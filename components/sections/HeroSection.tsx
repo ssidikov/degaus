@@ -1,51 +1,69 @@
+import InstagramIcon from '../icons/InstagramIcon'
+import TikTokIcon from '../icons/TikTokIcon'
+
 export default function HeroSection() {
+  const contentCards = [
+    { type: 'Faceless Account', color: 'from-purple-400 to-pink-400' },
+    { type: 'AI UGC', color: 'from-pink-300 to-orange-300' },
+    { type: 'Organic Podcast', color: 'from-amber-400 to-orange-400' },
+    { type: 'AI Influencer', color: 'from-gray-400 to-gray-500' },
+    { type: 'AI UGC Overlay', color: 'from-blue-400 to-cyan-400' },
+    { type: 'Polished Ad', color: 'from-amber-200 to-pink-200' },
+  ]
+
   return (
-    <section className='pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
-      <div className='container mx-auto max-w-7xl'>
+    <section className='pt-16 pb-20 px-4 sm:px-6 bg-gray-50'>
+      <div className='container mx-auto max-w-6xl'>
         <div className='text-center mb-12'>
-          <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight'>
-            AI content that
-            <br />
-            <span className='text-gray-900'>actually converts</span>
+          <h1 className='text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-700 mb-6 leading-tight'>
+            AI content that <br /> actually
+            <span className='text-gray-900'> converts</span>
           </h1>
 
-          <p className='text-lg sm:text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-            Activate, create & automate your{' '}
-            <span className='inline-flex items-center gap-2'>
-              <svg className='w-6 h-6' viewBox='0 0 24 24' fill='currentColor'>
-                <path d='M9.5 3A1.5 1.5 0 0 0 8 4.5v15A1.5 1.5 0 0 0 9.5 21h5a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 14.5 3h-5z' />
-              </svg>
-              <svg className='w-6 h-6' viewBox='0 0 24 24' fill='currentColor'>
-                <path d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z' />
-              </svg>
-              <svg className='w-6 h-6' viewBox='0 0 24 24' fill='currentColor'>
-                <path d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z' />
-              </svg>
-            </span>{' '}
-            content in one place for your{' '}
-            <svg className='inline w-6 h-6' viewBox='0 0 24 24' fill='currentColor'>
-              <path d='M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z' />
-            </svg>{' '}
-            <span className='underline decoration-wavy decoration-indigo-500'>brand</span>
+          <p className='text-lg sm:text-xl text-gray-600 font-bold mb-8 max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-2'>
+            <span>In minutes, create & automate your</span>
+            <InstagramIcon className='w-6 h-6 text-pink-600' />
+            <span>and</span>
+            <TikTokIcon className='w-6 h-6 text-gray-900' />
+            <span>content for your</span>
+            <span className='inline-flex items-center gap-1 px-3 py-1 bg-blue-100 text-blue-700 rounded-full'>
+              ✨ e-commerce
+            </span>
           </p>
 
-          <button className='px-8 py-4 text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full transition-all shadow-lg hover:shadow-xl'>
-            Try for free with 5,000
+          <button className='px-6 py-3 text-2xl font-bold text-white bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-lg transition-all shadow-lg hover:shadow-xl'>
+            Try for free with 1-click
           </button>
         </div>
 
-        <div className='relative'>
-          <div className='flex gap-4 justify-center overflow-x-auto pb-4 scrollbar-hide'>
-            {[1, 2, 3, 4, 5, 6].map((item) => (
+        <div className='relative mt-16'>
+          <div className='flex gap-4 justify-center overflow-x-auto pb-4'>
+            {contentCards.map((card, index) => (
               <div
-                key={item}
-                className='shrink-0 w-48 h-96 bg-linear-to-br from-purple-100 to-pink-100 rounded-3xl shadow-xl overflow-hidden relative'>
-                <div className='absolute inset-0 bg-gray-900/10' />
-                <div className='absolute bottom-4 left-4 right-4 text-white text-sm font-medium'>
-                  Example Content {item}
+                key={index}
+                className={`shrink-0 w-44 h-80 bg-linear-to-br ${card.color} rounded-3xl shadow-xl overflow-hidden relative`}>
+                <div className='absolute top-4 left-4 px-3 py-1.5 bg-pink-600/20 backdrop-blur-sm rounded-md text-xs font-medium text-gray-900'>
+                  {card.type}
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className='mt-16 text-center'>
+          <p className='text-gray-500 text-sm mb-6'>Trusted by</p>
+          <div className='flex flex-wrap items-center justify-center gap-8 opacity-60'>
+            <span className='text-xl font-bold text-purple-600 bg-purple-100 px-3 py-1 rounded'>
+              RE VIBE
+            </span>
+            <span className='text-xl font-bold text-gray-900'>Voodoo</span>
+            <span className='text-xl font-bold text-orange-500'>mojo</span>
+            <span className='text-xl font-bold text-gray-900'>ROULETTE</span>
+            <span className='text-xl font-bold text-gray-900'>⬢ Embat</span>
+            <span className='text-xl font-bold text-white bg-gray-900 px-3 py-1 rounded'>
+              neads
+            </span>
+            <span className='text-xl font-bold text-gray-900'>WIN◇BOSS</span>
           </div>
         </div>
       </div>
