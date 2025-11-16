@@ -7,21 +7,23 @@ export const TRUST_BADGES = [
   { name: 'Embark', logo: '/logos/embark.svg' },
   { name: 'FREETLI', logo: '/logos/freetli.svg' },
   { name: 'WIRINGS', logo: '/logos/wirings.svg' },
-] as const;
+] as const
 
 // Stats Cards
 export const STATS = [
   {
     value: '5x+',
     title: 'Post more on social media',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.',
     bgColor: 'bg-cyan-100',
     icons: ['facebook', 'tiktok', 'youtube'],
   },
   {
     value: '4.2x',
     title: 'AI Ads that actually convert',
-    description: 'Generate winning ads in minutes. Start from real ads or build from scratch. Add your brand.',
+    description:
+      'Generate winning ads in minutes. Start from real ads or build from scratch. Add your brand.',
     bgColor: 'bg-indigo-500',
   },
   {
@@ -30,7 +32,7 @@ export const STATS = [
     description: 'Multiple concepts to accelerate your output. A/B test hundreds of hooks.',
     bgColor: 'bg-purple-200',
   },
-] as const;
+] as const
 
 // End-to-End Ads Features
 export const END_TO_END_FEATURES = [
@@ -39,7 +41,7 @@ export const END_TO_END_FEATURES = [
   { icon: '✓', text: 'Share with' },
   { icon: '✓', text: 'Better CTR' },
   { icon: '✓', text: 'Platform ready' },
-] as const;
+] as const
 
 // Organic Content Features
 export const ORGANIC_CONTENT_FEATURES = [
@@ -47,7 +49,7 @@ export const ORGANIC_CONTENT_FEATURES = [
   { icon: '✓', text: 'Improved funnel' },
   { icon: '✓', text: 'AI Hooks' },
   { icon: '✓', text: 'Analytics' },
-] as const;
+] as const
 
 // Product Features
 export const PRODUCT_FEATURES = [
@@ -55,12 +57,7 @@ export const PRODUCT_FEATURES = [
     id: 'ugcs',
     title: '#1 realistic AI UGCs',
     subtitle: 'Create the most realistic AI UGCs',
-    features: [
-      'Infinity AI',
-      'Vetted Ads',
-      'Real actors',
-      'Excellent deliveries',
-    ],
+    features: ['Infinity AI', 'Vetted Ads', 'Real actors', 'Excellent deliveries'],
     image: '/features/ugcs.png',
     bgColor: 'bg-purple-50',
   },
@@ -68,12 +65,7 @@ export const PRODUCT_FEATURES = [
     id: 'b-rolls',
     title: 'High quality B-Rolls',
     subtitle: 'Integrate with your framework',
-    features: [
-      'Vercel AI',
-      'Post hook',
-      'Trending sounds',
-      'AI voices',
-    ],
+    features: ['Vercel AI', 'Post hook', 'Trending sounds', 'AI voices'],
     image: '/features/b-rolls.png',
     bgColor: 'bg-white',
   },
@@ -105,7 +97,7 @@ export const PRODUCT_FEATURES = [
     bgColor: 'bg-gray-900',
     isDark: true,
   },
-] as const;
+] as const
 
 // Pricing Plans
 export const PRICING_PLANS = [
@@ -166,7 +158,7 @@ export const PRICING_PLANS = [
     buttonText: 'Talk to human',
     buttonVariant: 'dark' as const,
   },
-] as const;
+] as const
 
 // FAQ Items
 export const FAQ_ITEMS = [
@@ -187,7 +179,7 @@ export const FAQ_ITEMS = [
     answer: 'Most content is generated within 2-5 minutes.',
   },
   {
-    question: "Does it work in other languages of cultures?",
+    question: 'Does it work in other languages of cultures?',
     answer: 'Yes, we support multiple languages and cultural contexts.',
   },
   {
@@ -210,4 +202,4 @@ export const FAQ_ITEMS = [
     question: 'How can I become an affiliate?',
     answer: 'Contact our team to join our affiliate program.',
   },
-] as const;
+] as const

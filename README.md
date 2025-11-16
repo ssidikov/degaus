@@ -44,4 +44,3 @@ degaus/
 ## 📄 License
 
 Private project
-
