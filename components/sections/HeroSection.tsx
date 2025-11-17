@@ -81,7 +81,7 @@ export default function HeroSection() {
     <section className='pt-8 pb-20'>
       <div className='container mx-auto max-w-7xl'>
         {/* Hero Content */}
-        <div className='text-center mb-16 max-w-4xl mx-auto'>
+        <div className='text-center mb-16 max-w-4xl mx-auto px-4'>
           <h1 className='text-[clamp(3rem,2.4435rem+2.7826vw,5rem)] font-extrabold mb-9 leading-[1.1] tracking-tight'>
             <span className='text-gray-600'>
               AI content that <br />
@@ -141,7 +141,7 @@ export default function HeroSection() {
         {/* Trusted By */}
         <div className='text-center'>
           <p className='text-gray-500 text-[26px] font-bold mb-10 tracking-tight'>Trusted by</p>
-          <div className='flex flex-wrap items-center justify-center gap-20'>
+          <div className='flex flex-wrap items-center justify-center gap-5 lg:gap-20'>
             {trustedBrands.map((brand, index) => (
               <div key={index} className='relative opacity-80 hover:opacity-100 transition'>
                 <Image
