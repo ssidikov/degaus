@@ -1,3 +1,5 @@
+'use client'
+
 import InstagramIcon from '../icons/InstagramIcon'
 import TikTokIcon from '../icons/TikTokIcon'
 import Image from 'next/image'
@@ -119,7 +121,12 @@ export default function HeroSection() {
                 loop
                 muted
                 playsInline
+                preload='auto'
                 className='absolute inset-0 w-full h-full object-cover'
+                onLoadedMetadata={(e) => {
+                  const video = e.currentTarget
+                  video.play().catch(() => {})
+                }}
               />
               <div className='absolute top-3 left-2 px-1.5 py-1.5 bg-purple-500/30 backdrop-blur-sm rounded-md z-10'>
                 <span className='text-[16px] font-semibold text-pink-200 leading-none tracking-tight'>
