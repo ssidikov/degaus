@@ -1,3 +1,7 @@
+'use client'
+
+import Image from 'next/image'
+
 export default function UseCasesSection() {
   return (
     <section className='bg-[#e9e8f5] px-6 py-16'>
@@ -21,14 +25,29 @@ export default function UseCasesSection() {
           {/* End-to-end Ads */}
           <div className='rounded-3xl bg-white p-8 shadow-lg'>
             <div className='mb-6 flex items-center gap-3'>
-              <span className='text-4xl'>💎</span>
+              <Image src='/gem.svg' alt='gem icon' width={40} height={40} />
               <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
                 End-to-end Ads
               </h3>
             </div>
-            <div className='mb-6 overflow-hidden rounded-2xl'>
-              <div className='aspect-video bg-linear-to-br from-purple-100 to-purple-200' />
+            <div className='mb-6 overflow-hidden rounded-2xl relative aspect-video'>
+              <video
+                src='/videos/End-to-end Ads.mov'
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload='auto'
+                className='w-full h-full object-cover'
+                onLoadedMetadata={(e) => {
+                  const video = e.currentTarget
+                  video.play().catch(() => {})
+                }}
+              />
             </div>
+            <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#323232] mb-4">
+              Generate end-to-end winning ads in minutes
+            </p>
             <ul className='space-y-3'>
               {[
                 'AI UGC overlays',
@@ -38,17 +57,7 @@ export default function UseCasesSection() {
                 'Podcasts ads',
               ].map((feature, i) => (
                 <li key={i} className='flex items-center gap-3'>
-                  <div className='flex size-7 items-center justify-center rounded-full bg-linear-to-br from-purple-500 to-pink-500'>
-                    <svg className='size-3 text-white' fill='none' viewBox='0 0 10 10'>
-                      <path
-                        stroke='currentColor'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M2 5l2 2 4-4'
-                      />
-                    </svg>
-                  </div>
+                  <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
                   <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
                     {feature}
                   </span>
@@ -60,14 +69,29 @@ export default function UseCasesSection() {
           {/* Organic Content */}
           <div className='rounded-3xl bg-white p-8 shadow-lg'>
             <div className='mb-6 flex items-center gap-3'>
-              <span className='text-4xl'>🎈</span>
+              <Image src='/balloon.svg' alt='balloon icon' width={40} height={40} />
               <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
                 Organic Content
               </h3>
             </div>
-            <div className='mb-6 overflow-hidden rounded-2xl'>
-              <div className='aspect-video bg-linear-to-br from-blue-100 to-blue-200' />
+            <div className='mb-6 overflow-hidden rounded-2xl relative aspect-video'>
+              <video
+                src='/videos/Organic Content.mov'
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload='auto'
+                className='w-full h-full object-cover'
+                onLoadedMetadata={(e) => {
+                  const video = e.currentTarget
+                  video.play().catch(() => {})
+                }}
+              />
             </div>
+            <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#323232] mb-4">
+              Generate viral organic content in minutes
+            </p>
             <ul className='space-y-3'>
               {[
                 'AI influencers',
@@ -77,17 +101,7 @@ export default function UseCasesSection() {
                 'Podcasts',
               ].map((feature, i) => (
                 <li key={i} className='flex items-center gap-3'>
-                  <div className='flex size-7 items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-teal-500'>
-                    <svg className='size-3 text-white' fill='none' viewBox='0 0 10 10'>
-                      <path
-                        stroke='currentColor'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2'
-                        d='M2 5l2 2 4-4'
-                      />
-                    </svg>
-                  </div>
+                  <Image src='/checked-pink.svg' alt='check' width={24} height={24} />
                   <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
                     {feature}
                   </span>
