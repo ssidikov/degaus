@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import StatsCard from '../ui/StatsCard'
 
 export default function UseCasesSection() {
   return (
@@ -138,81 +139,29 @@ export default function UseCasesSection() {
         </div>
         {/* Stats Cards */}
         <div className='grid grid-cols-1 gap-9 md:grid-cols-3'>
-          {/* Card 1 - Post more on social media */}
-          <div className='relative rounded-[40px] bg-linear-to-b from-white to-[#f3f3f9] border-[7px] border-white shadow-lg overflow-hidden'>
-            <div className='flex flex-col items-center h-full'>
-              {/* Top Image Section */}
-              <div className='relative w-full h-[203px] bg-[#a5e1ec] overflow-hidden -mx-6'>
-                <Image
-                  src='/images/cards/Post more on social media.png'
-                  alt='Post more on social media'
-                  fill
-                  className='object-cover'
-                />
-              </div>
+          <StatsCard
+            imageSrc='/images/cards/Post more on social media.png'
+            imageAlt='Post more on social media'
+            backgroundColor='#a5e1ec'
+            title='Post more on social media'
+            description='Post more content, more views, more followers, more conversions. Simple as that.'
+          />
 
-              {/* Content */}
-              <div className='flex flex-col gap-6 pt-6 pb-10 px-4'>
-                <h3 className="font-['Darker_Grotesque'] text-[28px] font-bold text-[#323232] leading-6 tracking-[-0.84px]">
-                  Post more on social media
-                </h3>
-                <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d] leading-5 tracking-[-0.6px]">
-                  Post more content, more views, more followers, more conversions. Simple as that.
-                </p>
-              </div>
-            </div>
-          </div>
+          <StatsCard
+            imageSrc='/images/cards/AI Ads that actually convert.png'
+            imageAlt='AI Ads that actually convert'
+            backgroundColor='#253de5'
+            title='AI Ads that actually convert'
+            description='Post AI content with high conversion rates. Start from a template or build your own.'
+          />
 
-          {/* Card 2 - AI Ads that actually convert */}
-          <div className='relative rounded-[40px] bg-linear-to-b from-white to-[#f3f3f9] border-[7px] border-white shadow-lg overflow-hidden'>
-            <div className='flex flex-col items-center px-6 h-full'>
-              {/* Top Image Section */}
-              <div className='relative w-full h-[203px] bg-[#253de5] overflow-hidden -mx-6'>
-                <Image
-                  src='/images/cards/AI Ads that actually convert.png'
-                  alt='AI Ads that actually convert'
-                  fill
-                  className='object-cover'
-                />
-              </div>
-
-              {/* Content */}
-              <div className='flex flex-col gap-6 pt-6'>
-                <h3 className="font-['Darker_Grotesque'] text-[28px] font-bold text-[#323232] leading-6 tracking-[-0.84px]">
-                  AI Ads that actually convert
-                </h3>
-                <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d] leading-5 tracking-[-0.6px]">
-                  Post AI content with high conversion rates. Start from a template or build your
-                  own.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 - Go viral by testing 100+ hooks */}
-          <div className='relative rounded-[40px] bg-linear-to-b from-white to-[#f3f3f9] border-[7px] border-white shadow-lg overflow-hidden'>
-            <div className='flex flex-col items-center px-6 h-full'>
-              {/* Top Image Section */}
-              <div className='relative w-full h-[203px] bg-[#e2c0ff] overflow-hidden -mx-6'>
-                <Image
-                  src='/images/cards/Go viral by testing 100+ hooks.png'
-                  alt='Go viral by testing 100+ hooks'
-                  fill
-                  className='object-cover'
-                />
-              </div>
-
-              {/* Content */}
-              <div className='flex flex-col gap-6 pt-6'>
-                <h3 className="font-['Darker_Grotesque'] text-[28px] font-bold text-[#323232] leading-6 tracking-[-0.84px]">
-                  Go viral by testing 100+ hooks
-                </h3>
-                <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d] leading-5 tracking-[-0.6px]">
-                  Test an unlimited amount of hooks, across multiple accounts, to maximize virality.
-                </p>
-              </div>
-            </div>
-          </div>
+          <StatsCard
+            imageSrc='/images/cards/Go viral by testing 100+ hooks.png'
+            imageAlt='Go viral by testing 100+ hooks'
+            backgroundColor='#e2c0ff'
+            title='Go viral by testing 100+ hooks'
+            description='Test an unlimited amount of hooks, across multiple accounts, to maximize virality.'
+          />
         </div>
       </div>
     </section>
