@@ -21,10 +21,10 @@ export default function UseCasesSection() {
         </h2>
 
         {/* Cards Container - Single card with two sections */}
-        <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg mx-8'>
+        <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg lg:mx-8'>
           <div className='grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]'>
             {/* End-to-end Ads Section */}
-            <div className='p-8 lg:p-10'>
+            <div className='p-6 py-8 lg:p-10'>
               {/* Title */}
               <div className='mb-8 flex items-center gap-3'>
                 <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-[#E2E1EF] shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
@@ -37,7 +37,7 @@ export default function UseCasesSection() {
               {/* Content: Video Left, Text Right */}
               <div className='flex flex-col md:flex-row gap-6'>
                 {/* Video - Left Side */}
-                <div className='overflow-hidden rounded-2xl relative w-full md:w-[190px] lg:w-[200px] h-[340px] shrink-0'>
+                <div className='overflow-hidden rounded-2xl relative w-full md:w-[190px] lg:w-[200px] h-[350px] shrink-0'>
                   <video
                     src='/videos/End-to-end Ads.mov'
                     autoPlay
@@ -45,7 +45,7 @@ export default function UseCasesSection() {
                     muted
                     playsInline
                     preload='auto'
-                    className='w-full h-full object-fill'
+                    className='w-full h-full object-cover'
                     onLoadedMetadata={(e) => {
                       const video = e.currentTarget
                       video.play().catch(() => {})
@@ -104,7 +104,7 @@ export default function UseCasesSection() {
                     muted
                     playsInline
                     preload='auto'
-                    className='w-full h-full object-fill'
+                    className='w-full h-full object-cover'
                     onLoadedMetadata={(e) => {
                       const video = e.currentTarget
                       video.play().catch(() => {})
