@@ -4,7 +4,7 @@ export default function UseCasesSection() {
       <div className='mx-auto max-w-7xl'>
         {/* Badge */}
         <div className='mb-8 flex justify-center'>
-          <div className='rounded-[20px] bg-white px-6 py-3 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]'>
+          <div className='rounded-[20px] bg-white px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]'>
             <p className="font-['Darker_Grotesque'] text-2xl font-semibold tracking-[-0.72px] text-[#7e7e7e]">
               Use cases
             </p>
@@ -12,7 +12,7 @@ export default function UseCasesSection() {
         </div>
 
         {/* Heading */}
-        <h2 className="mb-16 font-['Bricolage_Grotesque'] text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232] text-center">
+        <h2 className='mb-16 text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232] text-center'>
           Create winning content in minutes
         </h2>
 

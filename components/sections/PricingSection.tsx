@@ -80,7 +80,7 @@ export default function PricingSection() {
         </div>
 
         {/* Heading */}
-        <h2 className="mb-6 font-['Bricolage_Grotesque'] text-center text-5xl font-bold leading-7 tracking-[-1.5px] text-[#323232]">
+        <h2 className="mb-6 text-center text-5xl font-bold leading-7 tracking-[-1.5px] text-[#323232]">
           Start creating more content today
         </h2>
 
