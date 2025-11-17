@@ -20,94 +20,119 @@ export default function UseCasesSection() {
           Create winning content in minutes
         </h2>
 
-        {/* Two Column Layout */}
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 mb-12'>
-          {/* End-to-end Ads */}
-          <div className='rounded-3xl bg-white p-8 shadow-lg'>
-            <div className='mb-6 flex items-center gap-3'>
-              <Image src='/gem.svg' alt='gem icon' width={40} height={40} />
-              <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
-                End-to-end Ads
-              </h3>
-            </div>
-            <div className='mb-6 overflow-hidden rounded-2xl relative aspect-video'>
-              <video
-                src='/videos/End-to-end Ads.mov'
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload='auto'
-                className='w-full h-full object-cover'
-                onLoadedMetadata={(e) => {
-                  const video = e.currentTarget
-                  video.play().catch(() => {})
-                }}
-              />
-            </div>
-            <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#323232] mb-4">
-              Generate end-to-end winning ads in minutes
-            </p>
-            <ul className='space-y-3'>
-              {[
-                'AI UGC overlays',
-                'Generate B-rolls',
-                'Static ads',
-                'Cinematic ads',
-                'Podcasts ads',
-              ].map((feature, i) => (
-                <li key={i} className='flex items-center gap-3'>
-                  <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Cards Container - Single card with two sections */}
+        <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg'>
+          <div className='grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]'>
+            {/* End-to-end Ads Section */}
+            <div className='p-8 lg:p-10'>
+              {/* Title */}
+              <div className='mb-8 flex items-center gap-3'>
+                <Image src='/gem.svg' alt='gem icon' width={40} height={40} />
+                <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
+                  End-to-end Ads
+                </h3>
+              </div>
 
-          {/* Organic Content */}
-          <div className='rounded-3xl bg-white p-8 shadow-lg'>
-            <div className='mb-6 flex items-center gap-3'>
-              <Image src='/balloon.svg' alt='balloon icon' width={40} height={40} />
-              <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
-                Organic Content
-              </h3>
+              {/* Content: Video Left, Text Right */}
+              <div className='flex flex-col md:flex-row gap-6'>
+                {/* Video - Left Side */}
+                <div className='overflow-hidden rounded-2xl relative w-full md:w-[190px] lg:w-[200px] h-[340px] shrink-0'>
+                  <video
+                    src='/videos/End-to-end Ads.mov'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload='auto'
+                    className='w-full h-full object-cover'
+                    onLoadedMetadata={(e) => {
+                      const video = e.currentTarget
+                      video.play().catch(() => {})
+                    }}
+                  />
+                </div>
+
+                {/* Text Content - Right Side */}
+                <div className='flex-1'>
+                  <p className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d] mb-6">
+                    Generate end-to-end winning ads in minutes
+                  </p>
+                  <ul className='space-y-3'>
+                    {[
+                      'AI UGC overlays',
+                      'Generate B-rolls',
+                      'Static ads',
+                      'Cinematic ads',
+                      'Podcasts ads',
+                    ].map((feature, i) => (
+                      <li key={i} className='flex items-center gap-3'>
+                        <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
+                        <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-medium text-[#8d8d8d]">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className='mb-6 overflow-hidden rounded-2xl relative aspect-video'>
-              <video
-                src='/videos/Organic Content.mov'
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload='auto'
-                className='w-full h-full object-cover'
-                onLoadedMetadata={(e) => {
-                  const video = e.currentTarget
-                  video.play().catch(() => {})
-                }}
-              />
+
+            {/* Vertical Divider */}
+            <div className='hidden lg:block w-px bg-[#e5e5e5]'></div>
+
+            {/* Organic Content Section */}
+            <div className='p-8 lg:p-10 border-t lg:border-t-0 border-[#e5e5e5]'>
+              {/* Title */}
+              <div className='mb-8 flex items-center gap-3'>
+                <Image src='/balloon.svg' alt='balloon icon' width={40} height={40} />
+                <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
+                  Organic Content
+                </h3>
+              </div>
+
+              {/* Content: Video Left, Text Right */}
+              <div className='flex flex-col md:flex-row gap-6'>
+                {/* Video - Left Side */}
+                <div className='overflow-hidden rounded-2xl relative w-full md:w-[190px] lg:w-[200px] h-[340px] shrink-0'>
+                  <video
+                    src='/videos/Organic Content.mov'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload='auto'
+                    className='w-full h-full object-cover'
+                    onLoadedMetadata={(e) => {
+                      const video = e.currentTarget
+                      video.play().catch(() => {})
+                    }}
+                  />
+                </div>
+
+                {/* Text Content - Right Side */}
+                <div className='flex-1'>
+                  <p className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d] mb-6">
+                    Generate viral organic content in minutes
+                  </p>
+                  <ul className='space-y-3'>
+                    {[
+                      'AI influencers',
+                      'Tiktok slide-shows',
+                      'Shocked hook',
+                      'Text overlays',
+                      'Podcasts',
+                    ].map((feature, i) => (
+                      <li key={i} className='flex items-center gap-3'>
+                        <Image src='/checked-pink.svg' alt='check' width={24} height={24} />
+                        <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-medium text-[#8d8d8d]">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p className="font-['Darker_Grotesque'] text-xl font-semibold text-[#323232] mb-4">
-              Generate viral organic content in minutes
-            </p>
-            <ul className='space-y-3'>
-              {[
-                'AI influencers',
-                'Tiktok slide-shows',
-                'Shocked hook',
-                'Text overlays',
-                'Podcasts',
-              ].map((feature, i) => (
-                <li key={i} className='flex items-center gap-3'>
-                  <Image src='/checked-pink.svg' alt='check' width={24} height={24} />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
