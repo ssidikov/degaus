@@ -3,80 +3,10 @@
 import InstagramIcon from '../icons/InstagramIcon'
 import TikTokIcon from '../icons/TikTokIcon'
 import Image from 'next/image'
+import { VideoCard } from '@/components/ui'
+import { CONTENT_CARDS, TRUSTED_BRANDS } from '@/lib/constants'
 
 export default function HeroSection() {
-  const contentCards = [
-    {
-      type: 'Faceless Accounts',
-      video: '/videos/Faceless Accounts.mov',
-    },
-    {
-      type: 'AI UGC',
-      video: '/videos/AI UGC.mov',
-    },
-    {
-      type: 'Organic Podcast',
-      video: '/videos/Organic Podcast.mov',
-    },
-    {
-      type: 'AI Influencer',
-      video: '/videos/AI Influencer.mov',
-    },
-    {
-      type: 'AI UGC Overlay',
-      video: '/videos/AI UGC Overlay.mov',
-    },
-    {
-      type: 'Polished Ad',
-      video: '/videos/Polished Ad.mov',
-    },
-  ]
-
-  const trustedBrands = [
-    {
-      name: 'RE VIBE',
-      image: '/images/brands/revibe.png',
-      width: 83,
-      height: 27,
-    },
-    {
-      name: 'Voodoo',
-      image: '/images/brands/voodoo.png',
-      width: 89,
-      height: 18,
-    },
-    {
-      name: 'mojo',
-      image: '/images/brands/mojo.png',
-      width: 132,
-      height: 62,
-    },
-    {
-      name: 'ROULETTE',
-      image: '/images/brands/roulette.png',
-      width: 135,
-      height: 25,
-    },
-    {
-      name: 'Embat',
-      image: '/images/brands/embat.png',
-      width: 141,
-      height: 37,
-    },
-    {
-      name: 'neads',
-      image: '/images/brands/neads.png',
-      width: 99,
-      height: 34,
-    },
-    {
-      name: 'WIN◇BOSS',
-      image: '/images/brands/winboss.png',
-      width: 120,
-      height: 63,
-    },
-  ]
-
   return (
     <section className='pt-8 pb-20'>
       <div className='container mx-auto max-w-7xl'>
@@ -106,43 +36,28 @@ export default function HeroSection() {
             Try for free with 1-click
           </button>
         </div>
-
-        {/* Content Cards */}
       </div>
+
+      {/* Content Cards - Infinite Scroll */}
       <div className='w-full mb-24 overflow-hidden'>
         <div className='scroll-container gap-9 flex'>
-          {[...contentCards, ...contentCards].map((card, index) => (
-            <div
+          {[...CONTENT_CARDS, ...CONTENT_CARDS].map((card, index) => (
+            <VideoCard
               key={index}
-              className='shrink-0 w-[195px] h-[350px] rounded-3xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden relative'>
-              <video
-                src={card.video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload='auto'
-                className='absolute inset-0 w-full h-full object-cover'
-                onLoadedMetadata={(e) => {
-                  const video = e.currentTarget
-                  video.play().catch(() => {})
-                }}
-              />
-              <div className='absolute top-3 left-2 px-1.5 py-1.5 bg-purple-500/30 backdrop-blur-sm rounded-md z-10'>
-                <span className='text-[16px] font-semibold text-pink-200 leading-none tracking-tight'>
-                  {card.type}
-                </span>
-              </div>
-            </div>
+              src={card.video}
+              type={card.type}
+              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)]'
+            />
           ))}
         </div>
       </div>
+
+      {/* Trusted By */}
       <div className='container mx-auto max-w-7xl'>
-        {/* Trusted By */}
         <div className='text-center'>
           <p className='text-gray-500 text-[26px] font-bold mb-10 tracking-tight'>Trusted by</p>
           <div className='flex flex-wrap items-center justify-center gap-5 lg:gap-20'>
-            {trustedBrands.map((brand, index) => (
+            {TRUSTED_BRANDS.map((brand, index) => (
               <div key={index} className='relative opacity-80 hover:opacity-100 transition'>
                 <Image
                   src={brand.image}

@@ -34,21 +34,88 @@ export const STATS = [
   },
 ] as const
 
-// End-to-End Ads Features
+// Use Cases - End-to-End Ads
 export const END_TO_END_FEATURES = [
-  { icon: '✓', text: '100s of ad ideas' },
-  { icon: '✓', text: 'AI Ads to launch' },
-  { icon: '✓', text: 'Share with' },
-  { icon: '✓', text: 'Better CTR' },
-  { icon: '✓', text: 'Platform ready' },
+  'AI UGC overlays',
+  'Generate B-rolls',
+  'Static ads',
+  'Cinematic ads',
+  'Podcasts ads',
 ] as const
 
-// Organic Content Features
+// Use Cases - Organic Content
 export const ORGANIC_CONTENT_FEATURES = [
-  { icon: '✓', text: 'AI UGC videos' },
-  { icon: '✓', text: 'Improved funnel' },
-  { icon: '✓', text: 'AI Hooks' },
-  { icon: '✓', text: 'Analytics' },
+  'AI influencers',
+  'Tiktok slide-shows',
+  'Shocked hook',
+  'Text overlays',
+  'Podcasts',
+] as const
+
+// Stats Cards Data
+export const STATS_CARDS = [
+  {
+    imageSrc: '/images/cards/Post more on social media.png',
+    imageAlt: 'Post more on social media',
+    backgroundColor: '#a5e1ec',
+    title: 'Post more on social media',
+    description:
+      'Post more content, more views, more followers, more conversions. Simple as that.',
+  },
+  {
+    imageSrc: '/images/cards/AI Ads that actually convert.png',
+    imageAlt: 'AI Ads that actually convert',
+    backgroundColor: '#253de5',
+    title: 'AI Ads that actually convert',
+    description:
+      'Post AI content with high conversion rates. Start from a template or build your own.',
+  },
+  {
+    imageSrc: '/images/cards/Go viral by testing 100+ hooks.png',
+    imageAlt: 'Go viral by testing 100+ hooks',
+    backgroundColor: '#e2c0ff',
+    title: 'Go viral by testing 100+ hooks',
+    description:
+      'Test an unlimited amount of hooks, across multiple accounts, to maximize virality.',
+  },
+] as const
+
+// Features - AI UGCs
+export const AI_UGC_FEATURES = ['1080p HD', 'Up to 25 seconds', 'Consistent characters'] as const
+
+// Features - Video Editor
+export const VIDEO_EDITOR_FEATURES = [
+  'Overlays, split screens',
+  'AI captions (50+ fonts)',
+  'Transitions & effects',
+] as const
+
+// Features - Automation
+export const AUTOMATION_FEATURES = [
+  'AI Auto-selects best output',
+  'Automatic editing',
+  'Plug into your n8n workflows',
+] as const
+
+// Hero Section - Content Cards
+export const CONTENT_CARDS = [
+  { type: 'Faceless Accounts', video: '/videos/Faceless Accounts.mov' },
+  { type: 'AI UGC', video: '/videos/AI UGC.mov' },
+  { type: 'Organic Podcast', video: '/videos/Organic Podcast.mov' },
+  { type: 'AI Influencer', video: '/videos/AI Influencer.mov' },
+  { type: 'AI UGC Overlay', video: '/videos/AI UGC Overlay.mov' },
+  { type: 'Polished Ad', video: '/videos/Polished Ad.mov' },
+] as const
+
+// Hero Section - Trusted Brands
+export const TRUSTED_BRANDS = [
+  { name: 'RE VIBE', image: '/images/brands/revibe.png', width: 83, height: 27 },
+  { name: 'Voodoo', image: '/images/brands/voodoo.png', width: 89, height: 18 },
+  { name: 'mojo', image: '/images/brands/mojo.png', width: 132, height: 62 },
+  { name: 'ROULETTE', image: '/images/brands/roulette.png', width: 135, height: 25 },
+  { name: 'Embat', image: '/images/brands/embat.png', width: 141, height: 37 },
+  { name: 'neads', image: '/images/brands/neads.png', width: 99, height: 34 },
+  { name: 'WIN◇BOSS', image: '/images/brands/winboss.png', width: 120, height: 63 },
 ] as const
 
 // Product Features

@@ -1,22 +1,14 @@
 import Image from 'next/image'
+import { Badge, SectionHeading, FeatureList } from '@/components/ui'
+import { AI_UGC_FEATURES, VIDEO_EDITOR_FEATURES, AUTOMATION_FEATURES } from '@/lib/constants'
 
 export default function FeaturesSection() {
   return (
     <section className='bg-[#e9e8f5] px-6 py-16'>
       <div className='mx-auto max-w-7xl'>
-        {/* Badge */}
-        <div className='mb-8 flex justify-center'>
-          <div className='rounded-[20px] bg-white px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]'>
-            <p className="font-['Darker_Grotesque'] text-2xl font-semibold tracking-[-0.72px] text-[#7e7e7e]">
-              Features
-            </p>
-          </div>
-        </div>
+        <Badge>Features</Badge>
 
-        {/* Heading */}
-        <h2 className='mb-16 text-center text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232]'>
-          Everything you need in one place
-        </h2>
+        <SectionHeading title='Everything you need in one place' />
 
         {/* Features Grid - 3 columns */}
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
@@ -29,18 +21,9 @@ export default function FeaturesSection() {
               Create the most realistic AI Influencers
             </p>
 
-            <ul className='space-y-3 mt-6'>
-              {['1080p HD', 'Up to 25 seconds', 'Consistent characters'].map((feature, i) => (
-                <li key={i} className='flex items-center gap-3'>
-                  <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <FeatureList features={AI_UGC_FEATURES} iconColor='blue' className='mt-6' />
 
-            <button className="mt-6 font-['Darker_Grotesque'] text-lg font-semibold text-[#929292] tracking-[-0.54px] flex items-center gap-2">
+            <button className="mt-6 font-['Darker_Grotesque'] text-lg font-semibold text-[#929292] tracking-[-0.54px] flex items-center gap-2 hover:text-[#152cd3] transition-colors">
               <Image src='/sparkles.svg' alt='sparkles' width={16} height={16} />
               See for yourself
             </button>
@@ -94,20 +77,7 @@ export default function FeaturesSection() {
                 Edit your videos effortlessly
               </p>
 
-              <ul className='space-y-3 mt-6'>
-                {[
-                  'Overlays, split screens',
-                  'AI captions (50+ fonts)',
-                  'Transitions & effects',
-                ].map((feature, i) => (
-                  <li key={i} className='flex items-center gap-3'>
-                    <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
-                    <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <FeatureList features={VIDEO_EDITOR_FEATURES} iconColor='blue' className='mt-6' />
             </div>
           </div>
 
@@ -120,20 +90,7 @@ export default function FeaturesSection() {
               Build systems that actually work, reduce inconsistency & weird cuts
             </p>
 
-            <ul className='space-y-3 mt-6'>
-              {[
-                'AI Auto-selects best output',
-                'Automatic editing',
-                'Plug into your n8n workflows',
-              ].map((feature, i) => (
-                <li key={i} className='flex items-center gap-3'>
-                  <Image src='/checked-pink.svg' alt='check' width={24} height={24} />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#c6c6c6]">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <FeatureList features={AUTOMATION_FEATURES} iconColor='pink' className='mt-6' />
 
             {/* Decorative workflow visualization */}
             <div className='mt-8 flex items-center justify-center gap-4'>

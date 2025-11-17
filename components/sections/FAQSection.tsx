@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Badge, SectionHeading } from '@/components/ui'
 
 const FAQ_ITEMS = [
   'Is it difficult to create highly performing content?',
@@ -22,25 +23,16 @@ export default function FAQSection() {
   return (
     <section className='bg-[#f3f3f9] px-6 py-16'>
       <div className='mx-auto max-w-7xl'>
-        {/* Badge */}
-        <div className='mb-8 flex justify-center'>
-          <div className='rounded-[20px] bg-white px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]'>
-            <p className="font-['Darker_Grotesque'] text-2xl font-semibold tracking-[-0.72px] text-[#7e7e7e]">
-              FAQ
-            </p>
-          </div>
-        </div>
+        <Badge>FAQ</Badge>
 
         {/* Content Grid */}
         <div className='flex flex-col lg:flex-row gap-14 items-start justify-center'>
           {/* Left Side - Heading */}
           <div className='lg:max-w-md'>
-            <h2 className='text-5xl font-bold leading-7 tracking-[-1.5px] text-[#323232] mb-6'>
-              Frequently asked questions
-            </h2>
-            <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#8d8d8d] tracking-[-0.72px] leading-6">
+            <SectionHeading title='Frequently asked questions' centered={false} className='mb-0' />
+            <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold text-[#8d8d8d] tracking-[-0.72px] leading-6">
               If you don&apos;t find your answer here, simply{' '}
-              <span className='text-[#152cd3]'>reach out.</span>
+              <span className='text-[#152cd3] hover:underline cursor-pointer'>reach out.</span>
             </p>
           </div>
 
