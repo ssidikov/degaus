@@ -27,12 +27,13 @@ export default function UseCasesSection() {
             <div className='p-8 lg:p-10'>
               {/* Title */}
               <div className='mb-8 flex items-center gap-3'>
-                <Image src='/gem.svg' alt='gem icon' width={40} height={40} />
+                <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-[#E2E1EF] shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
+                  <Image src='/gem.svg' alt='gem icon' width={28} height={28} />
+                </span>
                 <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
                   End-to-end Ads
                 </h3>
               </div>
-
               {/* Content: Video Left, Text Right */}
               <div className='flex flex-col md:flex-row gap-6'>
                 {/* Video - Left Side */}
@@ -44,7 +45,7 @@ export default function UseCasesSection() {
                     muted
                     playsInline
                     preload='auto'
-                    className='w-full h-full object-cover'
+                    className='w-full h-full object-fill'
                     onLoadedMetadata={(e) => {
                       const video = e.currentTarget
                       video.play().catch(() => {})
@@ -54,7 +55,7 @@ export default function UseCasesSection() {
 
                 {/* Text Content - Right Side */}
                 <div className='flex-1'>
-                  <p className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d] mb-6">
+                  <p className="font-['Darker_Grotesque'] text-lg lg:text-3xl font-bold text-[#8d8d8d] mb-6 mr-2">
                     Generate end-to-end winning ads in minutes
                   </p>
                   <ul className='space-y-3'>
@@ -84,7 +85,9 @@ export default function UseCasesSection() {
             <div className='p-8 lg:p-10 border-t lg:border-t-0 border-[#e5e5e5]'>
               {/* Title */}
               <div className='mb-8 flex items-center gap-3'>
-                <Image src='/balloon.svg' alt='balloon icon' width={40} height={40} />
+                <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-[#E2E1EF] shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
+                  <Image src='/balloon.svg' alt='balloon icon' width={28} height={28} />
+                </span>
                 <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
                   Organic Content
                 </h3>
@@ -101,7 +104,7 @@ export default function UseCasesSection() {
                     muted
                     playsInline
                     preload='auto'
-                    className='w-full h-full object-cover'
+                    className='w-full h-full object-fill'
                     onLoadedMetadata={(e) => {
                       const video = e.currentTarget
                       video.play().catch(() => {})
@@ -111,7 +114,7 @@ export default function UseCasesSection() {
 
                 {/* Text Content - Right Side */}
                 <div className='flex-1'>
-                  <p className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d] mb-6">
+                  <p className="font-['Darker_Grotesque'] text-lg lg:text-3xl font-bold text-[#8d8d8d] mb-6 mr-2">
                     Generate viral organic content in minutes
                   </p>
                   <ul className='space-y-3'>
