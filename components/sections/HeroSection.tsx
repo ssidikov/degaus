@@ -137,7 +137,7 @@ export default function HeroSection() {
           ))}
         </div>
       </div>
-      <div className='container mx-auto max-w-7xl px-4 sm:px-6'>
+      <div className='container mx-auto max-w-7xl'>
         {/* Trusted By */}
         <div className='text-center'>
           <p className='text-gray-500 text-[26px] font-bold mb-10 tracking-tight'>Trusted by</p>
