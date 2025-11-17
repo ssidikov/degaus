@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function UseCasesSection() {
   return (
     <section className='bg-[#e9e8f5] px-6 py-16'>
-      <div className='mx-auto max-w-7xl'>
+      <div className='mx-auto max-w-6xl'>
         {/* Badge */}
         <div className='mb-8 flex justify-center'>
           <div className='rounded-[20px] bg-white px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]'>
@@ -21,7 +21,7 @@ export default function UseCasesSection() {
         </h2>
 
         {/* Cards Container - Single card with two sections */}
-        <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg'>
+        <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg mx-8'>
           <div className='grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]'>
             {/* End-to-end Ads Section */}
             <div className='p-8 lg:p-10'>
@@ -55,7 +55,7 @@ export default function UseCasesSection() {
 
                 {/* Text Content - Right Side */}
                 <div className='flex-1'>
-                  <p className="font-['Darker_Grotesque'] text-lg lg:text-3xl font-bold text-[#8d8d8d] mb-6 mr-2">
+                  <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-[#8d8d8d] mb-6">
                     Generate end-to-end winning ads in minutes
                   </p>
                   <ul className='space-y-3'>
@@ -68,7 +68,7 @@ export default function UseCasesSection() {
                     ].map((feature, i) => (
                       <li key={i} className='flex items-center gap-3'>
                         <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
-                        <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-medium text-[#8d8d8d]">
+                        <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d]">
                           {feature}
                         </span>
                       </li>
@@ -114,7 +114,7 @@ export default function UseCasesSection() {
 
                 {/* Text Content - Right Side */}
                 <div className='flex-1'>
-                  <p className="font-['Darker_Grotesque'] text-lg lg:text-3xl font-bold text-[#8d8d8d] mb-6 mr-2">
+                  <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-[#8d8d8d] mb-6">
                     Generate viral organic content in minutes
                   </p>
                   <ul className='space-y-3'>
@@ -127,7 +127,7 @@ export default function UseCasesSection() {
                     ].map((feature, i) => (
                       <li key={i} className='flex items-center gap-3'>
                         <Image src='/checked-pink.svg' alt='check' width={24} height={24} />
-                        <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-medium text-[#8d8d8d]">
+                        <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d]">
                           {feature}
                         </span>
                       </li>
