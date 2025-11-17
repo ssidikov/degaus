@@ -1,131 +1,173 @@
-import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS } from '@/lib/constants'
+import Image from 'next/image'
 
 export default function FeaturesSection() {
   return (
-    <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-50'>
-      <div className='container mx-auto max-w-7xl'>
-        <div className='text-center mb-16'>
-          <p className='text-sm font-semibold text-indigo-600 mb-2'>Use cases</p>
-          <h2 className='text-4xl sm:text-5xl font-bold text-gray-900'>
-            Create winning content in minutes
-          </h2>
+    <section className='bg-[#e9e8f5] px-6 py-16'>
+      <div className='mx-auto max-w-7xl'>
+        {/* Badge */}
+        <div className='mb-8 flex justify-center'>
+          <div className='rounded-[20px] bg-white px-6 py-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]'>
+            <p className="font-['Darker_Grotesque'] text-2xl font-semibold tracking-[-0.72px] text-[#7e7e7e]">
+              Features
+            </p>
+          </div>
         </div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16'>
-          <div className='bg-white rounded-3xl p-8 shadow-lg'>
-            <div className='flex items-start gap-4 mb-6'>
-              <div className='w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center'>
-                <svg
-                  className='w-6 h-6 text-pink-600'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M13 10V3L4 14h7v7l9-11h-7z'
-                  />
-                </svg>
+        {/* Heading */}
+        <h2 className='mb-16 text-center text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232]'>
+          Everything you need in one place
+        </h2>
+
+        {/* Features Grid - 3 columns */}
+        <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
+          {/* Feature 1 - AI UGCs */}
+          <div className='bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-bl-[20px] rounded-tr-[5px] rounded-br-[5px] p-11 shadow-lg'>
+            <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-7 leading-7">
+              #1 realistic AI UGCs
+            </h3>
+            <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] tracking-[-0.72px] mb-3">
+              Create the most realistic AI Influencers
+            </p>
+
+            <ul className='space-y-3 mt-6'>
+              {['1080p HD', 'Up to 25 seconds', 'Consistent characters'].map((feature, i) => (
+                <li key={i} className='flex items-center gap-3'>
+                  <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
+                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
+                    {feature}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <button className="mt-6 font-['Darker_Grotesque'] text-lg font-semibold text-[#929292] tracking-[-0.54px] flex items-center gap-2">
+              <Image src='/sparkles.svg' alt='sparkles' width={16} height={16} />
+              See for yourself
+            </button>
+          </div>
+
+          {/* Feature 2 & 3 - Stacked */}
+          <div className='flex flex-col gap-6'>
+            {/* High quality B-Rolls */}
+            <div className='bg-[#f3f3f9] border-[5px] border-white rounded-[5px] p-11 shadow-lg'>
+              <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-9 leading-7">
+                High quality B-Rolls
+              </h3>
+              <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] tracking-[-0.72px] mb-6">
+                Integrations with all major models
+              </p>
+
+              <div className='space-y-2'>
+                <div className='flex items-center gap-3'>
+                  <div className='w-7 h-7 rounded bg-black' />
+                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
+                    Sora2 pro
+                  </span>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <div className='w-7 h-7 rounded bg-linear-to-r from-blue-400 to-purple-600' />
+                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
+                    Veo3.1
+                  </span>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <div className='w-7 h-7 rounded bg-yellow-400' />
+                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
+                    Nanobanana
+                  </span>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
+                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
+                    10+ more
+                  </span>
+                </div>
               </div>
-              <div>
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>End-to-end Ads</h3>
-                <p className='text-gray-600 mb-6'>
-                  Generate winning ads in minutes. Start from real ads or build from scratch. Add
-                  your brand.
+            </div>
+
+            {/* Built-in video editor */}
+            <div className='bg-[#f3f3f9] border-[5px] border-white/50 rounded-[5px] p-11 shadow-lg'>
+              <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-9 leading-7">
+                Built-in video editor
+              </h3>
+              <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#636363] tracking-[-0.72px] mb-3">
+                Edit your videos effortlessly
+              </p>
+
+              <ul className='space-y-3 mt-6'>
+                {[
+                  'Overlays, split screens',
+                  'AI captions (50+ fonts)',
+                  'Transitions & effects',
+                ].map((feature, i) => (
+                  <li key={i} className='flex items-center gap-3'>
+                    <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
+                    <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Feature 4 - Automate */}
+          <div className='bg-[#1e1e22] border-[5px] border-[#36383f] rounded-tl-[5px] rounded-bl-[5px] rounded-tr-[20px] rounded-br-[20px] p-9 shadow-lg'>
+            <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#eeeeee] tracking-[-1.02px] mb-9 leading-7">
+              Automate your content
+            </h3>
+            <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#e0e0e0] tracking-[-0.72px] mb-3 leading-6">
+              Build systems that actually work, reduce inconsistency & weird cuts
+            </p>
+
+            <ul className='space-y-3 mt-6'>
+              {[
+                'AI Auto-selects best output',
+                'Automatic editing',
+                'Plug into your n8n workflows',
+              ].map((feature, i) => (
+                <li key={i} className='flex items-center gap-3'>
+                  <Image src='/checked-pink.svg' alt='check' width={24} height={24} />
+                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#c6c6c6]">
+                    {feature}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Decorative workflow visualization */}
+            <div className='mt-8 flex items-center justify-center gap-4'>
+              <div className='flex flex-col gap-3'>
+                <Image
+                  src='/images/brands/revibe.png'
+                  alt='instagram'
+                  width={21}
+                  height={21}
+                  className='rounded'
+                />
+                <Image
+                  src='/images/brands/voodoo.png'
+                  alt='tiktok'
+                  width={21}
+                  height={21}
+                  className='rounded-[5px]'
+                />
+                <Image
+                  src='/images/brands/mojo.png'
+                  alt='youtube'
+                  width={21}
+                  height={21}
+                  className='rounded-[5px]'
+                />
+              </div>
+              <div className='h-20 w-px bg-[#484848]' />
+              <div className='bg-[#485df4] px-4 py-3 rounded-[15px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1),0px_4px_15px_0px_rgba(46,71,249,0.5),inset_0px_2px_2px_0px_rgba(21,44,211,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)]'>
+                <p className="font-['Darker_Grotesque'] text-xl font-bold text-white tracking-[-0.4px]">
+                  degaus
                 </p>
               </div>
             </div>
-
-            <div className='bg-linear-to-br from-red-100 via-orange-100 to-pink-100 rounded-2xl h-64 mb-6 overflow-hidden relative'>
-              <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='text-center'>
-                  <div className='w-32 h-32 bg-white/30 backdrop-blur-sm rounded-2xl mx-auto mb-4' />
-                  <p className='text-sm font-medium text-gray-700'>Ad Preview</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature List */}
-            <ul className='space-y-3'>
-              {END_TO_END_FEATURES.map((feature, index) => (
-                <li key={index} className='flex items-center gap-3'>
-                  <span className='text-indigo-600'>{feature.icon}</span>
-                  <span className='text-gray-700'>{feature.text}</span>
-                </li>
-              ))}
-            </ul>
           </div>
-
-          <div className='bg-white rounded-3xl p-8 shadow-lg'>
-            <div className='flex items-start gap-4 mb-6'>
-              <div className='w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center'>
-                <svg
-                  className='w-6 h-6 text-purple-600'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z'
-                  />
-                </svg>
-              </div>
-              <div>
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>Organic Content</h3>
-                <p className='text-gray-600 mb-6'>Generate viral organic content in minutes.</p>
-              </div>
-            </div>
-
-            <div className='bg-linear-to-br from-purple-100 via-pink-100 to-orange-100 rounded-2xl h-64 mb-6 overflow-hidden relative'>
-              <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='text-center'>
-                  <div className='w-32 h-32 bg-white/30 backdrop-blur-sm rounded-2xl mx-auto mb-4' />
-                  <p className='text-sm font-medium text-gray-700'>Content Preview</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature List */}
-            <ul className='space-y-3'>
-              {ORGANIC_CONTENT_FEATURES.map((feature, index) => (
-                <li key={index} className='flex items-center gap-3'>
-                  <span className='text-indigo-600'>{feature.icon}</span>
-                  <span className='text-gray-700'>{feature.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          {STATS.map((stat, index) => (
-            <div
-              key={index}
-              className={`${stat.bgColor} rounded-3xl p-8 ${
-                index === 1 ? 'text-white' : 'text-gray-900'
-              }`}>
-              <div className='text-5xl font-bold mb-4'>{stat.value}</div>
-              <h4 className='text-xl font-bold mb-3'>{stat.title}</h4>
-              <p className={`text-sm ${index === 1 ? 'text-white/80' : 'text-gray-600'}`}>
-                {stat.description}
-              </p>
-
-              {'icons' in stat && stat.icons && (
-                <div className='flex gap-3 mt-4'>
-                  {stat.icons.map((icon: string, iconIndex: number) => (
-                    <div
-                      key={iconIndex}
-                      className='w-8 h-8 bg-white rounded-lg flex items-center justify-center'>
-                      <span className='text-xs'>{icon[0].toUpperCase()}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
         </div>
       </div>
     </section>
