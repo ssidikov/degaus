@@ -59,8 +59,7 @@ export const STATS_CARDS = [
     imageAlt: 'Post more on social media',
     backgroundColor: '#a5e1ec',
     title: 'Post more on social media',
-    description:
-      'Post more content, more views, more followers, more conversions. Simple as that.',
+    description: 'Post more content, more views, more followers, more conversions. Simple as that.',
   },
   {
     imageSrc: '/images/cards/AI Ads that actually convert.png',

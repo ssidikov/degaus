@@ -2,11 +2,7 @@
 
 import Image from 'next/image'
 import { Badge, VideoCard, FeatureList, StatsCard } from '@/components/ui'
-import {
-  END_TO_END_FEATURES,
-  ORGANIC_CONTENT_FEATURES,
-  STATS_CARDS,
-} from '@/lib/constants'
+import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/lib/constants'
 
 export default function UseCasesSection() {
   return (

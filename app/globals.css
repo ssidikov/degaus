@@ -10,22 +10,22 @@
   --color-foreground: #1a1a1a;
   --color-primary-blue: #152cd3;
   --color-primary-purple: #b308a7;
-  
+
   /* Background colors */
   --color-bg-section-light: #e9e8f5;
   --color-bg-section-lighter: #f3f3f9;
   --color-bg-card: #f9f9ff;
-  
+
   /* Text colors */
   --color-text-primary: #323232;
   --color-text-secondary: #616161;
   --color-text-tertiary: #7e7e7e;
   --color-text-muted: #8d8d8d;
-  
+
   /* Border colors */
   --color-border-light: #e5e5e5;
   --color-border-dark: #36383f;
-  
+
   /* Feature dark theme */
   --color-dark-bg: #1e1e22;
   --color-dark-text: #eeeeee;
@@ -63,7 +63,7 @@ button {
 /* Gradient button */
 .btn-gradient {
   background: linear-gradient(to right, var(--color-primary-blue), var(--color-primary-purple));
-  box-shadow: 
+  box-shadow:
     0px 4px 15px 0px rgba(46, 71, 249, 0.25),
     inset 0px -4px 4px 0px rgba(0, 0, 0, 0.3),
     inset 0px 4px 4px 0px rgba(255, 255, 255, 0.35);
@@ -89,13 +89,13 @@ button {
 }
 
 .card-inset-shadow {
-  box-shadow: 
+  box-shadow:
     inset 0px -4px 4px 0px rgba(0, 0, 0, 0.05),
     inset 0px 4px 4px 0px rgba(255, 255, 255, 0.3);
 }
 
 .card-inset-shadow-hover:hover {
-  box-shadow: 
+  box-shadow:
     inset 0px -2px 2px 0px rgba(0, 0, 0, 0.05),
     inset 0px 2px 2px 0px rgba(255, 255, 255, 0.4);
 }
@@ -141,6 +141,7 @@ button {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

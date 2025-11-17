@@ -1,6 +1,7 @@
 # 🏗️ Degaus Landing Page - Project Structure
 
 ## 📋 Overview
+
 Professionally organized landing page built with Next.js 15 using React/Next.js best practices.
 
 ## 📁 Directory Structure
@@ -56,6 +57,7 @@ degaus/
 ## 🎨 Design System
 
 ### Цвета (`lib/design-system.ts`)
+
 ```typescript
 colors: {
   background: {
@@ -88,11 +90,13 @@ colors: {
 ```
 
 ### Typography
+
 - **Fonts**: Bricolage Grotesque (headings), Darker Grotesque (body)
 - **Sizes**: 50px, 34px, 28px, 24px, 20px, 18px
 - **Letter spacing**: from -1.5px to -0.52px
 
 ### Spacing
+
 - Section padding: 4rem (64px)
 - Container max-width: 1280px
 - Border radius: 5px, 10px, 15px, 20px, 40px
@@ -102,74 +106,78 @@ colors: {
 ### UI Components (`components/ui/`)
 
 #### **Badge**
+
 ```tsx
 <Badge>Pricing</Badge>
 ```
+
 - White badge with shadow
 - Used in section headers
 
 #### **SectionHeading**
+
 ```tsx
-<SectionHeading 
-  title="Start creating more content today"
-  subtitle="Choose the plan that makes the most sense..."
+<SectionHeading
+  title='Start creating more content today'
+  subtitle='Choose the plan that makes the most sense...'
 />
 ```
+
 - Title + subtitle
 - Centered text
 
 #### **FeatureList**
+
 ```tsx
-<FeatureList 
-  items={features}
-  checkColor="bg-linear-to-br from-blue-400 to-blue-500"
-/>
+<FeatureList items={features} checkColor='bg-linear-to-br from-blue-400 to-blue-500' />
 ```
+
 - List with checkmarks
 - Custom icon colors
 
 #### **VideoCard**
+
 ```tsx
-<VideoCard 
-  videoSrc="/videos/example.mov"
-  title="End-to-end Ads"
+<VideoCard
+  videoSrc='/videos/example.mov'
+  title='End-to-end Ads'
   icon={<GemIcon />}
   features={features}
-  checkIconSrc="/checked-blue.svg"
+  checkIconSrc='/checked-blue.svg'
 />
 ```
+
 - Autoplay video
 - Title, icon, feature list
 
 #### **PricingCard**
+
 ```tsx
-<PricingCard
-  name="Pro"
-  price="$149.99"
-  period="/ month"
-  popular={true}
-  features={features}
-/>
+<PricingCard name='Pro' price='$149.99' period='/ month' popular={true} features={features} />
 ```
+
 - Pricing plan card
 - Popular badge support
 
 #### **StatsCard**
+
 ```tsx
 <StatsCard
-  imageSrc="/images/cards/stats1.png"
-  imageAlt="Statistics"
-  backgroundColor="#fef7e6"
-  title="5x+"
-  description="More posts"
+  imageSrc='/images/cards/stats1.png'
+  imageAlt='Statistics'
+  backgroundColor='#fef7e6'
+  title='5x+'
+  description='More posts'
 />
 ```
+
 - Statistics card
 - Gradient background, image
 
 ## 📊 Data (`lib/constants.ts`)
 
 Centralized data storage for sections:
+
 - `PRICING_PLANS` - pricing plans
 - `FAQ_ITEMS` - FAQ questions
 - `USE_CASES` - use cases with videos
@@ -179,30 +187,36 @@ Centralized data storage for sections:
 ### ✅ Applied:
 
 1. **Component Architecture**
+
    - Separation into ui/sections/icons
    - Barrel exports (`components/ui/index.ts`)
    - Component reusability
 
 2. **Design System**
+
    - CSS variables in `globals.css`
    - Design tokens in `lib/design-system.ts`
    - Single source of truth for colors/fonts
 
 3. **TypeScript Typing**
+
    - Interfaces for all props
    - Type safety everywhere
 
 4. **Performance**
+
    - Next.js Image optimization
    - Lazy loading videos
    - Avoiding CSS-in-JS (Tailwind)
 
 5. **DRY Principle**
+
    - No code duplication
    - Reusable components
    - Centralized data
 
 6. **Accessibility**
+
    - Semantic HTML tags
    - Alt texts for images
    - ARIA labels where needed
@@ -215,17 +229,20 @@ Centralized data storage for sections:
 ## 🚀 Usage
 
 ### Adding a new section:
+
 1. Create component in `components/sections/`
 2. Use UI components from `components/ui/`
 3. Add data to `lib/constants.ts` (if needed)
 4. Import in `app/page.tsx`
 
 ### Adding a new UI component:
+
 1. Create file in `components/ui/`
 2. Add export to `components/ui/index.ts`
 3. Use design tokens from `lib/design-system.ts`
 
 ### Changing colors/styles:
+
 1. Update `lib/design-system.ts`
 2. Update CSS variables in `app/globals.css`
 3. Components will update automatically
@@ -233,6 +250,7 @@ Centralized data storage for sections:
 ## 📝 Usage Examples
 
 ### Creating a new section with Badge and Heading:
+
 ```tsx
 import { Badge, SectionHeading, Container } from '@/components/ui'
 
@@ -241,10 +259,7 @@ export default function NewSection() {
     <section className='bg-[#e9e8f5] py-16'>
       <Container>
         <Badge>New Section</Badge>
-        <SectionHeading 
-          title="Amazing Title"
-          subtitle="Some description here"
-        />
+        <SectionHeading title='Amazing Title' subtitle='Some description here' />
         {/* Section content */}
       </Container>
     </section>
@@ -253,6 +268,7 @@ export default function NewSection() {
 ```
 
 ### Using FeatureList:
+
 ```tsx
 import { FeatureList } from '@/components/ui'
 
@@ -262,7 +278,7 @@ const features = [
   { text: 'Feature 3', enabled: false }
 ]
 
-<FeatureList 
+<FeatureList
   items={features}
   checkColor="bg-linear-to-br from-blue-400 to-blue-500"
 />
@@ -279,6 +295,7 @@ const features = [
 ## 📦 Export Structure
 
 ### UI Components Barrel Export:
+
 ```typescript
 // components/ui/index.ts
 export { Badge } from './Badge'
@@ -294,6 +311,7 @@ export { VideoCard } from './VideoCard'
 ```
 
 This allows importing like:
+
 ```typescript
 import { Badge, SectionHeading, PricingCard } from '@/components/ui'
 ```
@@ -301,6 +319,7 @@ import { Badge, SectionHeading, PricingCard } from '@/components/ui'
 ## 🎨 CSS Utility Classes
 
 Available in `globals.css`:
+
 - `.section-badge` - badge style
 - `.btn-gradient` - gradient button
 - `.card-shadow` - card shadow
@@ -310,6 +329,7 @@ Available in `globals.css`:
 ## ✨ Summary
 
 The project now has:
+
 - ✅ Clean component architecture
 - ✅ Design System with variables
 - ✅ Reusable UI components

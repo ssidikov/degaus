@@ -8,4 +8,3 @@ export { default as Section } from './Section'
 export { default as SectionHeading } from './SectionHeading'
 export { default as StatsCard } from './StatsCard'
 export { default as VideoCard } from './VideoCard'
-
