@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import HeroSection from '@/components/sections/HeroSection'
+import UseCasesSection from '@/components/sections/UseCasesSection'
 import TrustBadges from '@/components/sections/TrustBadges'
 import FeaturesSection from '@/components/sections/FeaturesSection'
 import ProductFeaturesSection from '@/components/sections/ProductFeaturesSection'
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <UseCasesSection />
         <TrustBadges />
         <FeaturesSection />
         <ProductFeaturesSection />

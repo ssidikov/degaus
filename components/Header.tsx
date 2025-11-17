@@ -1,36 +1,32 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Header() {
   return (
-    <header className='w-full bg-gray-50'>
-      <div className='container mx-auto px-6 py-6'>
+    <header className='w-full'>
+      <div className='container mx-auto px-6 py-8'>
         <div
-          className='mx-auto max-w-5xl rounded-2xl liquid-glass px-4 py-3'
+          className='mx-auto max-w-5xl px-3 rounded-[20px] liquid-glass p-3 flex items-center justify-between '
           style={{ background: 'rgba(190, 190, 190, 0.2)' }}>
-          <div className='flex items-center justify-between'>
-            <Link href='/' aria-label='degaus home' className='flex items-center gap-3'>
-              <span className='inline-flex items-center justify-center w-9 h-9 rounded-lg bg-linear-to-br from-indigo-500 to-pink-500 shadow-sm'>
-                <svg width='18' height='18' viewBox='0 0 24 24' fill='none' aria-hidden>
-                  <path d='M12 2 15 8 22 10 16 15 18 22 12 18 6 22 8 15 2 10 9 8z' fill='white' />
-                </svg>
-              </span>
+          <Link href='/' aria-label='degaus home' className='flex items-center gap-2'>
+            <Image src='/logo.svg' alt='degaus logo' width={25} height={25} />
+            <span className='text-[28px] font-bold text-gray-900 leading-none tracking-tight'>
+              degaus
+            </span>
+          </Link>
 
-              <span className='text-3xl font-bold text-gray-900 leading-tight'>degaus</span>
-            </Link>
+          <div className='flex items-center gap-2.5'>
+            <button
+              aria-label='Login'
+              className='rounded-lg bg-neutral-200 px-4 py-2 text-xl font-bold text-black shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:bg-gray-300 transition cursor-pointer'>
+              Login
+            </button>
 
-            <div className='flex items-center gap-3'>
-              <button
-                aria-label='Login'
-                className='rounded-lg bg-gray-300 border border-gray-200 px-3 py-1 text-xl font-bold shadow-sm hover:bg-gray-500 transition'>
-                Login
-              </button>
-
-              <button
-                aria-label='Try for free'
-                className='rounded-lg px-3 py-1 text-xl font-semibold text-white bg-linear-to-r from-indigo-600 to-pink-500 shadow-md hover:scale-[1.02] transition-transform'>
-                Try for free
-              </button>
-            </div>
+            <button
+              aria-label='Try for free'
+              className='rounded-lg px-4 py-2 text-xl font-bold text-gray-100 bg-linear-to-r from-[#152cd3] to-[#b308a7] shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:opacity-90 transition'>
+              Try for free
+            </button>
           </div>
         </div>
       </div>

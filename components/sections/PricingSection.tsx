@@ -1,103 +1,179 @@
-import { PRICING_PLANS } from '@/lib/constants'
+const CheckIcon = () => (
+  <svg className="size-3 text-white" fill="none" viewBox="0 0 10 10">
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M2 5l2 2 4-4"
+    />
+  </svg>
+);
 
 export default function PricingSection() {
-  return (
-    <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-50'>
-      <div className='container mx-auto max-w-7xl'>
-        <div className='text-center mb-4'>
-          <p className='text-sm font-semibold text-indigo-600 mb-2'>Pricing</p>
-          <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-4'>
-            Start creating more content today
-          </h2>
-          <p className='text-lg text-gray-600 max-w-2xl mx-auto mb-8'>
-            Choose the plan that makes the most sense for you.
-            <br />
-            Cancel anytime.
-          </p>
+  const plans = [
+    {
+      name: 'Basic',
+      price: '$49.99',
+      period: '/ month',
+      buttonColor: 'bg-[#a01c96]',
+      buttonText: 'Choose plan',
+      checkColor: 'bg-gradient-to-br from-purple-400 to-pink-400',
+      features: [
+        { text: 'Access to all models', enabled: true },
+        { text: 'Access to workflow node editor', enabled: true },
+        { text: 'Access to video editor', enabled: true },
+        { text: '1k image gen & edits (nanobanana)', enabled: true },
+        { text: '25 videos of Sora2 Pro HD (10 sec)', enabled: true },
+        { text: '20 videos of Sora2 Pro long (25 sec)', enabled: true },
+        { text: 'Bulk content creation', enabled: false },
+        { text: 'API Access (n8n or custom workflows)', enabled: false },
+      ],
+    },
+    {
+      name: 'Pro',
+      price: '$149.99',
+      period: '/ month',
+      buttonColor: 'bg-[#152cd3]',
+      buttonText: 'Choose plan',
+      checkColor: 'bg-gradient-to-br from-blue-400 to-blue-500',
+      popular: true,
+      features: [
+        { text: 'Access to all models', enabled: true },
+        { text: 'Access to workflow node editor', enabled: true },
+        { text: 'Access to video editor', enabled: true },
+        { text: '3k image gen & edits (nanobanana)', enabled: true },
+        { text: '75 videos of Sora2 Pro HD (10 sec)', enabled: true },
+        { text: '60 videos of Sora2 Pro long (25 sec)', enabled: true },
+        { text: 'Bulk content creation', enabled: true },
+        { text: 'API Access (n8n or custom workflows)', enabled: true },
+        { text: 'Priority access to new features', enabled: true },
+      ],
+    },
+    {
+      name: 'Custom',
+      price: 'Talk to a human',
+      period: '',
+      buttonColor: 'bg-linear-to-r from-[#101011] to-[#18181a]',
+      buttonText: 'Talk to a human',
+      checkColor: 'bg-gradient-to-br from-gray-400 to-gray-500',
+      features: [
+        { text: 'Everything in pro', enabled: true },
+        { text: 'Unlimited volume', enabled: true },
+        { text: 'Custom workflow building', enabled: true },
+        { text: 'Custom integrations', enabled: true },
+        { text: 'Custom video editing', enabled: true },
+      ],
+    },
+  ];
 
-          <div className='inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-12'>
-            <svg className='w-4 h-4' fill='currentColor' viewBox='0 0 20 20'>
-              <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z' />
-            </svg>
-            Most popular
+  return (
+    <section id="pricing" className="bg-[#e9e8f5] px-6 py-16">
+      <div className="mx-auto max-w-7xl">
+        {/* Badge */}
+        <div className="mb-8 flex justify-center">
+          <div className="rounded-[20px] bg-white px-6 py-4 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]">
+            <p className="font-['Darker_Grotesque'] text-2xl font-semibold leading-4 tracking-[-0.72px] text-[#7e7e7e]">
+              Pricing
+            </p>
           </div>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
-          {PRICING_PLANS.map((plan) => {
-            const isMostPopular = 'mostPopular' in plan && plan.mostPopular
+        {/* Heading */}
+        <h2 className="mb-6 font-['Bricolage_Grotesque'] text-center text-5xl font-bold leading-7 tracking-[-1.5px] text-[#323232]">
+          Start creating more content today
+        </h2>
 
-            return (
-              <div
-                key={plan.id}
-                className={`bg-white rounded-3xl p-8 ${
-                  isMostPopular ? 'ring-2 ring-indigo-600 shadow-xl scale-105' : 'shadow-lg'
-                } relative`}>
-                {isMostPopular && (
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-indigo-600 text-white px-4 py-1 rounded-full text-xs font-semibold'>
-                      Most Popular
-                    </span>
+        {/* Subheading */}
+        <p className="mx-auto mb-14 max-w-md text-center font-['Darker_Grotesque'] text-2xl font-bold leading-6 tracking-[-0.72px] text-[#8d8d8d]">
+          Choose the plan that makes the most sense for you. Cancel anytime.
+        </p>
+
+        {/* Pricing Cards */}
+        <div className="relative mb-16 grid grid-cols-1 gap-9 lg:grid-cols-3">
+          {plans.map((plan) => (
+            <div
+              key={plan.name}
+              className="relative h-[620px] rounded-[20px] border-[5px] border-white bg-[#f3f3f9]"
+            >
+              {plan.popular && (
+                <div className="absolute left-1/2 -top-14 -translate-x-1/2 rounded-[20px] bg-[rgba(0,31,254,0.1)] px-3 py-3 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-lg">🏆</span>
+                    <p className="font-['Darker_Grotesque'] text-xl font-bold leading-7 tracking-[-0.4px] text-[#3254ff]">
+                      Most popular
+                    </p>
                   </div>
-                )}
+                </div>
+              )}
 
-                <div className='mb-6'>
-                  <h3 className='text-2xl font-bold text-gray-900 mb-2'>{plan.name}</h3>
-                  {plan.price ? (
-                    <div className='flex items-baseline gap-1'>
-                      <span className='text-4xl font-bold text-gray-900'>${plan.price}</span>
-                      <span className='text-gray-600'>/{plan.period}</span>
-                    </div>
+              <div className="flex h-full flex-col px-11 pt-11">
+                {/* Plan Name */}
+                <h3 className="mb-7 font-['Darker_Grotesque'] text-[34px] font-bold leading-7 tracking-[-1.02px] text-[#323232]">
+                  {plan.name}
+                </h3>
+
+                {/* Price */}
+                <div className="mb-7 font-['Darker_Grotesque'] font-bold text-[#323232]">
+                  {plan.price.startsWith('$') ? (
+                    <p className="leading-7">
+                      <span className="text-[34px]">{plan.price}</span>
+                      <span className="text-2xl tracking-[-0.72px]">{plan.period}</span>
+                    </p>
                   ) : (
-                    <div className='text-2xl font-bold text-gray-900'>{plan.customPricing}</div>
+                    <span className="text-2xl leading-7 tracking-[-0.72px]">{plan.price}</span>
                   )}
                 </div>
 
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, index) => (
-                    <li key={index} className='flex items-start gap-3'>
-                      <svg
-                        className='w-5 h-5 text-indigo-600 mt-0.5 shrink-0'
-                        fill='none'
-                        stroke='currentColor'
-                        viewBox='0 0 24 24'>
-                        <path
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          strokeWidth={2}
-                          d='M5 13l4 4L19 7'
-                        />
-                      </svg>
-                      <span className='text-sm text-gray-700'>{feature}</span>
+                {/* Features */}
+                <ul className="mb-8 flex-1 space-y-3 py-3">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <div className={`flex size-7 shrink-0 items-center justify-center rounded-full ${plan.checkColor}`}>
+                        <CheckIcon />
+                      </div>
+                      <span
+                        className={`font-['Darker_Grotesque'] text-xl font-semibold leading-7 tracking-[-0.6px] text-[#8d8d8d] ${
+                          !feature.enabled ? 'line-through' : ''
+                        }`}
+                      >
+                        {feature.text}
+                      </span>
                     </li>
                   ))}
                 </ul>
 
+                {/* Button */}
                 <button
-                  className={`w-full py-3 px-6 rounded-xl font-semibold transition-all ${
-                    plan.buttonVariant === 'secondary'
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-lg hover:shadow-xl'
-                      : plan.buttonVariant === 'dark'
-                      ? 'bg-gray-900 text-white hover:bg-gray-800'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>
+                  className={`${plan.buttonColor} mb-10 w-full rounded-[15px] px-6 py-4 font-['Darker_Grotesque'] text-[26px] font-bold leading-7 tracking-[-0.52px] text-white shadow-[0px_4px_15px_0px_rgba(16,16,17,0.25)] transition-transform hover:scale-105`}
+                  style={{
+                    boxShadow:
+                      '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
+                  }}
+                >
                   {plan.buttonText}
                 </button>
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
 
-        <div className='text-center mt-12'>
-          <p className='text-gray-600 mb-4'>
-            Or try for free with unlimited free credits.{' '}
-            <span className='text-indigo-600 font-medium'>No credit card.</span>
+        {/* Try for free */}
+        <div className="flex flex-col items-center gap-9">
+          <p className="max-w-md text-center font-['Darker_Grotesque'] text-2xl font-bold leading-6 tracking-[-0.72px] text-[#8d8d8d]">
+            Or try for free with no free-trial, no credit card, no commitments.
           </p>
-          <button className='px-8 py-4 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl'>
+          <button
+            className="rounded-[15px] bg-linear-to-r from-[#152cd3] to-[#b308a7] px-6 py-4 font-['Darker_Grotesque'] text-[26px] font-bold leading-7 tracking-[-0.52px] text-white shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25)] transition-transform hover:scale-105"
+            style={{
+              boxShadow:
+                '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
+            }}
+          >
             Try for free
           </button>
         </div>
       </div>
     </section>
-  )
+  );
 }

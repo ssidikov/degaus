@@ -27,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='scroll-smooth'>
+      <head>
+        <link rel='icon' href='/logo.svg' type='image/svg+xml' />
+      </head>
       <body
         className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}>
         {children}
