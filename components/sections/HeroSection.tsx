@@ -98,8 +98,10 @@ export default function HeroSection() {
         {/* Hero Content */}
         <div className='text-center mb-16 max-w-4xl mx-auto'>
           <h1 className='text-[clamp(3rem,2.4435rem+2.7826vw,5rem)] font-extrabold mb-9 leading-[1.1] tracking-tight'>
-            <span className='text-gray-600'>AI content that actually</span>
-            <br />
+            <span className='text-gray-600'>
+              AI content that <br />
+              actually
+            </span>
             <span className='text-black'> converts</span>
           </h1>
 
