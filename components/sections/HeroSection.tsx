@@ -6,44 +6,27 @@ export default function HeroSection() {
   const contentCards = [
     {
       type: 'Faceless Accounts',
-      image: '/images/hero/faceless-accounts.jpg',
-      content: {
-        title: 'Daily reminder that',
-        items: [
-          "-you're worth it ✨",
-          "-it's time to reclaim your time 🍾",
-          '-celebrate the wins 🍷',
-        ],
-      },
+      video: '/videos/Faceless Accounts.mov',
     },
     {
       type: 'AI UGC',
-      image: '/images/hero/ai-ugc.jpg',
+      video: '/videos/AI UGC.mov',
     },
     {
       type: 'Organic Podcast',
-      image: '/images/hero/organic-podcast.jpg',
+      video: '/videos/Organic Podcast.mov',
     },
     {
       type: 'AI Influencer',
-      image: '/images/hero/ai-influencer.jpg',
-      content: {
-        title: '💔 Honest truths about dating part 1',
-        items: [
-          "-perfect companion doesn't exist 🥀",
-          "-if things dont click, don't persist",
-          '-looks count in the short term, personality in the long term',
-          "-don't date french people",
-        ],
-      },
+      video: '/videos/AI Influencer.mov',
     },
     {
       type: 'AI UGC Overlay',
-      image: '/images/hero/ai-ugc-overlay.jpg',
+      video: '/videos/AI UGC Overlay.mov',
     },
     {
       type: 'Polished Ad',
-      image: '/images/hero/polished-ad.jpg',
+      video: '/videos/Polished Ad.mov',
     },
   ]
 
@@ -93,7 +76,7 @@ export default function HeroSection() {
   ]
 
   return (
-    <section className='pt-8 pb-20 px-4 sm:px-6'>
+    <section className='pt-8 pb-20'>
       <div className='container mx-auto max-w-7xl'>
         {/* Hero Content */}
         <div className='text-center mb-16 max-w-4xl mx-auto'>
@@ -123,39 +106,31 @@ export default function HeroSection() {
         </div>
 
         {/* Content Cards */}
-        <div className='relative mb-24'>
-          <div className='flex gap-9 justify-center overflow-x-auto pb-4 px-4'>
-            {contentCards.map((card, index) => (
-              <div
-                key={index}
-                className='shrink-0 w-[195px] h-[350px] rounded-3xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden relative'>
-                <Image
-                  src={card.image}
-                  alt={card.type}
-                  fill
-                  className='object-cover'
-                  sizes='195px'
-                />
-                <div className='absolute top-3 left-2 px-1.5 py-1.5 bg-purple-500/30 backdrop-blur-sm rounded-md'>
-                  <span className='text-[16px] font-semibold text-pink-200 leading-none tracking-tight'>
-                    {card.type}
-                  </span>
-                </div>
-                {card.content && (
-                  <div className='absolute inset-x-0 bottom-0 p-4 text-center'>
-                    <p className='text-white text-xs font-semibold mb-2 tracking-tight'>
-                      {card.content.title}
-                    </p>
-                    <p className='text-white text-xs font-semibold leading-3.5 tracking-tight whitespace-pre-line'>
-                      {card.content.items.join('\n')}
-                    </p>
-                  </div>
-                )}
+      </div>
+      <div className='w-full mb-24 overflow-hidden'>
+        <div className='scroll-container gap-9 flex'>
+          {[...contentCards, ...contentCards].map((card, index) => (
+            <div
+              key={index}
+              className='shrink-0 w-[195px] h-[350px] rounded-3xl shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] overflow-hidden relative'>
+              <video
+                src={card.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className='absolute inset-0 w-full h-full object-cover'
+              />
+              <div className='absolute top-3 left-2 px-1.5 py-1.5 bg-purple-500/30 backdrop-blur-sm rounded-md z-10'>
+                <span className='text-[16px] font-semibold text-pink-200 leading-none tracking-tight'>
+                  {card.type}
+                </span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-
+      </div>
+      <div className='container mx-auto max-w-7xl px-4 sm:px-6'>
         {/* Trusted By */}
         <div className='text-center'>
           <p className='text-gray-500 text-[26px] font-bold mb-10 tracking-tight'>Trusted by</p>
