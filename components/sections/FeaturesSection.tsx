@@ -23,40 +23,81 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] border-[5px] border-white rounded-[5px] p-11 shadow-lg'>
-              <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-9 leading-7">
-                High quality B-Rolls
-              </h3>
-              <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] tracking-[-0.72px] mb-6">
-                Integrations with all major models
-              </p>
-
-              <div className='space-y-2'>
-                <div className='flex items-center gap-3'>
-                  <div className='w-7 h-7 rounded bg-black' />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    Sora2 pro
-                  </span>
-                </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-7 h-7 rounded bg-linear-to-r from-blue-400 to-purple-600' />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    Veo3.1
-                  </span>
-                </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-7 h-7 rounded bg-yellow-400' />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    Nanobanana
-                  </span>
-                </div>
-                <div className='flex items-center gap-3'>
-                  <Image src='/checked-blue.svg' alt='check' width={24} height={24} />
-                  <span className="font-['Darker_Grotesque'] text-xl font-semibold text-[#8d8d8d]">
-                    10+ more
-                  </span>
+            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] h-72 relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+              <div className='w-80 left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
+                <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
+                  High quality B-Rolls
+                </h3>
+                <div className='self-stretch flex flex-col justify-start items-start gap-6'>
+                  <p className="self-stretch justify-start text-zinc-600 text-2xl font-bold font-['Darker_Grotesque'] leading-7">
+                    Integrations with all major models
+                  </p>
+                  <div className='flex flex-col justify-start items-start gap-1.5'>
+                    {/* Sora2 pro */}
+                    <div className='inline-flex justify-start items-center gap-3'>
+                      <Image src='/icons/sora-2.svg' alt='Sora2 pro' width={16} height={16} />
+                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                        Sora2 pro
+                      </span>
+                    </div>
+                    {/* Veo3.1 */}
+                    <div className='inline-flex justify-start items-center gap-3'>
+                      <Image src='/icons/veo3.svg' alt='veo3' width={16} height={16} />
+                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                        Veo3.1
+                      </span>
+                    </div>
+                    {/* Nanobanana */}
+                    <div className='inline-flex justify-start items-center gap-3'>
+                      <Image src='/icons/nanobanana.svg' alt='nanobanana' width={16} height={16} />
+                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                        Nanobanana
+                      </span>
+                    </div>
+                    {/* 10+ more */}
+                    <div className='inline-flex justify-start items-center gap-3'>
+                      <div className='relative flex items-center justify-center'>
+                        <Image src='/checked-blue.svg' alt='plus' width={24} height={24} />
+                      </div>
+                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                        10+ more
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
+              {/* Decorative glow effect */}
+              <div className='w-32 h-32 left-[277.50px] top-[210px] absolute bg-violet-300/50 rounded-full blur-[50px]' />
+              {/* Video frame thumbnails */}
+              <Image
+                src='/images/cards/Post more on social media.png'
+                alt='video frame'
+                width={45}
+                height={80}
+                className='w-11 h-20 left-[261.50px] top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+              />
+              <Image
+                src='/images/cards/AI Ads that actually convert.png'
+                alt='video frame'
+                width={45}
+                height={80}
+                className='w-11 h-20 left-[339.50px] top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+              />
+              {/* Decorative arrow */}
+              <svg
+                width='34'
+                height='25'
+                viewBox='0 0 34 25'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+                className='left-[313.50px] top-[167px] absolute'>
+                <path
+                  d='M1.00021 1.00027C9.06013 3.03956 23.8651 9.47009 20.5099 19.5942C18.2192 26.5064 10.7493 22.3768 13.5421 14.9157C16.3349 7.45464 29.7119 7.86912 30.3816 23.5266M30.3816 23.5266L27.8214 21.7338M30.3816 23.5266L32.6017 19.9836'
+                  stroke='#929292'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                />
+              </svg>
             </div>
 
             {/* Built-in video editor */}
