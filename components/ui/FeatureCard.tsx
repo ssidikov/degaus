@@ -1,0 +1,110 @@
+import FeatureList from './FeatureList'
+import { AI_UGC_FEATURES } from '@/lib/constants'
+
+interface FeatureItem {
+  text: string
+}
+
+interface FeatureCardProps {
+  title: string
+  subtitle: string
+  features: FeatureItem[]
+  videoSrc?: string
+  showVideo?: boolean
+}
+
+export default function FeatureCard({
+  title,
+  subtitle,
+  videoSrc = '/videos/1 realistic AI UGCs.mov',
+  showVideo = true,
+}: FeatureCardProps) {
+  return (
+    <div className='relative w-[400px] h-auto bg-[#f3f3f9] rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+      <div className='w-80 left-[44px] top-[42px] absolute flex flex-col gap-7'>
+        <h3 className="text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
+          {title}
+        </h3>
+
+        <div className='flex flex-col gap-2.5'>
+          <p className="text-zinc-600 text-2xl font-bold font-['Darker_Grotesque'] leading-6">
+            {subtitle}
+          </p>
+
+          <FeatureList features={AI_UGC_FEATURES} iconColor='blue' className='mt-6' />
+        </div>
+      </div>
+
+      {showVideo && (
+        <>
+          {/* "See for yourself" indicator with arrow */}
+          <div className='w-auto left-[252.50px] top-[310px] absolute flex items-center gap-1.5'>
+            <svg
+              width='16'
+              height='16'
+              viewBox='0 0 16 16'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'>
+              <path
+                d='M11.9999 10.6667V13.3334M3.99986 2.6667V5.33336M10.6665 12H13.3332M2.66653 4.00003H5.3332M4.66653 9.67673V8.00003H6.55958M10.4576 6.6667H11.9999V4.9254M2.46842 13.1347L2.86574 13.532C3.14455 13.8108 3.28395 13.9503 3.44318 13.9988C3.58312 14.0415 3.73322 14.0369 3.87033 13.9859C4.02633 13.9278 4.15704 13.7802 4.41848 13.485L13.6879 3.0196C13.7858 2.90897 13.8348 2.85366 13.8565 2.79343C13.8851 2.71394 13.8825 2.62656 13.8491 2.54894C13.8238 2.49013 13.7716 2.43788 13.6671 2.33338C13.5626 2.22888 13.5103 2.17663 13.4515 2.15136C13.3739 2.118 13.2865 2.11535 13.207 2.14395C13.1468 2.16563 13.0915 2.21462 12.9809 2.31261L2.51543 11.582C2.22027 11.8434 2.07268 11.9741 2.01458 12.1301C1.96352 12.2672 1.95897 12.4173 2.00165 12.5573C2.05021 12.7165 2.18961 12.8559 2.46842 13.1347Z'
+                stroke='#929292'
+                strokeWidth='1.5'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              />
+            </svg>
+            <span className="text-neutral-400 text-lg font-semibold font-['Darker_Grotesque'] leading-7">
+              See for yourself
+            </span>
+          </div>
+
+          {/* Eclipse effects below video */}
+          <div className='w-48 h-32 left-[38.50px] top-[542px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-48 h-32 left-[174.50px] top-[541px] absolute bg-violet-300 rounded-full blur-[50px]' />
+
+          {/* Video with play button */}
+          <div className='w-48 h-80 left-[102.50px] top-[350px] absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)]'>
+            <video
+              className='w-48 h-[350px] rounded-[20px] object-cover'
+              src={videoSrc}
+              loop
+              muted
+              playsInline
+            />
+            <div className='p-2.5 left-[78px] top-[156px] absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
+              <svg
+                width='18'
+                height='18'
+                viewBox='0 0 18 18'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'>
+                <path
+                  d='M12.4937 6.96473C13.5735 7.6396 14.1134 7.97704 14.2985 8.40906C14.4602 8.78637 14.4602 9.21347 14.2985 9.59078C14.1134 10.0228 13.5735 10.3602 12.4937 11.0351L7.422 14.2049C6.22354 14.954 5.62431 15.3285 5.1298 15.2887C4.69876 15.2541 4.30364 15.0351 4.0458 14.6879C3.75 14.2897 3.75 13.583 3.75 12.1697V5.83012C3.75 4.41683 3.75 3.71019 4.0458 3.31192C4.30364 2.96476 4.69876 2.74577 5.1298 2.71112C5.62431 2.67136 6.22354 3.04588 7.422 3.79492L12.4937 6.96473Z'
+                  stroke='#EEEEEE'
+                  strokeWidth='2'
+                  strokeLinejoin='round'
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Arrow indicator pointing to video */}
+          <svg
+            width='71'
+            height='79'
+            viewBox='0 0 71 79'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            className='left-[257.50px] top-[340px] absolute'>
+            <path
+              d='M68.8677 2.00049C61.1912 22.0287 40.3275 57.9567 15.8842 46.0957C-0.804533 37.9981 11.9513 20.155 29.8641 29.7176C47.777 39.2802 42.5173 73.4717 2.86771 70.1661M2.86771 70.1661L8.19039 64.1717M2.86771 70.1661L11.0922 77.0005'
+              stroke='#929292'
+              strokeWidth='4'
+              strokeLinecap='round'
+            />
+          </svg>
+        </>
+      )}
+    </div>
+  )
+}

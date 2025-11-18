@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 interface FeatureListProps {
-  features: string[]
+  features: readonly string[]
   iconSrc?: string
   iconColor?: 'blue' | 'pink'
   className?: string
@@ -22,7 +22,7 @@ export default function FeatureList({
       {features.map((feature, i) => (
         <li key={i} className='flex items-center gap-3'>
           <Image src={icon} alt='check' width={24} height={24} className='shrink-0' />
-          <span className="font-['Darker_Grotesque'] text-lg lg:text-xl font-semibold text-[#8d8d8d]">
+          <span className="text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
             {feature}
           </span>
         </li>

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Badge, SectionHeading, FeatureList } from '@/components/ui'
+import { Badge, SectionHeading, FeatureList, FeatureCard } from '@/components/ui'
 import { AI_UGC_FEATURES, VIDEO_EDITOR_FEATURES, AUTOMATION_FEATURES } from '@/lib/constants'
 
 export default function FeaturesSection() {
@@ -12,27 +12,19 @@ export default function FeaturesSection() {
 
         {/* Features Grid - 3 columns */}
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
-          {/* Feature 1 - AI UGCs */}
-          <div className='bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-bl-[20px] rounded-tr-[5px] rounded-br-[5px] p-11 shadow-lg'>
-            <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-7 leading-7">
-              #1 realistic AI UGCs
-            </h3>
-            <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] tracking-[-0.72px] mb-3">
-              Create the most realistic AI Influencers
-            </p>
-
-            <FeatureList features={AI_UGC_FEATURES} iconColor='blue' className='mt-6' />
-
-            <button className="mt-6 font-['Darker_Grotesque'] text-lg font-semibold text-[#929292] tracking-[-0.54px] flex items-center gap-2 hover:text-[#152cd3] transition-colors">
-              <Image src='/sparkles.svg' alt='sparkles' width={16} height={16} />
-              See for yourself
-            </button>
-          </div>
+          {/* Feature 1 - AI UGCs with Video */}
+          <FeatureCard
+            title='#1 realistic AI UGCs'
+            subtitle='Create the most realistic AI Influencers'
+            features={AI_UGC_FEATURES}
+            videoSrc='/videos/1 realistic AI UGCs.mov'
+            showVideo={true}
+          />
 
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] border-[5px] border-white rounded-[5px] p-11 shadow-lg'>
+            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] border-[5px] border-white rounded-[5px] p-11 shadow-lg'>
               <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-9 leading-7">
                 High quality B-Rolls
               </h3>
@@ -69,7 +61,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] border-[5px] border-white/50 rounded-[5px] p-11 shadow-lg'>
+            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] border-[5px] border-white/50 rounded-[5px] p-11 shadow-lg'>
               <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#323232] tracking-[-1.02px] mb-9 leading-7">
                 Built-in video editor
               </h3>
@@ -82,7 +74,7 @@ export default function FeaturesSection() {
           </div>
 
           {/* Feature 4 - Automate */}
-          <div className='bg-[#1e1e22] border-[5px] border-[#36383f] rounded-tl-[5px] rounded-bl-[5px] rounded-tr-[20px] rounded-br-[20px] p-9 shadow-lg'>
+          <div className='bg-[#1e1e22] border-[5px] border-[#36383f] rounded-tl-[5px] rounded-bl-[5px] rounded-tr-[20px] rounded-br-[20px] p-9 shadow-lg w-auto lg:w-[400px]'>
             <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#eeeeee] tracking-[-1.02px] mb-9 leading-7">
               Automate your content
             </h3>
