@@ -23,7 +23,7 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] h-72 relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] h-[320px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
               <div className='w-80 left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   High quality B-Rolls
@@ -81,14 +81,14 @@ export default function FeaturesSection() {
               <div className='w-32 h-32 left-[277.50px] top-[210px] absolute bg-violet-300/50 rounded-full blur-[50px]' />
               {/* Video frame thumbnails */}
               <Image
-                src='/images/cards/Post more on social media.png'
+                src='/images/ai-video-1.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
                 className='w-11 h-20 left-[261.50px] top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               <Image
-                src='/images/cards/AI Ads that actually convert.png'
+                src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
