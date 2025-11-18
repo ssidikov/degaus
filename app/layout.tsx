@@ -26,12 +26,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className='scroll-smooth'>
+    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
       <head>
         <link rel='icon' href='/logo.svg' type='image/svg+xml' />
       </head>
       <body
-        className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}>
+        className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}
+        suppressHydrationWarning>
         {children}
       </body>
     </html>
