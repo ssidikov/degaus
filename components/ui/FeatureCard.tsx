@@ -15,7 +15,7 @@ export default function FeatureCard({
   showVideo = true,
 }: FeatureCardProps) {
   return (
-    <div className='relative w-[400px] h-auto bg-[#f3f3f9] rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+    <div className='relative w-[400px] h-[670px] bg-[#f3f3f9] border-4 rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
       <div className='w-80 left-[44px] top-[42px] absolute flex flex-col gap-7'>
         <h3 className="text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
           {title}
@@ -54,14 +54,15 @@ export default function FeatureCard({
           </div>
 
           {/* Eclipse effects below video */}
-          <div className='w-48 h-32 left-[38.50px] top-[542px] absolute bg-violet-300 rounded-full blur-[50px]' />
-          <div className='w-48 h-32 left-[174.50px] top-[541px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-48 h-32 left-[38.50px] top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-48 h-32 left-[174.50px] top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
 
           {/* Video with play button */}
-          <div className='w-48 h-80 left-[102.50px] top-[350px] absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)]'>
+          <div className='w-48 h-80 left-[102.50px] top-[350px] absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
             <video
               className='w-48 h-[350px] rounded-[20px] object-cover'
               src={videoSrc}
+              autoPlay
               loop
               muted
               playsInline
