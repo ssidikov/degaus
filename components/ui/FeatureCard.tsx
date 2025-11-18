@@ -1,14 +1,9 @@
 import FeatureList from './FeatureList'
 import { AI_UGC_FEATURES } from '@/lib/constants'
 
-interface FeatureItem {
-  text: string
-}
-
 interface FeatureCardProps {
   title: string
   subtitle: string
-  features: FeatureItem[]
   videoSrc?: string
   showVideo?: boolean
 }
@@ -16,7 +11,7 @@ interface FeatureCardProps {
 export default function FeatureCard({
   title,
   subtitle,
-  videoSrc = '/videos/1 realistic AI UGCs.mov',
+  videoSrc,
   showVideo = true,
 }: FeatureCardProps) {
   return (

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Badge, SectionHeading, FeatureList, FeatureCard } from '@/components/ui'
-import { AI_UGC_FEATURES, VIDEO_EDITOR_FEATURES, AUTOMATION_FEATURES } from '@/lib/constants'
+import { VIDEO_EDITOR_FEATURES, AUTOMATION_FEATURES } from '@/lib/constants'
 
 export default function FeaturesSection() {
   return (
@@ -16,7 +16,6 @@ export default function FeaturesSection() {
           <FeatureCard
             title='#1 realistic AI UGCs'
             subtitle='Create the most realistic AI Influencers'
-            features={AI_UGC_FEATURES}
             videoSrc='/videos/1 realistic AI UGCs.mov'
             showVideo={true}
           />
