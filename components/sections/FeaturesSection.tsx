@@ -35,28 +35,39 @@ export default function FeaturesSection() {
                   <div className='flex flex-col justify-start items-start gap-1.5'>
                     {/* Sora2 pro */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <Image src='/icons/sora-2.svg' alt='Sora2 pro' width={16} height={16} />
+                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                        <Image src='/icons/sora-2.svg' alt='Sora2 pro' width={16} height={16} />
+                      </div>
                       <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Sora2 pro
                       </span>
                     </div>
                     {/* Veo3.1 */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <Image src='/icons/veo3.svg' alt='veo3' width={16} height={16} />
+                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                        <Image src='/icons/veo3.svg' alt='veo3' width={16} height={16} />
+                      </div>
                       <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Veo3.1
                       </span>
                     </div>
                     {/* Nanobanana */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <Image src='/icons/nanobanana.svg' alt='nanobanana' width={16} height={16} />
+                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                        <Image
+                          src='/icons/nanobanana.svg'
+                          alt='nanobanana'
+                          width={16}
+                          height={16}
+                        />
+                      </div>
                       <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Nanobanana
                       </span>
                     </div>
                     {/* 10+ more */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center'>
+                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
                         <Image src='/checked-blue.svg' alt='plus' width={24} height={24} />
                       </div>
                       <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
