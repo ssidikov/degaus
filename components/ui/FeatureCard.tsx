@@ -59,9 +59,9 @@ export default function FeatureCard({
           <div className='w-24 sm:w-28 md:w-32 lg:w-40 h-20 sm:h-20 md:h-24 lg:h-28 left-[60%] sm:left-[58%] md:right-[5%] lg:left-40 top-[440px] sm:top-[480px] md:top-[550px] lg:top-[560px] absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
 
           {/* Video with play button */}
-          <div className='w-32 md:w-40 lg:w-44 h-56 md:h-72 lg:h-[296px] left-[50%] md:left-[35%] md:right-[10%] lg:left-[90px] xl:left-[120px] top-[230px] md:top-[350px] lg:top-[330px] xl:top-80 -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
+          <div className='w-32 sm:w-40 lg:w-44 h-56 md:h-72 lg:h-[296px] left-[50%] md:left-[35%] md:right-[10%] lg:left-[90px] xl:left-[120px] top-[230px] md:top-[350px] sm:top-[330px] xl:top-80 -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
             <video
-              className='w-32 md:w-40 lg:w-48 h-56 md:h-72 lg:h-80 rounded-[20px] object-cover'
+              className='w-full h-56 sm:h-80 rounded-[20px] object-cover'
               src={videoSrc}
               autoPlay
               loop
