@@ -22,7 +22,7 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-full h-[400px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-full h-[313px] md:h-[313px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
               <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   High quality B-Rolls
@@ -77,21 +77,21 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[277.50px] top-[250px] lg:top-[210px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[50px]' />
+              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[277.50px] top-[220px] md:top-[230px] lg:top-[210px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[50px]' />
               {/* Video frame thumbnails */}
               <Image
                 src='/images/ai-video-1.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-10 lg:w-11 h-16 lg:h-20 left-[60%] lg:left-[261.50px] top-[200px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-10 lg:w-11 h-16 lg:h-20 left-[60%] lg:left-[261.50px] top-[170px] md:top-[180px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-10 lg:w-11 h-16 lg:h-20 left-[75%] lg:left-[339.50px] top-[240px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-10 lg:w-11 h-16 lg:h-20 left-[75%] lg:left-[339.50px] top-[210px] md:top-[220px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -111,7 +111,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-full h-[500px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-full h-[313px] md:h-[313px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
               <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   Built-in video editor
@@ -402,9 +402,9 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[245.50px] top-[250px] lg:top-[237px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-[50px]' />
+              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[245.50px] top-[220px] md:top-[230px] lg:top-[237px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-[50px]' />
               {/* Video element */}
-              <div className='w-16 lg:w-20 h-32 lg:h-40 left-[50%] lg:left-[315px] top-[280px] lg:top-[153px] -translate-x-1/2 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
+              <div className='w-16 lg:w-20 h-32 lg:h-40 left-[50%] lg:left-[315px] top-[200px] md:top-[180px] lg:top-[153px] -translate-x-1/2 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                 <video
                   className='w-16 lg:w-20 h-32 lg:h-40 rounded-[10px] object-cover border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
@@ -418,13 +418,13 @@ export default function FeaturesSection() {
           </div>
 
           {/* Feature 4 - Automate */}
-          <div className='bg-zinc-900 w-full h-[900px] lg:h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+          <div className='bg-zinc-900 w-full h-[650px] md:h-[650px] lg:h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
             <div className='w-[90%] max-w-80 left-[5%] lg:left-[36px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
               <h3 className="self-stretch justify-start text-zinc-100 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                 Automate your content
               </h3>
-              <div className='w-80 flex flex-col justify-start items-start gap-2.5'>
-                <p className="self-stretch justify-start text-neutral-200 text-2xl font-bold font-['Darker_Grotesque'] leading-6">
+              <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2.5'>
+                <p className="self-stretch justify-start text-neutral-200 text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-6">
                   Build systems that actually work, reduce inconsistency & weird cuts
                 </p>
                 <div className='py-3 flex flex-col justify-start items-start gap-3'>
@@ -562,7 +562,7 @@ export default function FeaturesSection() {
               alt='n8n workflow schema'
               width={319}
               height={191}
-              className='w-[90%] max-w-80 h-40 lg:h-48 left-[5%] lg:left-[40.50px] top-[500px] lg:top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700 object-cover'
+              className='w-[90%] max-w-80 h-40 lg:h-48 left-[5%] lg:left-[40.50px] top-[470px] md:top-[470px] lg:top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700 object-cover'
             />
           </div>
         </div>
