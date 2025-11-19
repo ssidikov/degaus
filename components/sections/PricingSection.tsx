@@ -58,7 +58,7 @@ export default function PricingSection() {
   ]
 
   return (
-    <section id='pricing' className='bg-white px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
+    <section id='pricing' className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
       <div className='mx-auto max-w-7xl'>
         <Badge>Pricing</Badge>
 
