@@ -77,21 +77,21 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[277.50px] top-[220px] md:top-[230px] lg:top-[210px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[50px]' />
+              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] md:right-[15%] lg:left-[277.50px] top-[220px] md:top-[230px] lg:top-[210px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[50px]' />
               {/* Video frame thumbnails */}
               <Image
                 src='/images/ai-video-1.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-10 lg:w-11 h-16 lg:h-20 left-[60%] lg:left-[261.50px] top-[170px] md:top-[180px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-10 lg:w-11 h-16 lg:h-20 left-[60%] md:right-[25%] lg:left-[261.50px] top-[170px] md:top-[180px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-10 lg:w-11 h-16 lg:h-20 left-[75%] lg:left-[339.50px] top-[210px] md:top-[220px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-10 lg:w-11 h-16 lg:h-20 left-[75%] md:right-[5%] lg:left-[339.50px] top-[210px] md:top-[220px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -402,11 +402,11 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[245.50px] top-[220px] md:top-[230px] lg:top-[237px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-[50px]' />
+              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] md:right-[15%] lg:left-[245.50px] top-[220px] md:top-[230px] lg:top-[237px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-[50px]' />
               {/* Video element */}
-              <div className='w-16 lg:w-20 h-32 lg:h-40 left-[50%] lg:left-[315px] top-[200px] md:top-[180px] lg:top-[153px] -translate-x-1/2 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
+              <div className='w-16 md:w-20 lg:w-20 h-32 md:h-36 lg:h-40 left-[50%] md:left-auto md:right-[10%] lg:left-[315px] top-[200px] md:top-[180px] lg:top-[153px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                 <video
-                  className='w-16 lg:w-20 h-32 lg:h-40 rounded-[10px] object-cover border-[3px] border-white'
+                  className='w-16 md:w-20 lg:w-20 h-32 md:h-36 lg:h-40 rounded-[10px] object-cover border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
                   autoPlay
                   loop
@@ -506,7 +506,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Decorative glow */}
-            <div className='w-32 lg:w-48 h-24 lg:h-32 left-[50%] lg:left-[103.50px] top-[-30px] lg:top-[-52px] -translate-x-1/2 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[100px] lg:blur-[125px]' />
+            <div className='w-32 lg:w-48 h-24 lg:h-32 left-[50%] md:right-[20%] lg:left-[103.50px] top-[-30px] lg:top-[-52px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[100px] lg:blur-[125px]' />
 
             {/* Horizontal lines */}
             <div className='w-9 h-0 left-[111.50px] top-[336px] absolute border-t border-zinc-500 hidden lg:block' />
@@ -552,9 +552,9 @@ export default function FeaturesSection() {
             </div>
 
             {/* Bottom glow effects */}
-            <div className='w-6 h-24 lg:h-36 left-[20%] lg:left-[94.22px] top-[700px] lg:top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
-            <div className='w-6 lg:w-8 h-24 lg:h-32 left-[50%] lg:left-[183.09px] top-[700px] lg:top-[542.78px] -translate-x-1/2 lg:translate-x-0 absolute bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
-            <div className='w-6 h-24 lg:h-36 left-[75%] lg:left-[284.42px] top-[700px] lg:top-[540px] absolute origin-top-left rotate-[17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 h-24 lg:h-36 left-[20%] md:right-[35%] lg:left-[94.22px] top-[700px] md:top-[580px] lg:top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 lg:w-8 h-24 lg:h-32 left-[50%] md:left-auto md:right-[20%] lg:left-[183.09px] top-[700px] md:top-[580px] lg:top-[542.78px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 h-24 lg:h-36 left-[75%] md:right-[5%] lg:left-[284.42px] top-[700px] md:top-[580px] lg:top-[540px] absolute origin-top-left rotate-[17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
 
             {/* n8n schema image */}
             <Image
@@ -562,7 +562,7 @@ export default function FeaturesSection() {
               alt='n8n workflow schema'
               width={319}
               height={191}
-              className='w-[90%] max-w-80 h-40 lg:h-48 left-[5%] lg:left-[40.50px] top-[470px] md:top-[470px] lg:top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700 object-cover'
+              className='w-[90%] md:w-[55%] max-w-80 h-40 md:h-44 lg:h-48 left-[5%] md:left-auto md:right-[5%] lg:left-[40.50px] top-[470px] md:top-[470px] lg:top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700 object-cover'
             />
           </div>
         </div>

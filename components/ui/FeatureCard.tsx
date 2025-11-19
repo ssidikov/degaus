@@ -54,13 +54,13 @@ export default function FeatureCard({
           </div>
 
           {/* Eclipse effects below video */}
-          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[20%] lg:left-[38.50px] top-[520px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
-          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[60%] lg:left-[174.50px] top-[520px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[20%] md:right-[25%] lg:left-[38.50px] top-[520px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[60%] md:right-[5%] lg:left-[174.50px] top-[520px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
 
           {/* Video with play button */}
-          <div className='w-36 lg:w-48 h-64 lg:h-80 left-[50%] lg:left-[102.50px] top-[360px] md:top-[360px] lg:top-[340px] -translate-x-1/2 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
+          <div className='w-36 md:w-40 lg:w-48 h-64 md:h-72 lg:h-80 left-[50%] md:left-auto md:right-[10%] lg:left-[102.50px] top-[360px] md:top-[360px] lg:top-[340px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
             <video
-              className='w-36 lg:w-48 h-[280px] lg:h-[350px] rounded-[20px] object-cover'
+              className='w-36 md:w-40 lg:w-48 h-[280px] md:h-[320px] lg:h-[350px] rounded-[20px] object-cover'
               src={videoSrc}
               autoPlay
               loop
