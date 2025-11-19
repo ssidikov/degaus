@@ -15,21 +15,21 @@ export default function FeatureCard({
   showVideo = true,
 }: FeatureCardProps) {
   return (
-    <div className='relative w-full h-[580px] md:h-[620px] lg:h-[650px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-      <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] md:top-[38px] lg:top-[42px] absolute flex flex-col gap-4 md:gap-5 lg:gap-7'>
-        <h3 className="text-zinc-800 text-3xl md:text-4xl lg:text-4xl font-bold font-['Darker_Grotesque'] leading-7">
+    <div className='relative w-full h-[500px] sm:h-[560px] md:h-[620px] lg:h-[650px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+      <div className='w-[90%] max-w-80 left-[5%] sm:left-[6%] lg:left-[44px] top-[24px] sm:top-[32px] md:top-[38px] lg:top-[42px] absolute flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-7'>
+        <h3 className="text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
           {title}
         </h3>
 
-        <div className='flex flex-col gap-2.5'>
-          <p className="text-zinc-600 text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-6">
+        <div className='flex flex-col gap-2 sm:gap-2.5'>
+          <p className="text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-6">
             {subtitle}
           </p>
 
           <FeatureList
             features={AI_UGC_FEATURES}
             iconColor='blue'
-            className='mt-4 md:mt-5 lg:mt-6'
+            className='mt-3 sm:mt-4 md:mt-5 lg:mt-6'
           />
         </div>
       </div>
@@ -37,13 +37,14 @@ export default function FeatureCard({
       {showVideo && (
         <>
           {/* "See for yourself" indicator with arrow */}
-          <div className='w-auto right-[5%] top-[300px] md:top-[310px] lg:top-[300px] absolute flex items-center gap-1.5'>
+          <div className='w-auto right-[5%] sm:right-[6%] top-[250px] sm:top-[280px] md:top-[310px] lg:top-[300px] absolute flex items-center gap-1 sm:gap-1.5'>
             <svg
-              width='16'
-              height='16'
+              width='14'
+              height='14'
               viewBox='0 0 16 16'
               fill='none'
-              xmlns='http://www.w3.org/2000/svg'>
+              xmlns='http://www.w3.org/2000/svg'
+              className='w-3.5 sm:w-4'>
               <path
                 d='M11.9999 10.6667V13.3334M3.99986 2.6667V5.33336M10.6665 12H13.3332M2.66653 4.00003H5.3332M4.66653 9.67673V8.00003H6.55958M10.4576 6.6667H11.9999V4.9254M2.46842 13.1347L2.86574 13.532C3.14455 13.8108 3.28395 13.9503 3.44318 13.9988C3.58312 14.0415 3.73322 14.0369 3.87033 13.9859C4.02633 13.9278 4.15704 13.7802 4.41848 13.485L13.6879 3.0196C13.7858 2.90897 13.8348 2.85366 13.8565 2.79343C13.8851 2.71394 13.8825 2.62656 13.8491 2.54894C13.8238 2.49013 13.7716 2.43788 13.6671 2.33338C13.5626 2.22888 13.5103 2.17663 13.4515 2.15136C13.3739 2.118 13.2865 2.11535 13.207 2.14395C13.1468 2.16563 13.0915 2.21462 12.9809 2.31261L2.51543 11.582C2.22027 11.8434 2.07268 11.9741 2.01458 12.1301C1.96352 12.2672 1.95897 12.4173 2.00165 12.5573C2.05021 12.7165 2.18961 12.8559 2.46842 13.1347Z'
                 stroke='#929292'
@@ -52,14 +53,14 @@ export default function FeatureCard({
                 strokeLinejoin='round'
               />
             </svg>
-            <span className="text-neutral-400 text-lg font-semibold font-['Darker_Grotesque'] leading-7">
+            <span className="text-neutral-400 text-base sm:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
               See for yourself
             </span>
           </div>
 
           {/* Eclipse effects below video */}
-          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[20%] md:right-[25%] lg:left-[38.50px] top-[520px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
-          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[60%] md:right-[5%] lg:left-[174.50px] top-[520px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-24 sm:w-28 md:w-32 lg:w-48 h-20 sm:h-20 md:h-24 lg:h-32 left-[20%] sm:left-[22%] md:right-[25%] lg:left-[38.50px] top-[440px] sm:top-[480px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[40px] sm:blur-[45px] md:blur-[50px]' />
+          <div className='w-24 sm:w-28 md:w-32 lg:w-48 h-20 sm:h-20 md:h-24 lg:h-32 left-[60%] sm:left-[58%] md:right-[5%] lg:left-[174.50px] top-[440px] sm:top-[480px] md:top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[40px] sm:blur-[45px] md:blur-[50px]' />
 
           {/* Video with play button */}
           <div className='w-32 md:w-40 lg:w-48 h-56 md:h-72 lg:h-80 left-[50%] md:left-auto md:right-[10%] lg:left-[102.50px] top-[340px] md:top-[350px] lg:top-[340px] -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
@@ -71,11 +72,12 @@ export default function FeatureCard({
               muted
               playsInline
             />
-            <div className='p-2 lg:p-2.5 left-[50%] lg:left-[78px] top-[50%] lg:top-[156px] -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
+            <div className='p-1.5 sm:p-2 lg:p-2.5 left-[50%] lg:left-[78px] top-[50%] lg:top-[156px] -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
               <svg
-                width='18'
-                height='18'
+                width='16'
+                height='16'
                 viewBox='0 0 18 18'
+                className='w-4 sm:w-[18px]'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
                 <path
@@ -95,7 +97,7 @@ export default function FeatureCard({
             viewBox='0 0 71 79'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
-            className='right-[5%] lg:right-[18%] top-[330px] md:top-[340px] lg:top-[330px] -translate-x-1/2 lg:translate-x-0 absolute lg:block'>
+            className='right-[8%] sm:right-[6%] lg:right-[18%] top-[270px] sm:top-[310px] md:top-[340px] lg:top-[330px] -translate-x-1/2 lg:translate-x-0 absolute hidden sm:block w-12 sm:w-14 md:w-16 lg:w-[71px]'>
             <path
               d='M68.8677 2.00049C61.1912 22.0287 40.3275 57.9567 15.8842 46.0957C-0.804533 37.9981 11.9513 20.155 29.8641 29.7176C47.777 39.2802 42.5173 73.4717 2.86771 70.1661M2.86771 70.1661L8.19039 64.1717M2.86771 70.1661L11.0922 77.0005'
               stroke='#929292'
