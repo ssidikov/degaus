@@ -15,8 +15,8 @@ export default function FeatureCard({
   showVideo = true,
 }: FeatureCardProps) {
   return (
-    <div className='relative w-full h-[650px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-      <div className='w-80 left-[44px] top-[42px] absolute flex flex-col gap-7'>
+    <div className='relative w-full h-[800px] lg:h-[650px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+      <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[42px] absolute flex flex-col gap-5 lg:gap-7'>
         <h3 className="text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
           {title}
         </h3>
@@ -33,7 +33,7 @@ export default function FeatureCard({
       {showVideo && (
         <>
           {/* "See for yourself" indicator with arrow */}
-          <div className='w-auto left-[252.50px] top-[300px] absolute flex items-center gap-1.5'>
+          <div className='w-auto left-[50%] lg:left-[252.50px] top-[280px] lg:top-[300px] -translate-x-1/2 lg:translate-x-0 absolute flex items-center gap-1.5'>
             <svg
               width='16'
               height='16'
@@ -54,20 +54,20 @@ export default function FeatureCard({
           </div>
 
           {/* Eclipse effects below video */}
-          <div className='w-48 h-32 left-[38.50px] top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
-          <div className='w-48 h-32 left-[174.50px] top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[20%] lg:left-[38.50px] top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
+          <div className='w-32 lg:w-48 h-24 lg:h-32 left-[60%] lg:left-[174.50px] top-[550px] lg:top-[600px] absolute bg-violet-300 rounded-full blur-[50px]' />
 
           {/* Video with play button */}
-          <div className='w-48 h-80 left-[102.50px] top-[340px] absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
+          <div className='w-36 lg:w-48 h-64 lg:h-80 left-[50%] lg:left-[102.50px] top-[320px] lg:top-[340px] -translate-x-1/2 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
             <video
-              className='w-48 h-[350px] rounded-[20px] object-cover'
+              className='w-36 lg:w-48 h-[280px] lg:h-[350px] rounded-[20px] object-cover'
               src={videoSrc}
               autoPlay
               loop
               muted
               playsInline
             />
-            <div className='p-2.5 left-[78px] top-[156px] absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
+            <div className='p-2 lg:p-2.5 left-[50%] lg:left-[78px] top-[50%] lg:top-[156px] -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
               <svg
                 width='18'
                 height='18'
@@ -91,7 +91,7 @@ export default function FeatureCard({
             viewBox='0 0 71 79'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
-            className='left-[257.50px] top-[330px] absolute'>
+            className='left-[50%] lg:left-[257.50px] top-[300px] lg:top-[330px] -translate-x-1/2 lg:translate-x-0 absolute hidden lg:block'>
             <path
               d='M68.8677 2.00049C61.1912 22.0287 40.3275 57.9567 15.8842 46.0957C-0.804533 37.9981 11.9513 20.155 29.8641 29.7176C47.777 39.2802 42.5173 73.4717 2.86771 70.1661M2.86771 70.1661L8.19039 64.1717M2.86771 70.1661L11.0922 77.0005'
               stroke='#929292'

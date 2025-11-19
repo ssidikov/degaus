@@ -22,8 +22,8 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-full h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-              <div className='w-80 left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
+            <div className='bg-[#f3f3f9] w-full h-[400px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+              <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   High quality B-Rolls
                 </h3>
@@ -77,21 +77,21 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-32 h-32 left-[277.50px] top-[210px] absolute bg-violet-300/50 rounded-full blur-[50px]' />
+              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[277.50px] top-[250px] lg:top-[210px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[50px]' />
               {/* Video frame thumbnails */}
               <Image
                 src='/images/ai-video-1.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-11 h-20 left-[261.50px] top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-10 lg:w-11 h-16 lg:h-20 left-[60%] lg:left-[261.50px] top-[200px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-11 h-20 left-[339.50px] top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-10 lg:w-11 h-16 lg:h-20 left-[75%] lg:left-[339.50px] top-[240px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -100,7 +100,7 @@ export default function FeaturesSection() {
                 viewBox='0 0 34 25'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-                className='left-[313.50px] top-[167px] absolute'>
+                className='left-[65%] lg:left-[313.50px] top-[210px] lg:top-[167px] absolute hidden lg:block'>
                 <path
                   d='M1.00021 1.00027C9.06013 3.03956 23.8651 9.47009 20.5099 19.5942C18.2192 26.5064 10.7493 22.3768 13.5421 14.9157C16.3349 7.45464 29.7119 7.86912 30.3816 23.5266M30.3816 23.5266L27.8214 21.7338M30.3816 23.5266L32.6017 19.9836'
                   stroke='#929292'
@@ -111,8 +111,8 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-full h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
-              <div className='w-80 left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
+            <div className='bg-[#f3f3f9] w-full h-[500px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+              <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   Built-in video editor
                 </h3>
@@ -402,11 +402,11 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-32 h-32 left-[245.50px] top-[237px] absolute bg-violet-300 rounded-full blur-[50px]' />
+              <div className='w-24 lg:w-32 h-24 lg:h-32 left-[50%] lg:left-[245.50px] top-[250px] lg:top-[237px] -translate-x-1/2 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-[50px]' />
               {/* Video element */}
-              <div className='w-20 h-40 left-[315px] top-[153px] absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
+              <div className='w-16 lg:w-20 h-32 lg:h-40 left-[50%] lg:left-[315px] top-[280px] lg:top-[153px] -translate-x-1/2 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                 <video
-                  className='w-20 h-40 rounded-[10px] object-cover border-[3px] border-white'
+                  className='w-16 lg:w-20 h-32 lg:h-40 rounded-[10px] object-cover border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
                   autoPlay
                   loop
@@ -418,8 +418,8 @@ export default function FeaturesSection() {
           </div>
 
           {/* Feature 4 - Automate */}
-          <div className='bg-zinc-900 w-full h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden'>
-            <div className='w-80 left-[36px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
+          <div className='bg-zinc-900 w-full h-[900px] lg:h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+            <div className='w-[90%] max-w-80 left-[5%] lg:left-[36px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
               <h3 className="self-stretch justify-start text-zinc-100 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                 Automate your content
               </h3>
@@ -483,11 +483,11 @@ export default function FeaturesSection() {
               alt='n8n'
               width={74}
               height={24}
-              className='w-20 h-6 left-[35.50px] top-[321.50px] absolute object-cover'
+              className='w-16 lg:w-20 h-5 lg:h-6 left-[5%] lg:left-[35.50px] top-[300px] lg:top-[321.50px] absolute object-cover hidden lg:block'
             />
 
             {/* Social media icons */}
-            <div className='px-6 left-[294.50px] top-[292px] absolute inline-flex flex-col justify-center items-start gap-3'>
+            <div className='px-4 lg:px-6 right-[5%] lg:left-[294.50px] top-[270px] lg:top-[292px] absolute flex-col justify-center items-start gap-3 hidden lg:flex'>
               <Image src='/icons/instagram.png' alt='instagram' width={21} height={21} />
               <Image
                 src='/icons/tiktok.png'
@@ -506,11 +506,11 @@ export default function FeaturesSection() {
             </div>
 
             {/* Decorative glow */}
-            <div className='w-48 h-32 left-[103.50px] top-[-52px] absolute bg-indigo-400 rounded-full blur-[125px]' />
+            <div className='w-32 lg:w-48 h-24 lg:h-32 left-[50%] lg:left-[103.50px] top-[-30px] lg:top-[-52px] -translate-x-1/2 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[100px] lg:blur-[125px]' />
 
             {/* Horizontal lines */}
-            <div className='w-9 h-0 left-[111.50px] top-[336px] absolute border-t border-zinc-500' />
-            <div className='w-16 h-0 left-[249.50px] top-[336px] absolute border-t border-zinc-500' />
+            <div className='w-9 h-0 left-[111.50px] top-[336px] absolute border-t border-zinc-500 hidden lg:block' />
+            <div className='w-16 h-0 left-[249.50px] top-[336px] absolute border-t border-zinc-500 hidden lg:block' />
 
             {/* Curved connecting lines */}
             <svg
@@ -519,7 +519,7 @@ export default function FeaturesSection() {
               viewBox='0 0 65 34'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
-              className='left-[250px] top-[300.59px] absolute'>
+              className='left-[250px] top-[300.59px] absolute hidden lg:block'>
               <path
                 d='M0.5 32.6855C0.5 32.6855 24.0026 32.0038 36.7507 16.2518C49.4988 0.499872 64.3166 0.499928 64.3166 0.499928'
                 stroke='#808080'
@@ -532,7 +532,7 @@ export default function FeaturesSection() {
               viewBox='0 0 64 33'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
-              className='left-[250.84px] top-[331.06px] absolute'>
+              className='left-[250.84px] top-[331.06px] absolute hidden lg:block'>
               <path
                 d='M0.5 0.5C0.5 0.5 22.5952 0.985972 35.2976 16.4997C47.9999 32.0134 63 32.4997 63 32.4997'
                 stroke='#808080'
@@ -541,7 +541,7 @@ export default function FeaturesSection() {
             </svg>
 
             {/* degaus button with icon */}
-            <div className='w-26 left-[148px] top-[315.50px] absolute inline-flex flex-col justify-start items-center gap-px'>
+            <div className='w-24 lg:w-26 left-[50%] lg:left-[148px] top-[280px] lg:top-[315.50px] -translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden lg:flex'>
               <div className='self-stretch px-3 py-2 bg-indigo-600 rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.50),0px_4px_20px_0px_rgba(0,0,0,0.10),inset_0px_4px_4px_0px_rgba(255,255,255,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.30),inset_0px_2px_2px_0px_rgba(21,44,211,0.25)] inline-flex justify-center items-center gap-2.5'>
                 <Image src='/icons/degaus-btn.svg' alt='degaus icon' width={16} height={16} />
                 <p className="justify-start text-white text-xl font-bold font-['Darker_Grotesque'] leading-7">
@@ -552,9 +552,9 @@ export default function FeaturesSection() {
             </div>
 
             {/* Bottom glow effects */}
-            <div className='w-6 h-36 left-[94.22px] top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
-            <div className='w-8 h-32 left-[183.09px] top-[542.78px] absolute bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
-            <div className='w-6 h-36 left-[284.42px] top-[540px] absolute origin-top-left rotate-[17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 h-24 lg:h-36 left-[20%] lg:left-[94.22px] top-[700px] lg:top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 lg:w-8 h-24 lg:h-32 left-[50%] lg:left-[183.09px] top-[700px] lg:top-[542.78px] -translate-x-1/2 lg:translate-x-0 absolute bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 h-24 lg:h-36 left-[75%] lg:left-[284.42px] top-[700px] lg:top-[540px] absolute origin-top-left rotate-[17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
 
             {/* n8n schema image */}
             <Image
@@ -562,7 +562,7 @@ export default function FeaturesSection() {
               alt='n8n workflow schema'
               width={319}
               height={191}
-              className='w-80 h-48 left-[40.50px] top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700'
+              className='w-[90%] max-w-80 h-40 lg:h-48 left-[5%] lg:left-[40.50px] top-[500px] lg:top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700 object-cover'
             />
           </div>
         </div>
