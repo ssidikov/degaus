@@ -9,8 +9,9 @@ export default function FeaturesSection() {
 
         <SectionHeading title='Everything you need in one place' />
 
-        {/* Features Grid - 3 columns */}
-        <div className='grid grid-cols-1 gap-4 sm:gap-5 md:gap-6 lg:grid-cols-[1fr_1fr_1fr]'>
+        {/* Features Grid - responsive layout */}
+        {/* md: 2 columns with Automate below, lg: 3 columns with Automate in grid */}
+        <div className='grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3'>
           {/* Feature 1 - AI UGCs with Video */}
           <FeatureCard
             title='#1 realistic AI UGCs'
@@ -436,8 +437,9 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* Feature 4 - Automate */}
-          <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[632px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+          {/* Feature 4 - Automate - full width on md, third column on lg */}
+          <div className='md:col-span-2 lg:col-span-1'>
+            <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[632px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
             <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] lg:left-8 top-[24px] sm:top-[32px] md:top-[34px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-6'>
               <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                 Automate your content
@@ -595,6 +597,7 @@ export default function FeaturesSection() {
               height={191}
               className='w-[90%] sm:w-[85%] md:w-[55%] max-w-80 lg:max-w-[285px] h-36 sm:h-40 md:h-44 lg:h-[170px] left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[21%] top-[400px] sm:top-[430px] md:top-[470px] lg:top-[430px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
             />
+            </div>
           </div>
         </div>
       </div>
