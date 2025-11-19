@@ -15,7 +15,7 @@ export default function FeatureCard({
   showVideo = true,
 }: FeatureCardProps) {
   return (
-    <div className='relative w-[400px] h-[650px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+    <div className='relative w-full h-[650px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
       <div className='w-80 left-[44px] top-[42px] absolute flex flex-col gap-7'>
         <h3 className="text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
           {title}

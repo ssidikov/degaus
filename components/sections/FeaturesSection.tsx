@@ -10,7 +10,7 @@ export default function FeaturesSection() {
         <SectionHeading title='Everything you need in one place' />
 
         {/* Features Grid - 3 columns */}
-        <div className='grid grid-cols-1 gap-6 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1fr_1fr]'>
           {/* Feature 1 - AI UGCs with Video */}
           <FeatureCard
             title='#1 realistic AI UGCs'
@@ -22,7 +22,7 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] h-[320px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-full h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
               <div className='w-80 left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   High quality B-Rolls
@@ -111,7 +111,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-auto lg:w-[400px] h-[300px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-full h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
               <div className='w-80 left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   Built-in video editor
@@ -418,7 +418,7 @@ export default function FeaturesSection() {
           </div>
 
           {/* Feature 4 - Automate */}
-          <div className='bg-zinc-900 w-[400px] h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden'>
+          <div className='bg-zinc-900 w-full h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden'>
             <div className='w-80 left-[36px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
               <h3 className="self-stretch justify-start text-zinc-100 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                 Automate your content
@@ -548,7 +548,7 @@ export default function FeaturesSection() {
                   degaus
                 </p>
               </div>
-              <div className='relative top-10 w-20 h-0 rotate-90 border-t border-zinc-500' />
+              <div className='relative top-[56px] w-28 h-0 rotate-90 border-t border-zinc-500' />
             </div>
 
             {/* Bottom glow effects */}
@@ -562,7 +562,7 @@ export default function FeaturesSection() {
               alt='n8n workflow schema'
               width={319}
               height={191}
-              className='w-80 h-48 left-[40.50px] top-[438.50px] absolute rounded-[20px] border-[3px] border-neutral-700'
+              className='w-80 h-48 left-[40.50px] top-[468.50px] absolute rounded-[20px] border-[3px] border-neutral-700'
             />
           </div>
         </div>
