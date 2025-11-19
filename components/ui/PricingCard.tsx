@@ -31,17 +31,17 @@ export default function PricingCard({
   const iconSrc = checkColor === 'pink' ? '/checked-pink.svg' : '/checked-blue.svg'
 
   return (
-    <div className='relative h-auto sm:h-[580px] md:h-[600px] lg:h-[620px] rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] overflow-hidden'>
+    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] overflow-hidden'>
       {/* Popular Badge */}
       {popular && (
         <>
           {/* Glow effects */}
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-[40px] sm:bottom-[41px] absolute bg-violet-300 rounded-full blur-2xl sm:blur-3xl' />
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-[38px] sm:bottom-[42px] absolute bg-violet-300 rounded-full blur-2xl sm:blur-3xl' />
+          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-10 sm:bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
+          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-[38px] sm:bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
         </>
       )}
 
-      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-11 pt-8 sm:pt-9 md:pt-10 lg:pt-11 pb-6 sm:pb-8 md:pb-10'>
+      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-11 pt-8 sm:pt-9 md:pt-10 lg:pt-11 pb-6 sm:pb-7'>
         {/* Plan Name */}
         <h3 className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-[#323232]">
           {name}
@@ -96,7 +96,7 @@ export default function PricingCard({
         <button
           className={cn(
             buttonColor,
-            "mb-6 sm:mb-8 md:mb-10 w-full rounded-xl sm:rounded-[15px] px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-transform hover:scale-105"
+            "z-10 rounded-[15px] px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-white transition-transform hover:scale-105"
           )}
           style={{
             boxShadow:
