@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Badge, SectionHeading, FeatureList, FeatureCard } from '@/components/ui'
-import { AUTOMATION_FEATURES } from '@/lib/constants'
 
 export default function FeaturesSection() {
   return (
@@ -419,48 +418,152 @@ export default function FeaturesSection() {
           </div>
 
           {/* Feature 4 - Automate */}
-          <div className='bg-[#1e1e22] border-[5px] border-[#36383f] rounded-tl-[5px] rounded-bl-[5px] rounded-tr-[20px] rounded-br-[20px] p-9 shadow-lg w-auto lg:w-[400px]'>
-            <h3 className="font-['Darker_Grotesque'] text-[34px] font-bold text-[#eeeeee] tracking-[-1.02px] mb-9 leading-7">
-              Automate your content
-            </h3>
-            <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#e0e0e0] tracking-[-0.72px] mb-3 leading-6">
-              Build systems that actually work, reduce inconsistency & weird cuts
-            </p>
-
-            <FeatureList features={AUTOMATION_FEATURES} iconColor='pink' className='mt-6' />
-
-            {/* Decorative workflow visualization */}
-            <div className='mt-8 flex items-center justify-center gap-4'>
-              <div className='flex flex-col gap-3'>
-                <Image
-                  src='/images/brands/revibe.png'
-                  alt='instagram'
-                  width={21}
-                  height={21}
-                  className='rounded'
-                />
-                <Image
-                  src='/images/brands/voodoo.png'
-                  alt='tiktok'
-                  width={21}
-                  height={21}
-                  className='rounded-[5px]'
-                />
-                <Image
-                  src='/images/brands/mojo.png'
-                  alt='youtube'
-                  width={21}
-                  height={21}
-                  className='rounded-[5px]'
-                />
+          <div className='bg-zinc-900 w-[400px] h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden'>
+            <div className='w-80 left-[36px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-9'>
+              <h3 className="self-stretch justify-start text-zinc-100 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
+                Automate your content
+              </h3>
+              <div className='w-80 flex flex-col justify-start items-start gap-2.5'>
+                <p className="self-stretch justify-start text-neutral-200 text-2xl font-bold font-['Darker_Grotesque'] leading-6">
+                  Build systems that actually work, reduce inconsistency & weird cuts
+                </p>
+                <div className='py-3 flex flex-col justify-start items-start gap-3'>
+                  {/* AI Auto-selects best output */}
+                  <div className='inline-flex justify-start items-center gap-3'>
+                    <div className='relative flex items-center justify-center w-7 h-7'>
+                      <Image
+                        src='/checked-blue.svg'
+                        alt='check'
+                        width={24}
+                        height={24}
+                        className='relative z-10'
+                      />
+                    </div>
+                    <span className="justify-start text-stone-300 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      AI Auto-selects best output
+                    </span>
+                  </div>
+                  {/* Automatic editing */}
+                  <div className='inline-flex justify-start items-center gap-3'>
+                    <div className='relative flex items-center justify-center w-7 h-7'>
+                      <Image
+                        src='/checked-blue.svg'
+                        alt='check'
+                        width={24}
+                        height={24}
+                        className='relative z-10'
+                      />
+                    </div>
+                    <span className="justify-start text-stone-300 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      Automatic editing
+                    </span>
+                  </div>
+                  {/* Plug into your n8n workflows */}
+                  <div className='inline-flex justify-start items-center gap-3'>
+                    <div className='relative flex items-center justify-center w-7 h-7'>
+                      <Image
+                        src='/checked-blue.svg'
+                        alt='check'
+                        width={24}
+                        height={24}
+                        className='relative z-10'
+                      />
+                    </div>
+                    <span className="justify-start text-stone-300 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      Plug into your n8n workflows
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div className='h-20 w-px bg-[#484848]' />
-              <div className='bg-[#485df4] px-4 py-3 rounded-[15px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1),0px_4px_15px_0px_rgba(46,71,249,0.5),inset_0px_2px_2px_0px_rgba(21,44,211,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)]'>
-                <p className="font-['Darker_Grotesque'] text-xl font-bold text-white tracking-[-0.4px]">
+            </div>
+
+            {/* n8n logo */}
+            <Image
+              src='/icons/n8n-icon.png'
+              alt='n8n'
+              width={74}
+              height={24}
+              className='w-20 h-6 left-[35.50px] top-[321.50px] absolute object-cover'
+            />
+
+            {/* Social media icons */}
+            <div className='px-6 left-[294.50px] top-[292px] absolute inline-flex flex-col justify-center items-start gap-3'>
+              <Image src='/icons/instagram.png' alt='instagram' width={21} height={21} />
+              <Image
+                src='/icons/tiktok.png'
+                alt='tiktok'
+                width={21}
+                height={21}
+                className='rounded-[5px]'
+              />
+              <Image
+                src='/icons/youtube.png'
+                alt='youtube'
+                width={21}
+                height={21}
+                className='rounded-[5px]'
+              />
+            </div>
+
+            {/* Decorative glow */}
+            <div className='w-48 h-32 left-[103.50px] top-[-52px] absolute bg-indigo-400 rounded-full blur-[125px]' />
+
+            {/* Horizontal lines */}
+            <div className='w-9 h-0 left-[111.50px] top-[336px] absolute border-t border-zinc-500' />
+            <div className='w-16 h-0 left-[249.50px] top-[336px] absolute border-t border-zinc-500' />
+
+            {/* Curved connecting lines */}
+            <svg
+              width='65'
+              height='34'
+              viewBox='0 0 65 34'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              className='left-[250px] top-[300.59px] absolute'>
+              <path
+                d='M0.5 32.6855C0.5 32.6855 24.0026 32.0038 36.7507 16.2518C49.4988 0.499872 64.3166 0.499928 64.3166 0.499928'
+                stroke='#808080'
+                strokeLinecap='round'
+              />
+            </svg>
+            <svg
+              width='64'
+              height='33'
+              viewBox='0 0 64 33'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              className='left-[250.84px] top-[331.06px] absolute'>
+              <path
+                d='M0.5 0.5C0.5 0.5 22.5952 0.985972 35.2976 16.4997C47.9999 32.0134 63 32.4997 63 32.4997'
+                stroke='#808080'
+                strokeLinecap='round'
+              />
+            </svg>
+
+            {/* degaus button with icon */}
+            <div className='w-26 left-[148px] top-[315.50px] absolute inline-flex flex-col justify-start items-center gap-px'>
+              <div className='self-stretch px-3 py-2 bg-indigo-600 rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.50),0px_4px_20px_0px_rgba(0,0,0,0.10),inset_0px_4px_4px_0px_rgba(255,255,255,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.30),inset_0px_2px_2px_0px_rgba(21,44,211,0.25)] inline-flex justify-center items-center gap-2.5'>
+                <Image src='/icons/degaus-btn.svg' alt='degaus icon' width={16} height={16} />
+                <p className="justify-start text-white text-xl font-bold font-['Darker_Grotesque'] leading-7">
                   degaus
                 </p>
               </div>
+              <div className='relative top-10 w-20 h-0 rotate-90 border-t border-zinc-500' />
             </div>
+
+            {/* Bottom glow effects */}
+            <div className='w-6 h-36 left-[94.22px] top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-8 h-32 left-[183.09px] top-[542.78px] absolute bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+            <div className='w-6 h-36 left-[284.42px] top-[540px] absolute origin-top-left rotate-[17.23deg] bg-gradient-to-b from-white/50 to-zinc-900/50 blur-[50px]' />
+
+            {/* n8n schema image */}
+            <Image
+              src='/images/n8n-schema.png'
+              alt='n8n workflow schema'
+              width={319}
+              height={191}
+              className='w-80 h-48 left-[40.50px] top-[438.50px] absolute rounded-[20px] border-[3px] border-neutral-700'
+            />
           </div>
         </div>
       </div>
