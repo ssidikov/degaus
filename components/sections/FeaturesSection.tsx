@@ -35,7 +35,13 @@ export default function FeaturesSection() {
                     {/* Sora2 pro */}
                     <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                       <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
-                        <Image src='/icons/sora-2.svg' alt='Sora2 pro' width={16} height={16} className='w-3.5 sm:w-4 md:w-4' />
+                        <Image
+                          src='/icons/sora-2.svg'
+                          alt='Sora2 pro'
+                          width={16}
+                          height={16}
+                          className='w-3.5 sm:w-4 md:w-4'
+                        />
                       </div>
                       <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
                         Sora2 pro
@@ -44,7 +50,13 @@ export default function FeaturesSection() {
                     {/* Veo3.1 */}
                     <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                       <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
-                        <Image src='/icons/veo3.svg' alt='veo3' width={16} height={16} className='w-3.5 sm:w-4 md:w-4' />
+                        <Image
+                          src='/icons/veo3.svg'
+                          alt='veo3'
+                          width={16}
+                          height={16}
+                          className='w-3.5 sm:w-4 md:w-4'
+                        />
                       </div>
                       <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
                         Veo3.1
@@ -68,7 +80,13 @@ export default function FeaturesSection() {
                     {/* 10+ more */}
                     <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                       <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
-                        <Image src='/checked-blue.svg' alt='plus' width={24} height={24} className='w-5 sm:w-6' />
+                        <Image
+                          src='/checked-blue.svg'
+                          alt='plus'
+                          width={24}
+                          height={24}
+                          className='w-5 sm:w-6'
+                        />
                       </div>
                       <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
                         10+ more
@@ -489,7 +507,13 @@ export default function FeaturesSection() {
 
             {/* Social media icons */}
             <div className='px-3 sm:px-4 md:px-5 lg:px-6 right-[5%] sm:right-[6%] lg:left-[294.50px] top-[240px] sm:top-[260px] md:top-[270px] lg:top-[292px] absolute flex-col justify-center items-start gap-2 sm:gap-2.5 md:gap-3 hidden md:flex'>
-              <Image src='/icons/instagram.png' alt='instagram' width={21} height={21} className='w-5 sm:w-[21px]' />
+              <Image
+                src='/icons/instagram.png'
+                alt='instagram'
+                width={21}
+                height={21}
+                className='w-5 sm:w-[21px]'
+              />
               <Image
                 src='/icons/tiktok.png'
                 alt='tiktok'
@@ -544,7 +568,13 @@ export default function FeaturesSection() {
             {/* degaus button with icon */}
             <div className='w-20 sm:w-24 lg:w-26 left-[50%] sm:left-[48%] lg:left-[148px] top-[240px] sm:top-[260px] md:top-[280px] lg:top-[315.50px] -translate-x-1/2 sm:-translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
               <div className='self-stretch px-2.5 sm:px-3 py-1.5 sm:py-2 bg-indigo-600 rounded-xl sm:rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.50),0px_4px_20px_0px_rgba(0,0,0,0.10),inset_0px_4px_4px_0px_rgba(255,255,255,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.30),inset_0px_2px_2px_0px_rgba(21,44,211,0.25)] inline-flex justify-center items-center gap-2 sm:gap-2.5'>
-                <Image src='/icons/degaus-btn.svg' alt='degaus icon' width={16} height={16} className='w-3.5 sm:w-4' />
+                <Image
+                  src='/icons/degaus-btn.svg'
+                  alt='degaus icon'
+                  width={16}
+                  height={16}
+                  className='w-3.5 sm:w-4'
+                />
                 <p className="justify-start text-white text-lg sm:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
                   degaus
                 </p>

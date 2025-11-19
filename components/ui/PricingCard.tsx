@@ -29,7 +29,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   // Определяем иконку в зависимости от цвета
   const iconSrc = checkColor === 'pink' ? '/checked-pink.svg' : '/checked-blue.svg'
-  
+
   return (
     <div className='relative h-auto sm:h-[580px] md:h-[600px] lg:h-[620px] rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] overflow-hidden'>
       {/* Popular Badge */}
@@ -52,10 +52,16 @@ export default function PricingCard({
           {price.startsWith('$') ? (
             <p className='leading-tight sm:leading-7'>
               <span className='text-3xl sm:text-[32px] md:text-[34px]'>{price}</span>
-              {period && <span className='text-xl sm:text-2xl tracking-tight sm:tracking-[-0.72px]'>{period}</span>}
+              {period && (
+                <span className='text-xl sm:text-2xl tracking-tight sm:tracking-[-0.72px]'>
+                  {period}
+                </span>
+              )}
             </p>
           ) : (
-            <span className='text-xl sm:text-2xl leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.72px]'>{price}</span>
+            <span className='text-xl sm:text-2xl leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.72px]'>
+              {price}
+            </span>
           )}
         </div>
 
