@@ -28,8 +28,8 @@ export default function FeaturesSection() {
                 <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   High quality B-Rolls
                 </h3>
-                <div className='self-stretch flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-4'>
-                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                <div className='flex flex-col gap-4 xl:gap-6'>
+                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                     Integrations with all major models
                   </p>
                   <div className='flex flex-col justify-start items-start gap-1 sm:gap-1.5'>
@@ -97,21 +97,21 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-20 sm:w-24 md:w-28 lg:w-28 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[250px] top-[190px] sm:top-[210px] md:top-[230px] lg:top-[195px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[40px] sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-20 sm:w-24 md:w-28 lg:w-28 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[65%] top-[190px] sm:top-[210px] md:top-[230px] lg:top-[70%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-2xl' />
               {/* Video frame thumbnails */}
               <Image
                 src='/images/ai-video-1.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[58%] sm:left-[60%] md:right-[25%] lg:left-[235px] top-[140px] sm:top-[150px] md:top-[170px] lg:top-[148px] absolute rounded-[8px] sm:rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[58%] sm:left-[60%] md:right-[25%] lg:left-[69%] top-[140px] sm:top-[150px] md:top-[170px] lg:top-[175px] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[72%] sm:left-[75%] md:right-[5%] lg:left-[305px] top-[175px] sm:top-[185px] md:top-[210px] lg:top-[185px] absolute rounded-[8px] sm:rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[72%] sm:left-[75%] md:right-[5%] lg:left-[85%] top-[175px] sm:top-[185px] md:top-[210px] lg:top-[210px] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -120,7 +120,7 @@ export default function FeaturesSection() {
                 viewBox='0 0 34 25'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-                className='left-[68%] sm:left-[65%] lg:left-[282px] top-[165px] sm:top-[185px] md:top-[200px] lg:top-[155px] absolute hidden md:block w-7 sm:w-8 md:w-[34px] lg:w-7'>
+                className='left-[68%] sm:left-[70%] md:left-[70%] lg:left-[82%] xl:left-[80%] top-[165px] sm:top-[55%] md:top-[60%] lg:top-[62%] absolute w-7 sm:w-8 md:w-[34px] lg:w-7'>
                 <path
                   d='M1.00021 1.00027C9.06013 3.03956 23.8651 9.47009 20.5099 19.5942C18.2192 26.5064 10.7493 22.3768 13.5421 14.9157C16.3349 7.45464 29.7119 7.86912 30.3816 23.5266M30.3816 23.5266L27.8214 21.7338M30.3816 23.5266L32.6017 19.9836'
                   stroke='#929292'
@@ -136,8 +136,8 @@ export default function FeaturesSection() {
                 <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   Built-in video editor
                 </h3>
-                <div className='self-stretch flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-2'>
-                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                <div className='flex flex-col gap-4 xl:gap-6'>
+                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                     Edit your videos effortlessly
                   </p>
                   <div className='py-1.5 sm:py-2 md:py-2.5 lg:py-2 flex flex-col justify-start items-start gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-2'>
@@ -151,7 +151,7 @@ export default function FeaturesSection() {
                           viewBox='0 0 22 22'
                           fill='none'
                           xmlns='http://www.w3.org/2000/svg'
-                          className='absolute w-[18px] sm:w-[20px] md:w-[22px]'>
+                          className='absolute w-[18px] sm:w-5 md:w-[22px]'>
                           <circle
                             cx='11'
                             cy='11'
