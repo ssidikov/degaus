@@ -422,11 +422,11 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-20 sm:w-24 md:w-28 lg:w-28 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[225px] top-[180px] sm:top-[200px] md:top-[230px] lg:top-[220px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-20 sm:w-28 h-20 sm:h-28 left-[50%] sm:left-[85%] top-[180px] sm:top-[200px] md:top-[230px] lg:top-[220px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
               {/* Video element */}
-              <div className='w-14 sm:w-16 md:w-20 lg:w-[72px] h-28 sm:h-32 md:h-36 lg:h-36 left-[50%] sm:left-[52%] md:left-auto md:right-[10%] lg:left-[290px] top-[170px] sm:top-[180px] md:top-[180px] lg:top-[148px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
+              <div className='w-14 sm:w-22 h-28 sm:h-39 left-[50%] sm:left-[88%] top-[170px] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
                 <video
-                  className='w-14 sm:w-16 md:w-20 lg:w-[72px] h-28 sm:h-32 md:h-36 lg:h-36 rounded-lg sm:rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
+                  className='w-full h-full rounded-lg sm:rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
                   autoPlay
                   loop

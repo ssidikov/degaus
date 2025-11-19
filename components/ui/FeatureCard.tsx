@@ -68,7 +68,7 @@ export default function FeatureCard({
               muted
               playsInline
             />
-            <div className='p-1.5 sm:p-2 lg:p-2.5 left-[50%] lg:left-[72px] top-[50%] lg:top-[130px] -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
+            <div className='p-1.5 sm:p-2 lg:p-2.5 left-[50%] lg:left-[72px] top-[50%] sm:top-[130px] -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
               <svg
                 width='16'
                 height='16'
