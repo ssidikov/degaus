@@ -22,13 +22,13 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-4 sm:gap-5 md:gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[280px] md:h-[300px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[6%] lg:left-[44px] top-[20px] sm:top-[22px] md:top-[28px] lg:top-[34px] absolute inline-flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-9'>
-                <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+            <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[280px] md:h-[300px] lg:h-[308px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[6%] lg:left-[32px] top-[20px] sm:top-[22px] md:top-[28px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
+                <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   High quality B-Rolls
                 </h3>
-                <div className='self-stretch flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
-                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                <div className='self-stretch flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-4'>
+                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                     Integrations with all major models
                   </p>
                   <div className='flex flex-col justify-start items-start gap-1 sm:gap-1.5'>
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
                           className='w-3.5 sm:w-4 md:w-4'
                         />
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         Sora2 pro
                       </span>
                     </div>
@@ -58,7 +58,7 @@ export default function FeaturesSection() {
                           className='w-3.5 sm:w-4 md:w-4'
                         />
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         Veo3.1
                       </span>
                     </div>
@@ -73,7 +73,7 @@ export default function FeaturesSection() {
                           className='w-3.5 sm:w-4 md:w-4'
                         />
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         Nanobanana
                       </span>
                     </div>
@@ -88,7 +88,7 @@ export default function FeaturesSection() {
                           className='w-5 sm:w-6'
                         />
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         10+ more
                       </span>
                     </div>
@@ -96,21 +96,21 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-20 sm:w-24 md:w-28 lg:w-32 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[277.50px] top-[190px] sm:top-[210px] md:top-[230px] lg:top-[210px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[40px] sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-20 sm:w-24 md:w-28 lg:w-28 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[250px] top-[190px] sm:top-[210px] md:top-[230px] lg:top-[195px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300/50 rounded-full blur-[40px] sm:blur-[45px] md:blur-[50px]' />
               {/* Video frame thumbnails */}
               <Image
                 src='/images/ai-video-1.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-7 sm:w-8 md:w-10 lg:w-11 h-12 sm:h-14 md:h-16 lg:h-20 left-[58%] sm:left-[60%] md:right-[25%] lg:left-[261.50px] top-[140px] sm:top-[150px] md:top-[170px] lg:top-[159px] absolute rounded-[8px] sm:rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[58%] sm:left-[60%] md:right-[25%] lg:left-[235px] top-[140px] sm:top-[150px] md:top-[170px] lg:top-[148px] absolute rounded-[8px] sm:rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-7 sm:w-8 md:w-10 lg:w-11 h-12 sm:h-14 md:h-16 lg:h-20 left-[72%] sm:left-[75%] md:right-[5%] lg:left-[339.50px] top-[175px] sm:top-[185px] md:top-[210px] lg:top-[200px] absolute rounded-[8px] sm:rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[72%] sm:left-[75%] md:right-[5%] lg:left-[305px] top-[175px] sm:top-[185px] md:top-[210px] lg:top-[185px] absolute rounded-[8px] sm:rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -119,7 +119,7 @@ export default function FeaturesSection() {
                 viewBox='0 0 34 25'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-                className='left-[68%] sm:left-[65%] lg:left-[313.50px] top-[165px] sm:top-[185px] md:top-[200px] lg:top-[167px] absolute hidden md:block w-7 sm:w-8 md:w-[34px]'>
+                className='left-[68%] sm:left-[65%] lg:left-[282px] top-[165px] sm:top-[185px] md:top-[200px] lg:top-[155px] absolute hidden md:block w-7 sm:w-8 md:w-[34px] lg:w-7'>
                 <path
                   d='M1.00021 1.00027C9.06013 3.03956 23.8651 9.47009 20.5099 19.5942C18.2192 26.5064 10.7493 22.3768 13.5421 14.9157C16.3349 7.45464 29.7119 7.86912 30.3816 23.5266M30.3816 23.5266L27.8214 21.7338M30.3816 23.5266L32.6017 19.9836'
                   stroke='#929292'
@@ -130,16 +130,16 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-full h-[240px] sm:h-[260px] md:h-[300px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
-              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[6%] lg:left-[44px] top-[18px] sm:top-[20px] md:top-[28px] lg:top-[34px] absolute inline-flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-9'>
-                <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+            <div className='bg-[#f3f3f9] w-full h-[240px] sm:h-[260px] md:h-[300px] lg:h-[308px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[6%] lg:left-[32px] top-[18px] sm:top-[20px] md:top-[28px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
+                <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   Built-in video editor
                 </h3>
-                <div className='self-stretch flex flex-col justify-start items-start gap-2 sm:gap-2.5'>
-                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                <div className='self-stretch flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-2'>
+                  <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl lg:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                     Edit your videos effortlessly
                   </p>
-                  <div className='py-1.5 sm:py-2 md:py-2.5 lg:py-3 flex flex-col justify-start items-start gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3'>
+                  <div className='py-1.5 sm:py-2 md:py-2.5 lg:py-2 flex flex-col justify-start items-start gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-2'>
                     {/* Overlays, split screens */}
                     <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                       <div className='relative flex items-center justify-center w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7'>
@@ -223,7 +223,7 @@ export default function FeaturesSection() {
                           />
                         </svg>
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         Overlays, split screens
                       </span>
                     </div>
@@ -318,7 +318,7 @@ export default function FeaturesSection() {
                           />
                         </svg>
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         AI captions (50+ fonts)
                       </span>
                     </div>
@@ -413,7 +413,7 @@ export default function FeaturesSection() {
                           />
                         </svg>
                       </div>
-                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                      <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                         Transitions & effects
                       </span>
                     </div>
@@ -421,11 +421,11 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-20 sm:w-24 md:w-28 lg:w-32 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[245.50px] top-[180px] sm:top-[200px] md:top-[230px] lg:top-[237px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-20 sm:w-24 md:w-28 lg:w-28 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[225px] top-[180px] sm:top-[200px] md:top-[230px] lg:top-[220px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
               {/* Video element */}
-              <div className='w-14 sm:w-16 md:w-20 lg:w-20 h-28 sm:h-32 md:h-36 lg:h-40 left-[50%] sm:left-[52%] md:left-auto md:right-[10%] lg:left-[320px] top-[170px] sm:top-[180px] md:top-[180px] lg:top-[153px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
+              <div className='w-14 sm:w-16 md:w-20 lg:w-[72px] h-28 sm:h-32 md:h-36 lg:h-36 left-[50%] sm:left-[52%] md:left-auto md:right-[10%] lg:left-[290px] top-[170px] sm:top-[180px] md:top-[180px] lg:top-[148px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
                 <video
-                  className='w-14 sm:w-16 md:w-20 lg:w-20 h-28 sm:h-32 md:h-36 lg:h-40 rounded-lg sm:rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
+                  className='w-14 sm:w-16 md:w-20 lg:w-[72px] h-28 sm:h-32 md:h-36 lg:h-36 rounded-lg sm:rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
                   autoPlay
                   loop
@@ -437,16 +437,16 @@ export default function FeaturesSection() {
           </div>
 
           {/* Feature 4 - Automate */}
-          <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[650px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
-            <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] lg:left-9 top-[24px] sm:top-[32px] md:top-[34px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-9'>
-              <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+          <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[632px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+            <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] lg:left-8 top-[24px] sm:top-[32px] md:top-[34px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-6'>
+              <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                 Automate your content
               </h3>
-              <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2 sm:gap-2.5'>
-                <p className="self-stretch justify-start text-neutral-200 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-6">
+              <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-2'>
+                <p className="self-stretch justify-start text-neutral-200 text-lg sm:text-xl md:text-2xl lg:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-6 lg:leading-6">
                   Build systems that actually work, reduce inconsistency & weird cuts
                 </p>
-                <div className='py-2 sm:py-2.5 md:py-3 flex flex-col justify-start items-start gap-2 sm:gap-2.5 md:gap-3'>
+                <div className='py-2 sm:py-2.5 md:py-3 lg:py-2 flex flex-col justify-start items-start gap-2 sm:gap-2.5 md:gap-3 lg:gap-2'>
                   {/* AI Auto-selects best output */}
                   <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                     <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7'>
@@ -458,37 +458,37 @@ export default function FeaturesSection() {
                         className='relative z-10 w-5 sm:w-6'
                       />
                     </div>
-                    <span className="justify-start text-stone-300 text-lg sm:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                    <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                       AI Auto-selects best output
                     </span>
                   </div>
                   {/* Automatic editing */}
                   <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                    <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7'>
+                    <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-6 lg:w-6 h-6 sm:h-6 md:h-6 lg:h-6'>
                       <Image
                         src='/checked-blue.svg'
                         alt='check'
                         width={24}
                         height={24}
-                        className='relative z-10 w-5 sm:w-6'
+                        className='relative z-10 w-5 sm:w-6 lg:w-5'
                       />
                     </div>
-                    <span className="justify-start text-stone-300 text-lg sm:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                    <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                       Automatic editing
                     </span>
                   </div>
                   {/* Plug into your n8n workflows */}
                   <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                    <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7'>
+                    <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-6 lg:w-6 h-6 sm:h-6 md:h-6 lg:h-6'>
                       <Image
                         src='/checked-blue.svg'
                         alt='check'
                         width={24}
                         height={24}
-                        className='relative z-10 w-5 sm:w-6'
+                        className='relative z-10 w-5 sm:w-6 lg:w-5'
                       />
                     </div>
-                    <span className="justify-start text-stone-300 text-lg sm:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+                    <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
                       Plug into your n8n workflows
                     </span>
                   </div>
@@ -502,11 +502,11 @@ export default function FeaturesSection() {
               alt='n8n'
               width={74}
               height={24}
-              className='w-14 sm:w-16 md:w-18 lg:w-20 h-4 sm:h-5 lg:h-6 left-[5%] sm:left-[5.5%] lg:left-[35.50px] top-[260px] sm:top-[280px] md:top-[300px] lg:top-[323px] absolute object-cover hidden sm:block'
+              className='w-14 sm:w-16 md:w-18 lg:w-[70px] h-4 sm:h-5 lg:h-[22px] left-[5%] sm:left-[5.5%] lg:left-8 top-[260px] sm:top-[280px] md:top-[300px] lg:top-[260px] absolute object-cover hidden sm:block'
             />
 
             {/* Social media icons */}
-            <div className='px-3 sm:px-4 md:px-5 lg:px-6 right-[5%] sm:right-[6%] lg:left-[294.50px] top-[240px] sm:top-[260px] md:top-[270px] lg:top-[292px] absolute flex-col justify-center items-start gap-2 sm:gap-2.5 md:gap-3 hidden md:flex'>
+            <div className='px-3 sm:px-4 md:px-5 lg:px-5 right-[5%] sm:right-[6%] lg:left-[265px] top-[240px] sm:top-[260px] md:top-[270px] lg:top-[240px] absolute flex-col justify-center items-start gap-2 sm:gap-2.5 md:gap-3 lg:gap-2 hidden md:flex'>
               <Image
                 src='/icons/instagram.png'
                 alt='instagram'
@@ -531,7 +531,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Decorative glow */}
-            <div className='w-24 sm:w-32 md:w-40 lg:w-48 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[48%] md:right-[20%] lg:left-[103.50px] top-[-20px] sm:top-[-30px] md:top-[-40px] lg:top-[-52px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[125px]' />
+            <div className='w-24 sm:w-32 md:w-40 lg:w-40 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[48%] md:right-[20%] lg:left-[95px] top-[-20px] sm:top-[-30px] md:top-[-40px] lg:top-[-45px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[100px]' />
 
             {/* Horizontal lines */}
             <div className='w-9 h-0 left-[111.50px] top-[336px] absolute border-t border-zinc-500 hidden lg:block' />
@@ -566,7 +566,7 @@ export default function FeaturesSection() {
             </svg>
 
             {/* degaus button with icon */}
-            <div className='w-20 sm:w-24 lg:w-26 left-[50%] sm:left-[48%] lg:left-[148px] top-60 sm:top-[260px] md:top-[280px] lg:top-[315.50px] -translate-x-1/2 sm:-translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
+            <div className='w-20 sm:w-24 lg:w-24 left-[50%] sm:left-[48%] lg:left-[136px] top-60 sm:top-[260px] md:top-[280px] lg:top-[260px] -translate-x-1/2 sm:-translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
               <div className='self-stretch px-2.5 sm:px-3 py-1.5 sm:py-2 bg-indigo-600 rounded-xl sm:rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.50),0px_4px_20px_0px_rgba(0,0,0,0.10),inset_0px_4px_4px_0px_rgba(255,255,255,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.30),inset_0px_2px_2px_0px_rgba(21,44,211,0.25)] inline-flex justify-center items-center gap-2 sm:gap-2.5'>
                 <Image
                   src='/icons/degaus-btn.svg'
@@ -583,9 +583,9 @@ export default function FeaturesSection() {
             </div>
 
             {/* Bottom glow effects */}
-            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-36 left-[20%] sm:left-[22%] md:right-[35%] lg:left-[94.22px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
-            <div className='w-5 sm:w-6 md:w-7 lg:w-8 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[48%] md:left-auto md:right-[20%] lg:left-[183.09px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[542.78px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
-            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-36 left-[75%] sm:left-[72%] md:right-[5%] lg:left-[284.42px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[540px] absolute origin-top-left rotate-[17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-32 left-[20%] sm:left-[22%] md:right-[35%] lg:left-[85px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[530px] absolute origin-top-left rotate-[-17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+            <div className='w-5 sm:w-6 md:w-7 lg:w-7 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[48%] md:left-auto md:right-[20%] lg:left-[165px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[525px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-32 left-[75%] sm:left-[72%] md:right-[5%] lg:left-[255px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[525px] absolute origin-top-left rotate-[17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
 
             {/* n8n schema image */}
             <Image
@@ -593,7 +593,7 @@ export default function FeaturesSection() {
               alt='n8n workflow schema'
               width={319}
               height={191}
-              className='w-[90%] sm:w-[85%] md:w-[55%] max-w-80 h-36 sm:h-40 md:h-44 lg:h-48 left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[23%] top-[400px] sm:top-[430px] md:top-[470px] lg:top-[468.50px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
+              className='w-[90%] sm:w-[85%] md:w-[55%] max-w-80 lg:max-w-[285px] h-36 sm:h-40 md:h-44 lg:h-[170px] left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[21%] top-[400px] sm:top-[430px] md:top-[470px] lg:top-[430px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
             />
           </div>
         </div>
