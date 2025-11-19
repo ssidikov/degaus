@@ -59,7 +59,7 @@ export default function FeatureCard({
           <div className='w-24 sm:w-28 md:w-32 lg:w-40 h-20 sm:h-20 md:h-24 lg:h-28 left-[60%] sm:left-[58%] md:right-[5%] lg:left-40 top-[440px] sm:top-[480px] md:top-[550px] lg:top-[560px] absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
 
           {/* Video with play button */}
-          <div className='w-32 sm:w-48 h-56 sm:h-80 left-[50%] md:left-[25%] lg:left-[20%] xl:left-[120px] top-[58%] sm:top-[50%] xl:top-80 -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
+          <div className='w-32 sm:w-48 h-56 sm:h-80 left-[50%] md:left-[25%] lg:left-[20%] xl:left-[25%] top-[58%] sm:top-[50%] lg:top-[55%] xl:top-80 -translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] rounded-[20px]'>
             <video
               className='w-full h-full rounded-[20px] object-cover'
               src={videoSrc}
@@ -93,7 +93,7 @@ export default function FeatureCard({
             viewBox='0 0 71 79'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
-            className='right-[15%] top-[52%] sm:top-[40%] md:top-[340px] lg:top-[310px] -translate-x-1/2 lg:translate-x-0 absolute sm:block w-12 sm:w-14 md:w-16 lg:w-[71px]'>
+            className='right-[15%] lg:right-[23%] xl:right-[20%] top-[52%] sm:top-[45%] lg:top-[52%] -translate-x-1/2 lg:translate-x-0 absolute sm:block w-12 sm:w-14 md:w-16 lg:w-[71px]'>
             <path
               d='M68.8677 2.00049C61.1912 22.0287 40.3275 57.9567 15.8842 46.0957C-0.804533 37.9981 11.9513 20.155 29.8641 29.7176C47.777 39.2802 42.5173 73.4717 2.86771 70.1661M2.86771 70.1661L8.19039 64.1717M2.86771 70.1661L11.0922 77.0005'
               stroke='#929292'
