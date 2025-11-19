@@ -22,37 +22,37 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-full h-[313px] md:h-[313px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-              <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
-                <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
+            <div className='bg-[#f3f3f9] w-full h-[280px] md:h-[300px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+              <div className='w-[90%] max-w-80 left-[5%] md:left-[6%] lg:left-[44px] top-[24px] md:top-[28px] lg:top-[34px] absolute inline-flex flex-col justify-start items-start gap-4 md:gap-5 lg:gap-9'>
+                <h3 className="self-stretch justify-start text-zinc-800 text-3xl md:text-4xl lg:text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   High quality B-Rolls
                 </h3>
-                <div className='self-stretch flex flex-col justify-start items-start gap-6'>
-                  <p className="self-stretch justify-start text-zinc-600 text-2xl font-bold font-['Darker_Grotesque'] leading-7">
+                <div className='self-stretch flex flex-col justify-start items-start gap-4 md:gap-5 lg:gap-6'>
+                  <p className="self-stretch justify-start text-zinc-600 text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-7">
                     Integrations with all major models
                   </p>
                   <div className='flex flex-col justify-start items-start gap-1.5'>
                     {/* Sora2 pro */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                      <div className='relative flex items-center justify-center w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6'>
                         <Image src='/icons/sora-2.svg' alt='Sora2 pro' width={16} height={16} />
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Sora2 pro
                       </span>
                     </div>
                     {/* Veo3.1 */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                      <div className='relative flex items-center justify-center w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6'>
                         <Image src='/icons/veo3.svg' alt='veo3' width={16} height={16} />
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Veo3.1
                       </span>
                     </div>
                     {/* Nanobanana */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                      <div className='relative flex items-center justify-center w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6'>
                         <Image
                           src='/icons/nanobanana.svg'
                           alt='nanobanana'
@@ -60,16 +60,16 @@ export default function FeaturesSection() {
                           height={16}
                         />
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Nanobanana
                       </span>
                     </div>
                     {/* 10+ more */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-[24px] h-[24px]'>
+                      <div className='relative flex items-center justify-center w-5 h-5 md:w-6 md:h-6 lg:w-6 lg:h-6'>
                         <Image src='/checked-blue.svg' alt='plus' width={24} height={24} />
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         10+ more
                       </span>
                     </div>
@@ -84,14 +84,14 @@ export default function FeaturesSection() {
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-10 lg:w-11 h-16 lg:h-20 left-[60%] md:right-[25%] lg:left-[261.50px] top-[170px] md:top-[180px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-9 md:w-10 lg:w-11 h-14 md:h-16 lg:h-20 left-[60%] md:right-[25%] lg:left-[261.50px] top-[160px] md:top-[170px] lg:top-[159px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-10 lg:w-11 h-16 lg:h-20 left-[75%] md:right-[5%] lg:left-[339.50px] top-[210px] md:top-[220px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
+                className='w-9 md:w-10 lg:w-11 h-14 md:h-16 lg:h-20 left-[75%] md:right-[5%] lg:left-[339.50px] top-[200px] md:top-[210px] lg:top-[200px] absolute rounded-[10px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -111,20 +111,20 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-full h-[313px] md:h-[313px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
-              <div className='w-[90%] max-w-80 left-[5%] lg:left-[44px] top-[34px] absolute inline-flex flex-col justify-start items-start gap-6 lg:gap-9'>
-                <h3 className="self-stretch justify-start text-zinc-800 text-4xl font-bold font-['Darker_Grotesque'] leading-7">
+            <div className='bg-[#f3f3f9] w-full h-[280px] md:h-[300px] lg:h-[313px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+              <div className='w-[90%] max-w-80 left-[5%] md:left-[6%] lg:left-[44px] top-[24px] md:top-[28px] lg:top-[34px] absolute inline-flex flex-col justify-start items-start gap-4 md:gap-5 lg:gap-9'>
+                <h3 className="self-stretch justify-start text-zinc-800 text-3xl md:text-4xl lg:text-4xl font-bold font-['Darker_Grotesque'] leading-7">
                   Built-in video editor
                 </h3>
                 <div className='self-stretch flex flex-col justify-start items-start gap-2.5'>
-                  <p className="self-stretch justify-start text-zinc-600 text-2xl font-bold font-['Darker_Grotesque'] leading-7">
+                  <p className="self-stretch justify-start text-zinc-600 text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-7">
                     Edit your videos effortlessly
                   </p>
-                  <div className='py-3 flex flex-col justify-start items-start gap-3'>
+                  <div className='py-2 md:py-2.5 lg:py-3 flex flex-col justify-start items-start gap-2 md:gap-2.5 lg:gap-3'>
                     {/* Overlays, split screens */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-7 h-7'>
-                        <div className='w-7 h-7 bg-indigo-400/10 rounded-full absolute' />
+                      <div className='relative flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-7 lg:h-7'>
+                        <div className='w-6 h-6 md:w-7 md:h-7 lg:w-7 lg:h-7 bg-indigo-400/10 rounded-full absolute' />
                         <svg
                           width='22'
                           height='22'
@@ -204,13 +204,13 @@ export default function FeaturesSection() {
                           />
                         </svg>
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Overlays, split screens
                       </span>
                     </div>
                     {/* AI captions (50+ fonts) */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-7 h-7'>
+                      <div className='relative flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-7 lg:h-7'>
                         <svg
                           width='28'
                           height='28'
@@ -299,13 +299,13 @@ export default function FeaturesSection() {
                           />
                         </svg>
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         AI captions (50+ fonts)
                       </span>
                     </div>
                     {/* Transitions & effects */}
                     <div className='inline-flex justify-start items-center gap-3'>
-                      <div className='relative flex items-center justify-center w-7 h-7'>
+                      <div className='relative flex items-center justify-center w-6 h-6 md:w-7 md:h-7 lg:w-7 lg:h-7'>
                         <svg
                           width='28'
                           height='28'
@@ -394,7 +394,7 @@ export default function FeaturesSection() {
                           />
                         </svg>
                       </div>
-                      <span className="justify-start text-neutral-400 text-xl font-semibold font-['Darker_Grotesque'] leading-7">
+                      <span className="justify-start text-neutral-400 text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-7">
                         Transitions & effects
                       </span>
                     </div>
