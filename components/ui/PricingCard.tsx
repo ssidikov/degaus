@@ -36,12 +36,12 @@ export default function PricingCard({
       {popular && (
         <>
           {/* Glow effects */}
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-10 sm:bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-[38px] sm:bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
+          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
+          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
         </>
       )}
 
-      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-11 pt-8 sm:pt-9 md:pt-10 lg:pt-11 pb-6 sm:pb-7'>
+      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-11 pb-6 sm:pb-7 xl:pr-9'>
         {/* Plan Name */}
         <h3 className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-[#323232]">
           {name}
