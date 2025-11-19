@@ -423,7 +423,7 @@ export default function FeaturesSection() {
               {/* Decorative glow effect */}
               <div className='w-20 sm:w-24 md:w-28 lg:w-32 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[52%] md:right-[15%] lg:left-[245.50px] top-[180px] sm:top-[200px] md:top-[230px] lg:top-[237px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
               {/* Video element */}
-              <div className='w-14 sm:w-16 md:w-20 lg:w-20 h-28 sm:h-32 md:h-36 lg:h-40 left-[50%] sm:left-[52%] md:left-auto md:right-[10%] lg:left-[315px] top-[170px] sm:top-[180px] md:top-[180px] lg:top-[153px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
+              <div className='w-14 sm:w-16 md:w-20 lg:w-20 h-28 sm:h-32 md:h-36 lg:h-40 left-[50%] sm:left-[52%] md:left-auto md:right-[10%] lg:left-[320px] top-[170px] sm:top-[180px] md:top-[180px] lg:top-[153px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
                 <video
                   className='w-14 sm:w-16 md:w-20 lg:w-20 h-28 sm:h-32 md:h-36 lg:h-40 rounded-lg sm:rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
@@ -566,7 +566,7 @@ export default function FeaturesSection() {
             </svg>
 
             {/* degaus button with icon */}
-            <div className='w-20 sm:w-24 lg:w-26 left-[50%] sm:left-[48%] lg:left-[148px] top-[240px] sm:top-[260px] md:top-[280px] lg:top-[315.50px] -translate-x-1/2 sm:-translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
+            <div className='w-20 sm:w-24 lg:w-26 left-[50%] sm:left-[48%] lg:left-[148px] top-60 sm:top-[260px] md:top-[280px] lg:top-[315.50px] -translate-x-1/2 sm:-translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
               <div className='self-stretch px-2.5 sm:px-3 py-1.5 sm:py-2 bg-indigo-600 rounded-xl sm:rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.50),0px_4px_20px_0px_rgba(0,0,0,0.10),inset_0px_4px_4px_0px_rgba(255,255,255,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.30),inset_0px_2px_2px_0px_rgba(21,44,211,0.25)] inline-flex justify-center items-center gap-2 sm:gap-2.5'>
                 <Image
                   src='/icons/degaus-btn.svg'
@@ -583,9 +583,9 @@ export default function FeaturesSection() {
             </div>
 
             {/* Bottom glow effects */}
-            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-36 left-[20%] sm:left-[22%] md:right-[35%] lg:left-[94.22px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-[40px] sm:blur-[45px] md:blur-[50px]' />
-            <div className='w-5 sm:w-6 md:w-7 lg:w-8 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[48%] md:left-auto md:right-[20%] lg:left-[183.09px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[542.78px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-linear-to-b from-white/50 to-zinc-900/50 blur-[40px] sm:blur-[45px] md:blur-[50px]' />
-            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-36 left-[75%] sm:left-[72%] md:right-[5%] lg:left-[284.42px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[540px] absolute origin-top-left rotate-[17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-[40px] sm:blur-[45px] md:blur-[50px]' />
+            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-36 left-[20%] sm:left-[22%] md:right-[35%] lg:left-[94.22px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[546.62px] absolute origin-top-left rotate-[-17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+            <div className='w-5 sm:w-6 md:w-7 lg:w-8 h-20 sm:h-24 md:h-28 lg:h-32 left-[50%] sm:left-[48%] md:left-auto md:right-[20%] lg:left-[183.09px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[542.78px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+            <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-36 left-[75%] sm:left-[72%] md:right-[5%] lg:left-[284.42px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[540px] absolute origin-top-left rotate-[17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
 
             {/* n8n schema image */}
             <Image
@@ -593,7 +593,7 @@ export default function FeaturesSection() {
               alt='n8n workflow schema'
               width={319}
               height={191}
-              className='w-[90%] sm:w-[85%] md:w-[55%] max-w-80 h-36 sm:h-40 md:h-44 lg:h-48 left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[40.50px] top-[400px] sm:top-[430px] md:top-[470px] lg:top-[468.50px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
+              className='w-[90%] sm:w-[85%] md:w-[55%] max-w-80 h-36 sm:h-40 md:h-44 lg:h-48 left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[23%] top-[400px] sm:top-[430px] md:top-[470px] lg:top-[468.50px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
             />
           </div>
         </div>
