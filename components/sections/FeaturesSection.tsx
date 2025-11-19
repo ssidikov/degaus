@@ -23,7 +23,7 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-4 sm:gap-5 md:gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[280px] md:h-[300px] lg:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
               <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   High quality B-Rolls
@@ -104,14 +104,14 @@ export default function FeaturesSection() {
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-11 h-20 left-[63%] top-[50%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-11 h-20 left-[63%] md:left-[65%] xl:left-[68%] top-[50%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-11 h-20 left-[84%] top-[65%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-11 h-20 left-[84%] top-[65%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -131,7 +131,7 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-full h-60 sm:h-[260px] md:h-[300px] lg:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+            <div className='bg-[#f3f3f9] w-full h-60 sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
               <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   Built-in video editor
