@@ -104,14 +104,14 @@ export default function FeaturesSection() {
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[58%] sm:left-[60%] md:right-[25%] lg:left-[69%] top-[140px] sm:top-[150px] md:top-[170px] lg:top-[175px] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-8 md:w-10 lg:w-10 h-14 lg:h-[72px] left-[58%] sm:left-[60%] md:right-[25%] lg:left-[69%] top-[140px] sm:top-[150px] md:top-[170px] lg:top-[175px] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
               />
               <Image
                 src='/images/ai-video-2.jpg'
                 alt='video frame'
                 width={45}
                 height={80}
-                className='w-7 sm:w-8 md:w-10 lg:w-10 h-12 sm:h-14 md:h-16 lg:h-[72px] left-[72%] sm:left-[75%] md:right-[5%] lg:left-[85%] top-[175px] sm:top-[185px] md:top-[210px] lg:top-[210px] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
+                className='w-8 lg:w-10 h-14 lg:h-[72px] left-[87%] top-[72%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 sm:border-[3px] border-white object-cover'
               />
               {/* Decorative arrow */}
               <svg
@@ -120,7 +120,7 @@ export default function FeaturesSection() {
                 viewBox='0 0 34 25'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-                className='left-[68%] sm:left-[70%] md:left-[70%] lg:left-[82%] xl:left-[80%] top-[165px] sm:top-[55%] md:top-[60%] lg:top-[62%] absolute w-7 sm:w-8 md:w-[34px] lg:w-7'>
+                className='left-[82%] sm:left-[70%] md:left-[70%] lg:left-[82%] xl:left-[80%] top-[62%] sm:top-[55%] md:top-[60%] lg:top-[62%] absolute w-7 sm:w-8 md:w-[34px] lg:w-7'>
                 <path
                   d='M1.00021 1.00027C9.06013 3.03956 23.8651 9.47009 20.5099 19.5942C18.2192 26.5064 10.7493 22.3768 13.5421 14.9157C16.3349 7.45464 29.7119 7.86912 30.3816 23.5266M30.3816 23.5266L27.8214 21.7338M30.3816 23.5266L32.6017 19.9836'
                   stroke='#929292'
