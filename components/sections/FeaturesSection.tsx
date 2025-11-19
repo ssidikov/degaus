@@ -440,7 +440,7 @@ export default function FeaturesSection() {
           {/* Feature 4 - Automate - full width on md, third column on lg */}
           <div className='md:col-span-2 lg:col-span-1'>
             <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[632px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
-              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] lg:left-8 top-[24px] sm:top-[32px] md:top-[34px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-6'>
+              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[5%] lg:left-8 top-[24px] sm:top-[32px] md:top-[34px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-6'>
                 <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   Automate your content
                 </h3>
@@ -504,11 +504,11 @@ export default function FeaturesSection() {
                 alt='n8n'
                 width={74}
                 height={24}
-                className='w-14 sm:w-16 md:w-18 lg:w-[70px] h-4 sm:h-5 lg:h-[22px] left-[5%] sm:left-[5.5%] lg:left-8 top-[260px] sm:top-[280px] md:top-[300px] lg:top-[260px] absolute object-cover hidden sm:block'
+                className='w-14 sm:w-16 md:w-18 lg:w-[70px] h-4 sm:h-5 lg:h-[22px] left-[5%] sm:left-[5.5%] md:left-[5%] lg:left-8 top-[260px] sm:top-[280px] md:top-[260px] lg:top-[260px] absolute object-cover hidden sm:block'
               />
 
               {/* Social media icons */}
-              <div className='px-3 sm:px-4 md:px-5 lg:px-5 right-[5%] sm:right-[6%] lg:left-[265px] top-[240px] sm:top-[260px] md:top-[270px] lg:top-[240px] absolute flex-col justify-center items-start gap-2 sm:gap-2.5 md:gap-3 lg:gap-2 hidden md:flex'>
+              <div className='px-3 sm:px-4 md:px-5 lg:px-5 right-[5%] sm:right-[6%] md:right-[8%] lg:left-[265px] top-[240px] sm:top-[260px] md:top-[34px] lg:top-[240px] absolute flex-col justify-center items-start gap-2 sm:gap-2.5 md:gap-3 lg:gap-2 hidden md:flex'>
                 <Image
                   src='/icons/instagram.png'
                   alt='instagram'
@@ -533,11 +533,11 @@ export default function FeaturesSection() {
               </div>
 
               {/* Decorative glow */}
-              <div className='w-24 sm:w-32 md:w-40 lg:w-40 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[48%] md:right-[20%] lg:left-[95px] top-[-20px] sm:top-[-30px] md:top-[-40px] lg:top-[-45px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[100px]' />
+              <div className='w-24 sm:w-32 md:w-40 lg:w-40 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[48%] md:left-auto md:right-[15%] lg:left-[95px] top-[-20px] sm:top-[-30px] md:top-[-40px] lg:top-[-45px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-indigo-400 rounded-full blur-[80px] sm:blur-[100px] lg:blur-[100px]' />
 
               {/* Horizontal lines */}
-              <div className='w-9 h-0 left-[111.50px] top-[336px] absolute border-t border-zinc-500 hidden lg:block' />
-              <div className='w-16 h-0 left-[249.50px] top-[336px] absolute border-t border-zinc-500 hidden lg:block' />
+              <div className='w-9 h-0 md:left-auto md:right-[24.5%] lg:left-[111.50px] md:top-[220px] lg:top-[336px] absolute border-t border-zinc-500 hidden md:block' />
+              <div className='w-16 h-0 md:left-auto md:right-[8%] lg:left-[249.50px] md:top-[220px] lg:top-[336px] absolute border-t border-zinc-500 hidden md:block' />
 
               {/* Curved connecting lines */}
               <svg
@@ -546,7 +546,7 @@ export default function FeaturesSection() {
                 viewBox='0 0 65 34'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-                className='left-[250px] top-[300.59px] absolute hidden lg:block'>
+                className='md:left-auto md:right-[8%] lg:left-[250px] md:top-[184px] lg:top-[300.59px] absolute hidden md:block'>
                 <path
                   d='M0.5 32.6855C0.5 32.6855 24.0026 32.0038 36.7507 16.2518C49.4988 0.499872 64.3166 0.499928 64.3166 0.499928'
                   stroke='#808080'
@@ -559,7 +559,7 @@ export default function FeaturesSection() {
                 viewBox='0 0 64 33'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-                className='left-[250.84px] top-[331.06px] absolute hidden lg:block'>
+                className='md:left-auto md:right-[8%] lg:left-[250.84px] md:top-[214px] lg:top-[331.06px] absolute hidden md:block'>
                 <path
                   d='M0.5 0.5C0.5 0.5 22.5952 0.985972 35.2976 16.4997C47.9999 32.0134 63 32.4997 63 32.4997'
                   stroke='#808080'
@@ -568,7 +568,7 @@ export default function FeaturesSection() {
               </svg>
 
               {/* degaus button with icon */}
-              <div className='w-20 sm:w-24 lg:w-24 left-[50%] sm:left-[48%] lg:left-[136px] top-60 sm:top-[260px] md:top-[280px] lg:top-[260px] -translate-x-1/2 sm:-translate-x-1/2 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
+              <div className='w-20 sm:w-24 lg:w-24 left-[50%] sm:left-[48%] md:left-auto md:right-[20%] lg:left-[136px] top-60 sm:top-[260px] md:top-[180px] lg:top-[260px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute flex-col justify-start items-center gap-px hidden md:flex'>
                 <div className='self-stretch px-2.5 sm:px-3 py-1.5 sm:py-2 bg-indigo-600 rounded-xl sm:rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.50),0px_4px_20px_0px_rgba(0,0,0,0.10),inset_0px_4px_4px_0px_rgba(255,255,255,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.30),inset_0px_2px_2px_0px_rgba(21,44,211,0.25)] inline-flex justify-center items-center gap-2 sm:gap-2.5'>
                   <Image
                     src='/icons/degaus-btn.svg'
@@ -585,9 +585,9 @@ export default function FeaturesSection() {
               </div>
 
               {/* Bottom glow effects */}
-              <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-32 left-[20%] sm:left-[22%] md:right-[35%] lg:left-[85px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[530px] absolute origin-top-left rotate-[-17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
-              <div className='w-5 sm:w-6 md:w-7 lg:w-7 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[48%] md:left-auto md:right-[20%] lg:left-[165px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[525px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
-              <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-32 left-[75%] sm:left-[72%] md:right-[5%] lg:left-[255px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[525px] absolute origin-top-left rotate-[17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-32 left-[20%] sm:left-[22%] md:left-auto md:right-[40%] lg:left-[85px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[530px] absolute origin-top-left rotate-[-17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-5 sm:w-6 md:w-7 lg:w-7 h-20 sm:h-24 md:h-28 lg:h-28 left-[50%] sm:left-[48%] md:left-auto md:right-[23%] lg:left-[165px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[525px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-5 sm:w-6 h-20 sm:h-24 md:h-28 lg:h-32 left-[75%] sm:left-[72%] md:left-auto md:right-[6%] lg:left-[255px] top-[520px] sm:top-[550px] md:top-[580px] lg:top-[525px] absolute origin-top-left rotate-[17.23deg] bg-linear-to-b from-white/50 to-zinc-900/50 blur-2xl sm:blur-[45px] md:blur-[50px]' />
 
               {/* n8n schema image */}
               <Image
@@ -595,7 +595,7 @@ export default function FeaturesSection() {
                 alt='n8n workflow schema'
                 width={319}
                 height={191}
-                className='w-[90%] sm:w-[85%] md:w-[55%] max-w-80 lg:max-w-[285px] h-36 sm:h-40 md:h-44 lg:h-[170px] left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[21%] top-[400px] sm:top-[430px] md:top-[470px] lg:top-[430px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
+                className='w-[90%] sm:w-[85%] md:w-[48%] max-w-80 md:max-w-[380px] lg:max-w-[285px] h-36 sm:h-40 md:h-48 lg:h-[170px] left-[5%] sm:left-[7.5%] md:left-auto md:right-[5%] lg:left-[21%] top-[400px] sm:top-[430px] md:top-[390px] lg:top-[430px] absolute rounded-2xl sm:rounded-[20px] border-2 sm:border-[3px] border-neutral-700 object-cover'
               />
             </div>
           </div>
