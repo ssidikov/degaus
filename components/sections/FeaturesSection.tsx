@@ -422,11 +422,11 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-20 sm:w-28 h-20 sm:h-28 left-[50%] sm:left-[85%] top-[180px] sm:top-[200px] md:top-[230px] lg:top-[220px] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-28 h-28 left-[85%] top-[70%] -translate-x-1/2 sm:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
               {/* Video element */}
-              <div className='w-14 sm:w-22 h-28 sm:h-39 left-[50%] sm:left-[88%] top-[170px] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-lg sm:rounded-[10px]'>
+              <div className='w-22 h-39 left-[88%] top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                 <video
-                  className='w-full h-full rounded-lg sm:rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
+                  className='w-full h-full rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
                   autoPlay
                   loop
