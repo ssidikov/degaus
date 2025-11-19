@@ -422,11 +422,11 @@ export default function FeaturesSection() {
                 </div>
               </div>
               {/* Decorative glow effect */}
-              <div className='w-28 h-28 left-[85%] top-[70%] -translate-x-1/2 sm:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
+              <div className='w-28 h-28 left-[85%] sm:left-[70%] top-[60%] -translate-x-1/2 sm:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
               {/* Video element */}
-              <div className='w-22 h-39 left-[88%] top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 lg:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
+              <div className='w-22 h-39 left-[88%] sm:left-[78%] top-[45%] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                 <video
-                  className='w-full h-full rounded-[10px] object-cover border-2 sm:border-[3px] border-white'
+                  className='w-full h-full rounded-[10px] object-cover border-[3px] border-white'
                   src='/videos/AI UGC Overlay.mov'
                   autoPlay
                   loop
