@@ -23,8 +23,8 @@ export default function FeaturesSection() {
           {/* Feature 2 & 3 - Stacked */}
           <div className='flex flex-col gap-4 sm:gap-5 md:gap-6 justify-between'>
             {/* High quality B-Rolls */}
-            <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[280px] md:h-[300px] lg:h-[308px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[6%] lg:left-[32px] top-[20px] sm:top-[22px] md:top-[28px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
+            <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[280px] md:h-[300px] lg:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+              <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   High quality B-Rolls
                 </h3>
@@ -131,8 +131,8 @@ export default function FeaturesSection() {
             </div>
 
             {/* Built-in video editor */}
-            <div className='bg-[#f3f3f9] w-full h-[240px] sm:h-[260px] md:h-[300px] lg:h-[308px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
-              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[6%] lg:left-[32px] top-[18px] sm:top-[20px] md:top-[28px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6'>
+            <div className='bg-[#f3f3f9] w-full h-60 sm:h-[260px] md:h-[300px] lg:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+              <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                 <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   Built-in video editor
                 </h3>
@@ -439,8 +439,8 @@ export default function FeaturesSection() {
 
           {/* Feature 4 - Automate - full width on sm and md, third column on lg */}
           <div className='sm:col-span-2 md:col-span-2 lg:col-span-1'>
-            <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[632px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
-              <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[5%] lg:left-8 top-[24px] sm:top-[32px] md:top-[34px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-6'>
+            <div className='bg-zinc-900 w-full h-[450px] sm:h-[560px] md:h-[620px] lg:h-[620px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+              <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                 <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                   Automate your content
                 </h3>
