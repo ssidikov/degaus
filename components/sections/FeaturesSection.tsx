@@ -483,7 +483,7 @@ export default function FeaturesSection() {
               alt='n8n'
               width={74}
               height={24}
-              className='w-16 lg:w-20 h-5 lg:h-6 left-[5%] lg:left-[35.50px] top-[300px] lg:top-[321.50px] absolute object-cover hidden lg:block'
+              className='w-16 lg:w-20 h-5 lg:h-6 left-[5%] lg:left-[35.50px] top-[300px] lg:top-[323px] absolute object-cover hidden lg:block'
             />
 
             {/* Social media icons */}
