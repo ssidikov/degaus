@@ -10,8 +10,8 @@ export default function FeaturesSection() {
         <SectionHeading title='Everything you need in one place' />
 
         {/* Features Grid - responsive layout */}
-        {/* md: 2 columns with Automate below, lg: 3 columns with Automate in grid */}
-        <div className='grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3'>
+        {/* sm: 2 columns, md: 2 columns with Automate below, lg: 3 columns with Automate in grid */}
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3'>
           {/* Feature 1 - AI UGCs with Video */}
           <FeatureCard
             title='#1 realistic AI UGCs'
@@ -437,8 +437,8 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          {/* Feature 4 - Automate - full width on md, third column on lg */}
-          <div className='md:col-span-2 lg:col-span-1'>
+          {/* Feature 4 - Automate - full width on sm and md, third column on lg */}
+          <div className='sm:col-span-2 md:col-span-2 lg:col-span-1'>
             <div className='bg-zinc-900 w-full h-[580px] sm:h-[620px] md:h-[650px] lg:h-[632px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
               <div className='w-[90%] max-w-80 left-[5%] sm:left-[5.5%] md:left-[5%] lg:left-8 top-[24px] sm:top-[32px] md:top-[34px] lg:top-[28px] absolute inline-flex flex-col justify-start items-start gap-4 sm:gap-5 md:gap-6 lg:gap-6'>
                 <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
