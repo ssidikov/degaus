@@ -22,7 +22,7 @@ export default function StatsCard({
         <div
           className='relative w-full h-[203px] bg-cyan-200 overflow-hidden -mx-6'
           style={{ backgroundColor }}>
-          <Image src={imageSrc} alt={imageAlt} fill className='object-cover' />
+          <Image src={imageSrc} alt={imageAlt} fill className='object-cover' quality={100} />
         </div>
 
         {/* Content */}

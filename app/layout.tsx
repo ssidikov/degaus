@@ -19,7 +19,7 @@ const darkerGrotesque = Darker_Grotesque({
 export const metadata: Metadata = {
   title: 'degaus - AI Content That Actually Converts',
   description:
-    'Create winning AI content in minutes. Build realistic AI influencers, automate your content with high-quality B-rolls, and scale your e-commerce brand with degaus.',
+    'Create winning AI content in minutes. Build AI influencers, automate content with high-quality B-rolls, and scale your e-commerce brand.',
   keywords: [
     'AI content',
     'AI influencers',
@@ -38,10 +38,13 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://degaus.com'),
+  alternates: {
+    canonical: 'https://degaus.com',
+  },
   openGraph: {
     title: 'degaus - AI Content That Actually Converts',
     description:
-      'Create winning AI content in minutes. Build realistic AI influencers and automate your content.',
+      'Create winning AI content in minutes. Build AI influencers, automate content with B-rolls, and scale your e-commerce brand.',
     url: 'https://degaus.com',
     siteName: 'degaus',
     locale: 'en_US',
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'degaus - AI Content That Actually Converts',
     description:
-      'Create winning AI content in minutes. Build realistic AI influencers and automate your content.',
+      'Create winning AI content in minutes. Build AI influencers, automate content with B-rolls, and scale your e-commerce brand.',
   },
   robots: {
     index: true,

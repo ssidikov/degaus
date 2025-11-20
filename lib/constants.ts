@@ -56,14 +56,14 @@ export const ORGANIC_CONTENT_FEATURES = [
 export const STATS_CARDS = [
   {
     imageSrc: '/images/cards/Post more on social media.png',
-    imageAlt: 'Post more on social media',
+    imageAlt: 'Post more on social media - High quality',
     backgroundColor: '#a5e1ec',
     title: 'Post more on social media',
     description: 'Post more content, more views, more followers, more conversions. Simple as that.',
   },
   {
     imageSrc: '/images/cards/AI Ads that actually convert.png',
-    imageAlt: 'AI Ads that actually convert',
+    imageAlt: 'AI Ads that actually convert - High quality',
     backgroundColor: '#253de5',
     title: 'AI Ads that actually convert',
     description:
@@ -71,7 +71,7 @@ export const STATS_CARDS = [
   },
   {
     imageSrc: '/images/cards/Go viral by testing 100+ hooks.png',
-    imageAlt: 'Go viral by testing 100+ hooks',
+    imageAlt: 'Go viral by testing 100+ hooks - High quality',
     backgroundColor: '#e2c0ff',
     title: 'Go viral by testing 100+ hooks',
     description:

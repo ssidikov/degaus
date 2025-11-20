@@ -49,6 +49,8 @@ export default function PricingCard({
               width={150}
               height={40}
               className='w-[150px] h-auto relative z-10 '
+              priority
+              quality={100}
             />
           </div>
           {/* Glow effects */}
