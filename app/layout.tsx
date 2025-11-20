@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Darker_Grotesque } from 'next/font/google'
+import PostHogProvider from '@/components/PostHogProvider'
 import './globals.css'
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -78,7 +79,7 @@ export default function RootLayout({
       <body
         className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}
         suppressHydrationWarning>
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   )

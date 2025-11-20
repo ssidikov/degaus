@@ -14,6 +14,20 @@ Modern, production-ready landing page for AI content creation platform. Built wi
 
 ## 🚀 Getting Started
 
+### Environment Setup
+
+Create a `.env.local` file in the root directory:
+
+```bash
+# PostHog Analytics
+NEXT_PUBLIC_POSTHOG_KEY=your_posthog_project_api_key
+NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
+```
+
+See `.env.local.example` for reference.
+
+### Installation
+
 ```bash
 # Install dependencies
 npm install
