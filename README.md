@@ -118,6 +118,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions for Ve
 ## 📝 Key Features
 
 ### Sections
+
 - **Hero** - Eye-catching introduction with CTA
 - **Features** - Built-in AI video editor showcase
 - **Use Cases** - End-to-end Ads & Organic Content
@@ -125,6 +126,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions for Ve
 - **FAQ** - Expandable questions with smooth transitions
 
 ### Components
+
 - Animated scroll effects on all sections
 - Responsive pricing cards with glow effects
 - Interactive FAQ accordion
