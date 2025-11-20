@@ -63,7 +63,6 @@ degaus/
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   └── ErrorBoundary.tsx  # Production error handling
-├── hooks/                 # Custom React hooks
 ├── lib/
 │   ├── constants.ts       # App constants and content
 │   ├── design-system.ts   # Design tokens
