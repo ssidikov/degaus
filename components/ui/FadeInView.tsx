@@ -18,7 +18,7 @@ export default function FadeInView({ children, delay = 0, className = '' }: Fade
       transition={{
         duration: 0.6,
         delay,
-        ease: [0.25, 0.4, 0.25, 1]
+        ease: [0.25, 0.4, 0.25, 1],
       }}
       className={className}>
       {children}
