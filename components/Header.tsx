@@ -14,15 +14,12 @@ export default function Header() {
           }}>
           <Link href='/' aria-label='degaus home' className='flex items-center gap-1.5 sm:gap-2'>
             <Image
-              src='/logo.svg'
+              src='/icons/logo-header.svg'
               alt='degaus logo'
-              width={20}
-              height={20}
-              className='w-5 h-5 sm:w-6 sm:h-6 lg:w-[25px] lg:h-[25px]'
+              width={108}
+              height={25}
+              className='w-[108px] h-[25px]'
             />
-            <span className='text-lg sm:text-xl lg:text-[28px] font-bold text-gray-900 leading-none tracking-tight'>
-              degaus
-            </span>
           </Link>
 
           <div className='flex items-center gap-2.5'>
