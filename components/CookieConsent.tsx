@@ -40,14 +40,16 @@ export default function CookieConsent() {
           <div className='relative bg-white rounded-2xl shadow-[0px_-4px_30px_0px_rgba(0,0,0,0.15)] border-4 border-violet-100 overflow-hidden'>
             {/* Decorative gradient */}
             <div className='absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-700 via-violet-500 to-fuchsia-700' />
-            
+
             <div className='p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
               <div className='flex-1'>
                 <h3 className="font-['Darker_Grotesque'] text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
                   🍪 We use cookies
                 </h3>
                 <p className="font-['Darker_Grotesque'] text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking &ldquo;Accept&rdquo;, you consent to our use of cookies.
+                  We use cookies to enhance your browsing experience, serve personalized content,
+                  and analyze our traffic. By clicking &ldquo;Accept&rdquo;, you consent to our use
+                  of cookies.
                 </p>
               </div>
 
