@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ErrorBoundary from '@/components/ErrorBoundary'
+import CookieConsent from '@/components/CookieConsent'
 import HeroSection from '@/components/sections/HeroSection'
 import UseCasesSection from '@/components/sections/UseCasesSection'
 import FeaturesSection from '@/components/sections/FeaturesSection'
@@ -19,6 +20,7 @@ export default function Home() {
         <FAQSection />
       </main>
       <Footer />
+      <CookieConsent />
     </ErrorBoundary>
   )
 }

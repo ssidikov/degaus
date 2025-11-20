@@ -278,7 +278,7 @@ export default function FeaturesSection() {
                             viewBox='0 0 16 16'
                             fill='none'
                             xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-[14px] sm:w-[15px] md:w-4'>
+                            className='absolute w-3.5 sm:w-[15px] md:w-4'>
                             <circle
                               cx='8'
                               cy='8'
