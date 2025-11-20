@@ -14,7 +14,7 @@ export default function Badge({ children, className }: BadgeProps) {
           'shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]',
           className
         )}>
-        <p className="font-['Darker_Grotesque'] text-2xl font-semibold tracking-[-0.72px] text-[#7e7e7e]">
+        <p className="font-['Darker_Grotesque'] text-2xl font-semibold tracking-[-0.72px] text-gray-500">
           {children}
         </p>
       </div>

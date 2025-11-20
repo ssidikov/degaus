@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ErrorBoundary from '@/components/ErrorBoundary'
 import HeroSection from '@/components/sections/HeroSection'
 import UseCasesSection from '@/components/sections/UseCasesSection'
 import FeaturesSection from '@/components/sections/FeaturesSection'
@@ -8,7 +9,7 @@ import FAQSection from '@/components/sections/FAQSection'
 
 export default function Home() {
   return (
-    <>
+    <ErrorBoundary>
       <Header />
       <main>
         <HeroSection />
@@ -18,6 +19,6 @@ export default function Home() {
         <FAQSection />
       </main>
       <Footer />
-    </>
+    </ErrorBoundary>
   )
 }

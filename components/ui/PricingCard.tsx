@@ -31,7 +31,7 @@ export default function PricingCard({
   const iconSrc = checkColor === 'pink' ? '/checked-pink.svg' : '/checked-blue.svg'
 
   return (
-    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] overflow-visible'>
+    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-gray-50 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)]'>
       {/* Popular Badge */}
       {popular && (
         <>
@@ -47,19 +47,19 @@ export default function PricingCard({
             />
           </div>
           {/* Glow effects */}
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
+          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-3xl' />
+          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-3xl' />
         </>
       )}
 
       <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-11 pb-6 sm:pb-7 xl:pr-9'>
         {/* Plan Name */}
-        <h3 className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-[#323232]">
+        <h3 className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-gray-800">
           {name}
         </h3>
 
         {/* Price */}
-        <div className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] font-bold text-[#323232]">
+        <div className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] font-bold text-gray-800">
           {price.startsWith('$') ? (
             <p className='leading-tight sm:leading-7'>
               <span className='text-3xl sm:text-[32px] md:text-[34px]'>{price}</span>
@@ -94,7 +94,7 @@ export default function PricingCard({
               </div>
               <span
                 className={cn(
-                  "font-['Darker_Grotesque'] text-base sm:text-lg md:text-xl font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-[#8d8d8d]",
+                  "font-['Darker_Grotesque'] text-base sm:text-lg md:text-xl font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-gray-500",
                   !feature.enabled && 'line-through'
                 )}>
                 {feature.text}

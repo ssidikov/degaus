@@ -62,7 +62,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id='faq' className='bg-[#f3f3f9] px-6 py-16'>
+    <section id='faq' className='bg-gray-50 px-6 py-16'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
           <Badge>FAQ</Badge>
@@ -78,9 +78,9 @@ export default function FAQSection() {
                 centered={false}
                 className='mb-0'
               />
-              <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold text-[#8d8d8d] tracking-[-0.72px] leading-6">
+              <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold text-gray-500 tracking-[-0.72px] leading-6">
                 If you don&apos;t find your answer here, simply{' '}
-                <span className='text-[#152cd3] hover:underline cursor-pointer'>reach out.</span>
+                <span className='text-blue-600 hover:underline cursor-pointer'>reach out.</span>
               </p>
             </div>
 
@@ -90,11 +90,11 @@ export default function FAQSection() {
                 <div key={index}>
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className='bg-[#f9f9ff] border-2 border-white rounded-[10px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
+                    className='bg-gray-50 border-2 border-white rounded-[10px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
                     <div className='flex items-center gap-3'>
                       <div className='w-6 h-6 shrink-0'>
                         <svg
-                          className='w-full h-full text-[#616161]'
+                          className='w-full h-full text-gray-600'
                           fill='none'
                           stroke='currentColor'
                           viewBox='0 0 24 24'>
@@ -106,14 +106,14 @@ export default function FAQSection() {
                           />
                         </svg>
                       </div>
-                      <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] tracking-[-0.72px] leading-7">
+                      <p className="font-['Darker_Grotesque'] text-2xl font-bold text-gray-600 tracking-[-0.72px] leading-7">
                         {item.question}
                       </p>
                     </div>
                   </button>
                   {openIndex === index && (
                     <div className='bg-white border-2 border-white rounded-[10px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
-                      <p className="font-['Darker_Grotesque'] text-xl text-[#616161] leading-relaxed">
+                      <p className="font-['Darker_Grotesque'] text-xl text-gray-600 leading-relaxed">
                         {item.answer}
                       </p>
                     </div>

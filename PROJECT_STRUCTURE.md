@@ -56,7 +56,7 @@ degaus/
 
 ## 🎨 Design System
 
-### Цвета (`lib/design-system.ts`)
+### colors (`lib/design-system.ts`)
 
 ```typescript
 colors: {

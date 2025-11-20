@@ -8,7 +8,7 @@ import { FadeInView } from '@/components/ui'
 
 export default function Footer() {
   return (
-    <footer className='bg-[#e9e8f5] border-t-4 border-violet-200/50'>
+    <footer className='bg-violet-100 border-t-4 border-violet-200/50'>
       <FadeInView>
         <div className='mx-auto max-w-7xl px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
           <div className='grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12'>

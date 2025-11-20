@@ -6,14 +6,14 @@ import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/li
 
 export default function UseCasesSection() {
   return (
-    <section id='use-cases' className='bg-[#e9e8f5] px-6 py-16'>
+    <section id='use-cases' className='bg-violet-100 px-6 py-16'>
       <div className='mx-auto max-w-6xl'>
         <FadeInView>
           <Badge>Use cases</Badge>
         </FadeInView>
 
         <FadeInView delay={0.1}>
-          <h2 className='mb-16 text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232] text-center'>
+          <h2 className='mb-16 text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-gray-800 text-center'>
             Create winning content in minutes
           </h2>
         </FadeInView>
@@ -25,10 +25,10 @@ export default function UseCasesSection() {
               {/* End-to-end Ads Section */}
               <div className='p-6 py-8 lg:p-10'>
                 <div className='mb-8 flex items-center gap-3'>
-                  <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-[#E2E1EF] shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
+                  <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-violet-200 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
                     <Image src='/gem.svg' alt='gem icon' width={28} height={28} />
                   </span>
-                  <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
+                  <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-gray-800">
                     End-to-end Ads
                   </h3>
                 </div>
@@ -40,7 +40,7 @@ export default function UseCasesSection() {
                   />
 
                   <div className='flex-1'>
-                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-[#8d8d8d] mb-6">
+                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-gray-500 mb-6">
                       Generate end-to-end winning ads in minutes
                     </p>
                     <FeatureList features={END_TO_END_FEATURES} iconColor='blue' />
@@ -49,15 +49,15 @@ export default function UseCasesSection() {
               </div>
 
               {/* Vertical Divider */}
-              <div className='hidden lg:block w-px bg-[#e5e5e5]' />
+              <div className='hidden lg:block w-px bg-gray-200' />
 
               {/* Organic Content Section */}
-              <div className='p-8 lg:p-10 border-t lg:border-t-0 border-[#e5e5e5]'>
+              <div className='p-8 lg:p-10 border-t lg:border-t-0 border-gray-200'>
                 <div className='mb-8 flex items-center gap-3'>
-                  <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-[#E2E1EF] shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
+                  <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-violet-200 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
                     <Image src='/balloon.svg' alt='balloon icon' width={28} height={28} />
                   </span>
-                  <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
+                  <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-gray-800">
                     Organic Content
                   </h3>
                 </div>
@@ -69,7 +69,7 @@ export default function UseCasesSection() {
                   />
 
                   <div className='flex-1'>
-                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-[#8d8d8d] mb-6">
+                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-gray-500 mb-6">
                       Generate viral organic content in minutes
                     </p>
                     <FeatureList features={ORGANIC_CONTENT_FEATURES} iconColor='pink' />

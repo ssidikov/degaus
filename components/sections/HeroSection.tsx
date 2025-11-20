@@ -21,7 +21,7 @@ export default function HeroSection() {
               <span className='text-black'> converts</span>
             </h1>
 
-            <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-tight'>
+            <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-gray-500 mb-9 leading-none tracking-tight'>
               <span>In minutes, create & automate your</span>
               <InstagramIcon className='w-8 h-8' />
               <span>and</span>
@@ -33,7 +33,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <button className='p-[18px] text-[26px] font-bold text-gray-100 bg-linear-to-r from-[#152cd3] to-[#b308a7] rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:opacity-90 transition'>
+            <button className='p-[18px] text-[26px] font-bold text-gray-100 bg-linear-to-r from-blue-700 to-fuchsia-700 rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:opacity-90 transition'>
               Try for free with 1-click
             </button>
           </div>

@@ -3,7 +3,7 @@ import { Badge, SectionHeading, FeatureCard, FadeInView } from '@/components/ui'
 
 export default function FeaturesSection() {
   return (
-    <section id='features' className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
+    <section id='features' className='bg-violet-100 px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
           <Badge>Features</Badge>
@@ -28,7 +28,7 @@ export default function FeaturesSection() {
             {/* Feature 2 & 3 - Stacked */}
             <div className='flex flex-col gap-4 sm:gap-5 md:gap-6 justify-between'>
               {/* High quality B-Rolls */}
-              <div className='bg-[#f3f3f9] w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+              <div className='bg-gray-50 w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
                 <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                   <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                     High quality B-Rolls
@@ -136,7 +136,7 @@ export default function FeaturesSection() {
               </div>
 
               {/* Built-in video editor */}
-              <div className='bg-[#f3f3f9] w-full h-60 sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
+              <div className='bg-gray-50 w-full h-60 sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
                 <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                   <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                     Built-in video editor
