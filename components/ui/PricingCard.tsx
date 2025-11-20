@@ -28,7 +28,12 @@ export default function PricingCard({
   popular = false,
 }: PricingCardProps) {
   // Определяем иконку в зависимости от цвета
-  const iconSrc = checkColor === 'pink' ? '/checked-pink.svg' : '/checked-blue.svg'
+  const iconSrc =
+    checkColor === 'pink'
+      ? '/checked-pink.svg'
+      : checkColor === 'blue'
+      ? '/checked-blue.svg'
+      : '/checked-black.svg'
 
   return (
     <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-gray-50 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)]'>

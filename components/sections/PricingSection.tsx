@@ -46,7 +46,7 @@ export default function PricingSection() {
       period: '',
       buttonColor: 'bg-gradient-to-r from-stone-950 to-zinc-900',
       buttonText: 'Talk to a human',
-      checkColor: 'blue' as const,
+      checkColor: 'gray' as const,
       features: [
         { text: 'Everything in pro', enabled: true },
         { text: 'Unlimited volume', enabled: true },
