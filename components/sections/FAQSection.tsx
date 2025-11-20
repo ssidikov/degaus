@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Badge, SectionHeading } from '@/components/ui'
+import { Badge, SectionHeading, FadeInView } from '@/components/ui'
 
 const FAQ_ITEMS = [
   {
@@ -62,12 +62,15 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className='bg-[#f3f3f9] px-6 py-16'>
+    <section id='faq' className='bg-[#f3f3f9] px-6 py-16'>
       <div className='mx-auto max-w-7xl'>
-        <Badge>FAQ</Badge>
+        <FadeInView>
+          <Badge>FAQ</Badge>
+        </FadeInView>
 
         {/* Content Grid */}
-        <div className='flex flex-col lg:flex-row gap-14 items-start justify-center'>
+        <FadeInView delay={0.1}>
+          <div className='flex flex-col lg:flex-row gap-14 items-start justify-center'>
           {/* Left Side - Heading */}
           <div className='lg:max-w-md'>
             <SectionHeading title='Frequently asked questions' centered={false} className='mb-0' />
@@ -115,6 +118,7 @@ export default function FAQSection() {
             ))}
           </div>
         </div>
+        </FadeInView>
       </div>
     </section>
   )

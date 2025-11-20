@@ -1,21 +1,26 @@
 'use client'
 
 import Image from 'next/image'
-import { Badge, VideoCard, FeatureList, StatsCard } from '@/components/ui'
+import { Badge, VideoCard, FeatureList, StatsCard, FadeInView } from '@/components/ui'
 import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/lib/constants'
 
 export default function UseCasesSection() {
   return (
-    <section className='bg-[#e9e8f5] px-6 py-16'>
+    <section id='use-cases' className='bg-[#e9e8f5] px-6 py-16'>
       <div className='mx-auto max-w-6xl'>
-        <Badge>Use cases</Badge>
+        <FadeInView>
+          <Badge>Use cases</Badge>
+        </FadeInView>
 
-        <h2 className='mb-16 text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232] text-center'>
-          Create winning content in minutes
-        </h2>
+        <FadeInView delay={0.1}>
+          <h2 className='mb-16 text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-[#323232] text-center'>
+            Create winning content in minutes
+          </h2>
+        </FadeInView>
 
         {/* Cards Container - Single card with two sections */}
-        <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg lg:mx-8'>
+        <FadeInView delay={0.2}>
+          <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg lg:mx-8'>
           <div className='grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]'>
             {/* End-to-end Ads Section */}
             <div className='p-6 py-8 lg:p-10'>
@@ -73,13 +78,16 @@ export default function UseCasesSection() {
             </div>
           </div>
         </div>
+        </FadeInView>
 
         {/* Stats Cards */}
-        <div className='grid grid-cols-1 gap-9 md:grid-cols-3'>
-          {STATS_CARDS.map((card, index) => (
-            <StatsCard key={index} {...card} />
-          ))}
-        </div>
+        <FadeInView delay={0.3}>
+          <div className='grid grid-cols-1 gap-9 md:grid-cols-3'>
+            {STATS_CARDS.map((card, index) => (
+              <StatsCard key={index} {...card} />
+            ))}
+          </div>
+        </FadeInView>
       </div>
     </section>
   )

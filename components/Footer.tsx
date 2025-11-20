@@ -1,12 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import InstagramIcon from '@/components/icons/InstagramIcon'
 import TikTokIcon from '@/components/icons/TikTokIcon'
+import { FadeInView } from '@/components/ui'
 
 export default function Footer() {
   return (
     <footer className='bg-[#e9e8f5] border-t-4 border-violet-200/50'>
-      <div className='mx-auto max-w-7xl px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
+      <FadeInView>
+        <div className='mx-auto max-w-7xl px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
         <div className='grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12'>
           {/* Brand Column */}
           <div className='md:col-span-6'>
@@ -114,6 +118,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      </FadeInView>
     </footer>
   )
 }

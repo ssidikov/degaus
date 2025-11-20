@@ -1,17 +1,22 @@
 import Image from 'next/image'
-import { Badge, SectionHeading, FeatureCard } from '@/components/ui'
+import { Badge, SectionHeading, FeatureCard, FadeInView } from '@/components/ui'
 
 export default function FeaturesSection() {
   return (
-    <section className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
+    <section id='features' className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
       <div className='mx-auto max-w-7xl'>
-        <Badge>Features</Badge>
+        <FadeInView>
+          <Badge>Features</Badge>
+        </FadeInView>
 
-        <SectionHeading title='Everything you need in one place' />
+        <FadeInView delay={0.1}>
+          <SectionHeading title='Everything you need in one place' />
+        </FadeInView>
 
         {/* Features Grid - responsive layout */}
         {/* sm: 2 columns, md: 2 columns with Automate below, lg: 3 columns with Automate in grid */}
-        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3'>
+        <FadeInView delay={0.2}>
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3'>
           {/* Feature 1 - AI UGCs with Video */}
           <FeatureCard
             title='#1 realistic AI UGCs'
@@ -509,6 +514,7 @@ export default function FeaturesSection() {
             </div>
           </div>
         </div>
+        </FadeInView>
       </div>
     </section>
   )

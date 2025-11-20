@@ -31,10 +31,21 @@ export default function PricingCard({
   const iconSrc = checkColor === 'pink' ? '/checked-pink.svg' : '/checked-blue.svg'
 
   return (
-    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] overflow-hidden'>
+    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] overflow-visible'>
       {/* Popular Badge */}
       {popular && (
         <>
+          <div className='left-1/2 -translate-x-1/2 -top-8 absolute z-20'>
+            {/* Blur effect behind badge */}
+            <div className='absolute inset-0 bg-white/90 rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]' />
+            <Image
+              src='/icons/most-popular.svg'
+              alt='Most popular'
+              width={150}
+              height={40}
+              className='w-[150px] h-auto relative z-10 '
+            />
+          </div>
           {/* Glow effects */}
           <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
           <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-[-100px] absolute bg-[#C3C3FF] rounded-full blur-2xl sm:blur-3xl' />
