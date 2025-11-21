@@ -62,7 +62,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id='faq' className='bg-gray-50 px-6 py-16'>
+    <section id='faq' className='px-6 py-16 bg-[#f3f3f9]'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
           <Badge>FAQ</Badge>
@@ -78,7 +78,7 @@ export default function FAQSection() {
                 centered={false}
                 className='mb-0'
               />
-              <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold text-gray-500 tracking-[-0.72px] leading-6">
+              <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]">
                 If you don&apos;t find your answer here, simply{' '}
                 <span className='text-blue-600 hover:underline cursor-pointer'>reach out.</span>
               </p>
@@ -90,7 +90,7 @@ export default function FAQSection() {
                 <div key={index}>
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className='bg-gray-50 border-2 border-white rounded-[15px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
+                    className='bg-[#f9f9ff] border-2 border-white rounded-[15px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
                     <div className='flex items-center gap-3'>
                       <div className='w-6 h-6 shrink-0'>
                         <svg
@@ -106,14 +106,14 @@ export default function FAQSection() {
                           />
                         </svg>
                       </div>
-                      <p className="font-['Darker_Grotesque'] text-2xl font-bold text-gray-600 tracking-[-0.72px] leading-7">
+                      <h3 className="font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-7 text-[#616161]">
                         {item.question}
-                      </p>
+                      </h3>
                     </div>
                   </button>
                   {openIndex === index && (
                     <div className='bg-white border-2 border-white rounded-[15px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
-                      <p className="font-['Darker_Grotesque'] text-xl font-semibold text-gray-600 leading-snug">
+                      <p className="font-['Darker_Grotesque'] text-xl leading-6 tracking-tight text-[#616161]">
                         {item.answer}
                       </p>
                     </div>

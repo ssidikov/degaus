@@ -27,10 +27,10 @@ export default function StatsCard({
 
         {/* Content */}
         <div className='flex flex-col gap-6 pt-6 pb-10 px-4'>
-          <h3 className="font-['Darker_Grotesque'] text-[28px] font-bold text-gray-800 leading-6 tracking-[-0.84px]">
+          <h3 className="font-['Darker_Grotesque'] text-[28px] font-bold leading-6 tracking-[-0.84px] text-[#323232]">
             {title}
           </h3>
-          <p className="font-['Darker_Grotesque'] text-xl font-semibold text-gray-500 leading-5 tracking-[-0.6px]">
+          <p className="font-['Darker_Grotesque'] text-xl font-semibold leading-5 tracking-[-0.6px] text-[#8d8d8d]">
             {description}
           </p>
         </div>

@@ -36,7 +36,7 @@ export default function PricingCard({
       : '/checked-black.svg'
 
   return (
-    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-gray-50 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)]'>
+    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)]'>
       {/* Popular Badge */}
       {popular && (
         <>
