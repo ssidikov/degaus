@@ -12,8 +12,8 @@ export default function HeroSection() {
         {/* Hero Content */}
         <FadeInView>
           <div className='text-center mb-16 max-w-4xl mx-auto px-4'>
-            <h1 className='text-[clamp(3rem,2.4435rem+2.7826vw,5rem)] font-extrabold mb-9 leading-[1.05] tracking-tight'>
-              <span className='text-[#6B7280] tracking-[-1.6px]'>
+            <h1 className='text-[clamp(3rem,2.4286rem+2.8571vw,5rem)] font-extrabold mb-9 leading-[1.05] tracking-tight'>
+              <span className='text-[#525252] tracking-[-1.6px]'>
                 AI content that <br />
                 actually
               </span>
@@ -42,7 +42,7 @@ export default function HeroSection() {
             </div>
 
             <div className='flex justify-center'>
-              <button className='w-[253px] h-[51px] px-[18px] text-[26px] font-bold text-gray-100 leading-7 tracking-[-0.52px] bg-linear-to-r from-[#152CD3] to-[#B308A7] rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:opacity-90 hover:scale-105 hover:shadow-[0px_6px_20px_0px_rgba(46,71,249,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center'>
+              <button className='w-[253px] h-[51px] px-[18px] text-[26px] font-bold text-gray-100 leading-7 tracking-[-0.52px] bg-linear-to-r from-[#152CD3] to-[#B308A7] rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:opacity-90 hover:scale-105 hover:shadow-[0px_6px_20px_0px_rgba(46,71,249,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center pb-[7px]'>
                 Try for free with 1-click
               </button>
             </div>
