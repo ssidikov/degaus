@@ -17,13 +17,13 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div className='relative w-full h-[450px] sm:h-[620px] bg-[#f3f3f9] border-[5px] border-white rounded-tl-[20px] rounded-tr-[5px] rounded-bl-[20px] rounded-br-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-      <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
-        <h3 className='text-2xl md:text-4xl font-bold leading-tight sm:leading-7 lg:leading-8 text-[#323232]'>
+      <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 p-10'>
+        <h3 className='text-2xl md:text-[34px] font-bold leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px] text-[#323232]'>
           {title}
         </h3>
 
         <div className='flex flex-col gap-4 xl:gap-6'>
-          <p className='text-lg md:text-2xl font-bold leading-tight sm:leading-6 lg:leading-6 text-[#616161]'>
+          <p className='text-lg md:text-2xl font-bold leading-tight sm:leading-6 lg:leading-6 text-[#616161] tracking-[-0.72px]'>
             {subtitle}
           </p>
 

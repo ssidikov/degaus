@@ -31,7 +31,7 @@ export default function FeatureList({
           <span
             className={cn(
               'text-[#8d8d8d]',
-              "text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7"
+              "text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 tracking-[-0.6px]"
             )}>
             {feature}
           </span>

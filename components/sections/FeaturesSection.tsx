@@ -32,15 +32,15 @@ export default function FeaturesSection() {
             <div className='flex flex-col gap-4 sm:gap-5 md:gap-6 justify-between'>
               {/* High quality B-Rolls */}
               <div className='bg-gray-50 w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
-                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
-                  <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
+                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-8 pb-6'>
+                  <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
                     High quality B-Rolls
                   </h3>
-                  <div className='flex flex-col gap-4 xl:gap-6'>
-                    <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                  <div className='flex flex-col gap-4 xl:gap-5'>
+                    <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.72px]">
                       Integrations with all major models
                     </p>
-                    <div className='flex flex-col justify-start items-start gap-1 sm:gap-1.5'>
+                    <div className='flex flex-col justify-start items-start gap-[6px]'>
                       {/* Sora2 pro */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                         <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
@@ -52,7 +52,7 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Sora2 pro
                         </span>
                       </div>
@@ -67,7 +67,7 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Veo3.1
                         </span>
                       </div>
@@ -82,7 +82,7 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Nanobanana
                         </span>
                       </div>
@@ -97,7 +97,7 @@ export default function FeaturesSection() {
                             className='w-5 sm:w-6'
                           />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           10+ more
                         </span>
                       </div>
@@ -139,290 +139,58 @@ export default function FeaturesSection() {
               </div>
 
               {/* Built-in video editor */}
-              <div className='bg-gray-50 w-full h-60 sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] border-4 border-white outline-[5px] outline-offset-[-5px] outline-white/50 overflow-hidden'>
-                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
-                  <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
+              <div className='bg-gray-50 w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
+                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-8 pb-6'>
+                  <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
                     Built-in video editor
                   </h3>
-                  <div className='flex flex-col gap-4 xl:gap-6'>
-                    <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                  <div className='flex flex-col gap-4 xl:gap-5'>
+                    <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.72px]">
                       Edit your videos effortlessly
                     </p>
-                    <div className='py-1.5 sm:py-2 md:py-2.5 lg:py-2 flex flex-col justify-start items-start gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-2'>
+                    <div className='flex flex-col justify-start items-start gap-[6px]'>
                       {/* Overlays, split screens */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7'>
-                          <div className='w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 bg-indigo-400/10 rounded-full absolute' />
-                          <svg
-                            width='22'
-                            height='22'
-                            viewBox='0 0 22 22'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-[18px] sm:w-5 md:w-[22px]'>
-                            <circle
-                              cx='11'
-                              cy='11'
-                              r='11'
-                              fill='url(#paint0_linear_overlay)'
-                              fillOpacity='0.5'
-                            />
-                            <defs>
-                              <linearGradient
-                                id='paint0_linear_overlay'
-                                x1='11'
-                                y1='0'
-                                x2='11'
-                                y2='22'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#8F8DFF' />
-                                <stop offset='1' stopColor='#B7B6FF' />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <svg
-                            width='16'
-                            height='16'
-                            viewBox='0 0 16 16'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute'>
-                            <circle
-                              cx='8'
-                              cy='8'
-                              r='7.5'
-                              fill='url(#paint0_linear_overlay_inner)'
-                              stroke='url(#paint1_linear_overlay_inner)'
-                            />
-                            <defs>
-                              <linearGradient
-                                id='paint0_linear_overlay_inner'
-                                x1='8'
-                                y1='0'
-                                x2='8'
-                                y2='16'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#8F85FF' />
-                                <stop offset='1' stopColor='#492BDA' />
-                              </linearGradient>
-                              <linearGradient
-                                id='paint1_linear_overlay_inner'
-                                x1='8'
-                                y1='16'
-                                x2='8'
-                                y2='0'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#492BDA' />
-                                <stop offset='1' stopColor='white' />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <svg
-                            width='10'
-                            height='10'
-                            viewBox='0 0 10 10'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='relative z-10'>
-                            <path
-                              d='M1.66669 5.25455L3.71797 7.29159L8.33335 2.70825'
-                              stroke='white'
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                            />
-                          </svg>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                          <Image
+                            src='/checked-blue.svg'
+                            alt='plus'
+                            width={24}
+                            height={24}
+                            className='w-5 sm:w-6'
+                          />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Overlays, split screens
                         </span>
                       </div>
                       {/* AI captions (50+ fonts) */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7'>
-                          <svg
-                            width='28'
-                            height='28'
-                            viewBox='0 0 28 28'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-6 sm:w-7 md:w-7'>
-                            <circle cx='14' cy='14' r='14' fill='#8898EA' fillOpacity='0.1' />
-                          </svg>
-                          <svg
-                            width='22'
-                            height='22'
-                            viewBox='0 0 22 22'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-[18px] sm:w-5 md:w-[22px]'>
-                            <circle
-                              cx='11'
-                              cy='11'
-                              r='11'
-                              fill='url(#paint0_linear_captions)'
-                              fillOpacity='0.5'
-                            />
-                            <defs>
-                              <linearGradient
-                                id='paint0_linear_captions'
-                                x1='11'
-                                y1='0'
-                                x2='11'
-                                y2='22'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#8F8DFF' />
-                                <stop offset='1' stopColor='#B7B6FF' />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <svg
-                            width='16'
-                            height='16'
-                            viewBox='0 0 16 16'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-3.5 sm:w-[15px] md:w-4'>
-                            <circle
-                              cx='8'
-                              cy='8'
-                              r='7.5'
-                              fill='url(#paint0_linear_captions_inner)'
-                              stroke='url(#paint1_linear_captions_inner)'
-                            />
-                            <defs>
-                              <linearGradient
-                                id='paint0_linear_captions_inner'
-                                x1='8'
-                                y1='0'
-                                x2='8'
-                                y2='16'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#8F85FF' />
-                                <stop offset='1' stopColor='#492BDA' />
-                              </linearGradient>
-                              <linearGradient
-                                id='paint1_linear_captions_inner'
-                                x1='8'
-                                y1='16'
-                                x2='8'
-                                y2='0'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#492BDA' />
-                                <stop offset='1' stopColor='white' />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <svg
-                            width='10'
-                            height='10'
-                            viewBox='0 0 10 10'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='relative z-10 w-2 sm:w-2.5'>
-                            <path
-                              d='M1.66669 5.25455L3.71797 7.29159L8.33335 2.70825'
-                              stroke='white'
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                            />
-                          </svg>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                          <Image
+                            src='/checked-blue.svg'
+                            alt='plus'
+                            width={24}
+                            height={24}
+                            className='w-5 sm:w-6'
+                          />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           AI captions (50+ fonts)
                         </span>
                       </div>
                       {/* Transitions & effects */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7'>
-                          <svg
-                            width='28'
-                            height='28'
-                            viewBox='0 0 28 28'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-6 sm:w-7 md:w-7'>
-                            <circle cx='14' cy='14' r='14' fill='#8898EA' fillOpacity='0.1' />
-                          </svg>
-                          <svg
-                            width='22'
-                            height='22'
-                            viewBox='0 0 22 22'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-[18px] sm:w-5 md:w-[22px]'>
-                            <circle
-                              cx='11'
-                              cy='11'
-                              r='11'
-                              fill='url(#paint0_linear_transitions)'
-                              fillOpacity='0.5'
-                            />
-                            <defs>
-                              <linearGradient
-                                id='paint0_linear_transitions'
-                                x1='11'
-                                y1='0'
-                                x2='11'
-                                y2='22'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#8F8DFF' />
-                                <stop offset='1' stopColor='#B7B6FF' />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <svg
-                            width='16'
-                            height='16'
-                            viewBox='0 0 16 16'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='absolute w-3.5 sm:w-[15px] md:w-4'>
-                            <circle
-                              cx='8'
-                              cy='8'
-                              r='7.5'
-                              fill='url(#paint0_linear_transitions_inner)'
-                              stroke='url(#paint1_linear_transitions_inner)'
-                            />
-                            <defs>
-                              <linearGradient
-                                id='paint0_linear_transitions_inner'
-                                x1='8'
-                                y1='0'
-                                x2='8'
-                                y2='16'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#8F85FF' />
-                                <stop offset='1' stopColor='#492BDA' />
-                              </linearGradient>
-                              <linearGradient
-                                id='paint1_linear_transitions_inner'
-                                x1='8'
-                                y1='16'
-                                x2='8'
-                                y2='0'
-                                gradientUnits='userSpaceOnUse'>
-                                <stop stopColor='#492BDA' />
-                                <stop offset='1' stopColor='white' />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <svg
-                            width='10'
-                            height='10'
-                            viewBox='0 0 10 10'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                            className='relative z-10 w-2 sm:w-2.5'>
-                            <path
-                              d='M1.66669 5.25455L3.71797 7.29159L8.33335 2.70825'
-                              stroke='white'
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                            />
-                          </svg>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                          <Image
+                            src='/checked-blue.svg'
+                            alt='plus'
+                            width={24}
+                            height={24}
+                            className='w-5 sm:w-6'
+                          />
                         </div>
-                        <span className="justify-start text-neutral-400 text-base sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Transitions & effects
                         </span>
                       </div>
@@ -447,12 +215,46 @@ export default function FeaturesSection() {
 
             {/* Feature 4 - Automate - full width on sm and md, third column on lg */}
             <div className='sm:col-span-2 md:col-span-2 lg:col-span-1'>
-              <div className='bg-zinc-900 w-full h-[620px] md:h-[700px] lg:h-[620px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+              <div className='bg-[#1E1E22] w-full h-[620px] md:h-[700px] lg:h-[620px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
                 {/* Top blur gradient */}
-                <div className='absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-zinc-900 to-transparent z-10 pointer-events-none' />
+                <div className='absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-zinc-900 to-transparent z-10 pointer-events-none' />
 
-                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
-                  <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
+                {/* Blurred ellipse at top */}
+                <div className='absolute top-0 left-1/2 -translate-x-1/2 w-[192px] h-[122px] pointer-events-none z-10'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='192'
+                    height='122'
+                    viewBox='0 0 400 320'
+                    fill='none'
+                    className='w-full h-full'>
+                    <g filter='url(#filter0_f_ellipse)'>
+                      <ellipse cx='199.5' cy='9' rx='96' ry='61' fill='#8387D3' />
+                    </g>
+                    <defs>
+                      <filter
+                        id='filter0_f_ellipse'
+                        x='-146.5'
+                        y='-302'
+                        width='692'
+                        height='622'
+                        filterUnits='userSpaceOnUse'
+                        colorInterpolationFilters='sRGB'>
+                        <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                        <feBlend
+                          mode='normal'
+                          in='SourceGraphic'
+                          in2='BackgroundImageFix'
+                          result='shape'
+                        />
+                        <feGaussianBlur stdDeviation='125' result='effect1_foregroundBlur_1_447' />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+
+                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-8 px-6 xl:px-10 pt-6 xl:pt-[34px] pb-6'>
+                  <h3 className="self-stretch justify-start text-[#EEEEEE] z-10 opacity-90 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
                     Automate your content
                   </h3>
                   <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-2'>
