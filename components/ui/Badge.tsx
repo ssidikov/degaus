@@ -3,11 +3,12 @@ import { cn } from '@/lib/utils'
 interface BadgeProps {
   children: React.ReactNode
   className?: string
+  containerClassName?: string
 }
 
-export default function Badge({ children, className }: BadgeProps) {
+export default function Badge({ children, className, containerClassName }: BadgeProps) {
   return (
-    <div className='mb-[60px] flex justify-center'>
+    <div className={`flex justify-center ${containerClassName}`}>
       <div
         className={cn(
           'rounded-[20px] bg-[#FDFDFD] p-[15px] w-[117px] h-[44px] flex items-center justify-center',
