@@ -6,7 +6,7 @@ import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/li
 
 export default function UseCasesSection() {
   return (
-    <section id='use-cases' className='bg-violet-100 px-6 py-[60px]'>
+    <section id='use-cases' className='bg-[#E9E8F5] px-6 py-[60px]'>
       <div className='mx-auto max-w-6xl'>
         <FadeInView>
           <Badge>Use cases</Badge>
@@ -20,15 +20,15 @@ export default function UseCasesSection() {
 
         {/* Cards Container - Single card with two sections */}
         <FadeInView delay={0.2}>
-          <div className='mb-12 rounded-3xl overflow-hidden bg-white shadow-lg lg:mx-8'>
+          <div className='mb-12 rounded-[30px] overflow-hidden bg-white shadow-lg lg:mx-8'>
             <div className='grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]'>
               {/* End-to-end Ads Section */}
-              <div className='p-6 py-8 lg:p-10'>
-                <div className='mb-8 flex items-center gap-3'>
+              <div className='p-9 py-8 lg:p-10'>
+                <div className='mb-9 flex items-center gap-[18px]'>
                   <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-violet-200 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
                     <Image src='/gem.svg' alt='gem icon' width={28} height={28} />
                   </span>
-                  <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-gray-800">
+                  <h3 className="font-['Darker_Grotesque'] text-3xl font-bold text-[#323232]">
                     End-to-end Ads
                   </h3>
                 </div>
@@ -57,7 +57,7 @@ export default function UseCasesSection() {
 
               {/* Organic Content Section */}
               <div className='p-8 lg:p-10 border-t lg:border-t-0 border-gray-200'>
-                <div className='mb-8 flex items-center gap-3'>
+                <div className='mb-9 flex items-center gap-[18px]'>
                   <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-violet-200 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
                     <Image src='/balloon.svg' alt='balloon icon' width={28} height={28} />
                   </span>
