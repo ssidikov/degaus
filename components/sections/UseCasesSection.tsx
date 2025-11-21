@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Badge, VideoCard, FeatureList, StatsCard, FadeInView } from '@/components/ui'
+import { Badge, SequentialVideoCard, FeatureList, StatsCard, FadeInView } from '@/components/ui'
 import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/lib/constants'
 
 export default function UseCasesSection() {
@@ -34,8 +34,12 @@ export default function UseCasesSection() {
                 </div>
 
                 <div className='flex flex-col md:flex-row gap-8'>
-                  <VideoCard
-                    src='/videos/End-to-end Ads.mp4'
+                  <SequentialVideoCard
+                    videos={[
+                      '/videos/e2e-ads/e2e-ads-1.mp4',
+                      '/videos/e2e-ads/e2e-ads-2.mp4',
+                      '/videos/e2e-ads/e2e-ads-3.mp4',
+                    ]}
                     className='w-full md:w-[190px] lg:w-[200px] h-[350px] shadow-[0px_4px_20px_0px_rgba(73,43,218,0.25)]'
                   />
 
@@ -63,8 +67,12 @@ export default function UseCasesSection() {
                 </div>
 
                 <div className='flex flex-col md:flex-row gap-8'>
-                  <VideoCard
-                    src='/videos/Organic Content.mp4'
+                  <SequentialVideoCard
+                    videos={[
+                      '/videos/Organic/Organic-1.mp4',
+                      '/videos/Organic/Organic-2.mp4',
+                      '/videos/Organic/Organic-3.mp4',
+                    ]}
                     className='w-full md:w-[190px] lg:w-[200px] h-[340px] shadow-[0px_4px_20px_0px_rgba(190,72,244,0.25)]'
                   />
 

@@ -55,24 +55,21 @@ export const ORGANIC_CONTENT_FEATURES = [
 // Stats Cards Data
 export const STATS_CARDS = [
   {
-    imageSrc: '/images/cards/Post more on social media.png',
+    imageSrc: '/images/cards/Post more on social media.jpg',
     imageAlt: 'Post more on social media - High quality',
-    backgroundColor: '#a5e1ec',
     title: 'Post more on social media',
     description: 'Post more content, more views, more followers, more conversions. Simple as that.',
   },
   {
-    imageSrc: '/images/cards/AI Ads that actually convert.png',
+    imageSrc: '/images/cards/AI Ads that actually convert.jpg',
     imageAlt: 'AI Ads that actually convert - High quality',
-    backgroundColor: '#253de5',
     title: 'AI Ads that actually convert',
     description:
       'Post AI content with high conversion rates. Start from a template or build your own.',
   },
   {
-    imageSrc: '/images/cards/Go viral by testing 100+ hooks.png',
+    imageSrc: '/images/cards/Go viral by testing 100+ hooks.jpg',
     imageAlt: 'Go viral by testing 100+ hooks - High quality',
-    backgroundColor: '#e2c0ff',
     title: 'Go viral by testing 100+ hooks',
     description:
       'Test an unlimited amount of hooks, across multiple accounts, to maximize virality.',
