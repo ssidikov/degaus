@@ -22,47 +22,71 @@ export default function CookieConsent() {
   }, [isClient])
 
   const acceptCookies = () => {
-    localStorage.setItem('cookieConsent', 'true')
+    localStorage.setItem('cookieConsent', 'accepted')
     setShowBanner(false)
   }
 
-  const declineCookies = () => {
-    localStorage.setItem('cookieConsent', 'false')
+  const rejectCookies = () => {
+    localStorage.setItem('cookieConsent', 'rejected')
+    setShowBanner(false)
+  }
+
+  const manageCookies = () => {
+    // For now, just accept essential cookies
+    localStorage.setItem('cookieConsent', 'managed')
     setShowBanner(false)
   }
 
   if (!isClient || !showBanner) return null
 
   return (
-    <div className='fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6'>
+    <div className='fixed bottom-0 left-0 right-0 z-50 p-4'>
       <FadeInView delay={0.5}>
         <div className='mx-auto max-w-7xl'>
-          <div className='relative bg-white rounded-2xl shadow-[0px_-4px_30px_0px_rgba(0,0,0,0.15)] border-4 border-violet-100 overflow-hidden'>
-            {/* Decorative gradient */}
-            <div className='absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-blue-700 via-violet-500 to-fuchsia-700' />
-
-            <div className='p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
+          <div
+            className='relative overflow-hidden rounded-xl shadow-[0_-10px_40px_rgba(255,255,255,0.05)]'
+            style={{
+              background:
+                'linear-gradient(to right, #2C5364, #203A43, #0F2027)' /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+            }}>
+            <div className='px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4'>
               <div className='flex-1'>
-                <h3 className="font-['Darker_Grotesque'] text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
-                  🍪 We use cookies
+                <h3 className="font-['Inter'] text-base font-semibold text-white mb-2">
+                  We use cookies
                 </h3>
-                <p className="font-['Darker_Grotesque'] text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  We use cookies to enhance your browsing experience, serve personalized content,
-                  and analyze our traffic. By clicking &ldquo;Accept&rdquo;, you consent to our use
-                  of cookies.
+                <p className="font-['Inter'] text-sm text-gray-300 leading-relaxed">
+                  We use cookies to help this site function, understand service usage, and support
+                  marketing efforts. Visit{' '}
+                  <button
+                    onClick={manageCookies}
+                    className='text-gray-300 underline hover:text-white transition-colors'>
+                    Manage Cookies
+                  </button>{' '}
+                  to change preferences anytime. View our{' '}
+                  <a
+                    href='#'
+                    className='text-gray-300 underline hover:text-white transition-colors'>
+                    Cookie Policy
+                  </a>{' '}
+                  for more info.
                 </p>
               </div>
 
-              <div className='flex flex-col sm:flex-row gap-3 w-full sm:w-auto'>
+              <div className='flex flex-col sm:flex-row gap-3 w-full sm:w-auto shrink-0'>
                 <button
-                  onClick={declineCookies}
-                  className="font-['Darker_Grotesque'] text-lg sm:text-xl font-bold text-gray-600 px-6 py-3 rounded-xl border-2 border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all">
-                  Decline
+                  onClick={manageCookies}
+                  className="font-['Inter'] text-sm font-medium text-white px-5 py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap">
+                  Manage Cookies
+                </button>
+                <button
+                  onClick={rejectCookies}
+                  className="font-['Inter'] text-sm font-medium text-white px-5 py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap">
+                  Reject non-essential
                 </button>
                 <button
                   onClick={acceptCookies}
-                  className="font-['Darker_Grotesque'] text-lg sm:text-xl font-bold text-white px-6 py-3 rounded-xl bg-linear-to-r from-blue-700 to-fuchsia-700 hover:opacity-90 transition-opacity shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25)]">
-                  Accept
+                  className="font-['Inter'] text-sm font-medium text-white px-5 py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap">
+                  Accept all
                 </button>
               </div>
             </div>

@@ -5,6 +5,7 @@ interface FeatureListProps {
   features: readonly string[]
   iconSrc?: string
   iconColor?: 'blue' | 'pink'
+  textColor?: string
   className?: string
 }
 
@@ -12,6 +13,7 @@ export default function FeatureList({
   features,
   iconSrc,
   iconColor = 'blue',
+  textColor = 'text-neutral-400',
   className,
 }: FeatureListProps) {
   const defaultIcon = iconColor === 'blue' ? '/checked-blue.svg' : '/checked-pink.svg'
@@ -28,7 +30,11 @@ export default function FeatureList({
             height={24}
             className='shrink-0 w-5 sm:w-5 md:w-6 lg:w-6 h-5 sm:h-5 md:h-6 lg:h-6'
           />
-          <span className="text-neutral-400 text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7">
+          <span
+            className={cn(
+              textColor,
+              "text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7"
+            )}>
             {feature}
           </span>
         </li>

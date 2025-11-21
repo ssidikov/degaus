@@ -98,12 +98,14 @@ export const AUTOMATION_FEATURES = [
 
 // Hero Section - Content Cards
 export const CONTENT_CARDS = [
-  { type: 'Faceless Accounts', video: '/videos/Faceless Accounts.mov' },
-  { type: 'AI UGC', video: '/videos/AI UGC.mov' },
-  { type: 'Organic Podcast', video: '/videos/Organic Podcast.mov' },
-  { type: 'AI Influencer', video: '/videos/AI Influencer.mov' },
-  { type: 'AI UGC Overlay', video: '/videos/AI UGC Overlay.mov' },
-  { type: 'Polished Ad', video: '/videos/Polished Ad.mov' },
+  { type: 'AI Influencer', video: '/videos/carousel/AI Influencer.mov' },
+  { type: 'AI Influencer', video: '/videos/carousel/AI Influencer-2.mov' },
+  { type: 'AI UGC Overlay', video: '/videos/carousel/AI UGC Overlay.mov' },
+  { type: 'AI UGC Ad', video: '/videos/carousel/AI UGC ad.mov' },
+  { type: 'AI UGC', video: '/videos/carousel/AI UGC.mov' },
+  { type: 'Organic UGC', video: '/videos/carousel/Organic UGC.mov' },
+  { type: 'Podcast Ads', video: '/videos/carousel/Podcast ads.mov' },
+  { type: 'Polished Ad', video: '/videos/carousel/Polished ad.mov' },
 ] as const
 
 // Hero Section - Trusted Brands

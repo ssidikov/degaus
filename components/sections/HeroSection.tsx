@@ -1,9 +1,8 @@
 'use client'
 
-import InstagramIcon from '../icons/InstagramIcon'
-import TikTokIcon from '../icons/TikTokIcon'
 import Image from 'next/image'
 import { VideoCard, FadeInView } from '@/components/ui'
+import RotatingText from '@/components/ui/RotatingText'
 import { CONTENT_CARDS, TRUSTED_BRANDS } from '@/lib/constants'
 
 export default function HeroSection() {
@@ -13,29 +12,40 @@ export default function HeroSection() {
         {/* Hero Content */}
         <FadeInView>
           <div className='text-center mb-16 max-w-4xl mx-auto px-4'>
-            <h1 className='text-[clamp(3rem,2.4435rem+2.7826vw,5rem)] font-extrabold mb-9 leading-[1.1] tracking-tight'>
-              <span className='text-gray-600'>
+            <h1 className='text-[clamp(3rem,2.4435rem+2.7826vw,5rem)] font-extrabold mb-9 leading-[1.05] tracking-tight'>
+              <span className='text-[#6B7280] tracking-[-1.6px]'>
                 AI content that <br />
                 actually
               </span>
-              <span className='text-black'> converts</span>
+              <span className='text-black tracking-[-1.6px]'> converts</span>
             </h1>
 
-            <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-gray-500 mb-9 leading-none tracking-tight'>
+            <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-[-0.78px]'>
               <span>In minutes, create & automate your</span>
-              <InstagramIcon className='w-8 h-8' />
+              <Image
+                src='/icons/instagram.svg'
+                alt='Instagram'
+                width={32}
+                height={32}
+                className='w-8 h-8 rounded-[7px] mt-2'
+              />
               <span>and</span>
-              <TikTokIcon className='w-8 h-8' />
+              <Image
+                src='/icons/tiktok.svg'
+                alt='TikTok'
+                width={32}
+                height={32}
+                className='w-8 h-8 rounded-[7px] mt-2'
+              />
               <span>content for your</span>
-              <span className='inline-flex items-center gap-1.5 px-3 py-3 bg-blue-100/60 text-blue-600 rounded-2xl shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)] backdrop-blur-sm'>
-                <Image src='/sparkles.svg' alt='ecommerce icon' width={14} height={14} />
-                e-commerce
-              </span>
+              <RotatingText />
             </div>
 
-            <button className='p-[18px] text-[26px] font-bold text-gray-100 bg-linear-to-r from-blue-700 to-fuchsia-700 rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:opacity-90 transition'>
-              Try for free with 1-click
-            </button>
+            <div className='flex justify-center'>
+              <button className='w-[253px] h-[51px] px-[18px] text-[26px] font-bold text-gray-100 leading-7 tracking-[-0.52px] bg-linear-to-r from-[#152CD3] to-[#B308A7] rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:opacity-90 hover:scale-105 hover:shadow-[0px_6px_20px_0px_rgba(46,71,249,0.35),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center'>
+                Try for free with 1-click
+              </button>
+            </div>
           </div>
         </FadeInView>
       </div>
@@ -43,12 +53,19 @@ export default function HeroSection() {
       {/* Content Cards - Infinite Scroll */}
       <div className='w-full mb-24 overflow-hidden'>
         <div className='scroll-container gap-9 flex'>
-          {[...CONTENT_CARDS, ...CONTENT_CARDS].map((card, index) => (
+          {[
+            ...CONTENT_CARDS,
+            ...CONTENT_CARDS,
+            ...CONTENT_CARDS,
+            ...CONTENT_CARDS,
+            ...CONTENT_CARDS,
+            ...CONTENT_CARDS,
+          ].map((card, index) => (
             <VideoCard
               key={index}
               src={card.video}
               type={card.type}
-              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)]'
+              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] flex-shrink-0'
             />
           ))}
         </div>

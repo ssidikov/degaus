@@ -10,7 +10,7 @@ export default function Badge({ children, className }: BadgeProps) {
     <div className='mb-8 flex justify-center'>
       <div
         className={cn(
-          'rounded-[20px] bg-white px-6 py-2',
+          'rounded-[24px] bg-white px-6 py-2',
           'shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)]',
           className
         )}>

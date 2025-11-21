@@ -90,11 +90,11 @@ export default function FAQSection() {
                 <div key={index}>
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className='bg-gray-50 border-2 border-white rounded-[10px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
+                    className='bg-gray-50 border-2 border-white rounded-[15px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
                     <div className='flex items-center gap-3'>
                       <div className='w-6 h-6 shrink-0'>
                         <svg
-                          className='w-full h-full text-gray-600'
+                          className='w-full h-full text-blue-600'
                           fill='none'
                           stroke='currentColor'
                           viewBox='0 0 24 24'>
@@ -112,8 +112,8 @@ export default function FAQSection() {
                     </div>
                   </button>
                   {openIndex === index && (
-                    <div className='bg-white border-2 border-white rounded-[10px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
-                      <p className="font-['Darker_Grotesque'] text-xl text-gray-600 leading-relaxed">
+                    <div className='bg-white border-2 border-white rounded-[15px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
+                      <p className="font-['Darker_Grotesque'] text-xl font-semibold text-gray-600 leading-snug">
                         {item.answer}
                       </p>
                     </div>

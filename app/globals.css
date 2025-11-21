@@ -60,22 +60,29 @@ button {
  * Utility Classes
  */
 
-/* Gradient button */
+/* Font alignment offset - compensates for Darker Grotesque font baseline */
+.font-offset-bottom {
+  padding-bottom: 2px;
+}
+
+/* Gradient button with improved styling */
 .btn-gradient {
   background: linear-gradient(to right, var(--color-primary-blue), var(--color-primary-purple));
   box-shadow:
     0px 4px 15px 0px rgba(46, 71, 249, 0.25),
     inset 0px -4px 4px 0px rgba(0, 0, 0, 0.3),
     inset 0px 4px 4px 0px rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
 }
 
 .btn-gradient:hover {
   opacity: 0.9;
+  transform: scale(1.02);
 }
 
 /* Section badge */
 .section-badge {
-  @apply rounded-[20px] bg-white px-6 py-2;
+  @apply rounded-[24px] bg-white px-6 py-2;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -135,7 +142,7 @@ button {
 }
 
 /**
- * Video Scroll Animation
+ * Video Scroll Animation - Faster speed for better UX
  */
 @keyframes scroll-left {
   0% {
@@ -149,10 +156,40 @@ button {
 
 .scroll-container {
   display: flex;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 20s linear infinite;
   will-change: transform;
 }
 
 .scroll-container:hover {
   animation-play-state: paused;
+}
+
+/**
+ * Rotating Text Animation
+ */
+@keyframes rotate-text {
+  0%, 25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.rotating-text {
+  animation: rotate-text 8s infinite;
+}
+
+.rotating-text:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.rotating-text:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.rotating-text:nth-child(4) {
+  animation-delay: 6s;
 }

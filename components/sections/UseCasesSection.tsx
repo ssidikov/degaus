@@ -40,10 +40,14 @@ export default function UseCasesSection() {
                   />
 
                   <div className='flex-1'>
-                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-gray-500 mb-6">
+                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-gray-500 mb-6 leading-tight">
                       Generate end-to-end winning ads in minutes
                     </p>
-                    <FeatureList features={END_TO_END_FEATURES} iconColor='blue' />
+                    <FeatureList
+                      features={END_TO_END_FEATURES}
+                      iconColor='blue'
+                      textColor='text-gray-700'
+                    />
                   </div>
                 </div>
               </div>

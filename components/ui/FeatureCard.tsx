@@ -1,5 +1,6 @@
 import FeatureList from './FeatureList'
 import { AI_UGC_FEATURES } from '@/lib/constants'
+import { VIDEO_CONFIG } from '@/lib/videoConfig'
 
 interface FeatureCardProps {
   title: string
@@ -63,10 +64,10 @@ export default function FeatureCard({
             <video
               className='w-full h-full rounded-[20px] object-cover'
               src={videoSrc}
-              autoPlay
-              loop
-              muted
-              playsInline
+              autoPlay={VIDEO_CONFIG.autoplay}
+              loop={VIDEO_CONFIG.loop}
+              muted={VIDEO_CONFIG.muted}
+              playsInline={VIDEO_CONFIG.playsInline}
             />
             <div className='p-1.5 sm:p-2 lg:p-2.5 left-[50%] lg:left-[72px] top-[50%] sm:top-[130px] -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 absolute bg-black/50 rounded-[100px] flex justify-center items-center gap-2.5'>
               <svg

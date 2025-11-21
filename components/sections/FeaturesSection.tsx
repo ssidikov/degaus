@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Badge, SectionHeading, FeatureCard, FadeInView } from '@/components/ui'
+import { VIDEO_CONFIG } from '@/lib/videoConfig'
 
 export default function FeaturesSection() {
   return (
@@ -433,10 +434,10 @@ export default function FeaturesSection() {
                   <video
                     className='w-full h-full rounded-[10px] object-cover border-[3px] border-white'
                     src='/videos/AI UGC Overlay.mov'
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                    autoPlay={VIDEO_CONFIG.autoplay}
+                    loop={VIDEO_CONFIG.loop}
+                    muted={VIDEO_CONFIG.muted}
+                    playsInline={VIDEO_CONFIG.playsInline}
                   />
                 </div>
               </div>
@@ -445,6 +446,9 @@ export default function FeaturesSection() {
             {/* Feature 4 - Automate - full width on sm and md, third column on lg */}
             <div className='sm:col-span-2 md:col-span-2 lg:col-span-1'>
               <div className='bg-zinc-900 w-full h-[620px] md:h-[700px] lg:h-[620px] relative rounded-tl-[5px] rounded-tr-[20px] rounded-bl-[5px] rounded-br-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-neutral-700 overflow-hidden border-[5px] border-neutral-800'>
+                {/* Top blur gradient */}
+                <div className='absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-zinc-900 to-transparent z-10 pointer-events-none' />
+
                 <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-10 pb-6'>
                   <h3 className="self-stretch justify-start text-zinc-100 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-8">
                     Automate your content
@@ -502,6 +506,9 @@ export default function FeaturesSection() {
                     </div>
                   </div>
                 </div>
+
+                {/* Bottom blur gradient */}
+                <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-900 to-transparent z-10 pointer-events-none' />
 
                 {/* n8n schema */}
                 <Image

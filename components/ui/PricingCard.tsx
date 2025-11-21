@@ -40,9 +40,9 @@ export default function PricingCard({
       {/* Popular Badge */}
       {popular && (
         <>
-          <div className='left-1/2 -translate-x-1/2 -top-8 absolute z-20'>
+          <div className='left-1/2 -translate-x-1/2 -top-6 absolute z-20'>
             {/* Blur effect behind badge */}
-            <div className='absolute inset-0 bg-white/90 rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]' />
+            <div className='absolute inset-0 bg-white/80 rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]' />
             <Image
               src='/icons/most-popular.svg'
               alt='Most popular'
@@ -101,7 +101,7 @@ export default function PricingCard({
               </div>
               <span
                 className={cn(
-                  "font-['Darker_Grotesque'] text-base sm:text-lg md:text-xl font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-gray-500",
+                  "font-['Darker_Grotesque'] text-base sm:text-lg md:text-xl font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-gray-500 pb-[2px]",
                   !feature.enabled && 'line-through'
                 )}>
                 {feature.text}
@@ -114,7 +114,7 @@ export default function PricingCard({
         <button
           className={cn(
             buttonColor,
-            "z-10 rounded-[15px] px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-white transition-transform hover:scale-105"
+            "z-10 rounded-[15px] px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 pb-[12px] sm:pb-[14px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-white transition-transform hover:scale-105"
           )}
           style={{
             boxShadow:

@@ -87,7 +87,7 @@ export default function PricingSection() {
               Or try for free with no free-trial, no credit card, no commitments.
             </p>
             <button
-              className="rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 sm:px-6 py-3 sm:py-4 font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-transform hover:scale-105"
+              className="rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 sm:px-6 py-2.5 sm:py-3 pb-[12px] sm:pb-[14px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-transform hover:scale-105"
               style={{
                 boxShadow:
                   '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',

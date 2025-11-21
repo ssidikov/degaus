@@ -1,5 +1,8 @@
 'use client'
 
+import { useState } from 'react'
+import { VIDEO_CONFIG } from '@/lib/videoConfig'
+
 interface VideoCardProps {
   src: string
   type?: string
@@ -13,6 +16,8 @@ export default function VideoCard({
   className = '',
   aspectRatio = 'portrait',
 }: VideoCardProps) {
+  const [isLoaded, setIsLoaded] = useState(false)
+
   const heightClass =
     aspectRatio === 'portrait' ? 'h-[350px]' : aspectRatio === 'square' ? 'h-[300px]' : 'h-full'
 
@@ -21,20 +26,23 @@ export default function VideoCard({
       className={`overflow-hidden rounded-2xl relative w-[195px] shrink-0 ${heightClass} ${className}`}>
       <video
         src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload='auto'
+        autoPlay={VIDEO_CONFIG.autoplay}
+        loop={VIDEO_CONFIG.loop}
+        muted={VIDEO_CONFIG.muted}
+        playsInline={VIDEO_CONFIG.playsInline}
+        preload={VIDEO_CONFIG.preload}
         className='w-full h-full object-cover'
+        onLoadedData={() => setIsLoaded(true)}
         onLoadedMetadata={(e) => {
-          const video = e.currentTarget
-          video.play().catch(() => {})
+          if (VIDEO_CONFIG.autoplay) {
+            const video = e.currentTarget
+            video.play().catch(() => {})
+          }
         }}
       />
-      {type && (
-        <div className='absolute top-3 left-2 px-1.5 py-1.5 bg-purple-500/30 backdrop-blur-sm rounded-md z-10'>
-          <span className='text-base font-semibold text-pink-200 leading-none tracking-tight'>
+      {type && isLoaded && (
+        <div className='absolute top-3 left-2 px-2 py-1 bg-purple-600/35 backdrop-blur-sm rounded-xl z-10'>
+          <span className='text-sm font-semibold text-pink-100 leading-none tracking-tight'>
             {type}
           </span>
         </div>
