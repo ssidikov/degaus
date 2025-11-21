@@ -20,7 +20,7 @@ export default function VideoCard({
 
   return (
     <div
-      className={`overflow-hidden rounded-2xl relative w-[195px] shrink-0 ${heightClass} ${className}`}>
+      className={`overflow-hidden rounded-[20px] relative w-[195px] shrink-0 ${heightClass} ${className}`}>
       <video
         src={src}
         autoPlay={VIDEO_CONFIG.autoplay}

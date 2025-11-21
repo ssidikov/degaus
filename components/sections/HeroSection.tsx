@@ -8,11 +8,11 @@ import { CONTENT_CARDS, TRUSTED_BRANDS } from '@/lib/constants'
 
 export default function HeroSection() {
   return (
-    <section className='pt-8 pb-20'>
+    <section className='pt-8 lg:pt-16 pb-[30px]'>
       <div className='container mx-auto max-w-7xl'>
         {/* Hero Content */}
         <FadeInView>
-          <div className='text-center mb-16 max-w-4xl mx-auto px-4'>
+          <div className='text-center max-w-4xl mx-auto px-4'>
             <h1 className='text-[clamp(3rem,2.4286rem+2.8571vw,5rem)] font-extrabold mb-9 leading-[1.05] tracking-tight'>
               <span className='text-[#525252] tracking-[-1.6px]'>
                 AI content that <br />
@@ -103,7 +103,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content Cards - Infinite Scroll */}
-      <div className='w-full mb-24 overflow-hidden'>
+      <div className='w-full overflow-hidden py-[66px]'>
         <div className='scroll-container gap-9 flex'>
           {[
             ...CONTENT_CARDS,
@@ -117,7 +117,7 @@ export default function HeroSection() {
               key={index}
               src={card.video}
               type={card.type}
-              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] flex-shrink-0'
+              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0'
             />
           ))}
         </div>
@@ -127,7 +127,9 @@ export default function HeroSection() {
       <div className='container mx-auto max-w-7xl'>
         <FadeInView delay={0.2}>
           <div className='text-center'>
-            <p className='text-gray-500 text-[26px] font-bold mb-10 tracking-tight'>Trusted by</p>
+            <p className='text-[#767676] text-[26px] leading-[28px] tracking-[-0.78px] font-bold mb-6'>
+              Trusted by
+            </p>
             <div className='flex flex-wrap items-center justify-center gap-5 lg:gap-20'>
               {TRUSTED_BRANDS.map((brand, index) => (
                 <div key={index} className='relative opacity-80 hover:opacity-100 transition'>

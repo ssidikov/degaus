@@ -6,7 +6,7 @@ import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/li
 
 export default function UseCasesSection() {
   return (
-    <section id='use-cases' className='bg-violet-100 px-6 py-16'>
+    <section id='use-cases' className='bg-violet-100 px-6 py-[60px]'>
       <div className='mx-auto max-w-6xl'>
         <FadeInView>
           <Badge>Use cases</Badge>
