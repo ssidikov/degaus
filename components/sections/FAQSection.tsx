@@ -62,10 +62,12 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id='faq' className='px-6 py-16 bg-[#f3f3f9]'>
+    <section id='faq' className='px-6 py-15 bg-[#f3f3f9]'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
-          <Badge containerClassName='mb-[54px]'>FAQ</Badge>
+          <Badge containerClassName='mb-[54px]' badgeClassName='w-[67px]'>
+            FAQ
+          </Badge>
         </FadeInView>
 
         {/* Content Grid */}
@@ -77,6 +79,7 @@ export default function FAQSection() {
                 title='Frequently asked questions'
                 centered={false}
                 className='mb-[54px]'
+                titleClassNameWithSubtitle='mb-6'
               />
               <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]">
                 If you don&apos;t find your answer here, simply{' '}

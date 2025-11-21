@@ -6,6 +6,8 @@ interface SectionHeadingProps {
   className?: string
   centered?: boolean
   titleClassName?: string
+  titleClassNameWithSubtitle?: string
+  subtitleClassName?: string
 }
 
 export default function SectionHeading({
@@ -14,19 +16,25 @@ export default function SectionHeading({
   className,
   centered = true,
   titleClassName,
+  titleClassNameWithSubtitle,
+  subtitleClassName,
 }: SectionHeadingProps) {
   return (
     <div className={cn(centered && 'text-center', className)}>
       <h2
         className={cn(
           'text-4xl lg:text-[50px] leading-[28px] font-bold tracking-[-1.5px]',
-          subtitle && 'mb-6',
+          subtitle && titleClassNameWithSubtitle,
           titleClassName || 'text-[#323232]'
         )}>
         {title}
       </h2>
       {subtitle && (
-        <p className="font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]">
+        <p
+          className={cn(
+            "font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]",
+            subtitleClassName
+          )}>
           {subtitle}
         </p>
       )}

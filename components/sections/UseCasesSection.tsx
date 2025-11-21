@@ -16,7 +16,9 @@ export default function UseCasesSection() {
     <section id='use-cases' className='bg-[#e9e8f5] px-6 py-[60px]'>
       <div className='mx-auto max-w-6xl'>
         <FadeInView>
-          <Badge containerClassName='mb-[60px]'>Use cases</Badge>
+          <Badge containerClassName='mb-[60px]' badgeClassName='w-[117px]'>
+            Use cases
+          </Badge>
         </FadeInView>
 
         <FadeInView delay={0.1}>

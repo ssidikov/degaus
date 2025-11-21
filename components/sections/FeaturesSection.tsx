@@ -7,7 +7,9 @@ export default function FeaturesSection() {
     <section id='features' className='bg-[#E9E8F5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-15'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
-          <Badge containerClassName='mb-[54px]'>Features</Badge>
+          <Badge containerClassName='mb-[54px]' badgeClassName='w-[104px]'>
+            Features
+          </Badge>
         </FadeInView>
 
         <FadeInView delay={0.1}>
