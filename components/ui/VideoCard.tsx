@@ -41,7 +41,7 @@ export default function VideoCard({
         }}
       />
       {type && isLoaded && (
-        <div className='absolute top-3 left-2 px-2 py-1 bg-purple-600/35 backdrop-blur-sm rounded-xl z-10'>
+        <div className='absolute inline-flex w-auto h-[21px] text-nowrap top-3 left-2 p-1.5 bg-[#bb00ff4d] backdrop-blur-sm rounded-xl z-10'>
           <span className='text-sm font-semibold text-pink-100 leading-none tracking-tight'>
             {type}
           </span>
