@@ -16,10 +16,10 @@ export default function SectionHeading({
   titleClassName,
 }: SectionHeadingProps) {
   return (
-    <div className={cn('mb-16', centered && 'text-center', className)}>
+    <div className={cn(centered && 'text-center', className)}>
       <h2
         className={cn(
-          'text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px]',
+          'text-4xl lg:text-[50px] leading-[28px] font-bold tracking-[-1.5px]',
           subtitle && 'mb-6',
           titleClassName || 'text-[#323232]'
         )}>

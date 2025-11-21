@@ -1,7 +1,14 @@
 'use client'
 
 import Image from 'next/image'
-import { Badge, SequentialVideoCard, FeatureList, StatsCard, FadeInView } from '@/components/ui'
+import {
+  Badge,
+  SequentialVideoCard,
+  FeatureList,
+  StatsCard,
+  FadeInView,
+  SectionHeading,
+} from '@/components/ui'
 import { END_TO_END_FEATURES, ORGANIC_CONTENT_FEATURES, STATS_CARDS } from '@/lib/constants'
 
 export default function UseCasesSection() {
@@ -13,9 +20,7 @@ export default function UseCasesSection() {
         </FadeInView>
 
         <FadeInView delay={0.1}>
-          <h2 className='mb-16 text-4xl lg:text-5xl font-bold leading-tight tracking-[-1.5px] text-center text-[#323232]'>
-            Create winning content in minutes
-          </h2>
+          <SectionHeading title='Create winning content in minutes' className='mb-15' />
         </FadeInView>
 
         {/* Cards Container - Single card with two sections */}

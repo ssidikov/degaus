@@ -61,11 +61,12 @@ export default function PricingSection() {
     <section id='pricing' className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
-          <Badge>Pricing</Badge>
+          <Badge containerClassName='mb-[54px]'>Pricing</Badge>
         </FadeInView>
 
         <FadeInView delay={0.1}>
           <SectionHeading
+            className='mb-[54px]'
             title='Start creating more content today'
             subtitle='Choose the plan that makes the most sense for you. Cancel anytime.'
           />

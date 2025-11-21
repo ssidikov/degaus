@@ -11,7 +11,7 @@ export default function FeaturesSection() {
         </FadeInView>
 
         <FadeInView delay={0.1}>
-          <SectionHeading title='Everything you need in one place' />
+          <SectionHeading title='Everything you need in one place' className='mb-[54px]' />
         </FadeInView>
 
         {/* Features Grid - responsive layout */}

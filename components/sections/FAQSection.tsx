@@ -65,18 +65,18 @@ export default function FAQSection() {
     <section id='faq' className='px-6 py-16 bg-[#f3f3f9]'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
-          <Badge>FAQ</Badge>
+          <Badge containerClassName='mb-[54px]'>FAQ</Badge>
         </FadeInView>
 
         {/* Content Grid */}
         <FadeInView delay={0.1}>
-          <div className='flex flex-col lg:flex-row gap-14 items-start justify-center'>
+          <div className='flex flex-col lg:flex-row gap-[54px] items-start justify-center'>
             {/* Left Side - Heading */}
-            <div className='lg:max-w-md'>
+            <div className='lg:max-w-[487px]'>
               <SectionHeading
                 title='Frequently asked questions'
                 centered={false}
-                className='mb-0'
+                className='mb-[54px]'
               />
               <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]">
                 If you don&apos;t find your answer here, simply{' '}
