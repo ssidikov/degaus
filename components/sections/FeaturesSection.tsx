@@ -4,7 +4,7 @@ import { VIDEO_CONFIG } from '@/lib/videoConfig'
 
 export default function FeaturesSection() {
   return (
-    <section id='features' className='bg-violet-100 px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
+    <section id='features' className='bg-[#E9E8F5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
           <Badge>Features</Badge>
