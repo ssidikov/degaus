@@ -21,23 +21,23 @@ export default function HeroSection() {
             </h1>
 
             <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-[-0.78px]'>
-              <span>In minutes, create & automate your</span>
+              <span className='mb-1'>In minutes, create & automate your</span>
               <Image
                 src='/icons/instagram.svg'
                 alt='Instagram'
                 width={32}
                 height={32}
-                className='w-8 h-8 rounded-[7px] mt-2'
+                className='w-8 h-8 rounded-[7px]'
               />
-              <span>and</span>
+              <span className='mb-1'>and</span>
               <Image
                 src='/icons/tiktok.svg'
                 alt='TikTok'
                 width={32}
                 height={32}
-                className='w-8 h-8 rounded-[7px] mt-2'
+                className='w-8 h-8 rounded-[7px]'
               />
-              <span>content for your</span>
+              <span className='mb-1'>content for your</span>
               <RotatingText />
             </div>
 
