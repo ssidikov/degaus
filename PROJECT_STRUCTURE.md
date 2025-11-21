@@ -139,7 +139,7 @@ colors: {
 
 ```tsx
 <VideoCard
-  videoSrc='/videos/example.mov'
+  videoSrc='/videos/example.mp4'
   title='End-to-end Ads'
   icon={<GemIcon />}
   features={features}

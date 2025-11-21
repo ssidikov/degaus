@@ -22,7 +22,7 @@ export default function FeaturesSection() {
             <FeatureCard
               title='#1 realistic AI UGCs'
               subtitle='Create the most realistic AI Influencers'
-              videoSrc='/videos/1 realistic AI UGCs.mov'
+              videoSrc='/videos/1 realistic AI UGCs.mp4'
               showVideo={true}
             />
 
@@ -433,7 +433,7 @@ export default function FeaturesSection() {
                 <div className='w-18 xl:w-22 h-39 left-[88%] md:left-[75%] xl:left-[77%] top-[45%] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                   <video
                     className='w-full h-full rounded-[10px] object-cover border-[3px] border-white'
-                    src='/videos/AI UGC Overlay.mov'
+                    src='/videos/AI UGC Overlay.mp4'
                     autoPlay={VIDEO_CONFIG.autoplay}
                     loop={VIDEO_CONFIG.loop}
                     muted={VIDEO_CONFIG.muted}

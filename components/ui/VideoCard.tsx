@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { VIDEO_CONFIG } from '@/lib/videoConfig'
 
 interface VideoCardProps {
@@ -16,8 +15,6 @@ export default function VideoCard({
   className = '',
   aspectRatio = 'portrait',
 }: VideoCardProps) {
-  const [isLoaded, setIsLoaded] = useState(false)
-
   const heightClass =
     aspectRatio === 'portrait' ? 'h-[350px]' : aspectRatio === 'square' ? 'h-[300px]' : 'h-full'
 
@@ -32,7 +29,6 @@ export default function VideoCard({
         playsInline={VIDEO_CONFIG.playsInline}
         preload={VIDEO_CONFIG.preload}
         className='w-full h-full object-cover'
-        onLoadedData={() => setIsLoaded(true)}
         onLoadedMetadata={(e) => {
           if (VIDEO_CONFIG.autoplay) {
             const video = e.currentTarget
@@ -40,9 +36,9 @@ export default function VideoCard({
           }
         }}
       />
-      {type && isLoaded && (
-        <div className='absolute inline-flex w-auto h-[21px] text-nowrap top-3 left-2 p-1.5 bg-[#bb00ff4d] backdrop-blur-sm rounded-xl z-10'>
-          <span className='text-sm font-semibold text-pink-100 leading-none tracking-tight'>
+      {type && (
+        <div className='absolute inline-flex w-auto h-[21px] text-nowrap top-3 left-2 p-1.5 bg-[#bb00ff4d] backdrop-blur-sm rounded-[5px] z-10'>
+          <span className='text-base tracking-[-0.32px] relative bottom-[5px] font-semibold text-[#FBB4FF] leading-none'>
             {type}
           </span>
         </div>

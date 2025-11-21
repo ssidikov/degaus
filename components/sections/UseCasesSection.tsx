@@ -35,7 +35,7 @@ export default function UseCasesSection() {
 
                 <div className='flex flex-col md:flex-row gap-6'>
                   <VideoCard
-                    src='/videos/End-to-end Ads.mov'
+                    src='/videos/End-to-end Ads.mp4'
                     className='w-full md:w-[190px] lg:w-[200px] h-[350px] shadow-[0px_4px_20px_0px_rgba(73,43,218,0.25)]'
                   />
 
@@ -68,7 +68,7 @@ export default function UseCasesSection() {
 
                 <div className='flex flex-col md:flex-row gap-6'>
                   <VideoCard
-                    src='/videos/Organic Content.mov'
+                    src='/videos/Organic Content.mp4'
                     className='w-full md:w-[190px] lg:w-[200px] h-[340px] shadow-[0px_4px_20px_0px_rgba(190,72,244,0.25)]'
                   />
 

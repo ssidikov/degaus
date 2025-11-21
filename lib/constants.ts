@@ -98,14 +98,14 @@ export const AUTOMATION_FEATURES = [
 
 // Hero Section - Content Cards
 export const CONTENT_CARDS = [
-  { type: 'AI Influencer', video: '/videos/carousel/AI Influencer.mov' },
-  { type: 'AI Influencer', video: '/videos/carousel/AI Influencer-2.mov' },
-  { type: 'AI UGC Overlay', video: '/videos/carousel/AI UGC Overlay.mov' },
-  { type: 'AI UGC Ad', video: '/videos/carousel/AI UGC ad.mov' },
-  { type: 'AI UGC', video: '/videos/carousel/AI UGC.mov' },
-  { type: 'Organic UGC', video: '/videos/carousel/Organic UGC.mov' },
-  { type: 'Podcast Ads', video: '/videos/carousel/Podcast ads.mov' },
-  { type: 'Polished Ad', video: '/videos/carousel/Polished ad.mov' },
+  { type: 'AI Influencer', video: '/videos/carousel/AI Influencer.mp4' },
+  { type: 'AI Influencer', video: '/videos/carousel/AI Influencer-2.mp4' },
+  { type: 'AI UGC Overlay', video: '/videos/carousel/AI UGC Overlay.mp4' },
+  { type: 'AI UGC Ad', video: '/videos/carousel/AI UGC ad.mp4' },
+  { type: 'AI UGC', video: '/videos/carousel/AI UGC.mp4' },
+  { type: 'Organic UGC', video: '/videos/carousel/Organic UGC.mp4' },
+  { type: 'Podcast Ads', video: '/videos/carousel/Podcast ads.mp4' },
+  { type: 'Polished Ad', video: '/videos/carousel/Polished ad.mp4' },
 ] as const
 
 // Hero Section - Trusted Brands
