@@ -33,11 +33,11 @@ export default function FeaturesSection() {
               {/* High quality B-Rolls */}
               <div className='bg-gray-50 w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
                 <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-8 pb-6'>
-                  <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
+                  <h3 className='text-3xl md:text-[34px] font-bold leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px] text-[#323232]'>
                     High quality B-Rolls
                   </h3>
                   <div className='flex flex-col gap-4 xl:gap-5'>
-                    <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.72px]">
+                    <p className='text-xl md:text-2xl font-bold leading-tight sm:leading-6 lg:leading-6 text-[#616161] tracking-[-0.72px]'>
                       Integrations with all major models
                     </p>
                     <div className='flex flex-col justify-start items-start gap-[6px]'>
@@ -52,7 +52,7 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           Sora2 pro
                         </span>
                       </div>
@@ -67,7 +67,7 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           Veo3.1
                         </span>
                       </div>
@@ -82,7 +82,7 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           Nanobanana
                         </span>
                       </div>
@@ -97,7 +97,7 @@ export default function FeaturesSection() {
                             className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           10+ more
                         </span>
                       </div>
@@ -143,11 +143,11 @@ export default function FeaturesSection() {
               {/* Built-in video editor */}
               <div className='bg-gray-50 w-full h-[260px] sm:h-[298px] relative rounded-[5px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white overflow-hidden'>
                 <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-7 px-6 xl:px-10 pt-6 xl:pt-8 pb-6'>
-                  <h3 className="self-stretch justify-start text-zinc-800 text-2xl sm:text-3xl md:text-4xl lg:text-[34px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
+                  <h3 className='text-3xl md:text-[34px] font-bold leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px] text-[#323232]'>
                     Built-in video editor
                   </h3>
                   <div className='flex flex-col gap-4 xl:gap-5'>
-                    <p className="self-stretch justify-start text-zinc-600 text-lg sm:text-xl md:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.72px]">
+                    <p className='text-xl md:text-2xl font-bold leading-tight sm:leading-6 lg:leading-6 text-[#616161] tracking-[-0.72px]'>
                       Edit your videos effortlessly
                     </p>
                     <div className='flex flex-col justify-start items-start gap-[6px]'>
@@ -162,7 +162,7 @@ export default function FeaturesSection() {
                             className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           Overlays, split screens
                         </span>
                       </div>
@@ -177,7 +177,7 @@ export default function FeaturesSection() {
                             className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           AI captions (50+ fonts)
                         </span>
                       </div>
@@ -192,7 +192,7 @@ export default function FeaturesSection() {
                             className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
                           Transitions & effects
                         </span>
                       </div>
@@ -233,12 +233,12 @@ export default function FeaturesSection() {
                   />
                 </div>
 
-                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-6 px-6 xl:px-9 pt-6 xl:pt-[34px] pb-6'>
+                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-6 px-6 xl:px-9 pt-6 xl:pt-[34px] sm:pb-6'>
                   <h3 className="self-stretch justify-start text-[#EEEEEE] z-10 opacity-90 text-3xl sm:text-4xl lg:text-[34px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
                     Automate your content
                   </h3>
                   <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-6'>
-                    <p className="self-stretch justify-start text-neutral-200 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-6 lg:leading-[24px] tracking-[-0.72px]">
+                    <p className='text-xl md:text-2xl font-bold leading-tight sm:leading-6 lg:leading-[24px] text-[#E0E0E0] tracking-[-0.72px]'>
                       Build systems that actually work, reduce inconsistency & weird cuts
                     </p>
                     <div className='flex flex-col justify-start items-start gap-2 sm:gap-2.5 md:gap-3'>

@@ -42,7 +42,7 @@ export default function PricingCard({
         <>
           <div className='left-1/2 -translate-x-1/2 -top-6 absolute z-20'>
             {/* Blur effect behind badge */}
-            <div className='absolute inset-0 bg-white/80 rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]' />
+            <div className='absolute inset-0 bg-[#f3f3f9] rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]' />
             <Image
               src='/icons/most-popular.svg'
               alt='Most popular'

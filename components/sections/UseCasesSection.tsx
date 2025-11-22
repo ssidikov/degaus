@@ -30,7 +30,7 @@ export default function UseCasesSection() {
           <div className='mb-12 rounded-[30px] overflow-hidden bg-white shadow-lg lg:mx-8'>
             <div className='grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]'>
               {/* End-to-end Ads Section */}
-              <div className='p-9'>
+              <div className='p-6 lg:p-9'>
                 <div className='mb-9 flex items-center gap-[18px]'>
                   <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-violet-200 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
                     <Image src='/gem.svg' alt='gem icon' width={28} height={28} />
@@ -51,7 +51,7 @@ export default function UseCasesSection() {
                   />
 
                   <div className='flex-1'>
-                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-[#616161] mb-[26px] leading-tight">
+                    <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] mb-[26px] leading-tight">
                       Generate end-to-end winning ads in minutes
                     </p>
                     <FeatureList features={END_TO_END_FEATURES} iconColor='blue' />
@@ -63,7 +63,7 @@ export default function UseCasesSection() {
               <div className='hidden lg:block w-px bg-gray-200' />
 
               {/* Organic Content Section */}
-              <div className='p-9 border-t lg:border-t-0 border-gray-200'>
+              <div className='p-6 lg:p-9 border-t lg:border-t-0 border-gray-200'>
                 <div className='mb-9 flex items-center gap-[18px]'>
                   <span className='flex w-9 h-9 justify-center items-center border-0 rounded-[5px] bg-violet-200 shadow-[0_4px_10px_0_rgba(0,0,0,0.25)]'>
                     <Image src='/balloon.svg' alt='balloon icon' width={28} height={28} />
@@ -84,7 +84,7 @@ export default function UseCasesSection() {
                   />
 
                   <div className='flex-1'>
-                    <p className="font-['Darker_Grotesque'] text-lg lg:text-2xl font-bold text-[#616161] mb-[26px] leading-tight">
+                    <p className="font-['Darker_Grotesque'] text-2xl font-bold text-[#616161] mb-[26px] leading-tight">
                       Generate viral organic content in minutes
                     </p>
                     <FeatureList features={ORGANIC_CONTENT_FEATURES} iconColor='pink' />

@@ -18,16 +18,10 @@ export default function FeatureList({
   const icon = iconSrc || defaultIcon
 
   return (
-    <ul className={cn('space-y-1.5 sm:space-y-2 md:space-y-2.5 lg:space-y-3', className)}>
+    <ul className={cn('space-y-3', className)}>
       {features.map((feature, i) => (
-        <li key={i} className='flex items-center gap-2 sm:gap-2.5 md:gap-3'>
-          <Image
-            src={icon}
-            alt='check'
-            width={24}
-            height={24}
-            className='shrink-0 w-5 sm:w-5 md:w-7 h-5 sm:h-5 md:h-7'
-          />
+        <li key={i} className='flex items-center gap-3'>
+          <Image src={icon} alt='check' width={24} height={24} className='shrink-0 w-7 h-7' />
           <span
             className={cn(
               'text-[#8d8d8d]',
