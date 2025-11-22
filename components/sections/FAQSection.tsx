@@ -116,7 +116,7 @@ export default function FAQSection() {
                   </button>
                   {openIndex === index && (
                     <div className='bg-white border-2 border-white rounded-[10px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
-                      <p className="font-['Darker_Grotesque'] text-xl leading-6 tracking-tight text-[#616161]">
+                      <p className="ont-['Darker_Grotesque'] text-xl font-semibold leading-5 tracking-[-0.6px] text-[#8d8d8d]">
                         {item.answer}
                       </p>
                     </div>
