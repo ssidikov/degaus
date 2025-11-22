@@ -75,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className='scroll-smooth overflow-x-hidden' suppressHydrationWarning>
+    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
       <head>
         <link rel='icon' href='/logo.svg' type='image/svg+xml' />
 
