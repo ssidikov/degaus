@@ -308,7 +308,7 @@ export default function FeaturesSection() {
 
                 {/* n8n schema */}
                 <Image
-                  src='/images/n8n-schema-image.png'
+                  src='/images/n8n-schema.svg'
                   alt='n8n schema'
                   width={400}
                   height={300}
