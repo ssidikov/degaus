@@ -156,7 +156,7 @@ button {
 
 .scroll-container {
   display: flex;
-  /* animation: scroll-left 12s linear infinite; */
+  animation: scroll-left 12s linear infinite;
   will-change: transform;
 }
 

@@ -11,7 +11,7 @@ export const VIDEO_CONFIG = {
    * Set to `true` to enable autoplay (default)
    * Set to `false` to disable autoplay
    */
-  autoplay: false,
+  autoplay: true,
 
   /**
    * Other video settings
