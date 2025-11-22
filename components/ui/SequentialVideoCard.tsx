@@ -49,7 +49,7 @@ export default function SequentialVideoCard({
 
   return (
     <div
-      className={`overflow-hidden rounded-[20px] relative w-[195px] shrink-0 ${heightClass} ${className}`}>
+      className={`overflow-hidden rounded-[20px] relative w-[250px] shrink-0 ${heightClass} ${className}`}>
       <video
         ref={videoRef}
         src={videos[currentVideoIndex]}

@@ -107,23 +107,28 @@ export default function HeroSection() {
       </div>
 
       {/* Content Cards - Infinite Scroll */}
-      <div className='w-full max-w-[100vw] overflow-hidden py-[66px]'>
-        <div className='scroll-container flex w-max'>
-          {[
-            ...CONTENT_CARDS,
-            ...CONTENT_CARDS,
-            ...CONTENT_CARDS,
-            ...CONTENT_CARDS,
-            ...CONTENT_CARDS,
-            ...CONTENT_CARDS,
-          ].map((card, index) => (
-            <VideoCard
-              key={index}
-              src={card.video}
-              type={card.type}
-              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0 mr-4 sm:mr-9'
-            />
-          ))}
+      <div className='w-full backdrop-blur-sm'>
+        <div className='container mx-auto w-full relative'>
+          {/* Left Blur Mask */}
+          <div className='absolute left-[-8px] top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-r from-gray-50 via-gray-50/50 to-transparent pointer-events-none' />
+
+          {/* Right Blur Mask */}
+          <div className='absolute right-[-8px] top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-l from-gray-50 via-gray-50/50 to-transparent pointer-events-none' />
+
+          <div className='w-full overflow-hidden py-[66px] mask-image-linear-gradient'>
+            <div className='scroll-container flex w-max'>
+              {[...CONTENT_CARDS, ...CONTENT_CARDS, ...CONTENT_CARDS, ...CONTENT_CARDS].map(
+                (card, index) => (
+                  <VideoCard
+                    key={index}
+                    src={card.video}
+                    type={card.type}
+                    className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0 mr-4 sm:mr-9'
+                  />
+                )
+              )}
+            </div>
+          </div>
         </div>
       </div>
 
