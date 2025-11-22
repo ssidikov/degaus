@@ -13,7 +13,7 @@ export default function HeroSection() {
         {/* Hero Content */}
         <FadeInView>
           <div className='text-center max-w-4xl mx-auto px-4'>
-            <h1 className='text-[clamp(3rem,2.4286rem+2.8571vw,5rem)] font-extrabold mb-9 leading-[1.05] tracking-tight'>
+            <h1 className='text-[40px] sm:text-[60px] xl:text-[80px] font-extrabold mb-9 leading-[1.05] tracking-tight'>
               <span className='text-[#525252] tracking-[-1.6px]'>
                 AI content that <br />
                 actually

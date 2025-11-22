@@ -5,21 +5,14 @@ import { FadeInView } from '@/components/ui'
 
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false)
-  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    // Mark that we're now on the client
-    setIsClient(true)
-  }, [])
-
-  useEffect(() => {
-    if (isClient) {
-      const hasConsent = localStorage.getItem('cookieConsent')
-      if (!hasConsent) {
-        setShowBanner(true)
-      }
+    const hasConsent = localStorage.getItem('cookieConsent')
+    if (!hasConsent) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setShowBanner(true)
     }
-  }, [isClient])
+  }, [])
 
   const acceptCookies = () => {
     localStorage.setItem('cookieConsent', 'accepted')
@@ -37,7 +30,7 @@ export default function CookieConsent() {
     setShowBanner(false)
   }
 
-  if (!isClient || !showBanner) return null
+  if (!showBanner) return null
 
   return (
     <div className='fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4'>
