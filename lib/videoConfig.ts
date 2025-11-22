@@ -19,5 +19,5 @@ export const VIDEO_CONFIG = {
   loop: true,
   muted: true,
   playsInline: true,
-  preload: 'auto' as const,
+  preload: 'metadata' as const, // Changed from 'auto' to reduce initial load
 } as const

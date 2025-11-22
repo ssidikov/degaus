@@ -29,6 +29,7 @@ export default function HeroSection() {
                 width={32}
                 height={32}
                 quality={100}
+                priority
                 className='w-8 h-8 rounded-[7px]'
               />
               <span className='mb-1'>and</span>
@@ -38,6 +39,7 @@ export default function HeroSection() {
                 width={32}
                 height={32}
                 quality={100}
+                priority
                 className='w-8 h-8 rounded-[7px]'
               />
               <span className='mb-1'>content for your</span>
@@ -105,8 +107,8 @@ export default function HeroSection() {
       </div>
 
       {/* Content Cards - Infinite Scroll */}
-      <div className='w-full overflow-hidden py-[66px]'>
-        <div className='scroll-container gap-9 flex'>
+      <div className='w-full max-w-[100vw] overflow-hidden py-[66px]'>
+        <div className='scroll-container flex w-max'>
           {[
             ...CONTENT_CARDS,
             ...CONTENT_CARDS,
@@ -119,7 +121,7 @@ export default function HeroSection() {
               key={index}
               src={card.video}
               type={card.type}
-              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0'
+              className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0 mr-4 sm:mr-9'
             />
           ))}
         </div>
@@ -141,6 +143,7 @@ export default function HeroSection() {
                     width={brand.width}
                     height={brand.height}
                     quality={100}
+                    loading='lazy'
                     className='object-contain'
                   />
                 </div>

@@ -121,7 +121,7 @@ export default function FeaturesSection() {
                   width={45}
                   height={80}
                   quality={100}
-                  className='w-11 h-20 left-[84%] top-[65%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 border-white object-cover'
+                  className='w-11 h-20 left-[75%] md:left-[84%] top-[65%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 border-white object-cover'
                 />
                 {/* Decorative arrow */}
                 <svg
@@ -202,7 +202,7 @@ export default function FeaturesSection() {
                 {/* Decorative glow effect */}
                 <div className='w-28 h-28 left-[85%] sm:left-[70%] top-[60%] -translate-x-1/2 sm:translate-x-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]' />
                 {/* Video element */}
-                <div className='w-18 xl:w-22 h-39 left-[88%] md:left-[75%] xl:left-[77%] top-[45%] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
+                <div className='w-18 xl:w-22 h-39 left-[75%] md:left-[75%] xl:left-[77%] top-[45%] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                   <video
                     className='w-full h-full rounded-[10px] object-cover border-[3px] border-white'
                     src='/videos/Editing/video.mp4'
@@ -222,7 +222,7 @@ export default function FeaturesSection() {
                 <div className='absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-zinc-900 to-transparent z-10 pointer-events-none' />
 
                 {/* Blurred ellipse at top - only bottom half visible */}
-                <div className='absolute top-[-20px] z-30 left-1/2 w-full -translate-x-1/2 h-[244px] pointer-events-none overflow-visible'>
+                <div className='absolute top-[-20px] z-30 left-1/2 w-full -translate-x-1/2 h-[244px] pointer-events-none'>
                   <Image
                     src='/images/Ellipse-1.svg'
                     alt=''
@@ -295,7 +295,7 @@ export default function FeaturesSection() {
                 <div className='absolute bottom-0 left-0 right-0 h-32' />
 
                 {/* Blurred ellipse at bottom - only top half visible */}
-                <div className='absolute bottom-[-20px] z-30 left-1/2 w-full -translate-x-1/2 h-[244px] pointer-events-none overflow-visible'>
+                <div className='absolute bottom-[-20px] z-30 left-1/2 w-full -translate-x-1/2 h-[244px] pointer-events-none'>
                   <Image
                     src='/images/Ellipse-down.svg'
                     alt=''

@@ -33,9 +33,9 @@ export default function CookieConsent() {
   if (!showBanner) return null
 
   return (
-    <div className='fixed bottom-0 left-0 right-0 z-50 p-3 sm:p-4'>
+    <div className='fixed bottom-0 left-0 right-0 z-50 px-2 py-3 sm:p-4 w-[90%] md:w-auto mx-auto'>
       <FadeInView delay={0.5}>
-        <div className='mx-auto md:max-w-7xl'>
+        <div className='mx-auto max-w-[95%] sm:max-w-[90%] md:max-w-7xl'>
           <div
             className='relative overflow-hidden rounded-xl sm:rounded-2xl shadow-[0_-10px_40px_rgba(255,255,255,0.05)]'
             style={{

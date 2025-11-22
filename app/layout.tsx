@@ -75,12 +75,27 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+    <html lang='en' className='scroll-smooth overflow-x-hidden' suppressHydrationWarning>
       <head>
         <link rel='icon' href='/logo.svg' type='image/svg+xml' />
+
+        {/* DNS prefetch and preconnect for external resources */}
+        <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+
         {/* Preload critical hero icons */}
         <link rel='preload' href='/icons/instagram.svg' as='image' type='image/svg+xml' />
         <link rel='preload' href='/icons/tiktok.svg' as='image' type='image/svg+xml' />
+
+        {/* Preload critical fonts */}
+        <link
+          rel='preload'
+          href='/fonts/BricolageGrotesque-Bold.woff2'
+          as='font'
+          type='font/woff2'
+          crossOrigin='anonymous'
+        />
       </head>
       <body
         className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}
