@@ -58,7 +58,9 @@ export default function PricingSection() {
   ]
 
   return (
-    <section id='pricing' className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16'>
+    <section
+      id='pricing'
+      className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16 overflow-hidden'>
       <div className='mx-auto max-w-7xl'>
         <FadeInView>
           <Badge containerClassName='mb-[54px]' badgeClassName='w-[88px]'>
@@ -77,7 +79,7 @@ export default function PricingSection() {
 
         {/* Pricing Cards */}
         <FadeInView delay={0.2}>
-          <div className='relative mb-12 sm:mb-14 md:mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-9'>
+          <div className='relative mb-12 sm:mb-14 md:mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-9 items-stretch'>
             {plans.map((plan) => (
               <PricingCard key={plan.name} {...plan} />
             ))}

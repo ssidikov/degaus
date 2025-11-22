@@ -36,7 +36,7 @@ export default function PricingCard({
       : '/checked-black.svg'
 
   return (
-    <div className='relative h-auto rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)]'>
+    <div className='relative h-full rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white'>
       {/* Popular Badge */}
       {popular && (
         <>
@@ -53,139 +53,91 @@ export default function PricingCard({
               quality={100}
             />
           </div>
-          {/* Glow effects - SVG ellipses */}
-          {/* Left ellipse */}
-          <div className='absolute left-0 bottom-0 w-[382px] h-[191px] pointer-events-none overflow-hidden'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='382'
-              height='191'
-              viewBox='0 0 382 191'
-              fill='none'
-              className='w-full h-full'>
-              <g filter='url(#filter0_f_left_glow)'>
-                <ellipse cx='137.5' cy='211' rx='94' ry='61' fill='#C3C3FF' />
-              </g>
-              <defs>
-                <filter
-                  id='filter0_f_left_glow'
-                  x='-106.5'
-                  y='0'
-                  width='488'
-                  height='422'
-                  filterUnits='userSpaceOnUse'
-                  colorInterpolationFilters='sRGB'>
-                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
-                  <feBlend
-                    mode='normal'
-                    in='SourceGraphic'
-                    in2='BackgroundImageFix'
-                    result='shape'
-                  />
-                  <feGaussianBlur stdDeviation='75' result='effect1_foregroundBlur_1_551' />
-                </filter>
-              </defs>
-            </svg>
-          </div>
-          {/* Right ellipse */}
-          <div className='absolute right-0 bottom-0 w-[371px] h-[192px] pointer-events-none overflow-hidden'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='371'
-              height='192'
-              viewBox='0 0 371 192'
-              fill='none'
-              className='w-full h-full'>
-              <g filter='url(#filter0_f_right_glow)'>
-                <ellipse cx='246' cy='211' rx='96' ry='61' fill='#C3C3FF' />
-              </g>
-              <defs>
-                <filter
-                  id='filter0_f_right_glow'
-                  x='0'
-                  y='0'
-                  width='492'
-                  height='422'
-                  filterUnits='userSpaceOnUse'
-                  colorInterpolationFilters='sRGB'>
-                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
-                  <feBlend
-                    mode='normal'
-                    in='SourceGraphic'
-                    in2='BackgroundImageFix'
-                    result='shape'
-                  />
-                  <feGaussianBlur stdDeviation='75' result='effect1_foregroundBlur_1_552' />
-                </filter>
-              </defs>
-            </svg>
-          </div>
         </>
       )}
 
-      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-[42px] pb-6 sm:pb-7 xl:pr-9 gap-[30px]'>
-        {/* Plan Name */}
-        <h3 className="font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-gray-800">
-          {name}
-        </h3>
+      {/* Content wrapper with overflow hidden to clip ellipses */}
+      <div className='relative h-full overflow-hidden rounded-[15px] sm:rounded-[20px]'>
+        {popular && (
+          <>
+            {/* Glow effects - CSS ellipses similar to FeatureCard */}
+            {/* Left ellipse */}
+            <div
+              className='w-40 h-28 left-[20%] sm:left-[15%] md:left-[10%] bottom-[-60px] absolute rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]'
+              style={{ backgroundColor: '#C3C3FF' }}
+            />
+            {/* Right ellipse */}
+            <div
+              className='w-32 sm:w-40 h-24 sm:h-28 right-[20%] sm:right-[15%] md:right-[10%] bottom-[-60px] absolute rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]'
+              style={{ backgroundColor: '#C3C3FF' }}
+            />
+          </>
+        )}
 
-        {/* Price */}
-        <div className="font-['Darker_Grotesque'] font-bold text-gray-800">
-          {price.startsWith('$') ? (
-            <p className='leading-[28px] tracking-[-1.02px]'>
-              <span className='text-3xl sm:text-[32px] md:text-[34px]'>{price}</span>
-              {period && (
-                <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
-                  {period}
-                </span>
-              )}
-            </p>
-          ) : (
-            <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
-              {price}
-            </span>
-          )}
-        </div>
+        <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-[42px] pb-6 sm:pb-7 xl:pr-9 gap-[30px]'>
+          {/* Plan Name */}
+          <h3 className="font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-gray-800">
+            {name}
+          </h3>
 
-        {/* Features */}
-        <ul className='flex-1 space-y-2 sm:space-y-2.5 md:space-y-3 py-2'>
-          {features.map((feature, i) => (
-            <li key={i} className='flex items-center gap-2 sm:gap-2.5 md:gap-3'>
-              <div className='flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 shrink-0'>
-                <Image
-                  src={iconSrc}
-                  alt='check'
-                  width={28}
-                  height={28}
-                  className={cn(
-                    'w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7',
-                    !feature.enabled && 'opacity-50'
-                  )}
-                />
-              </div>
-              <span
-                className={cn(
-                  "font-['Darker_Grotesque'] text-base sm:text-[20px] font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-[#8D8D8D] pb-[2px]",
-                  !feature.enabled && 'line-through'
-                )}>
-                {feature.text}
+          {/* Price */}
+          <div className="font-['Darker_Grotesque'] font-bold text-gray-800">
+            {price.startsWith('$') ? (
+              <p className='leading-[28px] tracking-[-1.02px]'>
+                <span className='text-3xl sm:text-[32px] md:text-[34px]'>{price}</span>
+                {period && (
+                  <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
+                    {period}
+                  </span>
+                )}
+              </p>
+            ) : (
+              <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
+                {price}
               </span>
-            </li>
-          ))}
-        </ul>
+            )}
+          </div>
 
-        {/* Button */}
-        <button
-          className={cn(
-            buttonColor,
-            "z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-transform hover:scale-105 leading-[28px] tracking-[-0.52px]"
-          )}
-          style={{
-            boxShadow:
-              '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
-          }}>
-          {buttonText}
-        </button>
+          {/* Features */}
+          <ul className='flex-1 space-y-2 sm:space-y-2.5 md:space-y-3 py-2'>
+            {features.map((feature, i) => (
+              <li key={i} className='flex items-center gap-2 sm:gap-2.5 md:gap-3'>
+                <div className='flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 shrink-0'>
+                  <Image
+                    src={iconSrc}
+                    alt='check'
+                    width={28}
+                    height={28}
+                    className={cn(
+                      'w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7',
+                      !feature.enabled && 'opacity-50'
+                    )}
+                  />
+                </div>
+                <span
+                  className={cn(
+                    "font-['Darker_Grotesque'] text-base sm:text-[20px] font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-[#8D8D8D] pb-[2px]",
+                    !feature.enabled && 'line-through'
+                  )}>
+                  {feature.text}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Button */}
+          <button
+            className={cn(
+              buttonColor,
+              "z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto mt-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-transform hover:scale-105 leading-[28px] tracking-[-0.52px]"
+            )}
+            style={{
+              boxShadow:
+                '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
+            }}>
+            {buttonText}
+          </button>
+        </div>
       </div>
     </div>
   )
