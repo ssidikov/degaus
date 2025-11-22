@@ -78,6 +78,9 @@ export default function RootLayout({
     <html lang='en' className='scroll-smooth' suppressHydrationWarning>
       <head>
         <link rel='icon' href='/logo.svg' type='image/svg+xml' />
+        {/* Preload critical hero icons */}
+        <link rel='preload' href='/icons/instagram.svg' as='image' type='image/svg+xml' />
+        <link rel='preload' href='/icons/tiktok.svg' as='image' type='image/svg+xml' />
       </head>
       <body
         className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}
