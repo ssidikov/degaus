@@ -59,7 +59,7 @@ export default function HeroSection() {
                   stiffness: 300,
                   damping: 20,
                 }}
-                className='relative w-[253px] h-[51px] px-[18px] text-[26px] font-bold text-gray-100 leading-7 tracking-[-0.52px] rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] flex items-center justify-center pb-[7px] cursor-pointer overflow-hidden group'>
+                className='relative w-[200px] sm:w-[220px] lg:w-[253px] h-[42px] sm:h-[46px] lg:h-[51px] px-[14px] sm:px-[16px] lg:px-[18px] text-[20px] sm:text-[22px] lg:text-[26px] font-bold text-gray-100 leading-7 tracking-[-0.52px] rounded-2xl shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] flex items-center justify-center pb-[5px] sm:pb-[6px] lg:pb-[7px] cursor-pointer overflow-hidden group'>
                 {/* Animated gradient background */}
                 <motion.div
                   className='absolute inset-0 bg-linear-to-r from-[#152CD3] to-[#B308A7] -z-10'
