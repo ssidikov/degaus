@@ -28,6 +28,7 @@ export default function HeroSection() {
                 alt='Instagram'
                 width={32}
                 height={32}
+                quality={100}
                 className='w-8 h-8 rounded-[7px]'
               />
               <span className='mb-1'>and</span>
@@ -36,6 +37,7 @@ export default function HeroSection() {
                 alt='TikTok'
                 width={32}
                 height={32}
+                quality={100}
                 className='w-8 h-8 rounded-[7px]'
               />
               <span className='mb-1'>content for your</span>
@@ -138,6 +140,7 @@ export default function HeroSection() {
                     alt={brand.name}
                     width={brand.width}
                     height={brand.height}
+                    quality={100}
                     className='object-contain'
                   />
                 </div>

@@ -112,6 +112,7 @@ export default function FeaturesSection() {
                   alt='video frame'
                   width={45}
                   height={80}
+                  quality={100}
                   className='w-11 h-20 left-[63%] md:left-[65%] xl:left-[68%] top-[50%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 border-white object-cover'
                 />
                 <Image
@@ -119,6 +120,7 @@ export default function FeaturesSection() {
                   alt='video frame'
                   width={45}
                   height={80}
+                  quality={100}
                   className='w-11 h-20 left-[84%] top-[65%] absolute rounded-lg shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] border-2 border-white object-cover'
                 />
                 {/* Decorative arrow */}
@@ -219,38 +221,16 @@ export default function FeaturesSection() {
                 {/* Top blur gradient */}
                 <div className='absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-zinc-900 to-transparent z-10 pointer-events-none' />
 
-                {/* Blurred ellipse at top */}
-                <div className='absolute top-0 left-1/2 -translate-x-1/2 w-[192px] h-[122px] pointer-events-none z-10'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='192'
-                    height='122'
-                    viewBox='0 0 400 320'
-                    fill='none'
-                    className='w-full h-full'>
-                    <g filter='url(#filter0_f_ellipse)'>
-                      <ellipse cx='199.5' cy='9' rx='96' ry='61' fill='#8387D3' />
-                    </g>
-                    <defs>
-                      <filter
-                        id='filter0_f_ellipse'
-                        x='-146.5'
-                        y='-302'
-                        width='692'
-                        height='622'
-                        filterUnits='userSpaceOnUse'
-                        colorInterpolationFilters='sRGB'>
-                        <feFlood floodOpacity='0' result='BackgroundImageFix' />
-                        <feBlend
-                          mode='normal'
-                          in='SourceGraphic'
-                          in2='BackgroundImageFix'
-                          result='shape'
-                        />
-                        <feGaussianBlur stdDeviation='125' result='effect1_foregroundBlur_1_447' />
-                      </filter>
-                    </defs>
-                  </svg>
+                {/* Blurred ellipse at top - only bottom half visible */}
+                <div className='absolute top-[-20px] z-30 left-1/2 w-full -translate-x-1/2 h-[244px] pointer-events-none overflow-visible'>
+                  <Image
+                    src='/images/Ellipse-1.svg'
+                    alt=''
+                    width={192}
+                    height={244}
+                    quality={100}
+                    className='w-full h-full'
+                  />
                 </div>
 
                 <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-6 px-6 xl:px-9 pt-6 xl:pt-[34px] pb-6'>
@@ -314,13 +294,26 @@ export default function FeaturesSection() {
                 {/* Bottom blur gradient */}
                 <div className='absolute bottom-0 left-0 right-0 h-32' />
 
+                {/* Blurred ellipse at bottom - only top half visible */}
+                <div className='absolute bottom-[-20px] z-30 left-1/2 w-full -translate-x-1/2 h-[244px] pointer-events-none overflow-visible'>
+                  <Image
+                    src='/images/Ellipse-down.svg'
+                    alt=''
+                    width={192}
+                    height={244}
+                    quality={100}
+                    className='w-full h-full'
+                  />
+                </div>
+
                 {/* n8n schema */}
                 <Image
                   src='/images/n8n-schema-image.png'
                   alt='n8n schema'
                   width={400}
                   height={300}
-                  className='w-72 sm:w-80 md:w-96 lg:w-80 h-auto left-1/2 -translate-x-1/2 bottom-[-6px] absolute object-contain'
+                  quality={100}
+                  className='w-72 sm:w-80 md:w-96 lg:w-80 h-auto left-1/2 -translate-x-1/2 bottom-[-6px] absolute object-contain z-30'
                 />
               </div>
             </div>
