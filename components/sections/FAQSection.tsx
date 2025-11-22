@@ -10,7 +10,7 @@ const FAQ_ITEMS = [
       'No. With Degaus, in minutes you can create ads that actually convert, and organic content that actually performs. Our AI Agent takes care of finding the best performing formats for your content, editing included.',
   },
   {
-    question: 'Can I post this content as organic or ads on Instagram / TikTok?',
+    question: 'Can I post this content as organic or ads on insta / tiktok?',
     answer:
       'Our content performs for both ads and organic content, allowing you to test hundreds of hooks or formats in minutes. You can either create your own content formats, or choose from 20+ high converting ad templates (talking head, wall of text, split screen, UGC, etc.) or highly viral organic templates (shock hook, crying hook, b-roll hook).',
   },
@@ -83,7 +83,7 @@ export default function FAQSection() {
               />
               <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]">
                 If you don&apos;t find your answer here, simply{' '}
-                <span className='text-blue-600 hover:underline cursor-pointer'>reach out.</span>
+                <span className='text-[#152CD3] hover:underline cursor-pointer'>reach out.</span>
               </p>
             </div>
 
@@ -93,11 +93,11 @@ export default function FAQSection() {
                 <div key={index}>
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className='bg-[#f9f9ff] border-2 border-white rounded-[15px] p-6 w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
+                    className='bg-[#f9f9ff] border-2 border-white rounded-[10px] px-6 pt-5 pb-[22px] w-full text-left shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:shadow-[inset_0px_-2px_2px_0px_rgba(0,0,0,0.05),inset_0px_2px_2px_0px_rgba(255,255,255,0.4)] transition-shadow'>
                     <div className='flex items-center gap-3'>
                       <div className='w-6 h-6 shrink-0'>
                         <svg
-                          className='w-full h-full text-blue-600'
+                          className='w-full h-full text-[#152CD3]'
                           fill='none'
                           stroke='currentColor'
                           viewBox='0 0 24 24'>
@@ -115,7 +115,7 @@ export default function FAQSection() {
                     </div>
                   </button>
                   {openIndex === index && (
-                    <div className='bg-white border-2 border-white rounded-[15px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
+                    <div className='bg-white border-2 border-white rounded-[10px] p-6 mt-2 shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05)]'>
                       <p className="font-['Darker_Grotesque'] text-xl leading-6 tracking-tight text-[#616161]">
                         {item.answer}
                       </p>

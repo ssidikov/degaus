@@ -26,12 +26,12 @@ export default function FeatureList({
             alt='check'
             width={24}
             height={24}
-            className='shrink-0 w-5 sm:w-5 md:w-6 lg:w-6 h-5 sm:h-5 md:h-6 lg:h-6'
+            className='shrink-0 w-5 sm:w-5 md:w-7 h-5 sm:h-5 md:h-7'
           />
           <span
             className={cn(
               'text-[#8d8d8d]',
-              "text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 tracking-[-0.6px]"
+              "text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]"
             )}>
             {feature}
           </span>

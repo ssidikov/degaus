@@ -6,7 +6,7 @@ export default function PricingSection() {
       name: 'Basic',
       price: '$49.99',
       period: '/ month',
-      buttonColor: 'bg-fuchsia-700',
+      buttonColor: 'bg-[#A01C96]',
       buttonText: 'Choose plan',
       checkColor: 'pink' as const,
       features: [
@@ -24,7 +24,7 @@ export default function PricingSection() {
       name: 'Pro',
       price: '$149.99',
       period: '/ month',
-      buttonColor: 'bg-blue-700',
+      buttonColor: 'bg-[#152CD3]',
       buttonText: 'Choose plan',
       checkColor: 'blue' as const,
       popular: true,
@@ -44,7 +44,7 @@ export default function PricingSection() {
       name: 'Custom',
       price: 'Talk to a human',
       period: '',
-      buttonColor: 'bg-gradient-to-r from-stone-950 to-zinc-900',
+      buttonColor: 'bg-gradient-to-r from-[#101011] to-[#18181A]',
       buttonText: 'Talk to a human',
       checkColor: 'gray' as const,
       features: [
@@ -87,11 +87,11 @@ export default function PricingSection() {
         {/* Try for free */}
         <FadeInView delay={0.3}>
           <div className='flex flex-col items-center gap-6 sm:gap-7 md:gap-9'>
-            <p className="max-w-md text-center font-['Darker_Grotesque'] text-xl sm:text-2xl font-bold leading-tight sm:leading-6 tracking-tight sm:tracking-[-0.72px] text-gray-500 px-4">
+            <p className="max-w-md text-center font-['Darker_Grotesque'] text-xl sm:text-2xl font-bold leading-tight sm:leading-6 tracking-tight sm:tracking-[-0.72px] text-[#8D8D8D] px-4">
               Or try for free with no free-trial, no credit card, no commitments.
             </p>
             <button
-              className="rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 sm:px-6 py-2.5 sm:py-3 pb-[12px] sm:pb-[14px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-transform hover:scale-105"
+              className="rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-transform hover:scale-105 w-[142px] h-[52px]"
               style={{
                 boxShadow:
                   '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',

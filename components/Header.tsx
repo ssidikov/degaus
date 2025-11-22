@@ -6,7 +6,7 @@ export default function Header() {
     <header className='w-full sticky top-0 z-50'>
       <div className='container mx-auto px-4 sm:px-6 py-4 sm:py-5 lg:py-6'>
         <div
-          className='mx-auto max-w-5xl rounded-[24px] p-3 liquid-glass flex items-center justify-between gap-2'
+          className='mx-auto max-w-4xl rounded-[24px] p-3 liquid-glass flex items-center justify-between gap-2'
           style={{
             background: 'rgba(190, 190, 190, 0.2)',
             backdropFilter: 'blur(80px)',

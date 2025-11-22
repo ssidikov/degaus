@@ -53,38 +53,102 @@ export default function PricingCard({
               quality={100}
             />
           </div>
-          {/* Glow effects */}
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 left-[15%] sm:left-[43.50px] bottom-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-3xl' />
-          <div className='w-32 sm:w-40 md:w-48 h-24 sm:h-28 md:h-32 right-[15%] sm:left-[179.50px] bottom-0 absolute bg-violet-300 rounded-full blur-2xl sm:blur-3xl' />
+          {/* Glow effects - SVG ellipses */}
+          {/* Left ellipse */}
+          <div className='absolute left-0 bottom-0 w-[382px] h-[191px] pointer-events-none overflow-hidden'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='382'
+              height='191'
+              viewBox='0 0 382 191'
+              fill='none'
+              className='w-full h-full'>
+              <g filter='url(#filter0_f_left_glow)'>
+                <ellipse cx='137.5' cy='211' rx='94' ry='61' fill='#C3C3FF' />
+              </g>
+              <defs>
+                <filter
+                  id='filter0_f_left_glow'
+                  x='-106.5'
+                  y='0'
+                  width='488'
+                  height='422'
+                  filterUnits='userSpaceOnUse'
+                  colorInterpolationFilters='sRGB'>
+                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                  <feBlend
+                    mode='normal'
+                    in='SourceGraphic'
+                    in2='BackgroundImageFix'
+                    result='shape'
+                  />
+                  <feGaussianBlur stdDeviation='75' result='effect1_foregroundBlur_1_551' />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          {/* Right ellipse */}
+          <div className='absolute right-0 bottom-0 w-[371px] h-[192px] pointer-events-none overflow-hidden'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='371'
+              height='192'
+              viewBox='0 0 371 192'
+              fill='none'
+              className='w-full h-full'>
+              <g filter='url(#filter0_f_right_glow)'>
+                <ellipse cx='246' cy='211' rx='96' ry='61' fill='#C3C3FF' />
+              </g>
+              <defs>
+                <filter
+                  id='filter0_f_right_glow'
+                  x='0'
+                  y='0'
+                  width='492'
+                  height='422'
+                  filterUnits='userSpaceOnUse'
+                  colorInterpolationFilters='sRGB'>
+                  <feFlood floodOpacity='0' result='BackgroundImageFix' />
+                  <feBlend
+                    mode='normal'
+                    in='SourceGraphic'
+                    in2='BackgroundImageFix'
+                    result='shape'
+                  />
+                  <feGaussianBlur stdDeviation='75' result='effect1_foregroundBlur_1_552' />
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </>
       )}
 
-      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-11 pb-6 sm:pb-7 xl:pr-9'>
+      <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-[42px] pb-6 sm:pb-7 xl:pr-9 gap-[30px]'>
         {/* Plan Name */}
-        <h3 className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-gray-800">
+        <h3 className="font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-gray-800">
           {name}
         </h3>
 
         {/* Price */}
-        <div className="mb-5 sm:mb-6 md:mb-7 font-['Darker_Grotesque'] font-bold text-gray-800">
+        <div className="font-['Darker_Grotesque'] font-bold text-gray-800">
           {price.startsWith('$') ? (
-            <p className='leading-tight sm:leading-7'>
+            <p className='leading-[28px] tracking-[-1.02px]'>
               <span className='text-3xl sm:text-[32px] md:text-[34px]'>{price}</span>
               {period && (
-                <span className='text-xl sm:text-2xl tracking-tight sm:tracking-[-0.72px]'>
+                <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
                   {period}
                 </span>
               )}
             </p>
           ) : (
-            <span className='text-xl sm:text-2xl leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.72px]'>
+            <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
               {price}
             </span>
           )}
         </div>
 
         {/* Features */}
-        <ul className='mb-6 sm:mb-7 md:mb-8 flex-1 space-y-2 sm:space-y-2.5 md:space-y-3 py-2 sm:py-2.5 md:py-3'>
+        <ul className='flex-1 space-y-2 sm:space-y-2.5 md:space-y-3 py-2'>
           {features.map((feature, i) => (
             <li key={i} className='flex items-center gap-2 sm:gap-2.5 md:gap-3'>
               <div className='flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 shrink-0'>
@@ -101,7 +165,7 @@ export default function PricingCard({
               </div>
               <span
                 className={cn(
-                  "font-['Darker_Grotesque'] text-base sm:text-lg md:text-xl font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-gray-500 pb-[2px]",
+                  "font-['Darker_Grotesque'] text-base sm:text-[20px] font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-[#8D8D8D] pb-[2px]",
                   !feature.enabled && 'line-through'
                 )}>
                 {feature.text}
@@ -114,7 +178,7 @@ export default function PricingCard({
         <button
           className={cn(
             buttonColor,
-            "z-10 rounded-[15px] px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 pb-[12px] sm:pb-[14px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-white transition-transform hover:scale-105"
+            "z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-transform hover:scale-105 leading-[28px] tracking-[-0.52px]"
           )}
           style={{
             boxShadow:

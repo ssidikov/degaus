@@ -24,7 +24,7 @@ export default function FeaturesSection() {
             <FeatureCard
               title='#1 realistic AI UGCs'
               subtitle='Create the most realistic AI Influencers'
-              videoSrc='/videos/1 realistic AI UGCs.mp4'
+              videoSrc='/videos/realistic AI UGCs/realistic AI UGCs.mp4'
               showVideo={true}
             />
 
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
                     <div className='flex flex-col justify-start items-start gap-[6px]'>
                       {/* Sora2 pro */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-6 md:h-7'>
                           <Image
                             src='/icons/sora-2.svg'
                             alt='Sora2 pro'
@@ -52,13 +52,13 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Sora2 pro
                         </span>
                       </div>
                       {/* Veo3.1 */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-6 md:h-7'>
                           <Image
                             src='/icons/veo3.svg'
                             alt='veo3'
@@ -67,13 +67,13 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Veo3.1
                         </span>
                       </div>
                       {/* Nanobanana */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-6 md:h-7'>
                           <Image
                             src='/icons/nanobanana.svg'
                             alt='nanobanana'
@@ -82,22 +82,22 @@ export default function FeaturesSection() {
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Nanobanana
                         </span>
                       </div>
                       {/* 10+ more */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-6 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='plus'
-                            width={24}
-                            height={24}
-                            className='w-5 sm:w-6'
+                            width={28}
+                            height={28}
+                            className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           10+ more
                         </span>
                       </div>
@@ -151,46 +151,46 @@ export default function FeaturesSection() {
                     <div className='flex flex-col justify-start items-start gap-[6px]'>
                       {/* Overlays, split screens */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-5 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='plus'
-                            width={24}
-                            height={24}
-                            className='w-5 sm:w-6'
+                            width={28}
+                            height={28}
+                            className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Overlays, split screens
                         </span>
                       </div>
                       {/* AI captions (50+ fonts) */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-5 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='plus'
-                            width={24}
-                            height={24}
-                            className='w-5 sm:w-6'
+                            width={28}
+                            height={28}
+                            className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           AI captions (50+ fonts)
                         </span>
                       </div>
                       {/* Transitions & effects */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6'>
+                        <div className='relative flex items-center justify-center w-4 sm:w-5 md:w-7 h-4 sm:h-5 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='plus'
-                            width={24}
-                            height={24}
-                            className='w-5 sm:w-6'
+                            width={28}
+                            height={28}
+                            className='w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
+                        <span className="justify-start text-[#8d8d8d] text-[20px] sm:text-lg md:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-0.6px]">
                           Transitions & effects
                         </span>
                       </div>
@@ -203,7 +203,7 @@ export default function FeaturesSection() {
                 <div className='w-18 xl:w-22 h-39 left-[88%] md:left-[75%] xl:left-[77%] top-[45%] sm:top-[50%] -translate-x-1/2 sm:-translate-x-1/2 md:translate-x-0 absolute shadow-[0px_4px_4px_0px_rgba(0,0,0,0.15)] rounded-[10px]'>
                   <video
                     className='w-full h-full rounded-[10px] object-cover border-[3px] border-white'
-                    src='/videos/AI UGC Overlay.mp4'
+                    src='/videos/Editing/video.mp4'
                     autoPlay={VIDEO_CONFIG.autoplay}
                     loop={VIDEO_CONFIG.loop}
                     muted={VIDEO_CONFIG.muted}
@@ -253,57 +253,57 @@ export default function FeaturesSection() {
                   </svg>
                 </div>
 
-                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-8 px-6 xl:px-10 pt-6 xl:pt-[34px] pb-6'>
-                  <h3 className="self-stretch justify-start text-[#EEEEEE] z-10 opacity-90 text-3xl sm:text-4xl lg:text-[32px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
+                <div className='inline-flex flex-col justify-start items-start gap-4 xl:gap-6 px-6 xl:px-9 pt-6 xl:pt-[34px] pb-6'>
+                  <h3 className="self-stretch justify-start text-[#EEEEEE] z-10 opacity-90 text-3xl sm:text-4xl lg:text-[34px] font-bold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[28px] tracking-[-1.02px]">
                     Automate your content
                   </h3>
-                  <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-2'>
-                    <p className="self-stretch justify-start text-neutral-200 text-lg sm:text-xl md:text-2xl lg:text-xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-6 lg:leading-6">
+                  <div className='w-full max-w-80 flex flex-col justify-start items-start gap-2 sm:gap-2.5 lg:gap-6'>
+                    <p className="self-stretch justify-start text-neutral-200 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold font-['Darker_Grotesque'] leading-tight sm:leading-6 lg:leading-[24px] tracking-[-0.72px]">
                       Build systems that actually work, reduce inconsistency & weird cuts
                     </p>
-                    <div className='py-2 sm:py-2.5 md:py-3 lg:py-2 flex flex-col justify-start items-start gap-2 sm:gap-2.5 md:gap-3 lg:gap-2'>
+                    <div className='flex flex-col justify-start items-start gap-2 sm:gap-2.5 md:gap-3'>
                       {/* AI Auto-selects best output */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
                         <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='check'
-                            width={24}
-                            height={24}
-                            className='relative z-10 w-5 sm:w-6'
+                            width={28}
+                            height={28}
+                            className='relative z-10 w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[-0.6px]">
                           AI Auto-selects best output
                         </span>
                       </div>
                       {/* Automatic editing */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-6 lg:w-6 h-6 sm:h-6 md:h-6 lg:h-6'>
+                        <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='check'
-                            width={24}
-                            height={24}
-                            className='relative z-10 w-5 sm:w-6 lg:w-5'
+                            width={28}
+                            height={28}
+                            className='relative z-10 w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[-0.6px]">
                           Automatic editing
                         </span>
                       </div>
                       {/* Plug into your n8n workflows */}
                       <div className='inline-flex justify-start items-center gap-2 sm:gap-2.5 md:gap-3'>
-                        <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-6 lg:w-6 h-6 sm:h-6 md:h-6 lg:h-6'>
+                        <div className='relative flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7'>
                           <Image
                             src='/checked-blue.svg'
                             alt='check'
-                            width={24}
-                            height={24}
-                            className='relative z-10 w-5 sm:w-6 lg:w-5'
+                            width={28}
+                            height={28}
+                            className='relative z-10 w-5 sm:w-7'
                           />
                         </div>
-                        <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-lg font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-6">
+                        <span className="justify-start text-stone-300 text-lg sm:text-xl lg:text-[20px] font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[-0.6px]">
                           Plug into your n8n workflows
                         </span>
                       </div>
@@ -312,7 +312,7 @@ export default function FeaturesSection() {
                 </div>
 
                 {/* Bottom blur gradient */}
-                <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-900 to-transparent z-10 pointer-events-none' />
+                <div className='absolute bottom-0 left-0 right-0 h-32' />
 
                 {/* n8n schema */}
                 <Image
@@ -320,7 +320,7 @@ export default function FeaturesSection() {
                   alt='n8n schema'
                   width={400}
                   height={300}
-                  className='w-72 sm:w-80 md:w-96 lg:w-80 h-auto left-1/2 -translate-x-1/2 bottom-0 absolute object-contain'
+                  className='w-72 sm:w-80 md:w-96 lg:w-80 h-auto left-1/2 -translate-x-1/2 bottom-[-6px] absolute object-contain'
                 />
               </div>
             </div>
