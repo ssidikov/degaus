@@ -110,10 +110,10 @@ export default function HeroSection() {
       <div className='w-full overflow-x-clip backdrop-blur-sm'>
         <div className='container mx-auto max-w-7xl relative py-[66px]'>
           {/* Left Blur Mask */}
-          <div className='absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-r from-gray-50 via-gray-50/50 to-transparent pointer-events-none' />
+          <div className='absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-r from-[#FFFFFF] via-[#FFFFFF]/50 to-transparent pointer-events-none' />
 
           {/* Right Blur Mask */}
-          <div className='absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-l from-gray-50 via-gray-50/50 to-transparent pointer-events-none' />
+          <div className='absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-l from-[#FFFFFF] via-[#FFFFFF]/50 to-transparent pointer-events-none' />
 
           <div className='w-full overflow-hidden'>
             <div className='scroll-container flex w-max'>
