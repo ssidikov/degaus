@@ -16,8 +16,10 @@ export default function StatsCard({ imageSrc, imageAlt, title, description }: St
           src={imageSrc}
           alt={imageAlt}
           fill
+          sizes='(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px'
           className='object-cover max-h-[195px] w-full'
           quality={100}
+          unoptimized
         />
       </div>
 

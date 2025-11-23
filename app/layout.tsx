@@ -85,8 +85,8 @@ export default function RootLayout({
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
 
         {/* Preload critical hero icons */}
-        <link rel='preload' href='/icons/instagram.svg' as='image' type='image/svg+xml' />
-        <link rel='preload' href='/icons/tiktok.svg' as='image' type='image/svg+xml' />
+        <link rel='preload' href='/icons/instagram.png' as='image' type='image/svg+xml' />
+        <link rel='preload' href='/icons/tiktok.png' as='image' type='image/svg+xml' />
 
         {/* Preload critical fonts */}
         <link

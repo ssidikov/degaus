@@ -24,7 +24,7 @@ export default function HeroSection() {
             <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-[-0.78px]'>
               <span className='mb-1'>In minutes, create &amp; automate your</span>
               <Image
-                src='/icons/instagram.svg'
+                src='/icons/instagram.png'
                 alt='Instagram'
                 width={32}
                 height={32}
@@ -35,7 +35,7 @@ export default function HeroSection() {
               />
               <span className='mb-1'>and</span>
               <Image
-                src='/icons/tiktok.svg'
+                src='/icons/tiktok.png'
                 alt='TikTok'
                 width={32}
                 height={32}
