@@ -129,7 +129,7 @@ button {
 }
 
 /**
- * Video Scroll Animation - Faster speed for better UX
+ * Video Scroll Animation - Adjusted speed for better UX
  */
 @keyframes scroll-left {
   0% {
@@ -143,7 +143,7 @@ button {
 
 .scroll-container {
   display: flex;
-  animation: scroll-left 40s linear infinite;
+  animation: scroll-left 50s linear infinite;
   will-change: transform;
 }
 

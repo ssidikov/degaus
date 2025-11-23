@@ -13,7 +13,7 @@ export default function HeroSection() {
         {/* Hero Content */}
         <FadeInView>
           <div className='text-center max-w-4xl mx-auto px-4'>
-            <h1 className='text-[40px] sm:text-[60px] xl:text-[80px] font-extrabold mb-9 leading-[1.05] tracking-tight'>
+            <h1 className='text-[40px] sm:text-[60px] xl:text-[80px] font-[Bricolage_Grotesque] font-extrabold mb-9 leading-[1.05] tracking-tight'>
               <span className='text-[#525252] tracking-[-1.6px]'>
                 AI content that <br />
                 actually
@@ -108,15 +108,9 @@ export default function HeroSection() {
 
       {/* Content Cards - Infinite Scroll */}
       <div className='w-full overflow-x-clip backdrop-blur-sm'>
-        <div className='container mx-auto max-w-7xl relative py-[66px]'>
-          {/* Left Blur Mask */}
-          <div className='absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-r from-[#FFFFFF] via-[#FFFFFF]/50 to-transparent pointer-events-none' />
-
-          {/* Right Blur Mask */}
-          <div className='absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-linear-to-l from-[#FFFFFF] via-[#FFFFFF]/50 to-transparent pointer-events-none' />
-
+        <div className='w-full max-w-[1920px] mx-auto relative'>
           <div className='w-full overflow-hidden'>
-            <div className='scroll-container flex w-max'>
+            <div className='scroll-container flex w-max my-[66px]'>
               {[...CONTENT_CARDS, ...CONTENT_CARDS, ...CONTENT_CARDS, ...CONTENT_CARDS].map(
                 (card, index) => (
                   <VideoCard
