@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import { style, text } from 'framer-motion/client'
 
 interface PricingFeature {
   text: string
@@ -118,9 +119,18 @@ export default function PricingCard({
                 </div>
                 <span
                   className={cn(
-                    "font-['Darker_Grotesque'] text-base sm:text-[20px] font-semibold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.6px] text-[#8D8D8D] pb-[2px]",
-                    !feature.enabled && 'line-through'
-                  )}>
+                    "font-['Darker_Grotesque'] text-base sm:text-[20px] font-semibold leading-tight sm:leading-[28px] tracking-tight sm:tracking-[-0.6px] text-[#8D8D8D] pb-[2px]",
+                    !feature.enabled && 'relative'
+                  )}
+                  style={
+                    !feature.enabled
+                      ? {
+                          textDecoration: 'underline',
+                          textUnderlineOffset: '-.25em',
+                          textDecorationSkipInk: 'none',
+                        }
+                      : undefined
+                  }>
                   {feature.text}
                 </span>
               </li>
