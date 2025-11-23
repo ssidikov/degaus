@@ -18,11 +18,11 @@ export default function HeroSection() {
                 AI content that <br />
                 actually
               </span>
-              <span className='text-black tracking-[-1.6px]'> converts</span>
+              <span className='text-black tracking-[-1.6px]'>converts</span>
             </h1>
 
             <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-[-0.78px]'>
-              <span className='mb-1'>In minutes, create & automate your</span>
+              <span className='mb-1'>In minutes, create &amp; automate your</span>
               <Image
                 src='/icons/instagram.svg'
                 alt='Instagram'
@@ -30,6 +30,7 @@ export default function HeroSection() {
                 height={32}
                 quality={100}
                 priority
+                unoptimized
                 className='w-8 h-8 rounded-[7px]'
               />
               <span className='mb-1'>and</span>
@@ -40,6 +41,7 @@ export default function HeroSection() {
                 height={32}
                 quality={100}
                 priority
+                unoptimized
                 className='w-8 h-8 rounded-[7px]'
               />
               <span className='mb-1'>content for your</span>
@@ -107,7 +109,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content Cards - Infinite Scroll */}
-      <div className='w-full overflow-x-clip backdrop-blur-sm'>
+      <div className='w-full overflow-x-clip'>
         <div className='w-full max-w-[1920px] mx-auto relative'>
           <div className='w-full overflow-hidden'>
             <div className='scroll-container flex w-max my-[66px]'>
@@ -117,7 +119,7 @@ export default function HeroSection() {
                     key={index}
                     src={card.video}
                     type={card.type}
-                    className='w-[195px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0 mr-4 sm:mr-9'
+                    className='w-[195px] md:shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0 mr-4 sm:mr-9'
                   />
                 )
               )}

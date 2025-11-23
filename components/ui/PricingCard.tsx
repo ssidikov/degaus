@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { style, text } from 'framer-motion/client'
 
 interface PricingFeature {
   text: string
@@ -54,6 +53,7 @@ export default function PricingCard({
               className='w-[150px] h-auto relative z-10 '
               priority
               quality={100}
+              unoptimized
             />
           </div>
         </>
@@ -111,6 +111,7 @@ export default function PricingCard({
                     alt='check'
                     width={28}
                     height={28}
+                    unoptimized
                     className={cn(
                       'w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7',
                       !feature.enabled && 'opacity-50'

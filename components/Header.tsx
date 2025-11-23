@@ -40,6 +40,7 @@ export default function Header() {
                 alt='degaus logo'
                 width={108}
                 height={25}
+                unoptimized
                 className='w-[108px] h-[25px]'
               />
             </Link>

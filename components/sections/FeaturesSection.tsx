@@ -49,6 +49,7 @@ export default function FeaturesSection() {
                             alt='Sora2 pro'
                             width={16}
                             height={16}
+                            unoptimized
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
@@ -64,6 +65,7 @@ export default function FeaturesSection() {
                             alt='veo3'
                             width={16}
                             height={16}
+                            unoptimized
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
@@ -79,6 +81,7 @@ export default function FeaturesSection() {
                             alt='nanobanana'
                             width={16}
                             height={16}
+                            unoptimized
                             className='w-3.5 sm:w-4 md:w-4'
                           />
                         </div>
@@ -94,6 +97,7 @@ export default function FeaturesSection() {
                             alt='plus'
                             width={28}
                             height={28}
+                            unoptimized
                             className='w-5 sm:w-7'
                           />
                         </div>
@@ -229,6 +233,7 @@ export default function FeaturesSection() {
                     width={192}
                     height={244}
                     quality={100}
+                    unoptimized
                     className='w-full h-full'
                   />
                 </div>
@@ -302,6 +307,7 @@ export default function FeaturesSection() {
                     width={192}
                     height={244}
                     quality={100}
+                    unoptimized
                     className='w-full h-full'
                   />
                 </div>
@@ -313,6 +319,7 @@ export default function FeaturesSection() {
                   width={400}
                   height={300}
                   quality={100}
+                  unoptimized
                   className='w-72 sm:w-80 md:w-96 lg:w-80 h-auto left-1/2 -translate-x-1/2 bottom-[-6px] absolute object-contain z-30'
                 />
               </div>
