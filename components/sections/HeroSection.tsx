@@ -18,7 +18,7 @@ export default function HeroSection() {
                 AI content that <br />
                 actually
               </span>
-              <span className='text-black tracking-[-1.6px]'>converts</span>
+              <span className='text-black tracking-[-1.6px]'> converts</span>
             </h1>
 
             <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-[-0.78px]'>

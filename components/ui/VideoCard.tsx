@@ -38,7 +38,8 @@ export default function VideoCard({
         })
       },
       {
-        threshold: 0.2, // Play when 20% of the video is visible
+        threshold: 0.1, // Start loading when 10% visible (earlier than before)
+        rootMargin: '200px', // Start loading 200px before video enters viewport
       }
     )
 
