@@ -159,6 +159,7 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+
   30%, 100% {
     opacity: 0;
     transform: translateY(-10px);
@@ -188,6 +189,7 @@ button {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 200% 0%;
   }
