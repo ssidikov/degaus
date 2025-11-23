@@ -181,6 +181,18 @@ button {
   animation-delay: 6s;
 }
 
+/**
+ * Shimmer Animation for Buttons
+ */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
 /* Fix sticky header */
 body {
   overflow-x: visible;

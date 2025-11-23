@@ -83,7 +83,7 @@ export default function FeaturesSection() {
                           />
                         </div>
                         <span className="text-[#8d8d8d] text-base sm:text-lg md:text-xl lg:text-xl font-semibold font-['Darker_Grotesque'] leading-tight sm:leading-7 lg:leading-[24px] tracking-[-0.6px]">
-                          Nanobanana
+                          Nanobanana pro
                         </span>
                       </div>
                       {/* 10+ more */}

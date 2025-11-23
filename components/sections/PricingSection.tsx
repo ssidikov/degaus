@@ -1,3 +1,5 @@
+'use client'
+
 import { Badge, SectionHeading, PricingCard, FadeInView } from '@/components/ui'
 
 export default function PricingSection() {
@@ -93,12 +95,30 @@ export default function PricingSection() {
               Or try for free with no free-trial, no credit card, no commitments.
             </p>
             <button
-              className="rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-transform hover:scale-105 w-[142px] h-[52px]"
+              className="relative rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-all duration-300 hover:scale-105 w-[142px] h-[52px] overflow-hidden group"
               style={{
                 boxShadow:
                   '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  '0px 8px 30px 0px rgba(46,71,249,0.45), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
               }}>
-              Try for free
+              {/* Shimmer effect on hover */}
+              <div
+                className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'
+                style={{
+                  background:
+                    'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
+                  backgroundSize: '200% 100%',
+                  animation: 'shimmer 1.5s linear infinite',
+                }}
+              />
+              <span className='relative z-10'>Try for free</span>
             </button>
           </div>
         </FadeInView>

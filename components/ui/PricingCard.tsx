@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
@@ -129,13 +131,31 @@ export default function PricingCard({
           <button
             className={cn(
               buttonColor,
-              "z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto mt-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-transform hover:scale-105 leading-[28px] tracking-[-0.52px]"
+              "relative z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto mt-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-all duration-300 hover:scale-105 leading-[28px] tracking-[-0.52px] overflow-hidden group"
             )}
             style={{
               boxShadow:
                 '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow =
+                '0px 8px 30px 0px rgba(16,16,17,0.45), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow =
+                '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
             }}>
-            {buttonText}
+            {/* Shimmer effect on hover */}
+            <div
+              className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'
+              style={{
+                background:
+                  'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
+                backgroundSize: '200% 100%',
+                animation: 'shimmer 1.5s linear infinite',
+              }}
+            />
+            <span className='relative z-10'>{buttonText}</span>
           </button>
         </div>
       </div>
