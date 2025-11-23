@@ -14,11 +14,11 @@ export default function HeroSection() {
         <FadeInView>
           <div className='text-center max-w-4xl mx-auto px-4'>
             <h1 className='text-[40px] sm:text-[60px] xl:text-[80px] font-[Bricolage_Grotesque] font-extrabold mb-9 leading-[1.05] tracking-tight'>
-              <span className='text-[#525252] tracking-[-1.6px]'>
+              <span className='text-[#525252] tracking-[-1.6px] leading-[70px]'>
                 AI content that <br />
                 actually
               </span>
-              <span className='text-black tracking-[-1.6px]'> converts</span>
+              <span className='text-black tracking-[-1.6px] leading-[70px]'> converts</span>
             </h1>
 
             <div className='flex flex-wrap items-center justify-center gap-2 text-[26px] font-bold text-[#7C7C7C] mb-9 leading-none tracking-[-0.78px]'>
