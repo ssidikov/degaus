@@ -25,6 +25,7 @@ export default function FeaturesSection() {
               title='#1 realistic AI UGCs'
               subtitle='Create the most realistic AI Influencers'
               videoSrc='/videos/realistic AI UGCs/realistic AI UGCs.mp4'
+              poster='/images/AI UGCs thumbnail.png'
               showVideo={true}
             />
 

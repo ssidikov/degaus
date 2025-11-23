@@ -9,6 +9,7 @@ interface FeatureCardProps {
   subtitle: string
   videoSrc?: string
   showVideo?: boolean
+  poster?: string
 }
 
 export default function FeatureCard({
@@ -16,6 +17,7 @@ export default function FeatureCard({
   subtitle,
   videoSrc,
   showVideo = true,
+  poster,
 }: FeatureCardProps) {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
 
@@ -79,6 +81,7 @@ export default function FeatureCard({
               <video
                 className='w-full h-full rounded-[20px] object-cover pointer-events-none'
                 src={videoSrc}
+                poster={poster}
                 loop
                 muted
                 playsInline
