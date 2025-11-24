@@ -87,15 +87,6 @@ export default function RootLayout({
         {/* Preload critical hero icons */}
         <link rel='preload' href='/icons/instagram.png' as='image' type='image/svg+xml' />
         <link rel='preload' href='/icons/tiktok.png' as='image' type='image/svg+xml' />
-
-        {/* Preload critical fonts */}
-        <link
-          rel='preload'
-          href='/fonts/BricolageGrotesque-Bold.woff2'
-          as='font'
-          type='font/woff2'
-          crossOrigin='anonymous'
-        />
       </head>
       <body
         className={`${bricolageGrotesque.variable} ${darkerGrotesque.variable} font-sans antialiased`}
