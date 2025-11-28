@@ -83,6 +83,13 @@ export default function Footer() {
                       FAQ
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href='/blog'
+                      className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors">
+                      Blog
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
