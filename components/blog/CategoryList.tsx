@@ -16,7 +16,7 @@ export default function CategoryList({ categories, currentCategorySlug }: Catego
   if (!categories || categories.length === 0) return null
 
   return (
-    <aside className='rounded-xl bg-white p-6 shadow-md'>
+    <aside className='rounded-xl liquid-glass p-6'>
       <h3 className='mb-4 text-xl font-bold font-bricolage text-gray-900'>Categories</h3>
       <ul className='space-y-2'>
         <li>

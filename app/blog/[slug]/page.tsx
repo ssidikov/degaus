@@ -74,7 +74,12 @@ export default async function PostPage({ params }: PostPageProps) {
   ])
 
   return (
-    <>
+    <div
+      className='min-h-screen'
+      style={{
+        background:
+          'linear-gradient(180deg, rgba(169, 202, 255, 0.200) 0.000%, rgba(184, 203, 255, 0.400) 16.667%, rgba(211, 203, 255, 0.200) 33.333%, rgba(240, 200, 249, 0.200) 50.000%, rgba(255, 197, 241, 0.100) 66.667%, rgba(255, 192, 236, 0.100) 83.333%, rgba(255, 186, 236, 0.100) 100.000%)',
+      }}>
       {/* Schema Markup */}
       <script
         type='application/ld+json'
@@ -162,7 +167,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
             {/* Excerpt */}
             {post.excerpt && (
-              <div className='text-xl text-gray-700 leading-relaxed mb-8 p-6 bg-purple-50 rounded-xl border-l-4 border-[#492BDA]'>
+              <div className='text-xl text-gray-700 leading-relaxed mb-8 p-6 liquid-glass rounded-xl'>
                 {post.excerpt}
               </div>
             )}
@@ -249,6 +254,6 @@ export default async function PostPage({ params }: PostPageProps) {
         </article>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

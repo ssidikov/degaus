@@ -61,7 +61,12 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const totalPages = Math.ceil(totalCount / postsPerPage)
 
   return (
-    <div className='min-h-screen bg-radial-to-br from-indigo-50 via-white to-purple-50'>
+    <div
+      className='min-h-screen'
+      style={{
+        background:
+          'linear-gradient(180deg, rgba(169, 202, 255, 0.200) 0.000%, rgba(184, 203, 255, 0.400) 16.667%, rgba(211, 203, 255, 0.200) 33.333%, rgba(240, 200, 249, 0.200) 50.000%, rgba(255, 197, 241, 0.100) 66.667%, rgba(255, 192, 236, 0.100) 83.333%, rgba(255, 186, 236, 0.100) 100.000%)',
+      }}>
       <Header />
       <main>
         <div className='container mx-auto px-4 py-12 max-w-7xl'>
