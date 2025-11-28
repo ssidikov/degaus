@@ -1,0 +1,8 @@
+# Sanity CMS Configuration
+NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
+SANITY_API_TOKEN=your-token-here
+
+# Site URL (for SEO and OpenGraph)
+NEXT_PUBLIC_SITE_URL=https://degaus.com
