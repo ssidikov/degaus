@@ -1,7 +1,7 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './schemaTypes'
+import { schemaTypes } from '.'
 
 export default defineConfig({
   name: 'default',
@@ -48,22 +48,22 @@ export default defineConfig({
     // Auto-update updatedAt field
     actions: (prev, { schemaType }) => {
       if (schemaType === 'post') {
-        return prev.map((action) =>
-          action.action === 'publish'
-            ? {
-                ...action,
-                onHandle: async (context) => {
-                  const { draft, published } = context
-                  // Update updatedAt before publishing
-                  const patchedDraft = {
-                    ...draft,
-                    updatedAt: new Date().toISOString(),
-                  }
-                  // Call original handler with patched draft
-                  return action.onHandle?.({ ...context, draft: patchedDraft })
-                },
+        return prev.map((originalAction) =>
+          originalAction.action === 'publish'
+            ? (props) => {
+                const patchedDraft = props.draft
+                  ? {
+                      ...props.draft,
+                      updatedAt: new Date().toISOString(),
+                    }
+                  : props.draft
+
+                return originalAction({
+                  ...props,
+                  draft: patchedDraft,
+                })
               }
-            : action
+            : originalAction
         )
       }
       return prev
