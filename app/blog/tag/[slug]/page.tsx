@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { client } from '@/sanity/client'
 import {
-  getTagBySlugQuery,
   getPostsByTagQuery,
-  getPostCountByTagQuery,
+  getTagBySlugQuery,
+  getBlogSettingsQuery,
   getCategoriesQuery,
 } from '@/sanity/queries'
 import BlogCard from '@/components/blog/BlogCard'
@@ -14,6 +14,7 @@ import Breadcrumbs from '@/components/blog/Breadcrumbs'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
+import { Post } from '@/types/sanity'
 
 interface TagPageProps {
   params: Promise<{ slug: string }>
@@ -23,13 +24,14 @@ interface TagPageProps {
 export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
   const { slug } = await params
   const tag = await client.fetch(getTagBySlugQuery, { slug }, { next: { revalidate: 3600 } })
+  const blogSettings = await client.fetch(getBlogSettingsQuery, {}, { next: { revalidate: 3600 } })
 
-  if (!tag) return { title: 'Tag non trouvé' }
+  if (!tag) return { title: 'Tag not found' }
 
   return generatePageMetadata(
     {
-      title: `#${tag.name} - Blog degaus`,
-      description: tag.description || `Tous les articles avec le tag #${tag.name}`,
+      title: `${tag.name} - ${blogSettings?.blogTitle || 'Blog'}`,
+      description: `Articles tagged with ${tag.name}`,
       slug: tag.slug.current,
     },
     'tag'
@@ -38,46 +40,47 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
 
 export default async function TagPage({ params, searchParams }: TagPageProps) {
   const { slug } = await params
-  const search = await searchParams
-  const page = parseInt(search.page || '1')
+  const { page: pageParam } = await searchParams
+  const page = parseInt(pageParam || '1')
 
-  const tag = await client.fetch(getTagBySlugQuery, { slug }, { next: { revalidate: 3600 } })
+  // Fetch blog settings
+  const blogSettings = await client.fetch(getBlogSettingsQuery, {}, { next: { revalidate: 3600 } })
+  const postsPerPage = blogSettings?.postsPerPage || 12
+
+  // Calculate pagination
+  const start = (page - 1) * postsPerPage
+  const end = start + postsPerPage
+
+  // Fetch data
+  const [tag, postsResult, categories] = await Promise.all([
+    client.fetch(getTagBySlugQuery, { slug }, { next: { revalidate: 3600 } }),
+    client.fetch(getPostsByTagQuery, { slug, start, end }, { next: { revalidate: 60 } }),
+    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
+  ])
 
   if (!tag) {
     notFound()
   }
 
-  const postsPerPage = 12
-  const start = (page - 1) * postsPerPage
-  const end = start + postsPerPage
-
-  const [posts, categories, totalCount] = await Promise.all([
-    client.fetch(getPostsByTagQuery, { tagId: tag._id, start, end }, { next: { revalidate: 60 } }),
-    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
-    client.fetch(getPostCountByTagQuery, { tagId: tag._id }, { next: { revalidate: 60 } }),
-  ])
-
+  const { posts, totalCount } = postsResult
   const totalPages = Math.ceil(totalCount / postsPerPage)
 
   return (
     <>
       <Header />
-      <main className='min-h-screen bg-gradient-to-b from-purple-50 to-white'>
+      <main className='min-h-screen'>
         <div className='container mx-auto px-4 py-12 max-w-7xl'>
           {/* Breadcrumbs */}
-          <Breadcrumbs items={[{ name: 'Blog', url: '/blog' }, { name: `#${tag.name}` }]} />
+          <Breadcrumbs items={[{ name: 'Blog', url: '/blog' }, { name: `Tag: ${tag.name}` }]} />
 
           {/* Page Header */}
-          <div className='mb-12'>
+          <div className='mb-12 text-center'>
+            <span className='mb-4 inline-block rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#492BDA]'>
+              Tag
+            </span>
             <h1 className='text-4xl font-bold font-bricolage text-gray-900 mb-4 lg:text-5xl'>
-              #{tag.name}
+              {tag.name}
             </h1>
-            {tag.description && (
-              <p className='text-lg text-gray-600 max-w-2xl'>{tag.description}</p>
-            )}
-            <p className='mt-2 text-sm text-gray-500'>
-              {totalCount} {totalCount > 1 ? 'articles' : 'article'}
-            </p>
           </div>
 
           {/* Main Content */}
@@ -94,7 +97,7 @@ export default async function TagPage({ params, searchParams }: TagPageProps) {
               {posts.length > 0 ? (
                 <>
                   <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-                    {posts.map((post: any) => (
+                    {posts.map((post: Post) => (
                       <BlogCard key={post._id} post={post} />
                     ))}
                   </div>
@@ -108,7 +111,7 @@ export default async function TagPage({ params, searchParams }: TagPageProps) {
                 </>
               ) : (
                 <div className='text-center py-12'>
-                  <p className='text-gray-600 text-lg'>Aucun article avec ce tag pour le moment.</p>
+                  <p className='text-gray-600 text-lg'>No posts found with this tag.</p>
                 </div>
               )}
             </div>

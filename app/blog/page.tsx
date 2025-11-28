@@ -14,6 +14,7 @@ import CategoryList from '@/components/blog/CategoryList'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
+import { Post } from '@/types/sanity'
 
 interface BlogPageProps {
   searchParams: Promise<{ page?: string }>
@@ -62,7 +63,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <>
       <Header />
-      <main className='min-h-screen bg-gradient-to-b from-purple-50 to-white'>
+      <main className='min-h-screen'>
         <div className='container mx-auto px-4 py-12 max-w-7xl'>
           {/* Page Header */}
           <div className='mb-12 text-center'>
@@ -91,7 +92,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               {posts.length > 0 ? (
                 <>
                   <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-                    {posts.map((post: any) => (
+                    {posts.map((post: Post) => (
                       <BlogCard key={post._id} post={post} />
                     ))}
                   </div>

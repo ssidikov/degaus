@@ -1,26 +1,13 @@
 import { Metadata } from 'next'
 import { urlForOgImage } from '@/sanity/imageUrl'
-
-interface Post {
-  title: string
-  excerpt?: string
-  seoTitle?: string
-  metaDescription?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: any
-  mainImage?: any
-  slug: { current: string }
-  noindex?: boolean
-  canonicalUrl?: string
-  keywords?: string[]
-}
+import { Post, SanityImage } from '@/types/sanity'
+import { PortableTextBlock } from 'sanity'
 
 interface PageSEOData {
   title: string
   description?: string
   keywords?: string[]
-  ogImage?: any
+  ogImage?: SanityImage
   slug: string
   noindex?: boolean
   canonicalUrl?: string
@@ -84,7 +71,7 @@ export function generatePageMetadata(
   type: 'blog' | 'category' | 'tag'
 ): Metadata {
   let url = `${SITE_URL}/blog`
-  let pageType = 'website'
+  const pageType = 'website'
 
   if (type === 'category') {
     url = `${SITE_URL}/blog/category/${data.slug}`
@@ -115,7 +102,7 @@ export function generatePageMetadata(
       title: data.title,
       description: data.description || '',
       url,
-      type: pageType as any,
+      type: pageType,
       images: [
         {
           url: ogImageUrl,
@@ -134,7 +121,7 @@ export function generatePageMetadata(
   }
 }
 
-export function generateBlogPostSchema(post: any, url: string) {
+export function generateBlogPostSchema(post: Post, url: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -175,15 +162,16 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
   }
 }
 
-export function calculateReadingTime(body: any[]): number {
+export function calculateReadingTime(body: PortableTextBlock[]): number {
   if (!body || !Array.isArray(body)) return 0
 
   let wordCount = 0
 
   body.forEach((block) => {
     if (block._type === 'block' && block.children) {
-      block.children.forEach((child: any) => {
-        if (child.text) {
+      const children = block.children as unknown as { _type: string; text?: string }[]
+      children.forEach((child) => {
+        if (child._type === 'span' && child.text) {
           wordCount += child.text.split(/\s+/).length
         }
       })

@@ -1,7 +1,8 @@
 import BlogCard from './BlogCard'
+import { Post } from '@/types/sanity'
 
 interface FeaturedPostsProps {
-  posts: any[]
+  posts: Post[]
 }
 
 export default function FeaturedPosts({ posts }: FeaturedPostsProps) {
@@ -10,7 +11,7 @@ export default function FeaturedPosts({ posts }: FeaturedPostsProps) {
   return (
     <section className='mb-16'>
       <div className='mb-8'>
-        <h2 className='text-3xl font-bold font-bricolage text-gray-900 mb-2'>À la une</h2>
+        <h2 className='text-3xl font-bold font-bricolage text-gray-900 mb-2'>Featured Posts</h2>
         <div className='h-1 w-20 bg-[#492BDA] rounded-full'></div>
       </div>
 

@@ -17,7 +17,7 @@ export default function CategoryList({ categories, currentCategorySlug }: Catego
 
   return (
     <aside className='rounded-xl bg-white p-6 shadow-md'>
-      <h3 className='mb-4 text-xl font-bold font-bricolage text-gray-900'>Catégories</h3>
+      <h3 className='mb-4 text-xl font-bold font-bricolage text-gray-900'>Categories</h3>
       <ul className='space-y-2'>
         <li>
           <Link
@@ -25,7 +25,7 @@ export default function CategoryList({ categories, currentCategorySlug }: Catego
             className={`flex items-center justify-between rounded-lg px-4 py-2 transition-colors ${
               !currentCategorySlug ? 'bg-[#492BDA] text-white' : 'text-gray-700 hover:bg-gray-100'
             }`}>
-            <span className='font-medium'>Toutes les catégories</span>
+            <span className='font-medium'>All categories</span>
           </Link>
         </li>
         {categories.map((category) => (

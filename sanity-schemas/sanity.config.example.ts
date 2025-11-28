@@ -27,7 +27,7 @@ export default defineConfig({
               .title('Articles')
               .icon(() => '📝'),
             S.documentTypeListItem('category')
-              .title('Catégories')
+              .title('Categories')
               .icon(() => '📁'),
             S.documentTypeListItem('tag')
               .title('Tags')

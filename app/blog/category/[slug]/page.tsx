@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { client } from '@/sanity/client'
 import {
-  getCategoryBySlugQuery,
   getPostsByCategoryQuery,
-  getPostCountByCategoryQuery,
+  getCategoryBySlugQuery,
+  getBlogSettingsQuery,
   getCategoriesQuery,
 } from '@/sanity/queries'
 import BlogCard from '@/components/blog/BlogCard'
@@ -14,6 +14,7 @@ import Breadcrumbs from '@/components/blog/Breadcrumbs'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { generatePageMetadata } from '@/lib/seo'
+import { Post } from '@/types/sanity'
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>
@@ -27,13 +28,14 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     { slug },
     { next: { revalidate: 3600 } }
   )
+  const blogSettings = await client.fetch(getBlogSettingsQuery, {}, { next: { revalidate: 3600 } })
 
-  if (!category) return { title: 'Catégorie non trouvée' }
+  if (!category) return { title: 'Category not found' }
 
   return generatePageMetadata(
     {
-      title: `${category.name} - Blog degaus`,
-      description: category.description || `Tous les articles de la catégorie ${category.name}`,
+      title: `${category.name} - ${blogSettings?.blogTitle || 'Blog'}`,
+      description: category.description || `Articles in category ${category.name}`,
       slug: category.slug.current,
     },
     'category'
@@ -42,58 +44,50 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 
 export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
   const { slug } = await params
-  const search = await searchParams
-  const page = parseInt(search.page || '1')
+  const { page: pageParam } = await searchParams
+  const page = parseInt(pageParam || '1')
 
-  const category = await client.fetch(
-    getCategoryBySlugQuery,
-    { slug },
-    { next: { revalidate: 3600 } }
-  )
+  // Fetch blog settings
+  const blogSettings = await client.fetch(getBlogSettingsQuery, {}, { next: { revalidate: 3600 } })
+  const postsPerPage = blogSettings?.postsPerPage || 12
+
+  // Calculate pagination
+  const start = (page - 1) * postsPerPage
+  const end = start + postsPerPage
+
+  // Fetch data
+  const [category, postsResult, categories] = await Promise.all([
+    client.fetch(getCategoryBySlugQuery, { slug }, { next: { revalidate: 3600 } }),
+    client.fetch(getPostsByCategoryQuery, { slug, start, end }, { next: { revalidate: 60 } }),
+    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
+  ])
 
   if (!category) {
     notFound()
   }
 
-  const postsPerPage = 12
-  const start = (page - 1) * postsPerPage
-  const end = start + postsPerPage
-
-  const [posts, categories, totalCount] = await Promise.all([
-    client.fetch(
-      getPostsByCategoryQuery,
-      { categoryId: category._id, start, end },
-      { next: { revalidate: 60 } }
-    ),
-    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
-    client.fetch(
-      getPostCountByCategoryQuery,
-      { categoryId: category._id },
-      { next: { revalidate: 60 } }
-    ),
-  ])
-
+  const { posts, totalCount } = postsResult
   const totalPages = Math.ceil(totalCount / postsPerPage)
 
   return (
     <>
       <Header />
-      <main className='min-h-screen bg-gradient-to-b from-purple-50 to-white'>
+      <main className='min-h-screen'>
         <div className='container mx-auto px-4 py-12 max-w-7xl'>
           {/* Breadcrumbs */}
           <Breadcrumbs items={[{ name: 'Blog', url: '/blog' }, { name: category.name }]} />
 
           {/* Page Header */}
-          <div className='mb-12'>
+          <div className='mb-12 text-center'>
+            <span className='mb-4 inline-block rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-[#492BDA]'>
+              Category
+            </span>
             <h1 className='text-4xl font-bold font-bricolage text-gray-900 mb-4 lg:text-5xl'>
               {category.name}
             </h1>
             {category.description && (
-              <p className='text-lg text-gray-600 max-w-2xl'>{category.description}</p>
+              <p className='text-lg text-gray-600 max-w-2xl mx-auto'>{category.description}</p>
             )}
-            <p className='mt-2 text-sm text-gray-500'>
-              {totalCount} {totalCount > 1 ? 'articles' : 'article'}
-            </p>
           </div>
 
           {/* Main Content */}
@@ -110,7 +104,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
               {posts.length > 0 ? (
                 <>
                   <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-                    {posts.map((post: any) => (
+                    {posts.map((post: Post) => (
                       <BlogCard key={post._id} post={post} />
                     ))}
                   </div>
@@ -124,9 +118,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                 </>
               ) : (
                 <div className='text-center py-12'>
-                  <p className='text-gray-600 text-lg'>
-                    Aucun article dans cette catégorie pour le moment.
-                  </p>
+                  <p className='text-gray-600 text-lg'>No posts found in this category.</p>
                 </div>
               )}
             </div>

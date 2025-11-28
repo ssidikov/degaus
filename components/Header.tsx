@@ -6,15 +6,9 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <>
-      <header className='w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)]'>
+      <header className='w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)] '>
         <div className='container mx-auto px-4 sm:px-6 py-4 sm:py-5 lg:py-6'>
-          <div
-            className='mx-auto max-w-4xl rounded-[24px] p-3 liquid-glass flex items-center justify-between gap-2'
-            style={{
-              background: 'rgba(190, 190, 190, 0.2)',
-              backdropFilter: 'blur(80px)',
-              WebkitBackdropFilter: 'blur(80px)',
-            }}>
+          <div className='mx-auto max-w-4xl rounded-[24px] p-3 liquid-glass flex items-center justify-between gap-2'>
             <Link href='/' aria-label='degaus home' className='flex items-center gap-1.5 sm:gap-2'>
               <Image
                 src='/icons/logo.svg'

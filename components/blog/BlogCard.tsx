@@ -2,34 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { urlForImageWithDimensions } from '@/sanity/imageUrl'
 import { calculateReadingTime } from '@/lib/seo'
+import { Post } from '@/types/sanity'
 
 interface BlogCardProps {
-  post: {
-    _id: string
-    title: string
-    slug: { current: string }
-    excerpt?: string
-    publishedAt: string
-    mainImage?: {
-      asset: { url: string }
-      alt?: string
-    }
-    author?: {
-      name: string
-      slug: { current: string }
-    }
-    category?: {
-      name: string
-      slug: { current: string }
-    }
-    body?: any[]
-  }
+  post: Post
   featured?: boolean
 }
 
 export default function BlogCard({ post, featured = false }: BlogCardProps) {
   const imageUrl = post.mainImage
-    ? urlForImageWithDimensions(post.mainImage, 600, 400).url()
+    ? urlForImageWithDimensions(post.mainImage, 800, 533).quality(100).url()
     : '/placeholder-blog.jpg'
 
   const readingTime = post.body ? calculateReadingTime(post.body) : 0
@@ -47,6 +29,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
             alt={post.mainImage?.alt || post.title}
             fill
             className='object-cover transition-transform duration-300 group-hover:scale-105'
+            quality={100}
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
           />
           {post.category && (

@@ -12,10 +12,10 @@ interface BreadcrumbsProps {
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <nav aria-label='Breadcrumb' className='mb-8'>
-      <ol className='flex flex-wrap items-center gap-2 text-sm text-gray-600'>
+      <ol className='flex flex-wrap items-center align-center justify-center gap-2 text-sm text-gray-600'>
         <li>
           <Link href='/' className='transition-colors hover:text-[#492BDA]'>
-            Accueil
+            Main page
           </Link>
         </li>
 

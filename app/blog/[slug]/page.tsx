@@ -22,6 +22,7 @@ import CategoryList from '@/components/blog/CategoryList'
 import Breadcrumbs from '@/components/blog/Breadcrumbs'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { Tag } from '@/types/sanity'
 
 interface PostPageProps {
   params: Promise<{ slug: string }>
@@ -29,7 +30,7 @@ interface PostPageProps {
 
 export async function generateStaticParams() {
   const posts = await client.fetch(getPostSlugsQuery)
-  return posts.map((post: any) => ({
+  return posts.map((post: { slug: string }) => ({
     slug: post.slug,
   }))
 }
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
   const { slug } = await params
   const post = await client.fetch(getPostBySlugQuery, { slug }, { next: { revalidate: 3600 } })
 
-  if (!post) return { title: 'Article non trouvé' }
+  if (!post) return { title: 'Article not found' }
 
   return generatePostMetadata(post)
 }
@@ -61,13 +62,13 @@ export default async function PostPage({ params }: PostPageProps) {
     client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
   ])
 
-  const readingTime = calculateReadingTime(post.body)
+  const readingTime = calculateReadingTime(post.body || [])
   const postUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://degaus.com'}/blog/${slug}`
 
   // Schema markup
   const blogPostSchema = generateBlogPostSchema(post, postUrl)
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Accueil', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://degaus.com' },
+    { name: 'Home', url: process.env.NEXT_PUBLIC_SITE_URL || 'https://degaus.com' },
     { name: 'Blog', url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://degaus.com'}/blog` },
     { name: post.title, url: postUrl },
   ])
@@ -85,7 +86,7 @@ export default async function PostPage({ params }: PostPageProps) {
       />
 
       <Header />
-      <main className='min-h-screen bg-gradient-to-b from-purple-50 to-white'>
+      <main className='min-h-screen'>
         <article className='container mx-auto px-4 py-12 max-w-7xl'>
           {/* Breadcrumbs */}
           <Breadcrumbs items={[{ name: 'Blog', url: '/blog' }, { name: post.title }]} />
@@ -148,11 +149,12 @@ export default async function PostPage({ params }: PostPageProps) {
             {post.mainImage && (
               <div className='relative aspect-video w-full overflow-hidden rounded-2xl mb-12'>
                 <Image
-                  src={urlForImageWithDimensions(post.mainImage, 1200, 675).url()}
+                  src={urlForImageWithDimensions(post.mainImage, 1920, 1080).quality(100).url()}
                   alt={post.mainImage.alt || post.title}
                   fill
                   className='object-cover'
                   priority
+                  quality={100}
                   sizes='(max-width: 1200px) 100vw, 1200px'
                 />
               </div>
@@ -179,7 +181,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 <div className='mt-12 pt-8 border-t border-gray-200'>
                   <h3 className='text-lg font-bold font-bricolage mb-4'>Tags</h3>
                   <div className='flex flex-wrap gap-2'>
-                    {post.tags.map((tag: any) => (
+                    {post.tags.map((tag: Tag) => (
                       <TagBadge key={tag._id} tag={tag} size='md' />
                     ))}
                   </div>
@@ -194,7 +196,7 @@ export default async function PostPage({ params }: PostPageProps) {
                       <Link
                         href={`/blog/${adjacentPosts.previous.slug.current}`}
                         className='group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-[#492BDA] hover:shadow-lg'>
-                        <span className='text-sm text-gray-600'>← Article précédent</span>
+                        <span className='text-sm text-gray-600'>← Previous Article</span>
                         <span className='font-semibold text-gray-900 group-hover:text-[#492BDA]'>
                           {adjacentPosts.previous.title}
                         </span>
@@ -205,7 +207,7 @@ export default async function PostPage({ params }: PostPageProps) {
                       <Link
                         href={`/blog/${adjacentPosts.next.slug.current}`}
                         className='group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 text-right transition-all hover:border-[#492BDA] hover:shadow-lg sm:col-start-2'>
-                        <span className='text-sm text-gray-600'>Article suivant →</span>
+                        <span className='text-sm text-gray-600'>Next Article →</span>
                         <span className='font-semibold text-gray-900 group-hover:text-[#492BDA]'>
                           {adjacentPosts.next.title}
                         </span>
@@ -224,9 +226,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 {/* Author Bio */}
                 {post.author?.bio && (
                   <div className='rounded-xl bg-white p-6 shadow-md'>
-                    <h3 className='text-lg font-bold font-bricolage mb-4'>
-                      À propos de l&apos;auteur
-                    </h3>
+                    <h3 className='text-lg font-bold font-bricolage mb-4'>About the Author</h3>
                     {post.author.image?.asset?.url && (
                       <div className='relative h-20 w-20 overflow-hidden rounded-full mb-4 mx-auto'>
                         <Image
