@@ -22,21 +22,26 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className='hidden md:flex items-center gap-6 lg:gap-8'>
-              <a
-                href='#use-cases'
+              <Link
+                href='/#use-cases'
                 className='text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors'>
                 Use Cases
-              </a>
-              <a
-                href='#features'
+              </Link>
+              <Link
+                href='/#features'
                 className='text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors'>
                 Features
-              </a>
-              <a
-                href='#pricing'
+              </Link>
+              <Link
+                href='/#pricing'
                 className='text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors'>
                 Pricing
-              </a>
+              </Link>
+              <Link
+                href='/blog'
+                className='text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors'>
+                Blog
+              </Link>
             </nav>
 
             {/* Action Buttons - Visible on all screen sizes */}
