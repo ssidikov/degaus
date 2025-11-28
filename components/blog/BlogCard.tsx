@@ -7,9 +7,10 @@ import { Post } from '@/types/sanity'
 interface BlogCardProps {
   post: Post
   featured?: boolean
+  className?: string
 }
 
-export default function BlogCard({ post, featured = false }: BlogCardProps) {
+export default function BlogCard({ post, featured = false, className = '' }: BlogCardProps) {
   const imageUrl = post.mainImage
     ? urlForImageWithDimensions(post.mainImage, 800, 533).quality(100).url()
     : '/placeholder-blog.jpg'
@@ -17,8 +18,8 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
   const readingTime = post.body ? calculateReadingTime(post.body) : 0
 
   const cardClasses = featured
-    ? 'group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]'
-    : 'group flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.01]'
+    ? `group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] ${className}`
+    : `group flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.01] ${className}`
 
   return (
     <article className={cardClasses}>

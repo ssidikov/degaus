@@ -61,9 +61,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const totalPages = Math.ceil(totalCount / postsPerPage)
 
   return (
-    <>
+    <div className='min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50'>
       <Header />
-      <main className='min-h-screen'>
+      <main>
         <div className='container mx-auto px-4 py-12 max-w-7xl'>
           {/* Page Header */}
           <div className='mb-12 text-center'>
@@ -87,14 +87,33 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               </div>
             </div>
 
-            {/* Posts Grid */}
+            {/* Posts Grid - Bento Style */}
             <div className='lg:col-span-3'>
               {posts.length > 0 ? (
                 <>
-                  <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-                    {posts.map((post: Post) => (
-                      <BlogCard key={post._id} post={post} />
-                    ))}
+                  <div className='grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[minmax(400px,auto)]'>
+                    {posts.map((post: Post, index: number) => {
+                      // Bento Grid Logic
+                      // Pattern:
+                      // 0: Large (2x2)
+                      // 1, 2: Standard
+                      // 3: Wide (2x1)
+                      // 4: Standard
+                      // 5: Standard
+                      // 6: Wide (2x1)
+                      let spanClass = ''
+                      if (index === 0) spanClass = 'sm:col-span-2 lg:col-span-2 lg:row-span-2'
+                      else if (index === 3 || index === 6) spanClass = 'sm:col-span-2 lg:col-span-2'
+
+                      return (
+                        <BlogCard
+                          key={post._id}
+                          post={post}
+                          className={spanClass}
+                          featured={index === 0} // Make the first one look featured too
+                        />
+                      )
+                    })}
                   </div>
 
                   {/* Pagination */}
@@ -110,6 +129,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
