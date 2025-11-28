@@ -220,7 +220,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
             {/* Sidebar */}
             <aside className='lg:col-span-1'>
-              <div className='sticky top-8 space-y-6'>
+              <div className='space-y-6'>
                 <CategoryList categories={categories} />
 
                 {/* Author Bio */}
