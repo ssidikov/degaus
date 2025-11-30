@@ -56,14 +56,7 @@ export default function CookieConsent() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50">
       <FadeInView delay={0.5}>
-        <div
-          className="relative overflow-hidden shadow-[0_-10px_40px_rgba(255,255,255,0.05)] border border-white/10 bg-[#333]/90 backdrop-blur-xl"
-          // style={{
-          //   background: "rgba(32, 58, 67, 0.85)",
-          //   backdropFilter: "blur(20px)",
-          //   WebkitBackdropFilter: "blur(20px)",
-          // }}
-        >
+        <div className="relative overflow-hidden shadow-[0_-10px_40px_rgba(255,255,255,0.05)] border border-white/10 bg-[#333]/90 backdrop-blur-xl">
           {/* Gradient overlay for depth */}
           <div
             className="absolute inset-0 pointer-events-none"
@@ -102,25 +95,13 @@ export default function CookieConsent() {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-                  <Button
-                    variant="outline"
-                    onClick={manageCookies}
-                    // className="font-['Darker_Grotesque'] text-xs sm:text-sm font-medium text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap w-full sm:w-auto"
-                  >
+                  <Button variant="outline" onClick={manageCookies}>
                     Manage Cookies
                   </Button>
-                  <Button
-                    variant="outline"
-                    onClick={rejectCookies}
-                    // className="font-['Darker_Grotesque'] text-xs sm:text-sm font-medium text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap w-full sm:w-auto"
-                  >
+                  <Button variant="outline" onClick={rejectCookies}>
                     Reject non-essential
                   </Button>
-                  <Button
-                    variant="outline"
-                    onClick={acceptCookies}
-                    // className="font-['Darker_Grotesque'] text-xs sm:text-sm font-medium text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap w-full sm:w-auto"
-                  >
+                  <Button variant="outline" onClick={acceptCookies}>
                     Accept all
                   </Button>
                 </div>
@@ -172,16 +153,10 @@ export default function CookieConsent() {
                   <Button
                     onClick={() => setShowManage(false)}
                     variant="outline"
-                    // className="font-['Darker_Grotesque'] text-xs sm:text-sm font-medium text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-transparent border border-gray-500 hover:bg-gray-700 transition-all whitespace-nowrap w-full sm:w-auto"
                   >
                     Back
                   </Button>
-                  <Button
-                    onClick={savePreferences}
-                    // className="font-['Darker_Grotesque'] text-xs sm:text-sm font-medium text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-blue-600 border border-blue-600 hover:bg-blue-700 transition-all whitespace-nowrap w-full sm:w-auto"
-                  >
-                    Save Preferences
-                  </Button>
+                  <Button onClick={savePreferences}>Save Preferences</Button>
                 </div>
               </>
             )}
