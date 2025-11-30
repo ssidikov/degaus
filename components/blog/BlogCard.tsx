@@ -35,7 +35,7 @@ export default function BlogCard({ post, featured = false, className = '' }: Blo
           />
           {post.category && (
             <div className='absolute left-4 top-4'>
-              <span className='rounded-full bg-[#492BDA] px-3 py-1 text-xs font-semibold text-white'>
+              <span className='liquid-glass rounded-full px-3 py-1 pb-1.5 text-xs font-semibold text-gray-900'>
                 {post.category.name}
               </span>
             </div>

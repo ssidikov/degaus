@@ -103,7 +103,7 @@ export default async function PostPage({ params }: PostPageProps) {
               <Link
                 href={`/blog/category/${post.category.slug.current}`}
                 className='inline-block mb-4'>
-                <span className='rounded-full bg-[#492BDA] px-4 py-2 text-sm font-semibold text-white hover:bg-[#3620B0] transition-colors'>
+                <span className='rounded-full bg-[#492BDA] px-4 py-2 pb-[9px] text-sm font-semibold text-white hover:bg-[#3620B0] transition-colors'>
                   {post.category.name}
                 </span>
               </Link>
@@ -173,83 +173,79 @@ export default async function PostPage({ params }: PostPageProps) {
             )}
           </div>
 
-          {/* Main Content + Sidebar */}
-          <div className='grid gap-12 lg:grid-cols-4'>
+          {/* Main Content - Centered */}
+          <div className='mx-auto max-w-4xl'>
             {/* Article Content */}
-            <div className='lg:col-span-3'>
-              <div className='prose prose-lg max-w-none'>
-                {post.body && <RichTextRenderer value={post.body} />}
-              </div>
-
-              {/* Tags */}
-              {post.tags && post.tags.length > 0 && (
-                <div className='mt-12 pt-8 border-t border-gray-200'>
-                  <h3 className='text-lg font-bold font-bricolage mb-4'>Tags</h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {post.tags.map((tag: Tag) => (
-                      <TagBadge key={tag._id} tag={tag} size='md' />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Navigation (Previous/Next) */}
-              {(adjacentPosts.previous || adjacentPosts.next) && (
-                <nav className='mt-12 pt-8 border-t border-gray-200'>
-                  <div className='grid gap-4 sm:grid-cols-2'>
-                    {adjacentPosts.previous && (
-                      <Link
-                        href={`/blog/${adjacentPosts.previous.slug.current}`}
-                        className='group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-[#492BDA] hover:shadow-lg'>
-                        <span className='text-sm text-gray-600'>← Previous Article</span>
-                        <span className='font-semibold text-gray-900 group-hover:text-[#492BDA]'>
-                          {adjacentPosts.previous.title}
-                        </span>
-                      </Link>
-                    )}
-
-                    {adjacentPosts.next && (
-                      <Link
-                        href={`/blog/${adjacentPosts.next.slug.current}`}
-                        className='group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 text-right transition-all hover:border-[#492BDA] hover:shadow-lg sm:col-start-2'>
-                        <span className='text-sm text-gray-600'>Next Article →</span>
-                        <span className='font-semibold text-gray-900 group-hover:text-[#492BDA]'>
-                          {adjacentPosts.next.title}
-                        </span>
-                      </Link>
-                    )}
-                  </div>
-                </nav>
-              )}
+            <div className='prose prose-lg max-w-none'>
+              {post.body && <RichTextRenderer value={post.body} />}
             </div>
 
-            {/* Sidebar */}
-            <aside className='lg:col-span-1'>
-              <div className='space-y-6'>
-                <CategoryList categories={categories} />
+            {/* Tags */}
+            {post.tags && post.tags.length > 0 && (
+              <div className='mt-12 pt-8 border-t border-gray-200'>
+                <h3 className='text-lg font-bold font-bricolage mb-4'>Tags</h3>
+                <div className='flex flex-wrap gap-2'>
+                  {post.tags.map((tag: Tag) => (
+                    <TagBadge key={tag._id} tag={tag} size='md' />
+                  ))}
+                </div>
+              </div>
+            )}
 
-                {/* Author Bio */}
-                {post.author?.bio && (
-                  <div className='rounded-xl bg-white p-6 shadow-md'>
-                    <h3 className='text-lg font-bold font-bricolage mb-4'>About the Author</h3>
-                    {post.author.image?.asset?.url && (
-                      <div className='relative h-20 w-20 overflow-hidden rounded-full mb-4 mx-auto'>
-                        <Image
-                          src={post.author.image.asset.url}
-                          alt={post.author.name}
-                          fill
-                          className='object-cover'
-                        />
-                      </div>
-                    )}
-                    <p className='font-medium text-center mb-3'>{post.author.name}</p>
-                    <div className='text-sm text-gray-600'>
-                      <RichTextRenderer value={post.author.bio} />
-                    </div>
+            {/* Categories */}
+            <div className='mt-8 pt-8 border-t border-gray-200 liquid-glass rounded-xl p-6'>
+              <CategoryList categories={categories} />
+            </div>
+
+            {/* Author Bio */}
+            {post.author?.bio && (
+              <div className='mt-8 rounded-xl bg-white p-6 shadow-md'>
+                <h3 className='text-lg font-bold font-bricolage mb-4'>About the Author</h3>
+                {post.author.image?.asset?.url && (
+                  <div className='relative h-20 w-20 overflow-hidden rounded-full mb-4 mx-auto'>
+                    <Image
+                      src={post.author.image.asset.url}
+                      alt={post.author.name}
+                      fill
+                      className='object-cover'
+                    />
                   </div>
                 )}
+                <p className='font-medium text-center mb-3'>{post.author.name}</p>
+                <div className='text-sm text-gray-600'>
+                  <RichTextRenderer value={post.author.bio} />
+                </div>
               </div>
-            </aside>
+            )}
+
+            {/* Navigation (Previous/Next) */}
+            {(adjacentPosts.previous || adjacentPosts.next) && (
+              <nav className='mt-12 pt-8 border-t border-gray-200'>
+                <div className='grid gap-4 sm:grid-cols-2'>
+                  {adjacentPosts.previous && (
+                    <Link
+                      href={`/blog/${adjacentPosts.previous.slug.current}`}
+                      className='group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-[#492BDA] hover:shadow-lg'>
+                      <span className='text-sm text-gray-600'>← Previous Article</span>
+                      <span className='font-semibold text-gray-900 group-hover:text-[#492BDA]'>
+                        {adjacentPosts.previous.title}
+                      </span>
+                    </Link>
+                  )}
+
+                  {adjacentPosts.next && (
+                    <Link
+                      href={`/blog/${adjacentPosts.next.slug.current}`}
+                      className='group flex flex-col gap-2 rounded-xl border border-gray-200 bg-white p-6 text-right transition-all hover:border-[#492BDA] hover:shadow-lg sm:col-start-2'>
+                      <span className='text-sm text-gray-600'>Next Article →</span>
+                      <span className='font-semibold text-gray-900 group-hover:text-[#492BDA]'>
+                        {adjacentPosts.next.title}
+                      </span>
+                    </Link>
+                  )}
+                </div>
+              </nav>
+            )}
           </div>
         </article>
       </main>

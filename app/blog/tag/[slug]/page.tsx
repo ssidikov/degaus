@@ -51,16 +51,18 @@ export default async function TagPage({ params, searchParams }: TagPageProps) {
   const start = (page - 1) * postsPerPage
   const end = start + postsPerPage
 
-  // Fetch data
-  const [tag, postsResult, categories] = await Promise.all([
-    client.fetch(getTagBySlugQuery, { slug }, { next: { revalidate: 3600 } }),
-    client.fetch(getPostsByTagQuery, { slug, start, end }, { next: { revalidate: 60 } }),
-    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
-  ])
+  // Fetch tag first to get its ID
+  const tag = await client.fetch(getTagBySlugQuery, { slug }, { next: { revalidate: 3600 } })
 
   if (!tag) {
     notFound()
   }
+
+  // Fetch data
+  const [postsResult, categories] = await Promise.all([
+    client.fetch(getPostsByTagQuery, { tagId: tag._id, start, end }, { next: { revalidate: 60 } }),
+    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
+  ])
 
   const { posts, totalCount } = postsResult
   const totalPages = Math.ceil(totalCount / postsPerPage)

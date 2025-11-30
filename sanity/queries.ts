@@ -169,69 +169,75 @@ export const getBlogSettingsQuery = `
 }
 `
 
-// Get posts by category
+// Get posts by category (returns object with posts and totalCount)
 export const getPostsByCategoryQuery = `
-*[_type == "post" && category._ref == $categoryId && defined(slug.current)] | order(publishedAt desc) [$start...$end] {
-  _id,
-  title,
-  slug,
-  excerpt,
-  publishedAt,
-  mainImage {
-    asset->{
-      _id,
-      url
+{
+  "posts": *[_type == "post" && category._ref == $categoryId && defined(slug.current)] | order(publishedAt desc) [$start...$end] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    publishedAt,
+    mainImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
     },
-    alt
+    author->{
+      _id,
+      name,
+      slug
+    },
+    category->{
+      _id,
+      name,
+      slug
+    },
+    tags[]->{
+      _id,
+      name,
+      slug
+    }
   },
-  author->{
-    _id,
-    name,
-    slug
-  },
-  category->{
-    _id,
-    name,
-    slug
-  },
-  tags[]->{
-    _id,
-    name,
-    slug
-  }
+  "totalCount": count(*[_type == "post" && category._ref == $categoryId && defined(slug.current)])
 }
 `
 
-// Get posts by tag
+// Get posts by tag (returns object with posts and totalCount)
 export const getPostsByTagQuery = `
-*[_type == "post" && $tagId in tags[]._ref && defined(slug.current)] | order(publishedAt desc) [$start...$end] {
-  _id,
-  title,
-  slug,
-  excerpt,
-  publishedAt,
-  mainImage {
-    asset->{
-      _id,
-      url
+{
+  "posts": *[_type == "post" && $tagId in tags[]._ref && defined(slug.current)] | order(publishedAt desc) [$start...$end] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    publishedAt,
+    mainImage {
+      asset->{
+        _id,
+        url
+      },
+      alt
     },
-    alt
+    author->{
+      _id,
+      name,
+      slug
+    },
+    category->{
+      _id,
+      name,
+      slug
+    },
+    tags[]->{
+      _id,
+      name,
+      slug
+    }
   },
-  author->{
-    _id,
-    name,
-    slug
-  },
-  category->{
-    _id,
-    name,
-    slug
-  },
-  tags[]->{
-    _id,
-    name,
-    slug
-  }
+  "totalCount": count(*[_type == "post" && $tagId in tags[]._ref && defined(slug.current)])
 }
 `
 

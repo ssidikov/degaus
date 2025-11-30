@@ -35,29 +35,33 @@ const components: PortableTextComponents = {
   },
   block: {
     h2: ({ children }: { children?: React.ReactNode }) => (
-      <h2 className='mt-12 mb-4 text-3xl font-bold font-bricolage text-gray-900'>{children}</h2>
+      <h2 className='mt-12 mb-6 text-3xl font-bold font-bricolage text-gray-900'>{children}</h2>
     ),
     h3: ({ children }: { children?: React.ReactNode }) => (
-      <h3 className='mt-8 mb-3 text-2xl font-bold font-bricolage text-gray-900'>{children}</h3>
+      <h3 className='mt-10 mb-4 text-2xl font-bold font-bricolage text-gray-900'>{children}</h3>
     ),
     h4: ({ children }: { children?: React.ReactNode }) => (
-      <h4 className='mt-6 mb-2 text-xl font-bold font-bricolage text-gray-900'>{children}</h4>
+      <h4 className='mt-8 mb-3 text-xl font-bold font-bricolage text-gray-900'>{children}</h4>
     ),
     normal: ({ children }: { children?: React.ReactNode }) => (
-      <p className='mb-4 text-lg leading-relaxed text-gray-700'>{children}</p>
+      <p className='mb-6 text-xl leading-relaxed text-gray-700 font-semibold'>{children}</p>
     ),
     blockquote: ({ children }: { children?: React.ReactNode }) => (
-      <blockquote className='my-6 border-l-4 border-[#492BDA] bg-purple-50 pl-6 py-4 italic text-gray-800'>
+      <div className='my-8 border-l-4 border-[#492BDA] bg-purple-50 pl-6 py-5 italic text-xl text-gray-800 font-semibold rounded-r-lg'>
         {children}
-      </blockquote>
+      </div>
     ),
   },
   list: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
-      <ul className='my-6 ml-6 list-disc space-y-2 text-lg text-gray-700'>{children}</ul>
+      <ul className='my-6 ml-6 list-disc space-y-3 text-xl text-gray-700 font-semibold'>
+        {children}
+      </ul>
     ),
     number: ({ children }: { children?: React.ReactNode }) => (
-      <ol className='my-6 ml-6 list-decimal space-y-2 text-lg text-gray-700'>{children}</ol>
+      <ol className='my-6 ml-6 list-decimal space-y-3 text-xl text-gray-700 font-semibold'>
+        {children}
+      </ol>
     ),
   },
   listItem: {

@@ -45,4 +45,10 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  // Enable paste handling for formatted text
+  document: {
+    // Enable paste handling globally
+    actions: (prev) => prev,
+  },
 })

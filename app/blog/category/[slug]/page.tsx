@@ -55,16 +55,26 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
   const start = (page - 1) * postsPerPage
   const end = start + postsPerPage
 
-  // Fetch data
-  const [category, postsResult, categories] = await Promise.all([
-    client.fetch(getCategoryBySlugQuery, { slug }, { next: { revalidate: 3600 } }),
-    client.fetch(getPostsByCategoryQuery, { slug, start, end }, { next: { revalidate: 60 } }),
-    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
-  ])
+  // Fetch category first to get its ID
+  const category = await client.fetch(
+    getCategoryBySlugQuery,
+    { slug },
+    { next: { revalidate: 3600 } }
+  )
 
   if (!category) {
     notFound()
   }
+
+  // Fetch data
+  const [postsResult, categories] = await Promise.all([
+    client.fetch(
+      getPostsByCategoryQuery,
+      { categoryId: category._id, start, end },
+      { next: { revalidate: 60 } }
+    ),
+    client.fetch(getCategoriesQuery, {}, { next: { revalidate: 3600 } }),
+  ])
 
   const { posts, totalCount } = postsResult
   const totalPages = Math.ceil(totalCount / postsPerPage)
