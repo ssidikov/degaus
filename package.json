@@ -21,6 +21,7 @@
     "posthog-js": "^1.297.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-is": "^19.2.0",
     "sanity": "^3.63.0",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^3.4.0"
