@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { LogoWithText } from "@/components/LogoWithText";
 
 export default function Header() {
   return (
     <>
-      <header className="w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)] ">
+      <header className="w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)]">
         <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-5 lg:py-6">
           <div className="mx-auto max-w-4xl rounded-[24px] p-3 liquid-glass flex items-center justify-between gap-2">
             <Link
@@ -14,42 +14,15 @@ export default function Header() {
               aria-label="degaus home"
               className="flex items-center gap-1.5 sm:gap-2"
             >
-              <Image
-                src="/icons/logo.svg"
-                alt="degaus logo"
-                width={108}
-                height={25}
-                unoptimized
-                className="w-[108px] h-[25px]"
-              />
+              <LogoWithText className="h-8" />
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-              <Link
-                href="/#use-cases"
-                className="text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors"
-              >
-                Use Cases
-              </Link>
-              <Link
-                href="/#features"
-                className="text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors"
-              >
-                Features
-              </Link>
-              <Link
-                href="/#pricing"
-                className="text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors"
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/blog"
-                className="text-sm lg:text-base font-semibold hover:text-[#b308a7] transition-colors"
-              >
-                Blog
-              </Link>
+              <HeaderItem href="/#use-cases">Use Cases</HeaderItem>
+              <HeaderItem href="/#features">Features</HeaderItem>
+              <HeaderItem href="/#pricing">Pricing</HeaderItem>
+              <HeaderItem href="/blog">Blog</HeaderItem>
             </nav>
 
             {/* Action Buttons - Visible on all screen sizes */}
@@ -89,5 +62,21 @@ export default function Header() {
         </div>
       </header>
     </>
+  );
+}
+
+type HeaderItemProps = {
+  href: string;
+  children: React.ReactNode;
+};
+
+function HeaderItem({ href, children }: HeaderItemProps) {
+  return (
+    <Link
+      href={href}
+      className="text-lg lg:text-xl font-semibold hover:text-[#b308a7] transition-colors"
+    >
+      {children}
+    </Link>
   );
 }
