@@ -3,11 +3,35 @@ import Image from 'next/image'
 import { urlForImageWithDimensions } from '@/sanity/imageUrl'
 import { calculateReadingTime } from '@/lib/seo'
 import { Post } from '@/types/sanity'
+import { PortableTextBlock } from 'sanity'
 
 interface BlogCardProps {
   post: Post
   featured?: boolean
   className?: string
+}
+
+// Helper to extract text from Portable Text (up to first H2)
+function extractTextFromBody(body: PortableTextBlock[] | undefined): string {
+  if (!body || !Array.isArray(body)) return ''
+
+  let text = ''
+  for (const block of body) {
+    // Stop at first H2
+    if (block._type === 'block' && block.style === 'h2') {
+      break
+    }
+    // Extract text from paragraphs
+    if (block._type === 'block' && block.children) {
+      const children = block.children as unknown as { _type: string; text?: string }[]
+      children.forEach((child) => {
+        if (child.text) {
+          text += child.text + ' '
+        }
+      })
+    }
+  }
+  return text.trim()
 }
 
 export default function BlogCard({ post, featured = false, className = '' }: BlogCardProps) {
@@ -16,6 +40,10 @@ export default function BlogCard({ post, featured = false, className = '' }: Blo
     : '/placeholder-blog.jpg'
 
   const readingTime = post.body ? calculateReadingTime(post.body) : 0
+
+  // Generate excerpt with fallback to body content
+  const displayExcerpt =
+    post.excerpt || (post.body ? extractTextFromBody(post.body).substring(0, 200) : '')
 
   const cardClasses = featured
     ? `group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] ${className}`
@@ -66,7 +94,9 @@ export default function BlogCard({ post, featured = false, className = '' }: Blo
             {post.title}
           </h3>
 
-          {post.excerpt && <p className='line-clamp-2 text-gray-600'>{post.excerpt}</p>}
+          {displayExcerpt && (
+            <p className='line-clamp-2 text-gray-600 font-semibold'>{displayExcerpt}</p>
+          )}
 
           {post.author && (
             <div className='mt-2 flex items-center gap-2 text-sm text-gray-600'>

@@ -1,5 +1,39 @@
 import { defineField, defineType } from 'sanity'
 
+// Type for Portable Text blocks
+type PortableTextBlock = {
+  _type: string
+  style?: string
+  children?: Array<{ text?: string }>
+  [key: string]: unknown
+}
+
+// Helper function to extract plain text from Portable Text (up to first H2)
+const extractTextFromPortableText = (body: PortableTextBlock[]): string => {
+  if (!body || !Array.isArray(body)) return ''
+
+  let text = ''
+
+  // Extract text only from paragraphs before the first H2
+  for (const block of body) {
+    // Stop when we hit the first H2 heading
+    if (block._type === 'block' && block.style === 'h2') {
+      break
+    }
+
+    // Extract text from normal paragraphs and other text blocks
+    if (block._type === 'block' && block.children) {
+      for (const child of block.children) {
+        if (child.text) {
+          text += child.text + ' '
+        }
+      }
+    }
+  }
+
+  return text.trim()
+}
+
 // Schema for converting HTML to Portable Text
 const blockContentSchema = {
   type: 'block',
@@ -83,7 +117,21 @@ export const postType = defineType({
       type: 'text',
       rows: 4,
       validation: (rule) => rule.max(200),
-      description: 'Short summary of the post (max 200 characters)',
+      description:
+        'Short summary of the post (max 200 characters). Auto-filled from article content.',
+      initialValue: ({ document }) => {
+        if (document?.body) {
+          const text = extractTextFromPortableText(
+            document.body as Array<{
+              _type: string
+              children?: Array<{ text?: string }>
+              [key: string]: unknown
+            }>
+          )
+          return text.substring(0, 200)
+        }
+        return ''
+      },
       group: 'content',
     }),
     defineField({
@@ -187,9 +235,13 @@ export const postType = defineType({
       name: 'seoTitle',
       title: 'SEO Title',
       type: 'string',
-      description: 'Optimized title for search engines (max 60 characters, auto-filled from title)',
+      description:
+        'Optimized title for search engines (max 60 characters). Auto-filled from main title.',
       validation: (rule) => rule.max(60),
-      initialValue: ({ document }) => document?.title || '',
+      initialValue: ({ document }) => {
+        const title = (document?.title as string) || ''
+        return title.substring(0, 60)
+      },
       group: 'seo',
     }),
     defineField({
@@ -197,9 +249,12 @@ export const postType = defineType({
       title: 'Meta Description',
       type: 'text',
       rows: 3,
-      description: 'Description for search engines (max 160 characters, auto-filled from excerpt)',
+      description: 'Description for search engines (max 160 characters). Auto-filled from excerpt.',
       validation: (rule) => rule.max(160),
-      initialValue: ({ document }) => document?.excerpt || '',
+      initialValue: ({ document }) => {
+        const excerpt = (document?.excerpt as string) || ''
+        return excerpt.substring(0, 160)
+      },
       group: 'seo',
     }),
     defineField({

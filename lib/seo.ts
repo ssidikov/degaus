@@ -15,9 +15,43 @@ interface PageSEOData {
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://degaus.com'
 
+// Helper function to extract plain text from Portable Text (up to first H2)
+function extractTextFromBody(body: PortableTextBlock[] | undefined): string {
+  if (!body || !Array.isArray(body)) return ''
+
+  let text = ''
+
+  // Extract text only from paragraphs before the first H2
+  for (const block of body) {
+    // Stop when we hit the first H2 heading
+    if (block._type === 'block' && block.style === 'h2') {
+      break
+    }
+
+    // Extract text from normal paragraphs and other text blocks
+    if (block._type === 'block' && block.children) {
+      const children = block.children as unknown as { _type: string; text?: string }[]
+      children.forEach((child) => {
+        if (child.text) {
+          text += child.text + ' '
+        }
+      })
+    }
+  }
+
+  return text.trim()
+}
+
 export function generatePostMetadata(post: Post): Metadata {
   const title = post.seoTitle || post.title
-  const description = post.metaDescription || post.excerpt || ''
+
+  // Generate description with fallback to body content
+  let description = post.metaDescription || post.excerpt || ''
+  if (!description && post.body) {
+    const bodyText = extractTextFromBody(post.body)
+    description = bodyText.substring(0, 160)
+  }
+
   const ogTitle = post.ogTitle || title
   const ogDescription = post.ogDescription || description
   const url = `${SITE_URL}/blog/${post.slug.current}`

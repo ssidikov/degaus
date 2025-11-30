@@ -7,6 +7,7 @@ export const getAllPostsQuery = `
   title,
   slug,
   excerpt,
+  body,
   publishedAt,
   updatedAt,
   mainImage {
