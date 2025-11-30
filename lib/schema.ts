@@ -1,3 +1,5 @@
+import { FAQ_ITEMS } from './faq'
+
 export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
@@ -92,31 +94,13 @@ export function generateFAQSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Can I post the content on any other AI tools / Midjo?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, you can use the content generated on any platform you wish.',
-        },
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
       },
-      {
-        '@type': 'Question',
-        name: 'Is the quality of videos good?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our AI generates high-quality videos optimized for social media platforms.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you generate static posts as well?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we support both video and static image content generation.',
-        },
-      },
-    ],
+    })),
   }
 }
