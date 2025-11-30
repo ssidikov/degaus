@@ -1,5 +1,4 @@
 import { defineField, defineType } from 'sanity'
-import { htmlToBlocks } from '@sanity/block-tools'
 
 // Schema for converting HTML to Portable Text
 const blockContentSchema = {
