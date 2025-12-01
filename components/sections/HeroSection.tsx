@@ -5,8 +5,12 @@ import { motion } from "framer-motion";
 import { VideoCard, FadeInView } from "@/components/ui";
 import RotatingText from "@/components/ui/RotatingText";
 import { CONTENT_CARDS, TRUSTED_BRANDS } from "@/lib/constants";
+import { useFeatureFlagEnabled } from "posthog-js/react";
 
 export default function HeroSection() {
+  const trustedBySectionEnabled = useFeatureFlagEnabled(
+    "trustedBySectionEnabled",
+  );
   return (
     <section className="pt-8 lg:pt-16 pb-[30px]">
       <div className="container mx-auto max-w-7xl">
@@ -139,33 +143,35 @@ export default function HeroSection() {
       </div>
 
       {/* Trusted By */}
-      <div className="container mx-auto max-w-7xl">
-        <FadeInView delay={0.2}>
-          <div className="text-center">
-            <p className="text-[#767676] text-[26px] leading-[28px] tracking-[-0.78px] font-bold mb-6">
-              Trusted by
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-20">
-              {TRUSTED_BRANDS.map((brand, index) => (
-                <div
-                  key={index}
-                  className="relative opacity-80 hover:opacity-100 transition"
-                >
-                  <Image
-                    src={brand.image}
-                    alt={brand.name}
-                    width={brand.width}
-                    height={brand.height}
-                    quality={100}
-                    loading="lazy"
-                    className="object-contain"
-                  />
-                </div>
-              ))}
+      {trustedBySectionEnabled && (
+        <div className="container mx-auto max-w-7xl">
+          <FadeInView delay={0.2}>
+            <div className="text-center">
+              <p className="text-[#767676] text-[26px] leading-[28px] tracking-[-0.78px] font-bold mb-6">
+                Trusted by
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-5 lg:gap-20">
+                {TRUSTED_BRANDS.map((brand, index) => (
+                  <div
+                    key={index}
+                    className="relative opacity-80 hover:opacity-100 transition"
+                  >
+                    <Image
+                      src={brand.image}
+                      alt={brand.name}
+                      width={brand.width}
+                      height={brand.height}
+                      quality={100}
+                      loading="lazy"
+                      className="object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </FadeInView>
-      </div>
+          </FadeInView>
+        </div>
+      )}
     </section>
   );
 }
