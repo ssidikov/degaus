@@ -6,7 +6,7 @@ import { LogoWithText } from "@/components/LogoWithText";
 export default function Header() {
   return (
     <>
-      <header className="w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)]">
+      <header className="w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)] animate-in fade-in slide-in-from-top-10 duration-200">
         <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-5 lg:py-6">
           <div className="mx-auto max-w-4xl rounded-[24px] p-3 liquid-glass flex items-center justify-between gap-2">
             <Link
