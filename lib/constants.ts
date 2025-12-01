@@ -101,14 +101,46 @@ export const AUTOMATION_FEATURES = [
 
 // Hero Section - Content Cards
 export const CONTENT_CARDS = [
-  { type: "AI Influencer", video: "/videos/carousel/AI Influencer.mp4" },
-  { type: "AI Influencer", video: "/videos/carousel/AI Influencer-2.mp4" },
-  { type: "AI UGC Overlay", video: "/videos/carousel/AI UGC Overlay.mp4" },
-  { type: "AI UGC Ad", video: "/videos/carousel/AI UGC ad.mp4" },
-  { type: "AI UGC", video: "/videos/carousel/AI UGC.mp4" },
-  { type: "Organic UGC", video: "/videos/carousel/Organic UGC.mp4" },
-  { type: "Podcast Ads", video: "/videos/carousel/Podcast ads.mp4" },
-  { type: "Polished Ad", video: "/videos/carousel/Polished ad.mp4" },
+  {
+    type: "AI Influencer",
+    video: "AI Influencer",
+    poster: "/videos/carousel/posters/AI Influencer.webp",
+  },
+  {
+    type: "AI Influencer",
+    video: "AI Influencer-2",
+    poster: "/videos/carousel/posters/AI Influencer-2.webp",
+  },
+  {
+    type: "AI UGC Overlay",
+    video: "AI UGC Overlay",
+    poster: "/videos/carousel/posters/AI UGC Overlay.webp",
+  },
+  {
+    type: "AI UGC Ad",
+    video: "AI UGC ad",
+    poster: "/videos/carousel/posters/AI UGC ad.webp",
+  },
+  {
+    type: "AI UGC",
+    video: "AI UGC",
+    poster: "/videos/carousel/posters/AI UGC.webp",
+  },
+  {
+    type: "Organic UGC",
+    video: "Organic UGC",
+    poster: "/videos/carousel/posters/Organic UGC.webp",
+  },
+  {
+    type: "Podcast Ads",
+    video: "Podcast ads",
+    poster: "/videos/carousel/posters/Podcast ads.webp",
+  },
+  {
+    type: "Polished Ad",
+    video: "Polished ad",
+    poster: "/videos/carousel/posters/Polished ad.webp",
+  },
 ] as const;
 
 // Hero Section - Trusted Brands

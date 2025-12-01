@@ -141,6 +141,7 @@ export default function HeroSection() {
                   key={index}
                   src={card.video}
                   type={card.type}
+                  poster={card.poster}
                   className="w-[195px] md:shadow-[0px_4px_20px_0px_rgba(0,0,0,0.25)] shrink-0 mr-4 sm:mr-9"
                 />
               ))}
