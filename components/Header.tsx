@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { LogoWithText } from "@/components/LogoWithText";
 import { SIGNUP_LINK_URL, LOGIN_LINK_URL } from "@/lib/constants";
+import { useFeatureFlagEnabled } from "posthog-js/react";
 
 export default function Header() {
+  const blogEnabled = useFeatureFlagEnabled("blogEnabled");
   return (
     <>
       <header className="w-full sticky top-0 z-50 pt-[env(safe-area-inset-top)] animate-in fade-in slide-in-from-top-10 duration-200">
@@ -23,7 +25,7 @@ export default function Header() {
               <HeaderItem href="/#use-cases">Use Cases</HeaderItem>
               <HeaderItem href="/#features">Features</HeaderItem>
               <HeaderItem href="/#pricing">Pricing</HeaderItem>
-              <HeaderItem href="/blog">Blog</HeaderItem>
+              {blogEnabled && <HeaderItem href="/blog">Blog</HeaderItem>}
             </nav>
 
             {/* Action Buttons - Visible on all screen sizes */}

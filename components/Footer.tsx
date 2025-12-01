@@ -5,8 +5,10 @@ import Image from "next/image";
 import InstagramIcon from "@/components/icons/InstagramIcon";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 import { FadeInView } from "@/components/ui";
+import { useFeatureFlagEnabled } from "posthog-js/react";
 
 export default function Footer() {
+  const blogEnabled = useFeatureFlagEnabled("blogEnabled");
   return (
     <footer className="bg-violet-100 border-t-4 border-violet-200/50">
       <FadeInView>
@@ -91,14 +93,16 @@ export default function Footer() {
                       FAQ
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/blog"
-                      className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors"
-                    >
-                      Blog
-                    </Link>
-                  </li>
+                  {blogEnabled && (
+                    <li>
+                      <Link
+                        href="/blog"
+                        className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors"
+                      >
+                        Blog
+                      </Link>
+                    </li>
+                  )}
                 </ul>
               </div>
 
