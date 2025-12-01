@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { LogoWithText } from "@/components/LogoWithText";
-import { SIGNUP_LINK_URL } from "@/lib/constants";
+import { SIGNUP_LINK_URL, LOGIN_LINK_URL } from "@/lib/constants";
 
 export default function Header() {
   return (
@@ -28,12 +28,15 @@ export default function Header() {
 
             {/* Action Buttons - Visible on all screen sizes */}
             <div className="flex items-center gap-2.5">
-              <button
+              <a
+                href={LOGIN_LINK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Login"
                 className="flex items-center justify-center w-[71px] h-[35px] rounded-[10px] bg-[#E0E0E0] px-3 sm:px-4 py-1 sm:py-1.5 pb-[6px] sm:pb-[10px] text-base lg:text-xl font-bold text-black shadow-[inset_0px_-4px_4px_0px_rgba(0,0,0,0.05),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] hover:bg-gray-300 transition cursor-pointer tracking-[-0.4px]"
               >
                 Login
-              </button>
+              </a>
 
               <a
                 href={SIGNUP_LINK_URL}
