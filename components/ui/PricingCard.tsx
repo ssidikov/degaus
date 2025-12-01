@@ -1,56 +1,58 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { cn } from '@/lib/utils'
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { Crisp } from "crisp-sdk-web";
 
 interface PricingFeature {
-  text: string
-  enabled: boolean
+  text: string;
+  enabled: boolean;
 }
 
 interface PricingCardProps {
-  name: string
-  price: string
-  period?: string
-  buttonColor: string
-  buttonText: string
-  checkColor: 'pink' | 'blue' | 'gray'
-  features: PricingFeature[]
-  popular?: boolean
+  name: string;
+  price: string;
+  period?: string;
+  buttonColor: string;
+  buttonText: string;
+  buttonHref?: string | null;
+  checkColor: "pink" | "blue" | "gray";
+  features: PricingFeature[];
+  popular?: boolean;
 }
 
 export default function PricingCard({
   name,
   price,
-  period = '',
+  period = "",
   buttonColor,
   buttonText,
+  buttonHref,
   checkColor,
   features,
   popular = false,
 }: PricingCardProps) {
-  // Определяем иконку в зависимости от цвета
   const iconSrc =
-    checkColor === 'pink'
-      ? '/checked-pink.svg'
-      : checkColor === 'blue'
-      ? '/checked-blue.svg'
-      : '/checked-black.svg'
+    checkColor === "pink"
+      ? "/checked-pink.svg"
+      : checkColor === "blue"
+        ? "/checked-blue.svg"
+        : "/checked-black.svg";
 
   return (
-    <div className='relative h-full rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white'>
+    <div className="relative h-full rounded-[15px] sm:rounded-[20px] border-4 sm:border-[5px] border-white bg-[#f3f3f9] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.10)] outline-[5px] outline-offset-[-5px] outline-white">
       {/* Popular Badge */}
       {popular && (
         <>
-          <div className='left-1/2 -translate-x-1/2 -top-6 absolute z-20'>
+          <div className="left-1/2 -translate-x-1/2 -top-6 absolute z-20">
             {/* Blur effect behind badge */}
-            <div className='absolute inset-0 bg-[#f3f3f9] rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]' />
+            <div className="absolute inset-0 bg-[#f3f3f9] rounded-[20px] blur-md -z-10 shadow-[0px_4px_10px_0px_rgba(50,84,255,0.25)]" />
             <Image
-              src='/icons/most-popular.png'
-              alt='Most popular'
+              src="/icons/most-popular.png"
+              alt="Most popular"
               width={150}
               height={40}
-              className='w-[150px] h-auto relative z-10 '
+              className="w-[150px] h-auto relative z-10 "
               priority
               quality={100}
               unoptimized
@@ -60,24 +62,24 @@ export default function PricingCard({
       )}
 
       {/* Content wrapper with overflow hidden to clip ellipses */}
-      <div className='relative h-full overflow-hidden rounded-[15px] sm:rounded-[20px]'>
+      <div className="relative h-full overflow-hidden rounded-[15px] sm:rounded-[20px]">
         {popular && (
           <>
             {/* Glow effects - CSS ellipses similar to FeatureCard */}
             {/* Left ellipse */}
             <div
-              className='w-40 h-28 left-[20%] sm:left-[15%] md:left-[10%] bottom-[-60px] absolute rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]'
-              style={{ backgroundColor: '#C3C3FF' }}
+              className="w-40 h-28 left-[20%] sm:left-[15%] md:left-[10%] bottom-[-60px] absolute rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]"
+              style={{ backgroundColor: "#C3C3FF" }}
             />
             {/* Right ellipse */}
             <div
-              className='w-32 sm:w-40 h-24 sm:h-28 right-[20%] sm:right-[15%] md:right-[10%] bottom-[-60px] absolute rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]'
-              style={{ backgroundColor: '#C3C3FF' }}
+              className="w-32 sm:w-40 h-24 sm:h-28 right-[20%] sm:right-[15%] md:right-[10%] bottom-[-60px] absolute rounded-full blur-2xl sm:blur-[45px] md:blur-[50px]"
+              style={{ backgroundColor: "#C3C3FF" }}
             />
           </>
         )}
 
-        <div className='flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-[42px] pb-6 sm:pb-7 xl:pr-9 gap-[30px]'>
+        <div className="flex h-full flex-col px-6 sm:px-8 md:px-10 lg:px-10 pt-8 sm:pt-9 md:pt-10 lg:pt-[42px] pb-6 sm:pb-7 xl:pr-9 gap-[30px]">
           {/* Plan Name */}
           <h3 className="font-['Darker_Grotesque'] text-3xl sm:text-[32px] md:text-[34px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-1.02px] text-gray-800">
             {name}
@@ -85,53 +87,59 @@ export default function PricingCard({
 
           {/* Price */}
           <div className="font-['Darker_Grotesque'] font-bold text-gray-800">
-            {price.startsWith('$') ? (
-              <p className='leading-[28px] tracking-[-1.02px]'>
-                <span className='text-3xl sm:text-[32px] md:text-[34px]'>{price}</span>
+            {price.startsWith("$") ? (
+              <p className="leading-[28px] tracking-[-1.02px]">
+                <span className="text-3xl sm:text-[32px] md:text-[34px]">
+                  {price}
+                </span>
                 {period && (
-                  <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
+                  <span className="text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]">
                     {period}
                   </span>
                 )}
               </p>
             ) : (
-              <span className='text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]'>
+              <span className="text-xl sm:text-[34px] leading-[28px] tracking-tight sm:tracking-[-1.02px]">
                 {price}
               </span>
             )}
           </div>
 
           {/* Features */}
-          <ul className='flex-1 space-y-2 sm:space-y-2.5 md:space-y-3 py-2'>
+          <ul className="flex-1 space-y-2 sm:space-y-2.5 md:space-y-3 py-2">
             {features.map((feature, i) => (
-              <li key={i} className='flex items-center gap-2 sm:gap-2.5 md:gap-3'>
-                <div className='flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 shrink-0'>
+              <li
+                key={i}
+                className="flex items-center gap-2 sm:gap-2.5 md:gap-3"
+              >
+                <div className="flex items-center justify-center w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7 shrink-0">
                   <Image
                     src={iconSrc}
-                    alt='check'
+                    alt="check"
                     width={28}
                     height={28}
                     unoptimized
                     className={cn(
-                      'w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7',
-                      !feature.enabled && 'opacity-50'
+                      "w-6 sm:w-6 md:w-7 h-6 sm:h-6 md:h-7",
+                      !feature.enabled && "opacity-50",
                     )}
                   />
                 </div>
                 <span
                   className={cn(
                     "font-['Darker_Grotesque'] text-base sm:text-[20px] font-semibold leading-tight sm:leading-[28px] tracking-tight sm:tracking-[-0.6px] text-[#8D8D8D] pb-[2px]",
-                    !feature.enabled && 'relative'
+                    !feature.enabled && "relative",
                   )}
                   style={
                     !feature.enabled
                       ? {
-                          textDecoration: 'underline',
-                          textUnderlineOffset: '-.25em',
-                          textDecorationSkipInk: 'none',
+                          textDecoration: "underline",
+                          textUnderlineOffset: "-.25em",
+                          textDecorationSkipInk: "none",
                         }
                       : undefined
-                  }>
+                  }
+                >
                   {feature.text}
                 </span>
               </li>
@@ -139,37 +147,78 @@ export default function PricingCard({
           </ul>
 
           {/* Button */}
-          <button
-            className={cn(
-              buttonColor,
-              "relative z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto mt-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-all duration-300 hover:scale-105 leading-[28px] tracking-[-0.52px] overflow-hidden group"
-            )}
-            style={{
-              boxShadow:
-                '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow =
-                '0px 8px 30px 0px rgba(16,16,17,0.45), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow =
-                '0px 4px 15px 0px rgba(16,16,17,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
-            }}>
-            {/* Shimmer effect on hover */}
-            <div
-              className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'
-              style={{
-                background:
-                  'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
-                backgroundSize: '200% 100%',
-                animation: 'shimmer 1.5s linear infinite',
-              }}
-            />
-            <span className='relative z-10'>{buttonText}</span>
-          </button>
+          <PricingButton
+            buttonColor={buttonColor}
+            buttonText={buttonText}
+            buttonHref={buttonHref}
+          />
         </div>
       </div>
     </div>
-  )
+  );
+}
+
+interface PricingButtonProps {
+  buttonColor: string;
+  buttonText: string;
+  buttonHref?: string | null;
+}
+
+function PricingButton({
+  buttonColor,
+  buttonText,
+  buttonHref,
+}: PricingButtonProps) {
+  const buttonShadowClasses =
+    "shadow-[0px_4px_15px_0px_rgba(16,16,17,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:shadow-[0px_8px_30px_0px_rgba(16,16,17,0.45),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)]";
+
+  const baseClasses =
+    "relative z-10 rounded-[15px] px-4 pt-2.5 pb-3.5 m-auto mt-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold text-[#EEE] transition-all duration-300 hover:scale-105 leading-[28px] tracking-[-0.52px] overflow-hidden group";
+
+  if (buttonHref) {
+    return (
+      <a
+        href={buttonHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(
+          buttonColor,
+          buttonShadowClasses,
+          baseClasses,
+          "block text-center",
+        )}
+      >
+        {/* Shimmer effect on hover */}
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+            backgroundSize: "200% 100%",
+            animation: "shimmer 1.5s linear infinite",
+          }}
+        />
+        <span className="relative z-10">{buttonText}</span>
+      </a>
+    );
+  }
+
+  return (
+    <button
+      onClick={() => Crisp.chat.open()}
+      className={cn(buttonColor, buttonShadowClasses, baseClasses)}
+    >
+      {/* Shimmer effect on hover */}
+      <div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+          backgroundSize: "200% 100%",
+          animation: "shimmer 1.5s linear infinite",
+        }}
+      />
+      <span className="relative z-10">{buttonText}</span>
+    </button>
+  );
 }

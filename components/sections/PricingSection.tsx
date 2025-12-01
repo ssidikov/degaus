@@ -14,6 +14,7 @@ const plans = [
     period: " / month",
     buttonColor: "bg-[#A01C96]",
     buttonText: "Choose plan",
+    buttonHref: "https://app.degaus.com/signup?plan=basic&price=49.99",
     checkColor: "pink" as const,
     features: [
       { text: "Access to all models", enabled: true },
@@ -32,6 +33,7 @@ const plans = [
     period: " / month",
     buttonColor: "bg-[#152CD3]",
     buttonText: "Choose plan",
+    buttonHref: "https://app.degaus.com/signup?plan=pro&price=149.99",
     checkColor: "blue" as const,
     popular: true,
     features: [
@@ -52,6 +54,7 @@ const plans = [
     period: "",
     buttonColor: "bg-gradient-to-r from-[#101011] to-[#18181A]",
     buttonText: "Talk to a human",
+    buttonHref: null,
     checkColor: "gray" as const,
     features: [
       { text: "Everything in pro", enabled: true },
