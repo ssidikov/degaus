@@ -4,7 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { VideoCard, FadeInView } from "@/components/ui";
 import RotatingText from "@/components/ui/RotatingText";
-import { CONTENT_CARDS, TRUSTED_BRANDS } from "@/lib/constants";
+import {
+  CONTENT_CARDS,
+  TRUSTED_BRANDS,
+  SIGNUP_LINK_URL,
+} from "@/lib/constants";
 import { useFeatureFlagEnabled } from "posthog-js/react";
 
 export default function HeroSection() {
@@ -58,7 +62,10 @@ export default function HeroSection() {
             </div>
 
             <div className="flex justify-center">
-              <motion.button
+              <motion.a
+                href={SIGNUP_LINK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{
                   scale: 1.03,
                   boxShadow:
@@ -113,7 +120,7 @@ export default function HeroSection() {
                 />
 
                 <span className="relative z-10">Try for free with 1-click</span>
-              </motion.button>
+              </motion.a>
             </div>
           </div>
         </FadeInView>

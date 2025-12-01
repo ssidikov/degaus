@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { LogoWithText } from "@/components/LogoWithText";
+import { SIGNUP_LINK_URL } from "@/lib/constants";
 
 export default function Header() {
   return (
@@ -34,7 +35,10 @@ export default function Header() {
                 Login
               </button>
 
-              <button
+              <a
+                href={SIGNUP_LINK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Try for free"
                 className="relative flex items-center justify-center w-[112px] h-[35px] rounded-[10px] px-3 sm:px-4 py-1 sm:py-1.5 pb-[6px] sm:pb-[10px] text-base lg:text-xl font-bold text-[#EEE] bg-linear-to-r from-[#152cd3] to-[#b308a7] shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.3)] transition-all duration-300 hover:scale-105 whitespace-nowrap tracking-[-0.4px] overflow-hidden group"
                 onMouseEnter={(e) => {
@@ -56,7 +60,7 @@ export default function Header() {
                   }}
                 />
                 <span className="relative z-10">Try for free</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

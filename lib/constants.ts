@@ -268,3 +268,16 @@ export const FAQ_ITEMS = [
     answer: 'Contact our team to join our affiliate program.',
   },
 ] as const
+
+// Signup Links
+export const SIGNUP_LINK_URL = 'https://app.degaus.com/signup'
+
+/**
+ * Generates a signup URL with plan and price query parameters
+ * @param plan - The plan name (e.g., "basic", "pro")
+ * @param price - The price as a number (e.g., 49.99)
+ * @returns The signup URL with query parameters
+ */
+export function getSignupLinkForPrice(plan: string, price: number): string {
+  return `${SIGNUP_LINK_URL}?plan=${plan}&price=${price}`
+}

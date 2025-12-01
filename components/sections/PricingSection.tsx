@@ -6,6 +6,7 @@ import {
   PricingCard,
   FadeInView,
 } from "@/components/ui";
+import { getSignupLinkForPrice, SIGNUP_LINK_URL } from "@/lib/constants";
 
 const plans = [
   {
@@ -14,7 +15,7 @@ const plans = [
     period: " / month",
     buttonColor: "bg-[#A01C96]",
     buttonText: "Choose plan",
-    buttonHref: "https://app.degaus.com/signup?plan=basic&price=49.99",
+    buttonHref: getSignupLinkForPrice("basic", 49.99),
     checkColor: "pink" as const,
     features: [
       { text: "Access to all models", enabled: true },
@@ -33,7 +34,7 @@ const plans = [
     period: " / month",
     buttonColor: "bg-[#152CD3]",
     buttonText: "Choose plan",
-    buttonHref: "https://app.degaus.com/signup?plan=pro&price=149.99",
+    buttonHref: getSignupLinkForPrice("pro", 149.99),
     checkColor: "blue" as const,
     popular: true,
     features: [
@@ -104,7 +105,12 @@ export default function PricingSection() {
               Or try for free with no free-trial, no credit card, no
               commitments.
             </p>
-            <button className="relative rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-all duration-300 hover:scale-105 w-[142px] h-[52px] overflow-hidden group shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:shadow-[0px_8px_30px_0px_rgba(46,71,249,0.45),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)]">
+            <a
+              href={SIGNUP_LINK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-all duration-300 hover:scale-105 w-[142px] h-[52px] overflow-hidden group shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:shadow-[0px_8px_30px_0px_rgba(46,71,249,0.45),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] flex items-center justify-center"
+            >
               {/* Shimmer effect on hover */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -116,7 +122,7 @@ export default function PricingSection() {
                 }}
               />
               <span className="relative z-10">Try for free</span>
-            </button>
+            </a>
           </div>
         </FadeInView>
       </div>
