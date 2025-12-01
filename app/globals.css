@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 /**
  * CSS Variables - Design System
@@ -6,7 +7,7 @@
  */
 :root {
   /* Colors */
-  --color-background: #F3F3F9;
+  --color-background: #f3f3f9;
   --color-foreground: #1a1a1a;
   --color-primary-blue: #152cd3;
   --color-primary-purple: #b308a7;
@@ -54,7 +55,11 @@ button {
 
 /* Gradient button with improved styling */
 .btn-gradient {
-  background: linear-gradient(to right, var(--color-primary-blue), var(--color-primary-purple));
+  background: linear-gradient(
+    to right,
+    var(--color-primary-blue),
+    var(--color-primary-purple)
+  );
   box-shadow:
     0px 4px 15px 0px rgba(46, 71, 249, 0.25),
     inset 0px -4px 4px 0px rgba(0, 0, 0, 0.3),
@@ -102,10 +107,19 @@ button {
   border: 1px solid transparent;
   background:
     /* Content background (padding-box) - keeping original color */
-    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) padding-box,
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))
+      padding-box,
     /* Border gradient (border-box) - mimicking the style with white/transparent */
-    linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.8) 100%) border-box;
-  
+    linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.2) 25%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        rgba(255, 255, 255, 0.8) 100%
+      )
+      border-box;
+
   -webkit-backdrop-filter: blur(12px) saturate(120%);
   backdrop-filter: blur(12px) saturate(120%);
   box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
@@ -139,12 +153,14 @@ button {
  * Rotating Text Animation
  */
 @keyframes rotate-text {
-  0%, 25% {
+  0%,
+  25% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  30%, 100% {
+  30%,
+  100% {
     opacity: 0;
     transform: translateY(-10px);
   }
