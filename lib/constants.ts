@@ -301,13 +301,12 @@ export const FAQ_ITEMS = [
 export const SIGNUP_LINK_URL = "https://app.degaus.com/signup";
 
 /**
- * Generates a signup URL with plan and price query parameters
- * @param plan - The plan name (e.g., "basic", "pro")
- * @param price - The price as a number (e.g., 49.99)
- * @returns The signup URL with query parameters
+ * Generates a signup URL with planCode query parameter
+ * @param planCode - The plan code (either "CREATOR" or "PREMIUM")
+ * @returns The signup URL with planCode query parameter
  */
-export function getSignupLinkForPrice(plan: string, price: number): string {
-  return `${SIGNUP_LINK_URL}?plan=${plan}&price=${price}`;
+export function getSignupLinkForPrice(planCode: "CREATOR" | "PREMIUM"): string {
+  return `${SIGNUP_LINK_URL}?planCode=${planCode}`;
 }
 
 // Login Links

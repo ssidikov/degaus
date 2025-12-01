@@ -10,12 +10,12 @@ import { getSignupLinkForPrice, SIGNUP_LINK_URL } from "@/lib/constants";
 
 const plans = [
   {
-    name: "Basic",
+    name: "Premium",
     price: "$49.99",
     period: " / month",
     buttonColor: "bg-[#A01C96]",
     buttonText: "Choose plan",
-    buttonHref: getSignupLinkForPrice("basic", 49.99),
+    buttonHref: getSignupLinkForPrice("PREMIUM"),
     checkColor: "pink" as const,
     features: [
       { text: "Access to all models", enabled: true },
@@ -29,12 +29,12 @@ const plans = [
     ],
   },
   {
-    name: "Pro",
+    name: "Creator",
     price: "$149.99",
     period: " / month",
     buttonColor: "bg-[#152CD3]",
     buttonText: "Choose plan",
-    buttonHref: getSignupLinkForPrice("pro", 149.99),
+    buttonHref: getSignupLinkForPrice("CREATOR"),
     checkColor: "blue" as const,
     popular: true,
     features: [
