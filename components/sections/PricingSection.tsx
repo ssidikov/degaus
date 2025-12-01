@@ -1,87 +1,93 @@
-'use client'
+"use client";
 
-import { Badge, SectionHeading, PricingCard, FadeInView } from '@/components/ui'
+import {
+  Badge,
+  SectionHeading,
+  PricingCard,
+  FadeInView,
+} from "@/components/ui";
+
+const plans = [
+  {
+    name: "Basic",
+    price: "$49.99",
+    period: " / month",
+    buttonColor: "bg-[#A01C96]",
+    buttonText: "Choose plan",
+    checkColor: "pink" as const,
+    features: [
+      { text: "Access to all models", enabled: true },
+      { text: "Access to workflow node editor", enabled: true },
+      { text: "Access to video editor", enabled: true },
+      { text: "1k image gen & edits (nanobanana)", enabled: true },
+      { text: "25 videos of Sora2 Pro HD (10 sec)", enabled: true },
+      { text: "20 videos of Sora2 Pro long (25 sec)", enabled: true },
+      { text: "Bulk content creation", enabled: false },
+      { text: "API Access (n8n or custom workflows)", enabled: false },
+    ],
+  },
+  {
+    name: "Pro",
+    price: "$149.99",
+    period: " / month",
+    buttonColor: "bg-[#152CD3]",
+    buttonText: "Choose plan",
+    checkColor: "blue" as const,
+    popular: true,
+    features: [
+      { text: "Access to all models", enabled: true },
+      { text: "Access to workflow node editor", enabled: true },
+      { text: "Access to video editor", enabled: true },
+      { text: "3k image gen & edits (nanobanana)", enabled: true },
+      { text: "75 videos of Sora2 Pro HD (10 sec)", enabled: true },
+      { text: "60 videos of Sora2 Pro long (25 sec)", enabled: true },
+      { text: "Bulk content creation", enabled: true },
+      { text: "API Access (n8n or custom workflows)", enabled: true },
+      { text: "Priority access to new features", enabled: true },
+    ],
+  },
+  {
+    name: "Custom",
+    price: "Talk to a human",
+    period: "",
+    buttonColor: "bg-gradient-to-r from-[#101011] to-[#18181A]",
+    buttonText: "Talk to a human",
+    checkColor: "gray" as const,
+    features: [
+      { text: "Everything in pro", enabled: true },
+      { text: "Unlimited volume", enabled: true },
+      { text: "Custom workflow building", enabled: true },
+      { text: "Custom integrations", enabled: true },
+      { text: "Custom video editing", enabled: true },
+    ],
+  },
+];
 
 export default function PricingSection() {
-  const plans = [
-    {
-      name: 'Basic',
-      price: '$49.99',
-      period: '/ month',
-      buttonColor: 'bg-[#A01C96]',
-      buttonText: 'Choose plan',
-      checkColor: 'pink' as const,
-      features: [
-        { text: 'Access to all models', enabled: true },
-        { text: 'Access to workflow node editor', enabled: true },
-        { text: 'Access to video editor', enabled: true },
-        { text: '1k image gen & edits (nanobanana)', enabled: true },
-        { text: '25 videos of Sora2 Pro HD (10 sec)', enabled: true },
-        { text: '20 videos of Sora2 Pro long (25 sec)', enabled: true },
-        { text: 'Bulk content creation', enabled: false },
-        { text: 'API Access (n8n or custom workflows)', enabled: false },
-      ],
-    },
-    {
-      name: 'Pro',
-      price: '$149.99',
-      period: '/ month',
-      buttonColor: 'bg-[#152CD3]',
-      buttonText: 'Choose plan',
-      checkColor: 'blue' as const,
-      popular: true,
-      features: [
-        { text: 'Access to all models', enabled: true },
-        { text: 'Access to workflow node editor', enabled: true },
-        { text: 'Access to video editor', enabled: true },
-        { text: '3k image gen & edits (nanobanana)', enabled: true },
-        { text: '75 videos of Sora2 Pro HD (10 sec)', enabled: true },
-        { text: '60 videos of Sora2 Pro long (25 sec)', enabled: true },
-        { text: 'Bulk content creation', enabled: true },
-        { text: 'API Access (n8n or custom workflows)', enabled: true },
-        { text: 'Priority access to new features', enabled: true },
-      ],
-    },
-    {
-      name: 'Custom',
-      price: 'Talk to a human',
-      period: '',
-      buttonColor: 'bg-gradient-to-r from-[#101011] to-[#18181A]',
-      buttonText: 'Talk to a human',
-      checkColor: 'gray' as const,
-      features: [
-        { text: 'Everything in pro', enabled: true },
-        { text: 'Unlimited volume', enabled: true },
-        { text: 'Custom workflow building', enabled: true },
-        { text: 'Custom integrations', enabled: true },
-        { text: 'Custom video editing', enabled: true },
-      ],
-    },
-  ]
-
   return (
     <section
-      id='pricing'
-      className='bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16 overflow-hidden'>
-      <div className='mx-auto max-w-7xl'>
+      id="pricing"
+      className="bg-[#e9e8f5] px-4 sm:px-5 md:px-6 py-12 sm:py-14 md:py-16 overflow-hidden"
+    >
+      <div className="mx-auto max-w-7xl">
         <FadeInView>
-          <Badge containerClassName='mb-[54px]' badgeClassName='w-[88px]'>
+          <Badge containerClassName="mb-[54px]" badgeClassName="w-[88px]">
             Pricing
           </Badge>
         </FadeInView>
 
         <FadeInView delay={0.1}>
           <SectionHeading
-            className='mb-[54px]'
-            titleClassNameWithSubtitle='mb-[54px]'
-            title='Start creating more content today'
-            subtitle='Choose the plan that makes the most sense for you. Cancel anytime.'
+            className="mb-[54px]"
+            titleClassNameWithSubtitle="mb-[54px]"
+            title="Start creating more content today"
+            subtitle="Choose the plan that makes the most sense for you. Cancel anytime."
           />
         </FadeInView>
 
         {/* Pricing Cards */}
         <FadeInView delay={0.2}>
-          <div className='relative mb-12 sm:mb-14 md:mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-9 items-stretch'>
+          <div className="relative mb-12 sm:mb-14 md:mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-9 items-stretch">
             {plans.map((plan) => (
               <PricingCard key={plan.name} {...plan} />
             ))}
@@ -90,39 +96,27 @@ export default function PricingSection() {
 
         {/* Try for free */}
         <FadeInView delay={0.3}>
-          <div className='flex flex-col items-center gap-6 sm:gap-7 md:gap-9'>
+          <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-9">
             <p className="max-w-md text-center font-['Darker_Grotesque'] text-xl sm:text-2xl font-bold leading-tight sm:leading-6 tracking-tight sm:tracking-[-0.72px] text-[#8D8D8D] px-4">
-              Or try for free with no free-trial, no credit card, no commitments.
+              Or try for free with no free-trial, no credit card, no
+              commitments.
             </p>
-            <button
-              className="relative rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-all duration-300 hover:scale-105 w-[142px] h-[52px] overflow-hidden group"
-              style={{
-                boxShadow:
-                  '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow =
-                  '0px 8px 30px 0px rgba(46,71,249,0.45), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow =
-                  '0px 4px 15px 0px rgba(46,71,249,0.25), inset 0px -4px 4px 0px rgba(0,0,0,0.3), inset 0px 4px 4px 0px rgba(255,255,255,0.35)'
-              }}>
+            <button className="relative rounded-xl sm:rounded-[15px] bg-linear-to-r from-blue-700 to-fuchsia-700 px-5 text-nowrap pb-[3px] m-auto font-['Darker_Grotesque'] text-xl sm:text-2xl md:text-[26px] font-bold leading-tight sm:leading-7 tracking-tight sm:tracking-[-0.52px] text-white transition-all duration-300 hover:scale-105 w-[142px] h-[52px] overflow-hidden group shadow-[0px_4px_15px_0px_rgba(46,71,249,0.25),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)] hover:shadow-[0px_8px_30px_0px_rgba(46,71,249,0.45),inset_0px_-4px_4px_0px_rgba(0,0,0,0.3),inset_0px_4px_4px_0px_rgba(255,255,255,0.35)]">
               {/* Shimmer effect on hover */}
               <div
-                className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none'
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{
                   background:
-                    'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
-                  backgroundSize: '200% 100%',
-                  animation: 'shimmer 1.5s linear infinite',
+                    "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+                  backgroundSize: "200% 100%",
+                  animation: "shimmer 1.5s linear infinite",
                 }}
               />
-              <span className='relative z-10'>Try for free</span>
+              <span className="relative z-10">Try for free</span>
             </button>
           </div>
         </FadeInView>
       </div>
     </section>
-  )
+  );
 }

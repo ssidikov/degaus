@@ -1,7 +1,9 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Darker_Grotesque } from "next/font/google";
 import PostHogProvider from "@/components/PostHogProvider";
-import "./globals.css";
+import { Crisp } from "@/components/Crisp";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -107,6 +109,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <PostHogProvider>{children}</PostHogProvider>
+        <Crisp />
       </body>
     </html>
   );

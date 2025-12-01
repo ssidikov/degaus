@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FAQ_ITEMS } from "@/lib/faq";
 import { Badge, SectionHeading, FadeInView } from "@/components/ui";
+import { Crisp } from "crisp-sdk-web";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -29,9 +30,12 @@ export default function FAQSection() {
               />
               <p className="mt-6 font-['Darker_Grotesque'] text-2xl font-bold tracking-[-0.72px] leading-6 text-[#8d8d8d]">
                 If you don&apos;t find your answer here, simply{" "}
-                <span className="text-[#152CD3] hover:underline cursor-pointer">
+                <button
+                  className="text-[#152CD3] hover:underline cursor-pointer"
+                  onClick={() => Crisp.chat.open()}
+                >
                   reach out.
-                </span>
+                </button>
               </p>
             </div>
 
