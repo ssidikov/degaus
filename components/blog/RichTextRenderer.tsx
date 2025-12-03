@@ -1,16 +1,18 @@
+import React from "react";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
-import { PortableTextBlock } from "sanity";
 import Image from "next/image";
-import Link from "next/link";
-import { urlForImage } from "@/sanity/imageUrl";
-import { SanityImage } from "@/types/sanity";
+import { urlForImageWithDimensions } from "@/sanity/imageUrl";
+import { PortableTextBlock } from "@portabletext/types";
 
 const components: PortableTextComponents = {
   types: {
-    image: ({ value }: { value: SanityImage }) => {
-      if (!value?.asset) return null;
-
-      const imageUrl = urlForImage(value).width(1920).quality(100).url();
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    image: ({ value }: any) => {
+      /* eslint-enable @typescript-eslint/no-explicit-any */
+      if (!value?.asset?._ref) return null;
+      const imageUrl = urlForImageWithDimensions(value, 1200, 800)
+        .quality(90)
+        .url();
 
       return (
         <figure className="my-8 blog-image-breakout">
@@ -20,12 +22,11 @@ const components: PortableTextComponents = {
               alt={value.alt || "Blog image"}
               fill
               className="object-cover"
-              quality={100}
-              sizes="(max-width: 768px) 100vw, 1200px"
+              sizes="(max-width: 1200px) 100vw, 1200px"
             />
           </div>
           {value.caption && (
-            <figcaption className="mt-2 text-center text-sm text-gray-600 italic">
+            <figcaption className="mt-2 text-sm text-gray-600 text-center">
               {value.caption}
             </figcaption>
           )}
@@ -34,17 +35,11 @@ const components: PortableTextComponents = {
     },
   },
   block: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h2: ({
-      children,
-      value,
-    }: {
-      children?: React.ReactNode;
-      value?: { children?: { text?: string }[] };
-    }) => {
-      // Extract text to create ID for anchor links
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    h2: ({ children, value }: any) => {
       const text =
-        value?.children?.map((child) => child.text || "").join("") || "";
+        value?.children?.map((child: any) => child.text || "").join("") || "";
+      /* eslint-enable @typescript-eslint/no-explicit-any */
       const id = text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
@@ -58,17 +53,11 @@ const components: PortableTextComponents = {
         </h2>
       );
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h3: ({
-      children,
-      value,
-    }: {
-      children?: React.ReactNode;
-      value?: { children?: { text?: string }[] };
-    }) => {
-      // Extract text to create ID for anchor links
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+    h3: ({ children, value }: any) => {
       const text =
-        value?.children?.map((child) => child.text || "").join("") || "";
+        value?.children?.map((child: any) => child.text || "").join("") || "";
+      /* eslint-enable @typescript-eslint/no-explicit-any */
       const id = text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
@@ -141,14 +130,14 @@ const components: PortableTextComponents = {
       const rel = value?.blank ? "noopener noreferrer" : undefined;
 
       return (
-        <Link
+        <a
           href={value?.href || "#"}
           target={target}
           rel={rel}
           className="blog-link-neutral font-medium"
         >
           {children}
-        </Link>
+        </a>
       );
     },
   },
