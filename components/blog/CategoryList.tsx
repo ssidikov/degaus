@@ -17,20 +17,57 @@ interface CategoryListProps {
   useQueryParam?: boolean;
 }
 
-export default function CategoryList({
+function CategoryListClient({
   categories,
   currentCategorySlug,
-  layout = "vertical",
-  useQueryParam = false,
-}: CategoryListProps) {
+  handleCategoryClick,
+}: {
+  categories: Category[];
+  currentCategorySlug?: string;
+  handleCategoryClick: (slug: string | null) => void;
+}) {
+  return (
+    <div className="mb-12">
+      <div className="flex flex-wrap gap-2 overflow-x-auto scrollbar-none">
+        <button
+          onClick={() => handleCategoryClick(null)}
+          className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+            !currentCategorySlug
+              ? "bg-gray-900 text-white"
+              : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+          }`}
+        >
+          Featured
+        </button>
+        {categories.map((category) => (
+          <button
+            key={category._id}
+            onClick={() => handleCategoryClick(category.slug.current)}
+            className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              currentCategorySlug === category.slug.current
+                ? "bg-gray-900 text-white"
+                : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+            }`}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CategoryListWithQuery({
+  categories,
+  currentCategorySlug,
+}: {
+  categories: Category[];
+  currentCategorySlug?: string;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  if (!categories || categories.length === 0) return null;
-
   const handleCategoryClick = (categorySlug: string | null) => {
-    if (!useQueryParam) return;
-
     const params = new URLSearchParams(searchParams?.toString() || "");
 
     if (categorySlug) {
@@ -39,68 +76,65 @@ export default function CategoryList({
       params.delete("category");
     }
 
-    // Reset to page 1 when changing category
     params.delete("page");
-
     const queryString = params.toString();
     router.push(`/blog${queryString ? `?${queryString}` : ""}`);
   };
 
+  return (
+    <CategoryListClient
+      categories={categories}
+      currentCategorySlug={currentCategorySlug}
+      handleCategoryClick={handleCategoryClick}
+    />
+  );
+}
+
+export default function CategoryList({
+  categories,
+  currentCategorySlug,
+  layout = "vertical",
+  useQueryParam = false,
+}: CategoryListProps) {
+  if (!categories || categories.length === 0) return null;
+
   // Horizontal layout for blog page
   if (layout === "horizontal") {
+    if (useQueryParam) {
+      return (
+        <CategoryListWithQuery
+          categories={categories}
+          currentCategorySlug={currentCategorySlug}
+        />
+      );
+    }
+
     return (
       <div className="mb-12">
         <div className="flex flex-wrap gap-2 overflow-x-auto scrollbar-none">
-          {useQueryParam ? (
-            <button
-              onClick={() => handleCategoryClick(null)}
-              className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                !currentCategorySlug
-                  ? "bg-gray-900 text-white"
-                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
-              }`}
-            >
-              Featured
-            </button>
-          ) : (
+          <Link
+            href="/blog"
+            className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              !currentCategorySlug
+                ? "bg-gray-900 text-white"
+                : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+            }`}
+          >
+            Featured
+          </Link>
+          {categories.map((category) => (
             <Link
-              href="/blog"
+              key={category._id}
+              href={`/blog/category/${category.slug.current}`}
               className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                !currentCategorySlug
+                currentCategorySlug === category.slug.current
                   ? "bg-gray-900 text-white"
                   : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
               }`}
             >
-              Featured
+              {category.name}
             </Link>
-          )}
-          {categories.map((category) =>
-            useQueryParam ? (
-              <button
-                key={category._id}
-                onClick={() => handleCategoryClick(category.slug.current)}
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  currentCategorySlug === category.slug.current
-                    ? "bg-gray-900 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
-                }`}
-              >
-                {category.name}
-              </button>
-            ) : (
-              <Link
-                key={category._id}
-                href={`/blog/category/${category.slug.current}`}
-                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  currentCategorySlug === category.slug.current
-                    ? "bg-gray-900 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
-                }`}
-              >
-                {category.name}
-              </Link>
-            ),
-          )}
+          ))}
         </div>
       </div>
     );
