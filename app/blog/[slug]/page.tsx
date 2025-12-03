@@ -159,7 +159,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-4xl font-[Bricolage_Grotesque] text-gray-900 font-extrabold mb-9 leading-[1.05] tracking-tight">
+                <h1 className="text-4xl font-[Bricolage_Grotesque] text-gray-900 font-medium mb-9 leading-[1.05] tracking-tight">
                   {post.title}
                 </h1>
 

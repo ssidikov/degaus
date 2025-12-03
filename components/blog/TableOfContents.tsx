@@ -103,13 +103,13 @@ export default function TableOfContents({ body }: TableOfContentsProps) {
 
   return (
     <nav aria-label="Table of contents" className="sticky top-24">
-      <p className="text-sm font-bold text-gray-900 mb-4">On this page</p>
+      <p className="text-base font-bold text-gray-900 mb-4">On this page</p>
       <ul className="space-y-2 border-l-2 border-gray-200">
         {headings.map(({ id, text, level }) => (
           <li key={id}>
             <button
               onClick={() => handleClick(id)}
-              className={`block w-full text-left text-sm leading-6 tracking-[-0.6px] transition-colors ${getIndentation(
+              className={`block w-full text-left text-base leading-6 tracking-[-0.6px] transition-colors ${getIndentation(
                 level,
               )} ${
                 activeId === id
