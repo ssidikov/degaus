@@ -63,7 +63,7 @@ export default function Footer() {
                 <ul className="space-y-3">
                   <li>
                     <Link
-                      href="#features"
+                      href="/#features"
                       className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors"
                     >
                       Features
@@ -71,7 +71,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#pricing"
+                      href="/#pricing"
                       className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors"
                     >
                       Pricing
@@ -79,7 +79,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#use-cases"
+                      href="/#use-cases"
                       className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors"
                     >
                       Use Cases
@@ -87,7 +87,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#faq"
+                      href="/#faq"
                       className="text-base sm:text-lg font-semibold font-['Darker_Grotesque'] text-zinc-600 hover:text-indigo-600 transition-colors"
                     >
                       FAQ
