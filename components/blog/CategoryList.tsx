@@ -1,31 +1,128 @@
-import Link from 'next/link'
+"use client";
+
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface Category {
-  _id: string
-  name: string
-  slug: { current: string }
-  postCount?: number
+  _id: string;
+  name: string;
+  slug: { current: string };
+  postCount?: number;
 }
 
 interface CategoryListProps {
-  categories: Category[]
-  currentCategorySlug?: string
+  categories: Category[];
+  currentCategorySlug?: string;
+  layout?: "vertical" | "horizontal";
+  useQueryParam?: boolean;
 }
 
-export default function CategoryList({ categories, currentCategorySlug }: CategoryListProps) {
-  if (!categories || categories.length === 0) return null
+export default function CategoryList({
+  categories,
+  currentCategorySlug,
+  layout = "vertical",
+  useQueryParam = false,
+}: CategoryListProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
+  if (!categories || categories.length === 0) return null;
+
+  const handleCategoryClick = (categorySlug: string | null) => {
+    if (!useQueryParam) return;
+
+    const params = new URLSearchParams(searchParams?.toString() || "");
+
+    if (categorySlug) {
+      params.set("category", categorySlug);
+    } else {
+      params.delete("category");
+    }
+
+    // Reset to page 1 when changing category
+    params.delete("page");
+
+    const queryString = params.toString();
+    router.push(`/blog${queryString ? `?${queryString}` : ""}`);
+  };
+
+  // Horizontal layout for blog page
+  if (layout === "horizontal") {
+    return (
+      <div className="mb-12">
+        <div className="flex flex-wrap gap-2 overflow-x-auto scrollbar-none">
+          {useQueryParam ? (
+            <button
+              onClick={() => handleCategoryClick(null)}
+              className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                !currentCategorySlug
+                  ? "bg-gray-900 text-white"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+              }`}
+            >
+              Featured
+            </button>
+          ) : (
+            <Link
+              href="/blog"
+              className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                !currentCategorySlug
+                  ? "bg-gray-900 text-white"
+                  : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+              }`}
+            >
+              Featured
+            </Link>
+          )}
+          {categories.map((category) =>
+            useQueryParam ? (
+              <button
+                key={category._id}
+                onClick={() => handleCategoryClick(category.slug.current)}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  currentCategorySlug === category.slug.current
+                    ? "bg-gray-900 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+                }`}
+              >
+                {category.name}
+              </button>
+            ) : (
+              <Link
+                key={category._id}
+                href={`/blog/category/${category.slug.current}`}
+                className={`inline-flex items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  currentCategorySlug === category.slug.current
+                    ? "bg-gray-900 text-white"
+                    : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+                }`}
+              >
+                {category.name}
+              </Link>
+            ),
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Vertical layout for sidebar
   return (
-    <aside className='rounded-xl liquid-glass p-6'>
-      <h3 className='mb-4 text-xl font-bold font-bricolage text-gray-900'>Categories</h3>
-      <ul className='space-y-2'>
+    <aside className="rounded-xl liquid-glass p-6">
+      <h3 className="mb-4 text-xl font-bold font-bricolage text-gray-900">
+        Categories
+      </h3>
+      <ul className="space-y-2">
         <li>
           <Link
-            href='/blog'
+            href="/blog"
             className={`flex items-center justify-between rounded-lg px-4 py-2 transition-colors ${
-              !currentCategorySlug ? 'bg-[#492BDA] text-white' : 'text-gray-700 hover:bg-gray-100'
-            }`}>
-            <span className='font-medium'>All categories</span>
+              !currentCategorySlug
+                ? "bg-[#492BDA] text-white"
+                : "text-gray-700 hover:bg-gray-100"
+            }`}
+          >
+            <span className="font-medium">All categories</span>
           </Link>
         </li>
         {categories.map((category) => (
@@ -34,15 +131,19 @@ export default function CategoryList({ categories, currentCategorySlug }: Catego
               href={`/blog/category/${category.slug.current}`}
               className={`flex items-center justify-between rounded-lg px-4 py-2 transition-colors ${
                 currentCategorySlug === category.slug.current
-                  ? 'bg-[#492BDA] text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}>
-              <span className='font-medium'>{category.name}</span>
+                  ? "bg-[#492BDA] text-white"
+                  : "text-gray-700 hover:bg-gray-100"
+              }`}
+            >
+              <span className="font-medium">{category.name}</span>
               {category.postCount !== undefined && (
                 <span
                   className={`rounded-full px-2 py-1 text-xs ${
-                    currentCategorySlug === category.slug.current ? 'bg-white/20' : 'bg-gray-200'
-                  }`}>
+                    currentCategorySlug === category.slug.current
+                      ? "bg-white/20"
+                      : "bg-gray-200"
+                  }`}
+                >
                   {category.postCount}
                 </span>
               )}
@@ -51,5 +152,5 @@ export default function CategoryList({ categories, currentCategorySlug }: Catego
         ))}
       </ul>
     </aside>
-  )
+  );
 }

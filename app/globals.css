@@ -199,3 +199,46 @@ button {
 body {
   overflow-x: visible;
 }
+
+/**
+ * Blog-specific styles - ElevenLabs design
+ */
+.blog-content-spacing h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content-spacing h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-content-spacing p {
+  margin-bottom: 1rem;
+}
+
+.blog-content-spacing ul,
+.blog-content-spacing ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Neutral link colors for blog */
+.blog-link-neutral {
+  color: #4b5563; /* gray-600 */
+  text-decoration: underline;
+  text-decoration-color: #d1d5db; /* gray-300 */
+  text-underline-offset: 2px;
+}
+
+.blog-link-neutral:hover {
+  color: #1f2937; /* gray-800 */
+  text-decoration-color: #9ca3af; /* gray-400 */
+}
+
+/* Wider images in article */
+.blog-image-breakout {
+  width: 110%;
+  margin-left: -5%;
+  max-width: 110%;
+}
