@@ -40,7 +40,7 @@ export const getAllPostsQuery = `
   },
   featured
 }
-`
+`;
 
 // Get single post by slug
 export const getPostBySlugQuery = `
@@ -99,7 +99,7 @@ export const getPostBySlugQuery = `
   },
   noindex
 }
-`
+`;
 
 // Get featured posts
 export const getFeaturedPostsQuery = `
@@ -127,7 +127,7 @@ export const getFeaturedPostsQuery = `
     slug
   }
 }
-`
+`;
 
 // Get all categories
 export const getCategoriesQuery = `
@@ -139,7 +139,7 @@ export const getCategoriesQuery = `
   order,
   "postCount": count(*[_type == "post" && references(^._id)])
 }
-`
+`;
 
 // Get all tags
 export const getTagsQuery = `
@@ -150,7 +150,10 @@ export const getTagsQuery = `
   description,
   "postCount": count(*[_type == "post" && references(^._id)])
 }
-`
+`;
+
+// Alias for consistency
+export const getAllTagsQuery = getTagsQuery;
 
 // Get blog settings
 export const getBlogSettingsQuery = `
@@ -168,7 +171,7 @@ export const getBlogSettingsQuery = `
     }
   }
 }
-`
+`;
 
 // Get posts by category (returns object with posts and totalCount)
 export const getPostsByCategoryQuery = `
@@ -204,7 +207,7 @@ export const getPostsByCategoryQuery = `
   },
   "totalCount": count(*[_type == "post" && category._ref == $categoryId && defined(slug.current)])
 }
-`
+`;
 
 // Get posts by tag (returns object with posts and totalCount)
 export const getPostsByTagQuery = `
@@ -240,7 +243,7 @@ export const getPostsByTagQuery = `
   },
   "totalCount": count(*[_type == "post" && $tagId in tags[]._ref && defined(slug.current)])
 }
-`
+`;
 
 // Get adjacent posts (previous and next)
 export const getAdjacentPostsQuery = `
@@ -256,14 +259,14 @@ export const getAdjacentPostsQuery = `
     slug
   }
 }
-`
+`;
 
 // Get all post slugs (for static generation)
 export const getPostSlugsQuery = `
 *[_type == "post" && defined(slug.current)] {
   "slug": slug.current
 }
-`
+`;
 
 // Get category by slug
 export const getCategoryBySlugQuery = `
@@ -273,7 +276,7 @@ export const getCategoryBySlugQuery = `
   slug,
   description
 }
-`
+`;
 
 // Get tag by slug
 export const getTagBySlugQuery = `
@@ -283,13 +286,13 @@ export const getTagBySlugQuery = `
   slug,
   description
 }
-`
+`;
 
 // Get total post count
-export const getTotalPostCountQuery = `count(*[_type == "post" && defined(slug.current)])`
+export const getTotalPostCountQuery = `count(*[_type == "post" && defined(slug.current)])`;
 
 // Get total post count by category
-export const getPostCountByCategoryQuery = `count(*[_type == "post" && category._ref == $categoryId && defined(slug.current)])`
+export const getPostCountByCategoryQuery = `count(*[_type == "post" && category._ref == $categoryId && defined(slug.current)])`;
 
 // Get total post count by tag
-export const getPostCountByTagQuery = `count(*[_type == "post" && $tagId in tags[]._ref && defined(slug.current)])`
+export const getPostCountByTagQuery = `count(*[_type == "post" && $tagId in tags[]._ref && defined(slug.current)])`;

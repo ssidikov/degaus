@@ -117,7 +117,7 @@ export default async function PostPage({ params }: PostPageProps) {
               {/* Post Header */}
               <div>
                 {/* Navigation and Share Buttons */}
-                <div className="flex items-center justify-between mb-8">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center gap-2 justify-between mb-8">
                   {/* Left: Navigation */}
                   <div className="flex items-center gap-4">
                     <Link
@@ -159,7 +159,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-4xl font-bold font-bricolage text-gray-900 mb-6 lg:text-5xl">
+                <h1 className="text-4xl font-[Bricolage_Grotesque] text-gray-900 font-extrabold mb-9 leading-[1.05] tracking-tight">
                   {post.title}
                 </h1>
 

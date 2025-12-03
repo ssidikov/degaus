@@ -74,7 +74,7 @@ const components: PortableTextComponents = {
       </h4>
     ),
     normal: ({ children }: { children?: React.ReactNode }) => (
-      <p className="mb-4 text-xl leading-relaxed text-gray-700 font-semibold">
+      <p className="mb-4 text-xl leading-6 tracking-[-0.6px] text-gray-700 font-semibold">
         {children}
       </p>
     ),
@@ -86,12 +86,12 @@ const components: PortableTextComponents = {
   },
   list: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
-      <ul className="my-4 ml-6 list-disc space-y-2 text-xl text-gray-700 font-semibold">
+      <ul className="my-4 ml-6 list-disc space-y-2 text-xl leading-6 tracking-[-0.6px] text-gray-700 font-semibold">
         {children}
       </ul>
     ),
     number: ({ children }: { children?: React.ReactNode }) => (
-      <ol className="my-4 ml-6 list-decimal space-y-2 text-xl text-gray-700 font-semibold">
+      <ol className="my-4 ml-6 list-decimal space-y-2 text-xl leading-6 tracking-[-0.6px] text-gray-700 font-semibold">
         {children}
       </ol>
     ),

@@ -18,7 +18,7 @@ export default function ShareButtons({
       {/* Copy Link */}
       <button
         onClick={handleCopyLink}
-        className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-100 transition-colors"
         aria-label="Copy link"
       >
         <svg
@@ -41,7 +41,7 @@ export default function ShareButtons({
         href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(postTitle)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-100 transition-colors"
         aria-label="Share on X"
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -54,7 +54,7 @@ export default function ShareButtons({
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-100 transition-colors"
         aria-label="Share on LinkedIn"
       >
         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -67,7 +67,7 @@ export default function ShareButtons({
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+        className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-100 transition-colors"
         aria-label="Share on Facebook"
       >
         <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

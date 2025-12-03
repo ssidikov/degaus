@@ -236,9 +236,19 @@ body {
   text-decoration-color: #9ca3af; /* gray-400 */
 }
 
-/* Wider images in article */
+/* Wider images in article - only on large screens */
 .blog-image-breakout {
-  width: 110%;
-  margin-left: -5%;
-  max-width: 110%;
+  width: calc(100% - 32px);
+  max-width: calc(100% - 32px);
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media (min-width: 1024px) {
+  .blog-image-breakout {
+    width: 110%;
+    margin-left: -5%;
+    margin-right: 0;
+    max-width: 110%;
+  }
 }
