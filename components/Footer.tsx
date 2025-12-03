@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import InstagramIcon from "@/components/icons/InstagramIcon";
-import TikTokIcon from "@/components/icons/TikTokIcon";
+// import InstagramIcon from "@/components/icons/InstagramIcon";
+// import TikTokIcon from "@/components/icons/TikTokIcon";
 import { FadeInView } from "@/components/ui";
 import { useFeatureFlagEnabled } from "posthog-js/react";
 

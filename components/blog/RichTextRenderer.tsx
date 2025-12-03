@@ -34,10 +34,17 @@ const components: PortableTextComponents = {
     },
   },
   block: {
-    h2: ({ children, value }: any) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    h2: ({
+      children,
+      value,
+    }: {
+      children?: React.ReactNode;
+      value?: { children?: { text?: string }[] };
+    }) => {
       // Extract text to create ID for anchor links
       const text =
-        value?.children?.map((child: any) => child.text || "").join("") || "";
+        value?.children?.map((child) => child.text || "").join("") || "";
       const id = text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
@@ -51,10 +58,17 @@ const components: PortableTextComponents = {
         </h2>
       );
     },
-    h3: ({ children, value }: any) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    h3: ({
+      children,
+      value,
+    }: {
+      children?: React.ReactNode;
+      value?: { children?: { text?: string }[] };
+    }) => {
       // Extract text to create ID for anchor links
       const text =
-        value?.children?.map((child: any) => child.text || "").join("") || "";
+        value?.children?.map((child) => child.text || "").join("") || "";
       const id = text
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")

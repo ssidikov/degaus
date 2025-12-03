@@ -64,7 +64,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   // Find category by slug if filtering
   const selectedCategory = categorySlug
-    ? categories.find((cat: any) => cat.slug.current === categorySlug)
+    ? categories.find(
+        (cat: { _id: string; slug: { current: string } }) =>
+          cat.slug.current === categorySlug,
+      )
     : null;
 
   // Fetch posts based on category filter
